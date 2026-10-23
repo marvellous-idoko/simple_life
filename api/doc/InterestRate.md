@@ -1,0 +1,20 @@
+# openapi.model.InterestRate
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**rateId** | **String** |  | [optional] 
+**annualRatePercentage** | **num** |  | [optional] 
+**premiumThreshold** | **num** |  | [optional] 
+**startDate** | **String** |  | [optional] 
+**productId** | **num** |  | [optional] 
+**frequency** | **String** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
