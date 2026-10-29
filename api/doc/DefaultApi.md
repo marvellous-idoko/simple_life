@@ -10,9 +10,11 @@ All URIs are relative to *https://live-retail-api.heirsinsurance.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addBeneficiaryShareToCoupleDocument**](DefaultApi.md#addbeneficiarysharetocoupledocument) | **PATCH** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[**addBeneficiaryShareToEndowmentDocument**](DefaultApi.md#addbeneficiarysharetoendowmentdocument) | **PATCH** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToHeirs3YearsDocument**](DefaultApi.md#addbeneficiarysharetoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToMyHeirsDocument**](DefaultApi.md#addbeneficiarysharetomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToMyHeirsPlusDocument**](DefaultApi.md#addbeneficiarysharetomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[**addBeneficiaryShareToSalaryDocument**](DefaultApi.md#addbeneficiarysharetosalarydocument) | **PATCH** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToSaveDocument**](DefaultApi.md#addbeneficiarysharetosavedocument) | **PATCH** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToSaveExtraDocument**](DefaultApi.md#addbeneficiarysharetosaveextradocument) | **PATCH** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [**addBeneficiaryShareToTriplePayDocument**](DefaultApi.md#addbeneficiarysharetotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -25,6 +27,7 @@ Method | HTTP request | Description
 [**addCustomerToAccidentSilverDocument**](DefaultApi.md#addcustomertoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver | 
 [**addCustomerToComprehensiveDocument**](DefaultApi.md#addcustomertocomprehensivedocument) | **PATCH** /document/{documentId}/comprehensive | 
 [**addCustomerToCoupleDocument**](DefaultApi.md#addcustomertocoupledocument) | **PATCH** /document/{documentId}/couple | 
+[**addCustomerToEndowmentDocument**](DefaultApi.md#addcustomertoendowmentdocument) | **PATCH** /documents/{documentId}/endowment | 
 [**addCustomerToHeirs25kDocument**](DefaultApi.md#addcustomertoheirs25kdocument) | **PATCH** /document/{documentId}/heirs-25k | 
 [**addCustomerToHeirs35kDocument**](DefaultApi.md#addcustomertoheirs35kdocument) | **PATCH** /document/{documentId}/heirs-35k | 
 [**addCustomerToHeirs3YearsDocument**](DefaultApi.md#addcustomertoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years | 
@@ -32,6 +35,7 @@ Method | HTTP request | Description
 [**addCustomerToHerMotorDocument**](DefaultApi.md#addcustomertohermotordocument) | **PATCH** /document/{documentId}/her-motor | 
 [**addCustomerToMyHeirsDocument**](DefaultApi.md#addcustomertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs | 
 [**addCustomerToMyHeirsPlusDocument**](DefaultApi.md#addcustomertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus | 
+[**addCustomerToSalaryDocument**](DefaultApi.md#addcustomertosalarydocument) | **PATCH** /document/{documentId}/salary | 
 [**addCustomerToSaveDocument**](DefaultApi.md#addcustomertosavedocument) | **PATCH** /document/{documentId}/save | 
 [**addCustomerToSaveExtraDocument**](DefaultApi.md#addcustomertosaveextradocument) | **PATCH** /document/{documentId}/save-extra | 
 [**addCustomerToTriplePayDocument**](DefaultApi.md#addcustomertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay | 
@@ -51,8 +55,10 @@ Method | HTTP request | Description
 [**addPersonToAccidentPlatinumDocument**](DefaultApi.md#addpersontoaccidentplatinumdocument) | **PATCH** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [**addPersonToAccidentSilverDocument**](DefaultApi.md#addpersontoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [**addRiderToCoupleDocument**](DefaultApi.md#addridertocoupledocument) | **PATCH** /document/{documentId}/couple/rider | 
+[**addRiderToEndowmentDocument**](DefaultApi.md#addridertoendowmentdocument) | **PATCH** /document/{documentId}/endowment/rider | 
 [**addRiderToMyHeirsDocument**](DefaultApi.md#addridertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/rider | 
 [**addRiderToMyHeirsPlusDocument**](DefaultApi.md#addridertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/rider | 
+[**addRiderToSalaryDocument**](DefaultApi.md#addridertosalarydocument) | **PATCH** /document/{documentId}/salary/rider | 
 [**addRiderToSaveExtraDocument**](DefaultApi.md#addridertosaveextradocument) | **PATCH** /document/{documentId}/save-extra/rider | 
 [**addRiderToTriplePayDocument**](DefaultApi.md#addridertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/rider | 
 [**create3rdPartyDocument**](DefaultApi.md#create3rdpartydocument) | **POST** /document/{documentId}/3rd-party | 
@@ -67,6 +73,7 @@ Method | HTTP request | Description
 [**createComprehensiveDocument**](DefaultApi.md#createcomprehensivedocument) | **POST** /document/{documentId}/comprehensive | 
 [**createCoupleDocument**](DefaultApi.md#createcoupledocument) | **POST** /document/{documentId}/couple | 
 [**createCustomer**](DefaultApi.md#createcustomer) | **POST** /customer/{customerId} | 
+[**createEndowmentDocument**](DefaultApi.md#createendowmentdocument) | **POST** /documents/{documentId}/endowment | 
 [**createHeirs25kDocument**](DefaultApi.md#createheirs25kdocument) | **POST** /document/{documentId}/heirs-25k | 
 [**createHeirs35kDocument**](DefaultApi.md#createheirs35kdocument) | **POST** /document/{documentId}/heirs-35k | 
 [**createHeirs3YearsDocument**](DefaultApi.md#createheirs3yearsdocument) | **POST** /document/{documentId}/heirs3years | 
@@ -78,13 +85,16 @@ Method | HTTP request | Description
 [**createMyHeirsPlusDocument**](DefaultApi.md#createmyheirsplusdocument) | **POST** /document/{documentId}/my-heirs-plus | 
 [**createOTP**](DefaultApi.md#createotp) | **POST** /user/otp | 
 [**createPassword**](DefaultApi.md#createpassword) | **POST** /user/password | 
+[**createSalaryDocument**](DefaultApi.md#createsalarydocument) | **POST** /document/{documentId}/salary | 
 [**createSaveDocument**](DefaultApi.md#createsavedocument) | **POST** /document/{documentId}/save | 
 [**createSaveExtraDocument**](DefaultApi.md#createsaveextradocument) | **POST** /document/{documentId}/save-extra | 
 [**createTriplePayDocument**](DefaultApi.md#createtriplepaydocument) | **POST** /document/{documentId}/triple-pay | 
 [**deleteBeneficiaryShareFromCoupleDocument**](DefaultApi.md#deletebeneficiarysharefromcoupledocument) | **DELETE** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[**deleteBeneficiaryShareFromEndowmentDocument**](DefaultApi.md#deletebeneficiarysharefromendowmentdocument) | **DELETE** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromHeirs3YearsDocument**](DefaultApi.md#deletebeneficiarysharefromheirs3yearsdocument) | **DELETE** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromMyHeirsDocument**](DefaultApi.md#deletebeneficiarysharefrommyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromMyHeirsPlusDocument**](DefaultApi.md#deletebeneficiarysharefrommyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[**deleteBeneficiaryShareFromSalaryDocument**](DefaultApi.md#deletebeneficiarysharefromsalarydocument) | **DELETE** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromSaveDocument**](DefaultApi.md#deletebeneficiarysharefromsavedocument) | **DELETE** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromSaveExtraDocument**](DefaultApi.md#deletebeneficiarysharefromsaveextradocument) | **DELETE** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [**deleteBeneficiaryShareFromTriplePayDocument**](DefaultApi.md#deletebeneficiarysharefromtriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -102,8 +112,10 @@ Method | HTTP request | Description
 [**deletePersonFromAccidentPlatinumDocument**](DefaultApi.md#deletepersonfromaccidentplatinumdocument) | **DELETE** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [**deletePersonFromAccidentSilverDocument**](DefaultApi.md#deletepersonfromaccidentsilverdocument) | **DELETE** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [**deleteRiderCoupleDocument**](DefaultApi.md#deleteridercoupledocument) | **DELETE** /document/{documentId}/couple/rider | 
+[**deleteRiderEndowmentDocument**](DefaultApi.md#deleteriderendowmentdocument) | **DELETE** /document/{documentId}/endowment/rider | 
 [**deleteRiderMyHeirsDocument**](DefaultApi.md#deleteridermyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/rider | 
 [**deleteRiderMyHeirsPlusDocument**](DefaultApi.md#deleteridermyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/rider | 
+[**deleteRiderSalaryDocument**](DefaultApi.md#deleteridersalarydocument) | **DELETE** /document/{documentId}/salary/rider | 
 [**deleteRiderSaveExtraDocument**](DefaultApi.md#deleteridersaveextradocument) | **DELETE** /document/{documentId}/save-extra/rider | 
 [**deleteRiderTriplePayDocument**](DefaultApi.md#deleteridertriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/rider | 
 [**get3rdPartyDocument**](DefaultApi.md#get3rdpartydocument) | **GET** /document/{documentId}/3rd-party | 
@@ -129,9 +141,11 @@ Method | HTTP request | Description
 [**getBeneficiariesByLoggedInUser**](DefaultApi.md#getbeneficiariesbyloggedinuser) | **GET** /beneficiaries | 
 [**getBeneficiaryById**](DefaultApi.md#getbeneficiarybyid) | **GET** /beneficiary/{beneficiaryId} | 
 [**getBeneficiaryShareFromCoupleDocument**](DefaultApi.md#getbeneficiarysharefromcoupledocument) | **GET** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[**getBeneficiaryShareFromEndowmentDocument**](DefaultApi.md#getbeneficiarysharefromendowmentdocument) | **GET** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromHeirs3YearsDocument**](DefaultApi.md#getbeneficiarysharefromheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromMyHeirsDocument**](DefaultApi.md#getbeneficiarysharefrommyheirsdocument) | **GET** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromMyHeirsPlusDocument**](DefaultApi.md#getbeneficiarysharefrommyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[**getBeneficiaryShareFromSalaryDocument**](DefaultApi.md#getbeneficiarysharefromsalarydocument) | **GET** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromSaveDocument**](DefaultApi.md#getbeneficiarysharefromsavedocument) | **GET** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromSaveExtraDocument**](DefaultApi.md#getbeneficiarysharefromsaveextradocument) | **GET** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [**getBeneficiaryShareFromTriplePayDocument**](DefaultApi.md#getbeneficiarysharefromtriplepaydocument) | **GET** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -148,6 +162,8 @@ Method | HTTP request | Description
 [**getCoupleSumAssuredQuote**](DefaultApi.md#getcouplesumassuredquote) | **GET** /couple/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
 [**getCustomerById**](DefaultApi.md#getcustomerbyid) | **GET** /customer/{customerId} | 
 [**getCustomersByLoggedInUser**](DefaultApi.md#getcustomersbyloggedinuser) | **GET** /customers | 
+[**getEndowmentDocument**](DefaultApi.md#getendowmentdocument) | **GET** /documents/{documentId}/endowment | 
+[**getEndowmentPremium**](DefaultApi.md#getendowmentpremium) | **GET** /document/{documentId}/endowment/premium | 
 [**getHeirs25kDocument**](DefaultApi.md#getheirs25kdocument) | **GET** /document/{documentId}/heirs-25k | 
 [**getHeirs25kDocumentPremium**](DefaultApi.md#getheirs25kdocumentpremium) | **GET** /document/{documentId}/heirs-25k/premium | 
 [**getHeirs25kInterestPremium**](DefaultApi.md#getheirs25kinterestpremium) | **GET** /document/{documentId}/heirs-25k/{motorId}/premium | 
@@ -197,6 +213,8 @@ Method | HTTP request | Description
 [**getPersonFromAccidentPlatinumDocument**](DefaultApi.md#getpersonfromaccidentplatinumdocument) | **GET** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [**getPersonFromAccidentSilverDocument**](DefaultApi.md#getpersonfromaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [**getPolicies**](DefaultApi.md#getpolicies) | **GET** /policy | 
+[**getSalaryDocument**](DefaultApi.md#getsalarydocument) | **GET** /document/{documentId}/salary | 
+[**getSalaryPremium**](DefaultApi.md#getsalarypremium) | **GET** /document/{documentId}/salary/premium | 
 [**getSaveDocument**](DefaultApi.md#getsavedocument) | **GET** /document/{documentId}/save | 
 [**getSaveExtraDocument**](DefaultApi.md#getsaveextradocument) | **GET** /document/{documentId}/save-extra | 
 [**getSaveExtraPremium**](DefaultApi.md#getsaveextrapremium) | **GET** /document/{documentId}/save-extra/premium | 
@@ -226,6 +244,7 @@ Method | HTTP request | Description
 [**payForAccidentSilverDocument**](DefaultApi.md#payforaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/pay/{payId} | 
 [**payForComprehensiveDocument**](DefaultApi.md#payforcomprehensivedocument) | **GET** /document/{documentId}/comprehensive/pay/{payId} | 
 [**payForCoupleDocument**](DefaultApi.md#payforcoupledocument) | **GET** /document/{documentId}/couple/pay/{payId} | 
+[**payForEndowmentDocument**](DefaultApi.md#payforendowmentdocument) | **GET** /document/{documentId}/endowment/pay/{payId} | 
 [**payForHeirs25kDocument**](DefaultApi.md#payforheirs25kdocument) | **GET** /document/{documentId}/heirs-25k/pay/{payId} | 
 [**payForHeirs35kDocument**](DefaultApi.md#payforheirs35kdocument) | **GET** /document/{documentId}/heirs-35k/pay/{payId} | 
 [**payForHeirs3YearsDocument**](DefaultApi.md#payforheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/pay/{payId} | 
@@ -233,6 +252,7 @@ Method | HTTP request | Description
 [**payForHerMotorDocument**](DefaultApi.md#payforhermotordocument) | **GET** /document/{documentId}/her-motor/pay/{payId} | 
 [**payForMyHeirsDocument**](DefaultApi.md#payformyheirsdocument) | **GET** /document/{documentId}/my-heirs/pay/{payId} | 
 [**payForMyHeirsPlusDocument**](DefaultApi.md#payformyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[**payForSalaryDocument**](DefaultApi.md#payforsalarydocument) | **GET** /document/{documentId}/salary/pay/{payId} | 
 [**payForSaveDocument**](DefaultApi.md#payforsavedocument) | **GET** /document/{documentId}/save/pay/{payId} | 
 [**payForSaveExtraDocument**](DefaultApi.md#payforsaveextradocument) | **GET** /document/{documentId}/save-extra/pay/{payId} | 
 [**payForTriplePayDocument**](DefaultApi.md#payfortriplepaydocument) | **GET** /document/{documentId}/triple-pay/pay/{payId} | 
@@ -246,6 +266,7 @@ Method | HTTP request | Description
 [**registerAccidentSilverPayment**](DefaultApi.md#registeraccidentsilverpayment) | **POST** /document/{documentId}/personal-accident-silver/pay/{payId} | 
 [**registerComprehensivePayment**](DefaultApi.md#registercomprehensivepayment) | **POST** /document/{documentId}/comprehensive/pay/{payId} | 
 [**registerCouplePayment**](DefaultApi.md#registercouplepayment) | **POST** /document/{documentId}/couple/pay/{payId} | 
+[**registerEndowmentPayment**](DefaultApi.md#registerendowmentpayment) | **POST** /document/{documentId}/endowment/pay/{payId} | 
 [**registerHeirs25kPayment**](DefaultApi.md#registerheirs25kpayment) | **POST** /document/{documentId}/heirs-25k/pay/{payId} | 
 [**registerHeirs35kPayment**](DefaultApi.md#registerheirs35kpayment) | **POST** /document/{documentId}/heirs-35k/pay/{payId} | 
 [**registerHeirs3YearsPayment**](DefaultApi.md#registerheirs3yearspayment) | **POST** /document/{documentId}/heirs3years/pay/{payId} | 
@@ -253,13 +274,13 @@ Method | HTTP request | Description
 [**registerHerMotorPayment**](DefaultApi.md#registerhermotorpayment) | **POST** /document/{documentId}/her-motor/pay/{payId} | 
 [**registerMyHeirsPayment**](DefaultApi.md#registermyheirspayment) | **POST** /document/{documentId}/my-heirs/pay/{payId} | 
 [**registerMyHeirsPlusPayment**](DefaultApi.md#registermyheirspluspayment) | **POST** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[**registerSalaryPayment**](DefaultApi.md#registersalarypayment) | **POST** /document/{documentId}/salary/pay/{payId} | 
 [**registerSaveExtraPayment**](DefaultApi.md#registersaveextrapayment) | **POST** /document/{documentId}/save-extra/pay/{payId} | 
 [**registerSavePayment**](DefaultApi.md#registersavepayment) | **POST** /document/{documentId}/save/pay/{payId} | 
 [**registerTriplePayPayment**](DefaultApi.md#registertriplepaypayment) | **POST** /document/{documentId}/triple-pay/pay/{payId} | 
 [**registerUserWithoutPassword**](DefaultApi.md#registeruserwithoutpassword) | **POST** /user/register | 
 [**resetOtp**](DefaultApi.md#resetotp) | **POST** /user/reset | 
 [**signUpUser**](DefaultApi.md#signupuser) | **POST** /user/signup | 
-[**updateCompanyCustomerAddress**](DefaultApi.md#updatecompanycustomeraddress) | **PATCH** /company-customer/{customerId}/address | 
 [**updateCustomer**](DefaultApi.md#updatecustomer) | **PATCH** /customer/{customerId} | 
 [**updateCustomerAddress**](DefaultApi.md#updatecustomeraddress) | **PATCH** /customer/{customerId}/address | 
 [**updateCustomerIdCard**](DefaultApi.md#updatecustomeridcard) | **PATCH** /customer/{customerId}/id-card | 
@@ -298,6 +319,52 @@ try {
     api.addBeneficiaryShareToCoupleDocument(documentId, beneficiaryId, beneficiaryShare);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->addBeneficiaryShareToCoupleDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+ **beneficiaryShare** | [**BeneficiaryShare**](BeneficiaryShare.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **addBeneficiaryShareToEndowmentDocument**
+> addBeneficiaryShareToEndowmentDocument(documentId, beneficiaryId, beneficiaryShare)
+
+
+
+Add beneficiary share to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+final BeneficiaryShare beneficiaryShare = ; // BeneficiaryShare | 
+
+try {
+    api.addBeneficiaryShareToEndowmentDocument(documentId, beneficiaryId, beneficiaryShare);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addBeneficiaryShareToEndowmentDocument: $e\n');
 }
 ```
 
@@ -436,6 +503,52 @@ try {
     api.addBeneficiaryShareToMyHeirsPlusDocument(documentId, beneficiaryId, beneficiaryShare);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->addBeneficiaryShareToMyHeirsPlusDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+ **beneficiaryShare** | [**BeneficiaryShare**](BeneficiaryShare.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **addBeneficiaryShareToSalaryDocument**
+> addBeneficiaryShareToSalaryDocument(documentId, beneficiaryId, beneficiaryShare)
+
+
+
+Add beneficiary share to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+final BeneficiaryShare beneficiaryShare = ; // BeneficiaryShare | 
+
+try {
+    api.addBeneficiaryShareToSalaryDocument(documentId, beneficiaryId, beneficiaryShare);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addBeneficiaryShareToSalaryDocument: $e\n');
 }
 ```
 
@@ -996,6 +1109,50 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **addCustomerToEndowmentDocument**
+> addCustomerToEndowmentDocument(documentId, customerId)
+
+
+
+Add customer to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final CustomerId customerId = ; // CustomerId | 
+
+try {
+    api.addCustomerToEndowmentDocument(documentId, customerId);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addCustomerToEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **customerId** | [**CustomerId**](CustomerId.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **addCustomerToHeirs25kDocument**
 > addCustomerToHeirs25kDocument(documentId, customerId)
 
@@ -1304,6 +1461,50 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **addCustomerToSalaryDocument**
+> addCustomerToSalaryDocument(documentId, customerId)
+
+
+
+Add customer to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final CustomerId customerId = ; // CustomerId | 
+
+try {
+    api.addCustomerToSalaryDocument(documentId, customerId);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addCustomerToSalaryDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **customerId** | [**CustomerId**](CustomerId.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **addCustomerToSaveDocument**
 > addCustomerToSaveDocument(documentId, customerId)
 
@@ -1525,7 +1726,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addLifeEntryToCoupleDocument**
-> addLifeEntryToCoupleDocument(documentId, createSaveDocumentRequest)
+> addLifeEntryToCoupleDocument(documentId, addLifeEntryToCoupleDocumentRequest)
 
 
 
@@ -1537,10 +1738,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getDefaultApi();
 final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
-final CreateSaveDocumentRequest createSaveDocumentRequest = ; // CreateSaveDocumentRequest | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
 
 try {
-    api.addLifeEntryToCoupleDocument(documentId, createSaveDocumentRequest);
+    api.addLifeEntryToCoupleDocument(documentId, addLifeEntryToCoupleDocumentRequest);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->addLifeEntryToCoupleDocument: $e\n');
 }
@@ -1551,7 +1752,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **String**|  | 
- **createSaveDocumentRequest** | [**CreateSaveDocumentRequest**](CreateSaveDocumentRequest.md)|  | [optional] 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -2166,6 +2367,52 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **addRiderToEndowmentDocument**
+> addRiderToEndowmentDocument(documentId, riderCode, rider)
+
+
+
+Add rider to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String riderCode = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final Rider rider = ; // Rider | 
+
+try {
+    api.addRiderToEndowmentDocument(documentId, riderCode, rider);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addRiderToEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **riderCode** | **String**|  | 
+ **rider** | [**Rider**](Rider.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **addRiderToMyHeirsDocument**
 > addRiderToMyHeirsDocument(documentId, riderCode, rider)
 
@@ -2232,6 +2479,52 @@ try {
     api.addRiderToMyHeirsPlusDocument(documentId, riderCode, rider);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->addRiderToMyHeirsPlusDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **riderCode** | **String**|  | 
+ **rider** | [**Rider**](Rider.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **addRiderToSalaryDocument**
+> addRiderToSalaryDocument(documentId, riderCode, rider)
+
+
+
+Add rider to document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String riderCode = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final Rider rider = ; // Rider | 
+
+try {
+    api.addRiderToSalaryDocument(documentId, riderCode, rider);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->addRiderToSalaryDocument: $e\n');
 }
 ```
 
@@ -2791,7 +3084,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createCoupleDocument**
-> createCoupleDocument(documentId, createSaveDocumentRequest)
+> createCoupleDocument(documentId, addLifeEntryToCoupleDocumentRequest)
 
 
 
@@ -2803,10 +3096,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getDefaultApi();
 final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
-final CreateSaveDocumentRequest createSaveDocumentRequest = ; // CreateSaveDocumentRequest | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
 
 try {
-    api.createCoupleDocument(documentId, createSaveDocumentRequest);
+    api.createCoupleDocument(documentId, addLifeEntryToCoupleDocumentRequest);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->createCoupleDocument: $e\n');
 }
@@ -2817,7 +3110,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **String**|  | 
- **createSaveDocumentRequest** | [**CreateSaveDocumentRequest**](CreateSaveDocumentRequest.md)|  | [optional] 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -2862,6 +3155,50 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customerId** | **String**|  | 
  **customerPersonal** | [**CustomerPersonal**](CustomerPersonal.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **createEndowmentDocument**
+> createEndowmentDocument(documentId, deathCover)
+
+
+
+Create Term assurance document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final DeathCover deathCover = ; // DeathCover | 
+
+try {
+    api.createEndowmentDocument(documentId, deathCover);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->createEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **deathCover** | [**DeathCover**](DeathCover.md)|  | [optional] 
 
 ### Return type
 
@@ -3187,7 +3524,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createMyHeirsDocument**
-> createMyHeirsDocument(documentId, createSaveDocumentRequest)
+> createMyHeirsDocument(documentId, addLifeEntryToCoupleDocumentRequest)
 
 
 
@@ -3199,10 +3536,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getDefaultApi();
 final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
-final CreateSaveDocumentRequest createSaveDocumentRequest = ; // CreateSaveDocumentRequest | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
 
 try {
-    api.createMyHeirsDocument(documentId, createSaveDocumentRequest);
+    api.createMyHeirsDocument(documentId, addLifeEntryToCoupleDocumentRequest);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->createMyHeirsDocument: $e\n');
 }
@@ -3213,7 +3550,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **String**|  | 
- **createSaveDocumentRequest** | [**CreateSaveDocumentRequest**](CreateSaveDocumentRequest.md)|  | [optional] 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -3358,8 +3695,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **createSaveDocument**
-> createSaveDocument(documentId, createSaveDocumentRequest)
+# **createSalaryDocument**
+> createSalaryDocument(documentId, addLifeEntryToCoupleDocumentRequest)
 
 
 
@@ -3371,10 +3708,54 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getDefaultApi();
 final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
-final CreateSaveDocumentRequest createSaveDocumentRequest = ; // CreateSaveDocumentRequest | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
 
 try {
-    api.createSaveDocument(documentId, createSaveDocumentRequest);
+    api.createSalaryDocument(documentId, addLifeEntryToCoupleDocumentRequest);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->createSalaryDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **createSaveDocument**
+> createSaveDocument(documentId, addLifeEntryToCoupleDocumentRequest)
+
+
+
+Create Term assurance document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
+
+try {
+    api.createSaveDocument(documentId, addLifeEntryToCoupleDocumentRequest);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->createSaveDocument: $e\n');
 }
@@ -3385,7 +3766,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **String**|  | 
- **createSaveDocumentRequest** | [**CreateSaveDocumentRequest**](CreateSaveDocumentRequest.md)|  | [optional] 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -3403,7 +3784,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createSaveExtraDocument**
-> createSaveExtraDocument(documentId, createSaveDocumentRequest)
+> createSaveExtraDocument(documentId, addLifeEntryToCoupleDocumentRequest)
 
 
 
@@ -3415,10 +3796,10 @@ import 'package:openapi/api.dart';
 
 final api = Openapi().getDefaultApi();
 final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
-final CreateSaveDocumentRequest createSaveDocumentRequest = ; // CreateSaveDocumentRequest | 
+final AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest = ; // AddLifeEntryToCoupleDocumentRequest | 
 
 try {
-    api.createSaveExtraDocument(documentId, createSaveDocumentRequest);
+    api.createSaveExtraDocument(documentId, addLifeEntryToCoupleDocumentRequest);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->createSaveExtraDocument: $e\n');
 }
@@ -3429,7 +3810,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentId** | **String**|  | 
- **createSaveDocumentRequest** | [**CreateSaveDocumentRequest**](CreateSaveDocumentRequest.md)|  | [optional] 
+ **addLifeEntryToCoupleDocumentRequest** | [**AddLifeEntryToCoupleDocumentRequest**](AddLifeEntryToCoupleDocumentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -3509,6 +3890,50 @@ try {
     api.deleteBeneficiaryShareFromCoupleDocument(documentId, beneficiaryId);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->deleteBeneficiaryShareFromCoupleDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deleteBeneficiaryShareFromEndowmentDocument**
+> deleteBeneficiaryShareFromEndowmentDocument(documentId, beneficiaryId)
+
+
+
+Delete beneficiary share from document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+
+try {
+    api.deleteBeneficiaryShareFromEndowmentDocument(documentId, beneficiaryId);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->deleteBeneficiaryShareFromEndowmentDocument: $e\n');
 }
 ```
 
@@ -3641,6 +4066,50 @@ try {
     api.deleteBeneficiaryShareFromMyHeirsPlusDocument(documentId, beneficiaryId);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->deleteBeneficiaryShareFromMyHeirsPlusDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deleteBeneficiaryShareFromSalaryDocument**
+> deleteBeneficiaryShareFromSalaryDocument(documentId, beneficiaryId)
+
+
+
+Delete beneficiary share from document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+
+try {
+    api.deleteBeneficiaryShareFromSalaryDocument(documentId, beneficiaryId);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->deleteBeneficiaryShareFromSalaryDocument: $e\n');
 }
 ```
 
@@ -4414,6 +4883,52 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **deleteRiderEndowmentDocument**
+> deleteRiderEndowmentDocument(documentId, riderCode, rider)
+
+
+
+Delete rider from document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String riderCode = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final Rider rider = ; // Rider | 
+
+try {
+    api.deleteRiderEndowmentDocument(documentId, riderCode, rider);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->deleteRiderEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **riderCode** | **String**|  | 
+ **rider** | [**Rider**](Rider.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **deleteRiderMyHeirsDocument**
 > deleteRiderMyHeirsDocument(documentId, riderCode, rider)
 
@@ -4480,6 +4995,52 @@ try {
     api.deleteRiderMyHeirsPlusDocument(documentId, riderCode, rider);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->deleteRiderMyHeirsPlusDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **riderCode** | **String**|  | 
+ **rider** | [**Rider**](Rider.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deleteRiderSalaryDocument**
+> deleteRiderSalaryDocument(documentId, riderCode, rider)
+
+
+
+Delete rider from document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String riderCode = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final Rider rider = ; // Rider | 
+
+try {
+    api.deleteRiderSalaryDocument(documentId, riderCode, rider);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->deleteRiderSalaryDocument: $e\n');
 }
 ```
 
@@ -4685,7 +5246,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get3rdPartyFireAndTheftQuote**
-> GetHeirs3YearsPremium200Response get3rdPartyFireAndTheftQuote(motorClass, motorValue)
+> GetEndowmentPremium200Response get3rdPartyFireAndTheftQuote(motorClass, motorValue)
 
 
 
@@ -4716,7 +5277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -4773,7 +5334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get3rdPartyPlusQuote**
-> GetHeirs3YearsPremium200Response get3rdPartyPlusQuote(motorClass, motorType)
+> GetEndowmentPremium200Response get3rdPartyPlusQuote(motorClass, motorType)
 
 
 
@@ -4804,7 +5365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -4951,7 +5512,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentBronzeDocumentPremium**
-> GetHeirs3YearsPremium200Response getAccidentBronzeDocumentPremium(documentId)
+> GetEndowmentPremium200Response getAccidentBronzeDocumentPremium(documentId)
 
 
 
@@ -4980,7 +5541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -4994,7 +5555,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentBronzeInterestPremium**
-> GetHeirs3YearsPremium200Response getAccidentBronzeInterestPremium(documentId, accidentId)
+> GetEndowmentPremium200Response getAccidentBronzeInterestPremium(documentId, accidentId)
 
 
 
@@ -5025,7 +5586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5082,7 +5643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentGoldDocumentPremium**
-> GetHeirs3YearsPremium200Response getAccidentGoldDocumentPremium(documentId)
+> GetEndowmentPremium200Response getAccidentGoldDocumentPremium(documentId)
 
 
 
@@ -5111,7 +5672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5125,7 +5686,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentGoldInterestPremium**
-> GetHeirs3YearsPremium200Response getAccidentGoldInterestPremium(documentId, accidentId)
+> GetEndowmentPremium200Response getAccidentGoldInterestPremium(documentId, accidentId)
 
 
 
@@ -5156,7 +5717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5256,7 +5817,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentPlatinumDocumentPremium**
-> GetHeirs3YearsPremium200Response getAccidentPlatinumDocumentPremium(documentId)
+> GetEndowmentPremium200Response getAccidentPlatinumDocumentPremium(documentId)
 
 
 
@@ -5285,7 +5846,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5299,7 +5860,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentPlatinumInterestPremium**
-> GetHeirs3YearsPremium200Response getAccidentPlatinumInterestPremium(documentId, accidentId)
+> GetEndowmentPremium200Response getAccidentPlatinumInterestPremium(documentId, accidentId)
 
 
 
@@ -5330,7 +5891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5387,7 +5948,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentSilverDocumentPremium**
-> GetHeirs3YearsPremium200Response getAccidentSilverDocumentPremium(documentId)
+> GetEndowmentPremium200Response getAccidentSilverDocumentPremium(documentId)
 
 
 
@@ -5416,7 +5977,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5430,7 +5991,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAccidentSilverInterestPremium**
-> GetHeirs3YearsPremium200Response getAccidentSilverInterestPremium(documentId, accidentId)
+> GetEndowmentPremium200Response getAccidentSilverInterestPremium(documentId, accidentId)
 
 
 
@@ -5461,7 +6022,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -5601,6 +6162,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getBeneficiaryShareFromEndowmentDocument**
+> BeneficiaryShare getBeneficiaryShareFromEndowmentDocument(documentId, beneficiaryId)
+
+
+
+Get beneficiary share of insured person for document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+
+try {
+    final response = api.getBeneficiaryShareFromEndowmentDocument(documentId, beneficiaryId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getBeneficiaryShareFromEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+
+### Return type
+
+[**BeneficiaryShare**](BeneficiaryShare.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getBeneficiaryShareFromHeirs3YearsDocument**
 > BeneficiaryShare getBeneficiaryShareFromHeirs3YearsDocument(documentId, beneficiaryId)
 
@@ -5711,6 +6317,51 @@ try {
     print(response);
 } on DioException catch (e) {
     print('Exception when calling DefaultApi->getBeneficiaryShareFromMyHeirsPlusDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **beneficiaryId** | **String**|  | 
+
+### Return type
+
+[**BeneficiaryShare**](BeneficiaryShare.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getBeneficiaryShareFromSalaryDocument**
+> BeneficiaryShare getBeneficiaryShareFromSalaryDocument(documentId, beneficiaryId)
+
+
+
+Get beneficiary share of insured person for document
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String beneficiaryId = e29a5ce0-a4b9-4ab2-85eb-355f01553d55; // String | 
+
+try {
+    final response = api.getBeneficiaryShareFromSalaryDocument(documentId, beneficiaryId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getBeneficiaryShareFromSalaryDocument: $e\n');
 }
 ```
 
@@ -5958,7 +6609,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComprehensiveDocumentPremium**
-> GetHeirs3YearsPremium200Response getComprehensiveDocumentPremium(documentId)
+> GetEndowmentPremium200Response getComprehensiveDocumentPremium(documentId)
 
 
 
@@ -5987,7 +6638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6001,7 +6652,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComprehensiveInterestPremium**
-> GetHeirs3YearsPremium200Response getComprehensiveInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getComprehensiveInterestPremium(documentId, motorId)
 
 
 
@@ -6032,7 +6683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6046,7 +6697,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComprehensivePlusQuote**
-> GetHeirs3YearsPremium200Response getComprehensivePlusQuote(motorClass, motorValue)
+> GetEndowmentPremium200Response getComprehensivePlusQuote(motorClass, motorValue)
 
 
 
@@ -6077,7 +6728,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6091,7 +6742,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getComprehensiveQuote**
-> GetHeirs3YearsPremium200Response getComprehensiveQuote(motorClass, motorValue)
+> GetEndowmentPremium200Response getComprehensiveQuote(motorClass, motorValue)
 
 
 
@@ -6122,7 +6773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6224,7 +6875,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getCouplePremium**
-> GetHeirs3YearsPremium200Response getCouplePremium(documentId)
+> GetEndowmentPremium200Response getCouplePremium(documentId)
 
 
 
@@ -6253,7 +6904,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6450,6 +7101,92 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getEndowmentDocument**
+> IndividualProtectionDocument getEndowmentDocument(documentId)
+
+
+
+Get term assurance with premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+
+try {
+    final response = api.getEndowmentDocument(documentId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+
+### Return type
+
+[**IndividualProtectionDocument**](IndividualProtectionDocument.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getEndowmentPremium**
+> GetEndowmentPremium200Response getEndowmentPremium(documentId)
+
+
+
+Get owner document premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+
+try {
+    final response = api.getEndowmentPremium(documentId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getEndowmentPremium: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+
+### Return type
+
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getHeirs25kDocument**
 > Document getHeirs25kDocument(documentId)
 
@@ -6494,7 +7231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs25kDocumentPremium**
-> GetHeirs3YearsPremium200Response getHeirs25kDocumentPremium(documentId)
+> GetEndowmentPremium200Response getHeirs25kDocumentPremium(documentId)
 
 
 
@@ -6523,7 +7260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6537,7 +7274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs25kInterestPremium**
-> GetHeirs3YearsPremium200Response getHeirs25kInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getHeirs25kInterestPremium(documentId, motorId)
 
 
 
@@ -6568,7 +7305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6582,7 +7319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs25kQuote**
-> GetHeirs3YearsPremium200Response getHeirs25kQuote()
+> GetEndowmentPremium200Response getHeirs25kQuote()
 
 
 
@@ -6607,7 +7344,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6664,7 +7401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs35kDocumentPremium**
-> GetHeirs3YearsPremium200Response getHeirs35kDocumentPremium(documentId)
+> GetEndowmentPremium200Response getHeirs35kDocumentPremium(documentId)
 
 
 
@@ -6693,7 +7430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6707,7 +7444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs35kInterestPremium**
-> GetHeirs3YearsPremium200Response getHeirs35kInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getHeirs35kInterestPremium(documentId, motorId)
 
 
 
@@ -6738,7 +7475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6752,7 +7489,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs35kQuote**
-> GetHeirs3YearsPremium200Response getHeirs35kQuote()
+> GetEndowmentPremium200Response getHeirs35kQuote()
 
 
 
@@ -6777,7 +7514,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -6834,7 +7571,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs3YearsPremium**
-> GetHeirs3YearsPremium200Response getHeirs3YearsPremium(documentId)
+> GetEndowmentPremium200Response getHeirs3YearsPremium(documentId)
 
 
 
@@ -6863,7 +7600,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7018,7 +7755,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs70kDocumentPremium**
-> GetHeirs3YearsPremium200Response getHeirs70kDocumentPremium(documentId)
+> GetEndowmentPremium200Response getHeirs70kDocumentPremium(documentId)
 
 
 
@@ -7047,7 +7784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7061,7 +7798,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs70kInterestPremium**
-> GetHeirs3YearsPremium200Response getHeirs70kInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getHeirs70kInterestPremium(documentId, motorId)
 
 
 
@@ -7092,7 +7829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7106,7 +7843,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHeirs70kQuote**
-> GetHeirs3YearsPremium200Response getHeirs70kQuote()
+> GetEndowmentPremium200Response getHeirs70kQuote()
 
 
 
@@ -7131,7 +7868,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7188,7 +7925,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHerMotorDocumentPremium**
-> GetHeirs3YearsPremium200Response getHerMotorDocumentPremium(documentId)
+> GetEndowmentPremium200Response getHerMotorDocumentPremium(documentId)
 
 
 
@@ -7217,7 +7954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7231,7 +7968,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHerMotorInterestPremium**
-> GetHeirs3YearsPremium200Response getHerMotorInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getHerMotorInterestPremium(documentId, motorId)
 
 
 
@@ -7262,7 +7999,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7276,7 +8013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getHerMotorQuote**
-> GetHeirs3YearsPremium200Response getHerMotorQuote(motorClass, motorValue)
+> GetEndowmentPremium200Response getHerMotorQuote(motorClass, motorValue)
 
 
 
@@ -7307,7 +8044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -7366,7 +8103,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getInsuredPersonById**
-> GetInsuredPersonById200Response getInsuredPersonById(personId)
+> InsuredPersonResponse getInsuredPersonById(personId)
 
 
 
@@ -7395,7 +8132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetInsuredPersonById200Response**](GetInsuredPersonById200Response.md)
+[**InsuredPersonResponse**](InsuredPersonResponse.md)
 
 ### Authorization
 
@@ -7409,7 +8146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getInsuredPersonsByLoggedInUser**
-> BuiltList<GetInsuredPersonsByLoggedInUser200ResponseInner> getInsuredPersonsByLoggedInUser()
+> BuiltList<InsuredPersonResponse> getInsuredPersonsByLoggedInUser()
 
 
 
@@ -7434,7 +8171,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;GetInsuredPersonsByLoggedInUser200ResponseInner&gt;**](GetInsuredPersonsByLoggedInUser200ResponseInner.md)
+[**BuiltList&lt;InsuredPersonResponse&gt;**](InsuredPersonResponse.md)
 
 ### Authorization
 
@@ -8058,7 +8795,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getMyHeirsPlusPremium**
-> GetHeirs3YearsPremium200Response getMyHeirsPlusPremium(documentId)
+> GetEndowmentPremium200Response getMyHeirsPlusPremium(documentId)
 
 
 
@@ -8087,7 +8824,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -8199,7 +8936,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getMyHeirsPremium**
-> GetHeirs3YearsPremium200Response getMyHeirsPremium(documentId)
+> GetEndowmentPremium200Response getMyHeirsPremium(documentId)
 
 
 
@@ -8228,7 +8965,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -8605,6 +9342,92 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getSalaryDocument**
+> IndividualSavingsDocument getSalaryDocument(documentId)
+
+
+
+Get term assurance with premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+
+try {
+    final response = api.getSalaryDocument(documentId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getSalaryDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+
+### Return type
+
+[**IndividualSavingsDocument**](IndividualSavingsDocument.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getSalaryPremium**
+> GetEndowmentPremium200Response getSalaryPremium(documentId)
+
+
+
+Get salary plus premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+
+try {
+    final response = api.getSalaryPremium(documentId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->getSalaryPremium: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+
+### Return type
+
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getSaveDocument**
 > IndividualSavingsDocument getSaveDocument(documentId)
 
@@ -8692,7 +9515,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSaveExtraPremium**
-> GetHeirs3YearsPremium200Response getSaveExtraPremium(documentId)
+> GetEndowmentPremium200Response getSaveExtraPremium(documentId)
 
 
 
@@ -8721,7 +9544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -8837,7 +9660,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getSavePremium**
-> GetHeirs3YearsPremium200Response getSavePremium(documentId)
+> GetEndowmentPremium200Response getSavePremium(documentId)
 
 
 
@@ -8866,7 +9689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9027,7 +9850,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyDocumentPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyDocumentPremium(documentId)
+> GetEndowmentPremium200Response getThirdPartyDocumentPremium(documentId)
 
 
 
@@ -9056,7 +9879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9070,7 +9893,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyFireAndTheftDocumentPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyFireAndTheftDocumentPremium(documentId)
+> GetEndowmentPremium200Response getThirdPartyFireAndTheftDocumentPremium(documentId)
 
 
 
@@ -9099,7 +9922,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9113,7 +9936,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyFireAndTheftInterestPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyFireAndTheftInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getThirdPartyFireAndTheftInterestPremium(documentId, motorId)
 
 
 
@@ -9144,7 +9967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9158,7 +9981,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyInterestPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getThirdPartyInterestPremium(documentId, motorId)
 
 
 
@@ -9189,7 +10012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9203,7 +10026,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyPlusDocumentPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyPlusDocumentPremium(documentId)
+> GetEndowmentPremium200Response getThirdPartyPlusDocumentPremium(documentId)
 
 
 
@@ -9232,7 +10055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9246,7 +10069,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getThirdPartyPlusInterestPremium**
-> GetHeirs3YearsPremium200Response getThirdPartyPlusInterestPremium(documentId, motorId)
+> GetEndowmentPremium200Response getThirdPartyPlusInterestPremium(documentId, motorId)
 
 
 
@@ -9277,7 +10100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9334,7 +10157,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getTriplePayPremium**
-> GetHeirs3YearsPremium200Response getTriplePayPremium(documentId)
+> GetEndowmentPremium200Response getTriplePayPremium(documentId)
 
 
 
@@ -9363,7 +10186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetHeirs3YearsPremium200Response**](GetHeirs3YearsPremium200Response.md)
+[**GetEndowmentPremium200Response**](GetEndowmentPremium200Response.md)
 
 ### Authorization
 
@@ -9506,7 +10329,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyDocument**
-> PayForSaveDocument200Response payFor3rdPartyDocument(documentId, payId)
+> PayForEndowmentDocument200Response payFor3rdPartyDocument(documentId, payId)
 
 
 
@@ -9537,7 +10360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9551,7 +10374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyFireAndTheftDocument**
-> PayForSaveDocument200Response payFor3rdPartyFireAndTheftDocument(documentId, payId)
+> PayForEndowmentDocument200Response payFor3rdPartyFireAndTheftDocument(documentId, payId)
 
 
 
@@ -9582,7 +10405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9596,7 +10419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyPlusDocument**
-> PayForSaveDocument200Response payFor3rdPartyPlusDocument(documentId, payId)
+> PayForEndowmentDocument200Response payFor3rdPartyPlusDocument(documentId, payId)
 
 
 
@@ -9627,7 +10450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9641,7 +10464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentBronzeDocument**
-> PayForSaveDocument200Response payForAccidentBronzeDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForAccidentBronzeDocument(documentId, payId)
 
 
 
@@ -9672,7 +10495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9686,7 +10509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentGoldDocument**
-> PayForSaveDocument200Response payForAccidentGoldDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForAccidentGoldDocument(documentId, payId)
 
 
 
@@ -9717,7 +10540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9731,7 +10554,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentPlatinumDocument**
-> PayForSaveDocument200Response payForAccidentPlatinumDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForAccidentPlatinumDocument(documentId, payId)
 
 
 
@@ -9762,7 +10585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9776,7 +10599,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentSilverDocument**
-> PayForSaveDocument200Response payForAccidentSilverDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForAccidentSilverDocument(documentId, payId)
 
 
 
@@ -9807,7 +10630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9821,7 +10644,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForComprehensiveDocument**
-> PayForSaveDocument200Response payForComprehensiveDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForComprehensiveDocument(documentId, payId)
 
 
 
@@ -9852,7 +10675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9866,7 +10689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForCoupleDocument**
-> PayForSaveDocument200Response payForCoupleDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForCoupleDocument(documentId, payId)
 
 
 
@@ -9897,7 +10720,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payForEndowmentDocument**
+> PayForEndowmentDocument200Response payForEndowmentDocument(documentId, payId)
+
+
+
+Pay for term assurance premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String payId = f1eacbc0-2e1b-40fe-8fdf-269f1a1d7fed; // String | 
+
+try {
+    final response = api.payForEndowmentDocument(documentId, payId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->payForEndowmentDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **payId** | **String**|  | 
+
+### Return type
+
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9911,7 +10779,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs25kDocument**
-> PayForSaveDocument200Response payForHeirs25kDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForHeirs25kDocument(documentId, payId)
 
 
 
@@ -9942,7 +10810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -9956,7 +10824,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs35kDocument**
-> PayForSaveDocument200Response payForHeirs35kDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForHeirs35kDocument(documentId, payId)
 
 
 
@@ -9987,7 +10855,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10001,7 +10869,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs3YearsDocument**
-> PayForSaveDocument200Response payForHeirs3YearsDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForHeirs3YearsDocument(documentId, payId)
 
 
 
@@ -10032,7 +10900,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10046,7 +10914,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs70kDocument**
-> PayForSaveDocument200Response payForHeirs70kDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForHeirs70kDocument(documentId, payId)
 
 
 
@@ -10077,7 +10945,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10091,7 +10959,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHerMotorDocument**
-> PayForSaveDocument200Response payForHerMotorDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForHerMotorDocument(documentId, payId)
 
 
 
@@ -10122,7 +10990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10136,7 +11004,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForMyHeirsDocument**
-> PayForSaveDocument200Response payForMyHeirsDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForMyHeirsDocument(documentId, payId)
 
 
 
@@ -10167,7 +11035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10181,7 +11049,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForMyHeirsPlusDocument**
-> PayForSaveDocument200Response payForMyHeirsPlusDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForMyHeirsPlusDocument(documentId, payId)
 
 
 
@@ -10212,7 +11080,52 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payForSalaryDocument**
+> PayForEndowmentDocument200Response payForSalaryDocument(documentId, payId)
+
+
+
+Pay for term assurance premium
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String payId = f1eacbc0-2e1b-40fe-8fdf-269f1a1d7fed; // String | 
+
+try {
+    final response = api.payForSalaryDocument(documentId, payId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->payForSalaryDocument: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **payId** | **String**|  | 
+
+### Return type
+
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10226,7 +11139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForSaveDocument**
-> PayForSaveDocument200Response payForSaveDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForSaveDocument(documentId, payId)
 
 
 
@@ -10257,7 +11170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10271,7 +11184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForSaveExtraDocument**
-> PayForSaveDocument200Response payForSaveExtraDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForSaveExtraDocument(documentId, payId)
 
 
 
@@ -10302,7 +11215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10316,7 +11229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForTriplePayDocument**
-> PayForSaveDocument200Response payForTriplePayDocument(documentId, payId)
+> PayForEndowmentDocument200Response payForTriplePayDocument(documentId, payId)
 
 
 
@@ -10347,7 +11260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForSaveDocument200Response**](PayForSaveDocument200Response.md)
+[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
 
 ### Authorization
 
@@ -10816,6 +11729,52 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **registerEndowmentPayment**
+> registerEndowmentPayment(documentId, payId, payEntry)
+
+
+
+Register Term Assurance Payment
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String payId = f1eacbc0-2e1b-40fe-8fdf-269f1a1d7fed; // String | 
+final PayEntry payEntry = ; // PayEntry | 
+
+try {
+    api.registerEndowmentPayment(documentId, payId, payEntry);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->registerEndowmentPayment: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **payId** | **String**|  | 
+ **payEntry** | [**PayEntry**](PayEntry.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **registerHeirs25kPayment**
 > registerHeirs25kPayment(documentId, payId, payEntry)
 
@@ -11138,6 +12097,52 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **registerSalaryPayment**
+> registerSalaryPayment(documentId, payId, payEntry)
+
+
+
+Register Term Assurance Payment
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+
+final api = Openapi().getDefaultApi();
+final String documentId = f453db02-6337-4797-922c-2fb836b3a146; // String | 
+final String payId = f1eacbc0-2e1b-40fe-8fdf-269f1a1d7fed; // String | 
+final PayEntry payEntry = ; // PayEntry | 
+
+try {
+    api.registerSalaryPayment(documentId, payId, payEntry);
+} on DioException catch (e) {
+    print('Exception when calling DefaultApi->registerSalaryPayment: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentId** | **String**|  | 
+ **payId** | **String**|  | 
+ **payEntry** | [**PayEntry**](PayEntry.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **registerSaveExtraPayment**
 > registerSaveExtraPayment(documentId, payId, payEntry)
 
@@ -11394,50 +12399,6 @@ void (empty response body)
 ### Authorization
 
 No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **updateCompanyCustomerAddress**
-> updateCompanyCustomerAddress(customerId, address)
-
-
-
-Add a company customer address
-
-### Example
-```dart
-import 'package:openapi/api.dart';
-
-final api = Openapi().getDefaultApi();
-final String customerId = e29a5ce0-a4b9-4ab2-85eb-355f01553d54; // String | 
-final Address address = ; // Address | 
-
-try {
-    api.updateCompanyCustomerAddress(customerId, address);
-} on DioException catch (e) {
-    print('Exception when calling DefaultApi->updateCompanyCustomerAddress: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customerId** | **String**|  | 
- **address** | [**Address**](Address.md)|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

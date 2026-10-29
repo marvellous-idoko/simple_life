@@ -67,9 +67,11 @@ All URIs are relative to *https://live-retail-api.heirsinsurance.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToCoupleDocument**](doc/DefaultApi.md#addbeneficiarysharetocoupledocument) | **PATCH** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToEndowmentDocument**](doc/DefaultApi.md#addbeneficiarysharetoendowmentdocument) | **PATCH** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToHeirs3YearsDocument**](doc/DefaultApi.md#addbeneficiarysharetoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToMyHeirsDocument**](doc/DefaultApi.md#addbeneficiarysharetomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToMyHeirsPlusDocument**](doc/DefaultApi.md#addbeneficiarysharetomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSalaryDocument**](doc/DefaultApi.md#addbeneficiarysharetosalarydocument) | **PATCH** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSaveDocument**](doc/DefaultApi.md#addbeneficiarysharetosavedocument) | **PATCH** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSaveExtraDocument**](doc/DefaultApi.md#addbeneficiarysharetosaveextradocument) | **PATCH** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToTriplePayDocument**](doc/DefaultApi.md#addbeneficiarysharetotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -82,6 +84,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToAccidentSilverDocument**](doc/DefaultApi.md#addcustomertoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToComprehensiveDocument**](doc/DefaultApi.md#addcustomertocomprehensivedocument) | **PATCH** /document/{documentId}/comprehensive | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToCoupleDocument**](doc/DefaultApi.md#addcustomertocoupledocument) | **PATCH** /document/{documentId}/couple | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToEndowmentDocument**](doc/DefaultApi.md#addcustomertoendowmentdocument) | **PATCH** /documents/{documentId}/endowment | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs25kDocument**](doc/DefaultApi.md#addcustomertoheirs25kdocument) | **PATCH** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs35kDocument**](doc/DefaultApi.md#addcustomertoheirs35kdocument) | **PATCH** /document/{documentId}/heirs-35k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs3YearsDocument**](doc/DefaultApi.md#addcustomertoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years | 
@@ -89,6 +92,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHerMotorDocument**](doc/DefaultApi.md#addcustomertohermotordocument) | **PATCH** /document/{documentId}/her-motor | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMyHeirsDocument**](doc/DefaultApi.md#addcustomertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMyHeirsPlusDocument**](doc/DefaultApi.md#addcustomertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSalaryDocument**](doc/DefaultApi.md#addcustomertosalarydocument) | **PATCH** /document/{documentId}/salary | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSaveDocument**](doc/DefaultApi.md#addcustomertosavedocument) | **PATCH** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSaveExtraDocument**](doc/DefaultApi.md#addcustomertosaveextradocument) | **PATCH** /document/{documentId}/save-extra | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTriplePayDocument**](doc/DefaultApi.md#addcustomertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay | 
@@ -108,8 +112,10 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentPlatinumDocument**](doc/DefaultApi.md#addpersontoaccidentplatinumdocument) | **PATCH** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentSilverDocument**](doc/DefaultApi.md#addpersontoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToCoupleDocument**](doc/DefaultApi.md#addridertocoupledocument) | **PATCH** /document/{documentId}/couple/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToEndowmentDocument**](doc/DefaultApi.md#addridertoendowmentdocument) | **PATCH** /document/{documentId}/endowment/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToMyHeirsDocument**](doc/DefaultApi.md#addridertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToMyHeirsPlusDocument**](doc/DefaultApi.md#addridertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToSalaryDocument**](doc/DefaultApi.md#addridertosalarydocument) | **PATCH** /document/{documentId}/salary/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToSaveExtraDocument**](doc/DefaultApi.md#addridertosaveextradocument) | **PATCH** /document/{documentId}/save-extra/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToTriplePayDocument**](doc/DefaultApi.md#addridertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**create3rdPartyDocument**](doc/DefaultApi.md#create3rdpartydocument) | **POST** /document/{documentId}/3rd-party | 
@@ -124,6 +130,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**createComprehensiveDocument**](doc/DefaultApi.md#createcomprehensivedocument) | **POST** /document/{documentId}/comprehensive | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createCoupleDocument**](doc/DefaultApi.md#createcoupledocument) | **POST** /document/{documentId}/couple | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createCustomer**](doc/DefaultApi.md#createcustomer) | **POST** /customer/{customerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createEndowmentDocument**](doc/DefaultApi.md#createendowmentdocument) | **POST** /documents/{documentId}/endowment | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs25kDocument**](doc/DefaultApi.md#createheirs25kdocument) | **POST** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs35kDocument**](doc/DefaultApi.md#createheirs35kdocument) | **POST** /document/{documentId}/heirs-35k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs3YearsDocument**](doc/DefaultApi.md#createheirs3yearsdocument) | **POST** /document/{documentId}/heirs3years | 
@@ -135,13 +142,16 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**createMyHeirsPlusDocument**](doc/DefaultApi.md#createmyheirsplusdocument) | **POST** /document/{documentId}/my-heirs-plus | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createOTP**](doc/DefaultApi.md#createotp) | **POST** /user/otp | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createPassword**](doc/DefaultApi.md#createpassword) | **POST** /user/password | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createSalaryDocument**](doc/DefaultApi.md#createsalarydocument) | **POST** /document/{documentId}/salary | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createSaveDocument**](doc/DefaultApi.md#createsavedocument) | **POST** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createSaveExtraDocument**](doc/DefaultApi.md#createsaveextradocument) | **POST** /document/{documentId}/save-extra | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createTriplePayDocument**](doc/DefaultApi.md#createtriplepaydocument) | **POST** /document/{documentId}/triple-pay | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromCoupleDocument**](doc/DefaultApi.md#deletebeneficiarysharefromcoupledocument) | **DELETE** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromEndowmentDocument**](doc/DefaultApi.md#deletebeneficiarysharefromendowmentdocument) | **DELETE** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromHeirs3YearsDocument**](doc/DefaultApi.md#deletebeneficiarysharefromheirs3yearsdocument) | **DELETE** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromMyHeirsDocument**](doc/DefaultApi.md#deletebeneficiarysharefrommyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromMyHeirsPlusDocument**](doc/DefaultApi.md#deletebeneficiarysharefrommyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSalaryDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsalarydocument) | **DELETE** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSaveDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsavedocument) | **DELETE** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSaveExtraDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsaveextradocument) | **DELETE** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromTriplePayDocument**](doc/DefaultApi.md#deletebeneficiarysharefromtriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -159,8 +169,10 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**deletePersonFromAccidentPlatinumDocument**](doc/DefaultApi.md#deletepersonfromaccidentplatinumdocument) | **DELETE** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deletePersonFromAccidentSilverDocument**](doc/DefaultApi.md#deletepersonfromaccidentsilverdocument) | **DELETE** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderCoupleDocument**](doc/DefaultApi.md#deleteridercoupledocument) | **DELETE** /document/{documentId}/couple/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderEndowmentDocument**](doc/DefaultApi.md#deleteriderendowmentdocument) | **DELETE** /document/{documentId}/endowment/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderMyHeirsDocument**](doc/DefaultApi.md#deleteridermyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderMyHeirsPlusDocument**](doc/DefaultApi.md#deleteridermyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderSalaryDocument**](doc/DefaultApi.md#deleteridersalarydocument) | **DELETE** /document/{documentId}/salary/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderSaveExtraDocument**](doc/DefaultApi.md#deleteridersaveextradocument) | **DELETE** /document/{documentId}/save-extra/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderTriplePayDocument**](doc/DefaultApi.md#deleteridertriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**get3rdPartyDocument**](doc/DefaultApi.md#get3rdpartydocument) | **GET** /document/{documentId}/3rd-party | 
@@ -186,9 +198,11 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiariesByLoggedInUser**](doc/DefaultApi.md#getbeneficiariesbyloggedinuser) | **GET** /beneficiaries | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryById**](doc/DefaultApi.md#getbeneficiarybyid) | **GET** /beneficiary/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromCoupleDocument**](doc/DefaultApi.md#getbeneficiarysharefromcoupledocument) | **GET** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromEndowmentDocument**](doc/DefaultApi.md#getbeneficiarysharefromendowmentdocument) | **GET** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromHeirs3YearsDocument**](doc/DefaultApi.md#getbeneficiarysharefromheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromMyHeirsDocument**](doc/DefaultApi.md#getbeneficiarysharefrommyheirsdocument) | **GET** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromMyHeirsPlusDocument**](doc/DefaultApi.md#getbeneficiarysharefrommyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSalaryDocument**](doc/DefaultApi.md#getbeneficiarysharefromsalarydocument) | **GET** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSaveDocument**](doc/DefaultApi.md#getbeneficiarysharefromsavedocument) | **GET** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSaveExtraDocument**](doc/DefaultApi.md#getbeneficiarysharefromsaveextradocument) | **GET** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromTriplePayDocument**](doc/DefaultApi.md#getbeneficiarysharefromtriplepaydocument) | **GET** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
@@ -205,6 +219,8 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getCoupleSumAssuredQuote**](doc/DefaultApi.md#getcouplesumassuredquote) | **GET** /couple/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCustomerById**](doc/DefaultApi.md#getcustomerbyid) | **GET** /customer/{customerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCustomersByLoggedInUser**](doc/DefaultApi.md#getcustomersbyloggedinuser) | **GET** /customers | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getEndowmentDocument**](doc/DefaultApi.md#getendowmentdocument) | **GET** /documents/{documentId}/endowment | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getEndowmentPremium**](doc/DefaultApi.md#getendowmentpremium) | **GET** /document/{documentId}/endowment/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kDocument**](doc/DefaultApi.md#getheirs25kdocument) | **GET** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kDocumentPremium**](doc/DefaultApi.md#getheirs25kdocumentpremium) | **GET** /document/{documentId}/heirs-25k/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kInterestPremium**](doc/DefaultApi.md#getheirs25kinterestpremium) | **GET** /document/{documentId}/heirs-25k/{motorId}/premium | 
@@ -254,6 +270,8 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentPlatinumDocument**](doc/DefaultApi.md#getpersonfromaccidentplatinumdocument) | **GET** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentSilverDocument**](doc/DefaultApi.md#getpersonfromaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPolicies**](doc/DefaultApi.md#getpolicies) | **GET** /policy | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSalaryDocument**](doc/DefaultApi.md#getsalarydocument) | **GET** /document/{documentId}/salary | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSalaryPremium**](doc/DefaultApi.md#getsalarypremium) | **GET** /document/{documentId}/salary/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveDocument**](doc/DefaultApi.md#getsavedocument) | **GET** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveExtraDocument**](doc/DefaultApi.md#getsaveextradocument) | **GET** /document/{documentId}/save-extra | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveExtraPremium**](doc/DefaultApi.md#getsaveextrapremium) | **GET** /document/{documentId}/save-extra/premium | 
@@ -283,6 +301,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**payForAccidentSilverDocument**](doc/DefaultApi.md#payforaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForComprehensiveDocument**](doc/DefaultApi.md#payforcomprehensivedocument) | **GET** /document/{documentId}/comprehensive/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForCoupleDocument**](doc/DefaultApi.md#payforcoupledocument) | **GET** /document/{documentId}/couple/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForEndowmentDocument**](doc/DefaultApi.md#payforendowmentdocument) | **GET** /document/{documentId}/endowment/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs25kDocument**](doc/DefaultApi.md#payforheirs25kdocument) | **GET** /document/{documentId}/heirs-25k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs35kDocument**](doc/DefaultApi.md#payforheirs35kdocument) | **GET** /document/{documentId}/heirs-35k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs3YearsDocument**](doc/DefaultApi.md#payforheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/pay/{payId} | 
@@ -290,6 +309,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHerMotorDocument**](doc/DefaultApi.md#payforhermotordocument) | **GET** /document/{documentId}/her-motor/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForMyHeirsDocument**](doc/DefaultApi.md#payformyheirsdocument) | **GET** /document/{documentId}/my-heirs/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForMyHeirsPlusDocument**](doc/DefaultApi.md#payformyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForSalaryDocument**](doc/DefaultApi.md#payforsalarydocument) | **GET** /document/{documentId}/salary/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForSaveDocument**](doc/DefaultApi.md#payforsavedocument) | **GET** /document/{documentId}/save/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForSaveExtraDocument**](doc/DefaultApi.md#payforsaveextradocument) | **GET** /document/{documentId}/save-extra/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForTriplePayDocument**](doc/DefaultApi.md#payfortriplepaydocument) | **GET** /document/{documentId}/triple-pay/pay/{payId} | 
@@ -303,6 +323,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**registerAccidentSilverPayment**](doc/DefaultApi.md#registeraccidentsilverpayment) | **POST** /document/{documentId}/personal-accident-silver/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerComprehensivePayment**](doc/DefaultApi.md#registercomprehensivepayment) | **POST** /document/{documentId}/comprehensive/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerCouplePayment**](doc/DefaultApi.md#registercouplepayment) | **POST** /document/{documentId}/couple/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerEndowmentPayment**](doc/DefaultApi.md#registerendowmentpayment) | **POST** /document/{documentId}/endowment/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs25kPayment**](doc/DefaultApi.md#registerheirs25kpayment) | **POST** /document/{documentId}/heirs-25k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs35kPayment**](doc/DefaultApi.md#registerheirs35kpayment) | **POST** /document/{documentId}/heirs-35k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs3YearsPayment**](doc/DefaultApi.md#registerheirs3yearspayment) | **POST** /document/{documentId}/heirs3years/pay/{payId} | 
@@ -310,13 +331,13 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHerMotorPayment**](doc/DefaultApi.md#registerhermotorpayment) | **POST** /document/{documentId}/her-motor/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerMyHeirsPayment**](doc/DefaultApi.md#registermyheirspayment) | **POST** /document/{documentId}/my-heirs/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerMyHeirsPlusPayment**](doc/DefaultApi.md#registermyheirspluspayment) | **POST** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerSalaryPayment**](doc/DefaultApi.md#registersalarypayment) | **POST** /document/{documentId}/salary/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerSaveExtraPayment**](doc/DefaultApi.md#registersaveextrapayment) | **POST** /document/{documentId}/save-extra/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerSavePayment**](doc/DefaultApi.md#registersavepayment) | **POST** /document/{documentId}/save/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerTriplePayPayment**](doc/DefaultApi.md#registertriplepaypayment) | **POST** /document/{documentId}/triple-pay/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerUserWithoutPassword**](doc/DefaultApi.md#registeruserwithoutpassword) | **POST** /user/register | 
 [*DefaultApi*](doc/DefaultApi.md) | [**resetOtp**](doc/DefaultApi.md#resetotp) | **POST** /user/reset | 
 [*DefaultApi*](doc/DefaultApi.md) | [**signUpUser**](doc/DefaultApi.md#signupuser) | **POST** /user/signup | 
-[*DefaultApi*](doc/DefaultApi.md) | [**updateCompanyCustomerAddress**](doc/DefaultApi.md#updatecompanycustomeraddress) | **PATCH** /company-customer/{customerId}/address | 
 [*DefaultApi*](doc/DefaultApi.md) | [**updateCustomer**](doc/DefaultApi.md#updatecustomer) | **PATCH** /customer/{customerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**updateCustomerAddress**](doc/DefaultApi.md#updatecustomeraddress) | **PATCH** /customer/{customerId}/address | 
 [*DefaultApi*](doc/DefaultApi.md) | [**updateCustomerIdCard**](doc/DefaultApi.md#updatecustomeridcard) | **PATCH** /customer/{customerId}/id-card | 
@@ -339,6 +360,7 @@ Class | Method | HTTP request | Description
 
  - [AccidentPerson](doc/AccidentPerson.md)
  - [AccountStatementPremium](doc/AccountStatementPremium.md)
+ - [AddLifeEntryToCoupleDocumentRequest](doc/AddLifeEntryToCoupleDocumentRequest.md)
  - [AddMotorTo3rdPartyDocumentRequest](doc/AddMotorTo3rdPartyDocumentRequest.md)
  - [Address](doc/Address.md)
  - [Agent](doc/Agent.md)
@@ -380,7 +402,6 @@ Class | Method | HTTP request | Description
  - [CompanyPartner](doc/CompanyPartner.md)
  - [Create3rdPartyDocumentRequest](doc/Create3rdPartyDocumentRequest.md)
  - [CreatePasswordRequest](doc/CreatePasswordRequest.md)
- - [CreateSaveDocumentRequest](doc/CreateSaveDocumentRequest.md)
  - [Customer](doc/Customer.md)
  - [CustomerIDVerification](doc/CustomerIDVerification.md)
  - [CustomerIDVerificationData](doc/CustomerIDVerificationData.md)
@@ -400,9 +421,7 @@ Class | Method | HTTP request | Description
  - [FlutterwaveEvent](doc/FlutterwaveEvent.md)
  - [Get3rdPartyQuoteOptions200Response](doc/Get3rdPartyQuoteOptions200Response.md)
  - [Get3rdPartyQuoteOptions200ResponsePremium](doc/Get3rdPartyQuoteOptions200ResponsePremium.md)
- - [GetHeirs3YearsPremium200Response](doc/GetHeirs3YearsPremium200Response.md)
- - [GetInsuredPersonById200Response](doc/GetInsuredPersonById200Response.md)
- - [GetInsuredPersonsByLoggedInUser200ResponseInner](doc/GetInsuredPersonsByLoggedInUser200ResponseInner.md)
+ - [GetEndowmentPremium200Response](doc/GetEndowmentPremium200Response.md)
  - [GetLgas200ResponseInner](doc/GetLgas200ResponseInner.md)
  - [GetLoggedInUser200Response](doc/GetLoggedInUser200Response.md)
  - [GetMotorFrom3rdPartyDocument200Response](doc/GetMotorFrom3rdPartyDocument200Response.md)
@@ -419,6 +438,7 @@ Class | Method | HTTP request | Description
  - [IndividualProtectionDocument](doc/IndividualProtectionDocument.md)
  - [IndividualProtectionDocumentBasic](doc/IndividualProtectionDocumentBasic.md)
  - [IndividualSavingsDocument](doc/IndividualSavingsDocument.md)
+ - [InsuredPersonResponse](doc/InsuredPersonResponse.md)
  - [InterestRate](doc/InterestRate.md)
  - [IsPasswordLogin200Response](doc/IsPasswordLogin200Response.md)
  - [LifePremium](doc/LifePremium.md)
@@ -438,7 +458,7 @@ Class | Method | HTTP request | Description
  - [PartnerPolicySubmissionBeneficiaryInner](doc/PartnerPolicySubmissionBeneficiaryInner.md)
  - [PartnerType](doc/PartnerType.md)
  - [PayEntry](doc/PayEntry.md)
- - [PayForSaveDocument200Response](doc/PayForSaveDocument200Response.md)
+ - [PayForEndowmentDocument200Response](doc/PayForEndowmentDocument200Response.md)
  - [PaystackEvent](doc/PaystackEvent.md)
  - [PaystackMandate](doc/PaystackMandate.md)
  - [PolicyInfo](doc/PolicyInfo.md)

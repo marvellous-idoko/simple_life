@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:simple_life/Bloc__state/general_bloc.dart';
+import 'package:simple_life/colors/app_colors.dart';
 
 class MyPoliciesScreen extends StatefulWidget {
   const MyPoliciesScreen({super.key});
@@ -12,7 +13,7 @@ class MyPoliciesScreen extends StatefulWidget {
 class _MyPoliciesScreenState extends State<MyPoliciesScreen> {
   static const _brandRed = Color(0xFFFF241B);
   static const _textColor = Color(0xFF55565A);
-  static const _mutedColor = Color(0xFF858B98);
+  static const _mutedColor = AppColors.mutedColor;
   static const _pageColor = Color(0xFFFDFDFE);
 
   final _searchController = TextEditingController();

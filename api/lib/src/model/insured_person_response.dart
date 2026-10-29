@@ -10,9 +10,9 @@ import 'package:openapi/src/model/date.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'get_insured_person_by_id200_response.g.dart';
+part 'insured_person_response.g.dart';
 
-/// GetInsuredPersonById200Response
+/// InsuredPersonResponse
 ///
 /// Properties:
 /// * [firstName] 
@@ -21,35 +21,58 @@ part 'get_insured_person_by_id200_response.g.dart';
 /// * [gender] 
 /// * [phone] 
 /// * [occupation] 
+/// * [personId] 
+/// * [bvn] 
+/// * [photoUrl] 
+/// * [signatureUrl] 
 /// * [health] 
 @BuiltValue()
-abstract class GetInsuredPersonById200Response implements CustomerPersonal, Built<GetInsuredPersonById200Response, GetInsuredPersonById200ResponseBuilder> {
+abstract class InsuredPersonResponse implements CustomerPersonal, Built<InsuredPersonResponse, InsuredPersonResponseBuilder> {
+  @BuiltValueField(wireName: r'photoUrl')
+  String? get photoUrl;
+
+  @BuiltValueField(wireName: r'signatureUrl')
+  String? get signatureUrl;
+
   @BuiltValueField(wireName: r'health')
   HealthForm? get health;
 
-  GetInsuredPersonById200Response._();
+  @BuiltValueField(wireName: r'personId')
+  String? get personId;
 
-  factory GetInsuredPersonById200Response([void updates(GetInsuredPersonById200ResponseBuilder b)]) = _$GetInsuredPersonById200Response;
+  @BuiltValueField(wireName: r'bvn')
+  String? get bvn;
+
+  InsuredPersonResponse._();
+
+  factory InsuredPersonResponse([void updates(InsuredPersonResponseBuilder b)]) = _$InsuredPersonResponse;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(GetInsuredPersonById200ResponseBuilder b) => b;
+  static void _defaults(InsuredPersonResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<GetInsuredPersonById200Response> get serializer => _$GetInsuredPersonById200ResponseSerializer();
+  static Serializer<InsuredPersonResponse> get serializer => _$InsuredPersonResponseSerializer();
 }
 
-class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer<GetInsuredPersonById200Response> {
+class _$InsuredPersonResponseSerializer implements PrimitiveSerializer<InsuredPersonResponse> {
   @override
-  final Iterable<Type> types = const [GetInsuredPersonById200Response, _$GetInsuredPersonById200Response];
+  final Iterable<Type> types = const [InsuredPersonResponse, _$InsuredPersonResponse];
 
   @override
-  final String wireName = r'GetInsuredPersonById200Response';
+  final String wireName = r'InsuredPersonResponse';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    GetInsuredPersonById200Response object, {
+    InsuredPersonResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.photoUrl != null) {
+      yield r'photoUrl';
+      yield serializers.serialize(
+        object.photoUrl,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.firstName != null) {
       yield r'firstName';
       yield serializers.serialize(
@@ -85,11 +108,25 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
         specifiedType: const FullType(String),
       );
     }
+    if (object.signatureUrl != null) {
+      yield r'signatureUrl';
+      yield serializers.serialize(
+        object.signatureUrl,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.health != null) {
       yield r'health';
       yield serializers.serialize(
         object.health,
         specifiedType: const FullType(HealthForm),
+      );
+    }
+    if (object.personId != null) {
+      yield r'personId';
+      yield serializers.serialize(
+        object.personId,
+        specifiedType: const FullType(String),
       );
     }
     if (object.dateOfBirth != null) {
@@ -99,12 +136,19 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
         specifiedType: const FullType(Date),
       );
     }
+    if (object.bvn != null) {
+      yield r'bvn';
+      yield serializers.serialize(
+        object.bvn,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    GetInsuredPersonById200Response object, {
+    InsuredPersonResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -115,13 +159,21 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required GetInsuredPersonById200ResponseBuilder result,
+    required InsuredPersonResponseBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'photoUrl':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.photoUrl = valueDes;
+          break;
         case r'firstName':
           final valueDes = serializers.deserialize(
             value,
@@ -162,13 +214,29 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
           if (valueDes == null) continue;
           result.phone = valueDes;
           break;
+        case r'signatureUrl':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.signatureUrl = valueDes;
+          break;
         case r'health':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(HealthForm),
           ) as HealthForm?;
           if (valueDes == null) continue;
-          result.health = valueDes;
+          result.health.replace(valueDes);
+          break;
+        case r'personId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.personId = valueDes;
           break;
         case r'dateOfBirth':
           final valueDes = serializers.deserialize(
@@ -177,6 +245,14 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
           ) as Date?;
           if (valueDes == null) continue;
           result.dateOfBirth = valueDes;
+          break;
+        case r'bvn':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.bvn = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -187,12 +263,12 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
   }
 
   @override
-  GetInsuredPersonById200Response deserialize(
+  InsuredPersonResponse deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = GetInsuredPersonById200ResponseBuilder();
+    final result = InsuredPersonResponseBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -208,18 +284,18 @@ class _$GetInsuredPersonById200ResponseSerializer implements PrimitiveSerializer
 }
 
 
-class GetInsuredPersonById200ResponseGenderEnum extends EnumClass {
+class InsuredPersonResponseGenderEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'male')
-  static const GetInsuredPersonById200ResponseGenderEnum male = _$getInsuredPersonById200ResponseGenderEnum_male;
+  static const InsuredPersonResponseGenderEnum male = _$insuredPersonResponseGenderEnum_male;
   @BuiltValueEnumConst(wireName: r'female')
-  static const GetInsuredPersonById200ResponseGenderEnum female = _$getInsuredPersonById200ResponseGenderEnum_female;
+  static const InsuredPersonResponseGenderEnum female = _$insuredPersonResponseGenderEnum_female;
 
-  static Serializer<GetInsuredPersonById200ResponseGenderEnum> get serializer => _$getInsuredPersonById200ResponseGenderEnumSerializer;
+  static Serializer<InsuredPersonResponseGenderEnum> get serializer => _$insuredPersonResponseGenderEnumSerializer;
 
-  const GetInsuredPersonById200ResponseGenderEnum._(String name): super(name);
+  const InsuredPersonResponseGenderEnum._(String name): super(name);
 
-  static BuiltSet<GetInsuredPersonById200ResponseGenderEnum> get values => _$getInsuredPersonById200ResponseGenderEnumValues;
-  static GetInsuredPersonById200ResponseGenderEnum valueOf(String name) => _$getInsuredPersonById200ResponseGenderEnumValueOf(name);
+  static BuiltSet<InsuredPersonResponseGenderEnum> get values => _$insuredPersonResponseGenderEnumValues;
+  static InsuredPersonResponseGenderEnum valueOf(String name) => _$insuredPersonResponseGenderEnumValueOf(name);
 }
 

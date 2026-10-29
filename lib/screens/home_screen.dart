@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:simple_life/Bloc__state/general_bloc.dart';
+import 'package:simple_life/colors/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  static const _brandRed = Color(0xFFF22B22);
-  static const _textColor = Color(0xFF4F5055);
-  static const _mutedColor = Color(0xFF777D8B);
-  static const _pageColor = Color(0xFFFCFCFD);
+  static const _brandRed = AppColors.primary;
+  static const _textColor = AppColors.textColor;
+  static const _mutedColor = AppColors.mutedColor;
+  static const _pageColor = AppColors.backgroundColor;
 
   @override
   Widget build(BuildContext context) {

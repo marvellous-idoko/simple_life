@@ -1,6 +1,6 @@
 import 'package:openapi/openapi.dart';
-import 'package:dio/dio.dart';
-import 'package:simple_life/interceptors/AuthInterceptor.dart'; // <-- MAKE SURE THIS IMPORT IS PRESENT
+import 'package:simple_life/interceptors/AuthInterceptor.dart';
+import 'package:simple_life/interceptors/HealthResponseInterceptor.dart'; // <-- MAKE SURE THIS IMPORT IS PRESENT
 class ApiClient {
   late final Openapi _client;
   late final DefaultApi _defaultApi;
@@ -10,7 +10,7 @@ class ApiClient {
   ApiClient({
     String baseUrl = 'https://retail-api.staging.heirslifeassurance.com',
   }) {
-    _client = Openapi(basePathOverride: baseUrl, interceptors:[AuthInterceptor()]);
+    _client = Openapi(basePathOverride: baseUrl, interceptors:[AuthInterceptor(), HealthResponseInterceptor()]);
     _defaultApi = _client.getDefaultApi();
         // final baseDio = Dio();
         // baseDio.interceptors.add(AuthInterceptor());

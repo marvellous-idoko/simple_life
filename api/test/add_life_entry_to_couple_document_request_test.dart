@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for CreateSaveDocumentRequest
+// tests for AddLifeEntryToCoupleDocumentRequest
 void main() {
-  final instance = CreateSaveDocumentRequestBuilder();
+  final instance = AddLifeEntryToCoupleDocumentRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(CreateSaveDocumentRequest, () {
+  group(AddLifeEntryToCoupleDocumentRequest, () {
     // String personId
     test('to test the property `personId`', () async {
       // TODO

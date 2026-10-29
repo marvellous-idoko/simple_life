@@ -70,8 +70,6 @@ class _SignInWithPasswordScreenState extends State<SignInWithPasswordScreen> {
         state.message['identity'] as String,
         _passwordController.text.trim(),
       );
-      print(_passwordController.text.trim());
-      print(state.message['identity'] as String);
 
       if (response == null) {
         throw Exception('Unable to verify your password');

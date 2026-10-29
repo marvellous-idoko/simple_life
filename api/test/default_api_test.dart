@@ -16,6 +16,13 @@ void main() {
 
     // Add beneficiary share to document
     //
+    //Future addBeneficiaryShareToEndowmentDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
     //Future addBeneficiaryShareToHeirs3YearsDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
     test('test addBeneficiaryShareToHeirs3YearsDocument', () async {
       // TODO
@@ -32,6 +39,13 @@ void main() {
     //
     //Future addBeneficiaryShareToMyHeirsPlusDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
     test('test addBeneficiaryShareToMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToSalaryDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToSalaryDocument', () async {
       // TODO
     });
 
@@ -121,6 +135,13 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToEndowmentDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToHeirs25kDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToHeirs25kDocument', () async {
       // TODO
@@ -170,6 +191,13 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToSalaryDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToSalaryDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToSaveDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToSaveDocument', () async {
       // TODO
@@ -205,7 +233,7 @@ void main() {
 
     // Add another life etry to document
     //
-    //Future addLifeEntryToCoupleDocument(String documentId, { CreateSaveDocumentRequest createSaveDocumentRequest }) async
+    //Future addLifeEntryToCoupleDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test addLifeEntryToCoupleDocument', () async {
       // TODO
     });
@@ -303,6 +331,13 @@ void main() {
 
     // Add rider to document
     //
+    //Future addRiderToEndowmentDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
     //Future addRiderToMyHeirsDocument(String documentId, String riderCode, { Rider rider }) async
     test('test addRiderToMyHeirsDocument', () async {
       // TODO
@@ -312,6 +347,13 @@ void main() {
     //
     //Future addRiderToMyHeirsPlusDocument(String documentId, String riderCode, { Rider rider }) async
     test('test addRiderToMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToSalaryDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToSalaryDocument', () async {
       // TODO
     });
 
@@ -401,7 +443,7 @@ void main() {
 
     // Create Term assurance document
     //
-    //Future createCoupleDocument(String documentId, { CreateSaveDocumentRequest createSaveDocumentRequest }) async
+    //Future createCoupleDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test createCoupleDocument', () async {
       // TODO
     });
@@ -410,6 +452,13 @@ void main() {
     //
     //Future createCustomer(String customerId, { CustomerPersonal customerPersonal }) async
     test('test createCustomer', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createEndowmentDocument(String documentId, { DeathCover deathCover }) async
+    test('test createEndowmentDocument', () async {
       // TODO
     });
 
@@ -464,7 +513,7 @@ void main() {
 
     // Create Term assurance document
     //
-    //Future createMyHeirsDocument(String documentId, { CreateSaveDocumentRequest createSaveDocumentRequest }) async
+    //Future createMyHeirsDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test createMyHeirsDocument', () async {
       // TODO
     });
@@ -492,14 +541,21 @@ void main() {
 
     // Create Term assurance document
     //
-    //Future createSaveDocument(String documentId, { CreateSaveDocumentRequest createSaveDocumentRequest }) async
+    //Future createSalaryDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
+    test('test createSalaryDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createSaveDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test createSaveDocument', () async {
       // TODO
     });
 
     // Create Term assurance document
     //
-    //Future createSaveExtraDocument(String documentId, { CreateSaveDocumentRequest createSaveDocumentRequest }) async
+    //Future createSaveExtraDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test createSaveExtraDocument', () async {
       // TODO
     });
@@ -515,6 +571,13 @@ void main() {
     //
     //Future deleteBeneficiaryShareFromCoupleDocument(String documentId, String beneficiaryId) async
     test('test deleteBeneficiaryShareFromCoupleDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromEndowmentDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromEndowmentDocument', () async {
       // TODO
     });
 
@@ -536,6 +599,13 @@ void main() {
     //
     //Future deleteBeneficiaryShareFromMyHeirsPlusDocument(String documentId, String beneficiaryId) async
     test('test deleteBeneficiaryShareFromMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromSalaryDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromSalaryDocument', () async {
       // TODO
     });
 
@@ -660,6 +730,13 @@ void main() {
 
     // Delete rider from document
     //
+    //Future deleteRiderEndowmentDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
     //Future deleteRiderMyHeirsDocument(String documentId, String riderCode, { Rider rider }) async
     test('test deleteRiderMyHeirsDocument', () async {
       // TODO
@@ -669,6 +746,13 @@ void main() {
     //
     //Future deleteRiderMyHeirsPlusDocument(String documentId, String riderCode, { Rider rider }) async
     test('test deleteRiderMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderSalaryDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderSalaryDocument', () async {
       // TODO
     });
 
@@ -702,7 +786,7 @@ void main() {
 
     // Get Quotes for 3rd party fire and theft by class and value
     //
-    //Future<GetHeirs3YearsPremium200Response> get3rdPartyFireAndTheftQuote(String motorClass, num motorValue) async
+    //Future<GetEndowmentPremium200Response> get3rdPartyFireAndTheftQuote(String motorClass, num motorValue) async
     test('test get3rdPartyFireAndTheftQuote', () async {
       // TODO
     });
@@ -716,7 +800,7 @@ void main() {
 
     // Get Quotes for 3rd party plus
     //
-    //Future<GetHeirs3YearsPremium200Response> get3rdPartyPlusQuote(String motorClass, String motorType) async
+    //Future<GetEndowmentPremium200Response> get3rdPartyPlusQuote(String motorClass, String motorType) async
     test('test get3rdPartyPlusQuote', () async {
       // TODO
     });
@@ -744,14 +828,14 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentBronzeDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentBronzeDocumentPremium(String documentId) async
     test('test getAccidentBronzeDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentBronzeInterestPremium(String documentId, String accidentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentBronzeInterestPremium(String documentId, String accidentId) async
     test('test getAccidentBronzeInterestPremium', () async {
       // TODO
     });
@@ -765,14 +849,14 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentGoldDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentGoldDocumentPremium(String documentId) async
     test('test getAccidentGoldDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentGoldInterestPremium(String documentId, String accidentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentGoldInterestPremium(String documentId, String accidentId) async
     test('test getAccidentGoldInterestPremium', () async {
       // TODO
     });
@@ -793,14 +877,14 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentPlatinumDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentPlatinumDocumentPremium(String documentId) async
     test('test getAccidentPlatinumDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentPlatinumInterestPremium(String documentId, String accidentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentPlatinumInterestPremium(String documentId, String accidentId) async
     test('test getAccidentPlatinumInterestPremium', () async {
       // TODO
     });
@@ -814,14 +898,14 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentSilverDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentSilverDocumentPremium(String documentId) async
     test('test getAccidentSilverDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getAccidentSilverInterestPremium(String documentId, String accidentId) async
+    //Future<GetEndowmentPremium200Response> getAccidentSilverInterestPremium(String documentId, String accidentId) async
     test('test getAccidentSilverInterestPremium', () async {
       // TODO
     });
@@ -849,6 +933,13 @@ void main() {
 
     // Get beneficiary share of insured person for document
     //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromEndowmentDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
     //Future<BeneficiaryShare> getBeneficiaryShareFromHeirs3YearsDocument(String documentId, String beneficiaryId) async
     test('test getBeneficiaryShareFromHeirs3YearsDocument', () async {
       // TODO
@@ -865,6 +956,13 @@ void main() {
     //
     //Future<BeneficiaryShare> getBeneficiaryShareFromMyHeirsPlusDocument(String documentId, String beneficiaryId) async
     test('test getBeneficiaryShareFromMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromSalaryDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromSalaryDocument', () async {
       // TODO
     });
 
@@ -905,28 +1003,28 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getComprehensiveDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getComprehensiveDocumentPremium(String documentId) async
     test('test getComprehensiveDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getComprehensiveInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getComprehensiveInterestPremium(String documentId, String motorId) async
     test('test getComprehensiveInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive Plus by class and value
     //
-    //Future<GetHeirs3YearsPremium200Response> getComprehensivePlusQuote(String motorClass, num motorValue) async
+    //Future<GetEndowmentPremium200Response> getComprehensivePlusQuote(String motorClass, num motorValue) async
     test('test getComprehensivePlusQuote', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive by class and value
     //
-    //Future<GetHeirs3YearsPremium200Response> getComprehensiveQuote(String motorClass, num motorValue) async
+    //Future<GetEndowmentPremium200Response> getComprehensiveQuote(String motorClass, num motorValue) async
     test('test getComprehensiveQuote', () async {
       // TODO
     });
@@ -947,7 +1045,7 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getCouplePremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getCouplePremium(String documentId) async
     test('test getCouplePremium', () async {
       // TODO
     });
@@ -980,6 +1078,20 @@ void main() {
       // TODO
     });
 
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getEndowmentDocument(String documentId) async
+    test('test getEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetEndowmentPremium200Response> getEndowmentPremium(String documentId) async
+    test('test getEndowmentPremium', () async {
+      // TODO
+    });
+
     // Get Heirs25k document with premium and interests
     //
     //Future<Document> getHeirs25kDocument(String documentId) async
@@ -989,21 +1101,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs25kDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getHeirs25kDocumentPremium(String documentId) async
     test('test getHeirs25kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs25kInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getHeirs25kInterestPremium(String documentId, String motorId) async
     test('test getHeirs25kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 15k
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs25kQuote() async
+    //Future<GetEndowmentPremium200Response> getHeirs25kQuote() async
     test('test getHeirs25kQuote', () async {
       // TODO
     });
@@ -1017,21 +1129,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs35kDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getHeirs35kDocumentPremium(String documentId) async
     test('test getHeirs35kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs35kInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getHeirs35kInterestPremium(String documentId, String motorId) async
     test('test getHeirs35kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 35k
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs35kQuote() async
+    //Future<GetEndowmentPremium200Response> getHeirs35kQuote() async
     test('test getHeirs35kQuote', () async {
       // TODO
     });
@@ -1045,7 +1157,7 @@ void main() {
 
     // Get heirs3years document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs3YearsPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getHeirs3YearsPremium(String documentId) async
     test('test getHeirs3YearsPremium', () async {
       // TODO
     });
@@ -1073,21 +1185,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs70kDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getHeirs70kDocumentPremium(String documentId) async
     test('test getHeirs70kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs70kInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getHeirs70kInterestPremium(String documentId, String motorId) async
     test('test getHeirs70kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 70k
     //
-    //Future<GetHeirs3YearsPremium200Response> getHeirs70kQuote() async
+    //Future<GetEndowmentPremium200Response> getHeirs70kQuote() async
     test('test getHeirs70kQuote', () async {
       // TODO
     });
@@ -1101,21 +1213,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHerMotorDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getHerMotorDocumentPremium(String documentId) async
     test('test getHerMotorDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getHerMotorInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getHerMotorInterestPremium(String documentId, String motorId) async
     test('test getHerMotorInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive by class and value
     //
-    //Future<GetHeirs3YearsPremium200Response> getHerMotorQuote(String motorClass, num motorValue) async
+    //Future<GetEndowmentPremium200Response> getHerMotorQuote(String motorClass, num motorValue) async
     test('test getHerMotorQuote', () async {
       // TODO
     });
@@ -1129,14 +1241,14 @@ void main() {
 
     // Get insured person
     //
-    //Future<GetInsuredPersonById200Response> getInsuredPersonById(String personId) async
+    //Future<InsuredPersonResponse> getInsuredPersonById(String personId) async
     test('test getInsuredPersonById', () async {
       // TODO
     });
 
     // Get insured persons for user
     //
-    //Future<BuiltList<GetInsuredPersonsByLoggedInUser200ResponseInner>> getInsuredPersonsByLoggedInUser() async
+    //Future<BuiltList<InsuredPersonResponse>> getInsuredPersonsByLoggedInUser() async
     test('test getInsuredPersonsByLoggedInUser', () async {
       // TODO
     });
@@ -1241,7 +1353,7 @@ void main() {
 
     // Get my heirs plus document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getMyHeirsPlusPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getMyHeirsPlusPremium(String documentId) async
     test('test getMyHeirsPlusPremium', () async {
       // TODO
     });
@@ -1262,7 +1374,7 @@ void main() {
 
     // Get my heirs document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getMyHeirsPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getMyHeirsPremium(String documentId) async
     test('test getMyHeirsPremium', () async {
       // TODO
     });
@@ -1325,6 +1437,20 @@ void main() {
 
     // Get term assurance with premium
     //
+    //Future<IndividualSavingsDocument> getSalaryDocument(String documentId) async
+    test('test getSalaryDocument', () async {
+      // TODO
+    });
+
+    // Get salary plus premium
+    //
+    //Future<GetEndowmentPremium200Response> getSalaryPremium(String documentId) async
+    test('test getSalaryPremium', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
     //Future<IndividualSavingsDocument> getSaveDocument(String documentId) async
     test('test getSaveDocument', () async {
       // TODO
@@ -1339,7 +1465,7 @@ void main() {
 
     // Get save extra document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getSaveExtraPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getSaveExtraPremium(String documentId) async
     test('test getSaveExtraPremium', () async {
       // TODO
     });
@@ -1360,7 +1486,7 @@ void main() {
 
     // Get save document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getSavePremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getSavePremium(String documentId) async
     test('test getSavePremium', () async {
       // TODO
     });
@@ -1388,42 +1514,42 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyDocumentPremium(String documentId) async
     test('test getThirdPartyDocumentPremium', () async {
       // TODO
     });
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyFireAndTheftDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyFireAndTheftDocumentPremium(String documentId) async
     test('test getThirdPartyFireAndTheftDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyFireAndTheftInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyFireAndTheftInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyFireAndTheftInterestPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyInterestPremium', () async {
       // TODO
     });
 
     // Get document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyPlusDocumentPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyPlusDocumentPremium(String documentId) async
     test('test getThirdPartyPlusDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getThirdPartyPlusInterestPremium(String documentId, String motorId) async
+    //Future<GetEndowmentPremium200Response> getThirdPartyPlusInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyPlusInterestPremium', () async {
       // TODO
     });
@@ -1437,7 +1563,7 @@ void main() {
 
     // Get triple pay document premium
     //
-    //Future<GetHeirs3YearsPremium200Response> getTriplePayPremium(String documentId) async
+    //Future<GetEndowmentPremium200Response> getTriplePayPremium(String documentId) async
     test('test getTriplePayPremium', () async {
       // TODO
     });
@@ -1465,133 +1591,147 @@ void main() {
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payFor3rdPartyDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payFor3rdPartyDocument(String documentId, String payId) async
     test('test payFor3rdPartyDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party fire and theft premium
     //
-    //Future<PayForSaveDocument200Response> payFor3rdPartyFireAndTheftDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payFor3rdPartyFireAndTheftDocument(String documentId, String payId) async
     test('test payFor3rdPartyFireAndTheftDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payFor3rdPartyPlusDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payFor3rdPartyPlusDocument(String documentId, String payId) async
     test('test payFor3rdPartyPlusDocument', () async {
       // TODO
     });
 
     // Pay for AccidentBronze premium
     //
-    //Future<PayForSaveDocument200Response> payForAccidentBronzeDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForAccidentBronzeDocument(String documentId, String payId) async
     test('test payForAccidentBronzeDocument', () async {
       // TODO
     });
 
     // Pay for accident premium
     //
-    //Future<PayForSaveDocument200Response> payForAccidentGoldDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForAccidentGoldDocument(String documentId, String payId) async
     test('test payForAccidentGoldDocument', () async {
       // TODO
     });
 
     // Pay for AccidentPlatinum premium
     //
-    //Future<PayForSaveDocument200Response> payForAccidentPlatinumDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForAccidentPlatinumDocument(String documentId, String payId) async
     test('test payForAccidentPlatinumDocument', () async {
       // TODO
     });
 
     // Pay for AccidentSilver premium
     //
-    //Future<PayForSaveDocument200Response> payForAccidentSilverDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForAccidentSilverDocument(String documentId, String payId) async
     test('test payForAccidentSilverDocument', () async {
       // TODO
     });
 
     // Pay for comprehensive premium
     //
-    //Future<PayForSaveDocument200Response> payForComprehensiveDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForComprehensiveDocument(String documentId, String payId) async
     test('test payForComprehensiveDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForCoupleDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForCoupleDocument(String documentId, String payId) async
     test('test payForCoupleDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForEndowmentDocument200Response> payForEndowmentDocument(String documentId, String payId) async
+    test('test payForEndowmentDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payForHeirs25kDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForHeirs25kDocument(String documentId, String payId) async
     test('test payForHeirs25kDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payForHeirs35kDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForHeirs35kDocument(String documentId, String payId) async
     test('test payForHeirs35kDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForHeirs3YearsDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForHeirs3YearsDocument(String documentId, String payId) async
     test('test payForHeirs3YearsDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payForHeirs70kDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForHeirs70kDocument(String documentId, String payId) async
     test('test payForHeirs70kDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForSaveDocument200Response> payForHerMotorDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForHerMotorDocument(String documentId, String payId) async
     test('test payForHerMotorDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForMyHeirsDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForMyHeirsDocument(String documentId, String payId) async
     test('test payForMyHeirsDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForMyHeirsPlusDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForMyHeirsPlusDocument(String documentId, String payId) async
     test('test payForMyHeirsPlusDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForSaveDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForSalaryDocument(String documentId, String payId) async
+    test('test payForSalaryDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForEndowmentDocument200Response> payForSaveDocument(String documentId, String payId) async
     test('test payForSaveDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForSaveExtraDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForSaveExtraDocument(String documentId, String payId) async
     test('test payForSaveExtraDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForSaveDocument200Response> payForTriplePayDocument(String documentId, String payId) async
+    //Future<PayForEndowmentDocument200Response> payForTriplePayDocument(String documentId, String payId) async
     test('test payForTriplePayDocument', () async {
       // TODO
     });
@@ -1666,6 +1806,13 @@ void main() {
       // TODO
     });
 
+    // Register Term Assurance Payment
+    //
+    //Future registerEndowmentPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerEndowmentPayment', () async {
+      // TODO
+    });
+
     // Register Heirs15k Payment
     //
     //Future registerHeirs25kPayment(String documentId, String payId, { PayEntry payEntry }) async
@@ -1717,6 +1864,13 @@ void main() {
 
     // Register Term Assurance Payment
     //
+    //Future registerSalaryPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerSalaryPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
     //Future registerSaveExtraPayment(String documentId, String payId, { PayEntry payEntry }) async
     test('test registerSaveExtraPayment', () async {
       // TODO
@@ -1754,13 +1908,6 @@ void main() {
     //
     //Future signUpUser({ SignUpUserRequest signUpUserRequest }) async
     test('test signUpUser', () async {
-      // TODO
-    });
-
-    // Add a company customer address
-    //
-    //Future updateCompanyCustomerAddress(String customerId, { Address address }) async
-    test('test updateCompanyCustomerAddress', () async {
       // TODO
     });
 

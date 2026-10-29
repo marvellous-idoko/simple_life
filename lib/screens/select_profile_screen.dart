@@ -1,10 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:openapi/openapi.dart';
 import 'package:simple_life/Bloc__state/general_bloc.dart';
+import 'package:simple_life/app_routes.dart';
+import 'package:simple_life/colors/app_colors.dart';
 import 'package:simple_life/repositories/general_repository.dart';
-import 'package:simple_life/services/general_storage.dart';
+import 'package:simple_life/utils/utils.dart';
 
 class SelectProfileScreen extends StatefulWidget {
   const SelectProfileScreen({super.key});
@@ -14,13 +18,16 @@ class SelectProfileScreen extends StatefulWidget {
 }
 
 class _SelectProfileScreenState extends State<SelectProfileScreen> {
-  static const _brandRed = Color(0xFFF22B22);
-  static const _textColor = Color(0xFF55565A);
-  static const _mutedColor = Color(0xFF858B98);
-  static const _backgroundColor = Color(0xFFFCFCFD);
+  static const _brandRed = AppColors.primary;
+  static const _textColor = AppColors.textColor;
+  static const _mutedColor = AppColors.mutedColor;
+  static const _backgroundColor = AppColors.backgroundColor;
 
   late Future<List<Customer>> _profilesFuture;
+  List<dynamic>? _insuredPersons;
   String? _selectedCustomerId;
+
+  Customer? _selectedProfile;
 
   @override
   void initState() {
@@ -28,8 +35,10 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
     final state = context.read<GeneralBloc>().state;
     _selectedCustomerId = state.message['selectedCustomer']?['customerId']
         ?.toString();
-    _profilesFuture = GeneralRepository().getCustomerProfiles();
-
+    _profilesFuture = GeneralRepository().getCustomersByLoggedInUser();
+    GeneralRepository().getInsuredPersonByLoggedInUser().then((value) {
+      _insuredPersons = value;
+    });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) _showSelfServiceNotice();
     });
@@ -101,34 +110,6 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
     );
   }
 
-  Future<void> _confirmSelection(List<Customer> profiles) async {
-    Customer? selected;
-    for (final profile in profiles) {
-      if (profile.customerId == _selectedCustomerId) {
-        selected = profile;
-        break;
-      }
-    }
-    if (selected == null) return;
-
-    final profile = <String, dynamic>{
-      'customerId': selected.customerId,
-      'firstName': selected.firstName,
-      'lastName': selected.lastName,
-      'phone': selected.phone,
-    };
-    final bloc = context.read<GeneralBloc>();
-    final updatedMessage = <String, dynamic>{
-      ...bloc.state.message,
-      'selectedCustomer': profile,
-    };
-
-    bloc.add(UpdateGeneralMessage(updatedMessage));
-    await GeneralStorageService().saveMessage(updatedMessage);
-
-    if (mounted) context.pop(profile);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -170,7 +151,10 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
                               'Please check your connection and try again.',
                           onAction: () => setState(() {
                             _profilesFuture = GeneralRepository()
-                                .getCustomerProfiles();
+                                .getCustomersByLoggedInUser();
+                            GeneralRepository()
+                                .getInsuredPersonByLoggedInUser()
+                                .then((value) => _insuredPersons = value);
                           }),
                         );
                       }
@@ -186,7 +170,6 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
 
                       return ListView.separated(
                         padding: const EdgeInsets.fromLTRB(20, 0, 20, 22),
-                        physics: const BouncingScrollPhysics(),
                         itemCount: profiles.length,
                         separatorBuilder: (_, _) => const SizedBox(height: 12),
                         itemBuilder: (context, index) {
@@ -194,9 +177,10 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
                           return _ProfileCard(
                             profile: profile,
                             selected: profile.customerId == _selectedCustomerId,
-                            onSelected: () => setState(
-                              () => _selectedCustomerId = profile.customerId,
-                            ),
+                            onSelected: () => setState(() {
+                              _selectedCustomerId = profile.customerId;
+                              _selectedProfile = profile;
+                            }),
                           );
                         },
                       );
@@ -215,7 +199,7 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
                           onPressed:
                               _selectedCustomerId == null || profiles.isEmpty
                               ? null
-                              : () => _confirmSelection(profiles),
+                              : () => selectCustomerProfile(),
                           style: FilledButton.styleFrom(
                             backgroundColor: _brandRed,
                             disabledBackgroundColor: const Color(0xFFF0F1F3),
@@ -243,6 +227,85 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> selectCustomerProfile() async {
+    final selected = _selectedProfile;
+    if (selected == null) return;
+    var encoder = const JsonEncoder.withIndent('  ');
+    // String prettyString = encoder.convert(_selectedProfile);
+
+    final matchInsuredPerson = getMatchInsuredPerson();
+
+    if (isProfileComplete(selected)) {
+      await markProfileAsSelected(selected, matchInsuredPerson);
+    } else {
+      await showDialog<void>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Incomplete profile'),
+          content: const Text('Kindly update your profile to continue.'),
+          actions: [
+            TextButton(
+              onPressed: () => context.go('/profile/edit'),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  Future<void> markProfileAsSelected(Customer customer, dynamic person) async {
+
+    final customerJson = Map<String, dynamic>.from(
+      standardSerializers.serializeWith(Customer.serializer, customer) as Map,
+    );
+    final personJson = person is InsuredPersonResponse
+        ? Map<String, dynamic>.from(
+            standardSerializers.serializeWith(
+              InsuredPersonResponse.serializer,
+              person,
+            ) as Map,
+          )
+        : null;
+    final bloc = context.read<GeneralBloc>();
+    final updatedMessage = <String, dynamic>{
+      ...bloc.state.message,
+      'selectedCustomer': customerJson,
+      'profile': {'person': personJson, 'customer': customerJson},
+    };
+    await saveMessage(context, updatedMessage);
+    // mark Customer as selected
+    // await GeneralRepository().markCustomerAsSelected(customer['customerId']);
+
+    if (mounted) context.go(AppRoutes.lifeProducts);
+  }
+
+  bool isProfileComplete(Customer profile) {
+    return profile.idDetails?.type == IdDetailsTypeEnum.nimc &&
+        profile.idDetails?.number.length == 11;
+  }
+
+  Object? getMatchInsuredPerson() {
+    var customerName =
+        '${_selectedProfile?.firstName} ${_selectedProfile?.lastName}';
+
+    for (final insuredPerson in _insuredPersons!) {
+      if (customerName.toLowerCase().contains(
+            insuredPerson.firstName.toLowerCase(),
+          ) &&
+          customerName.toLowerCase().contains(
+            insuredPerson.lastName.toLowerCase(),
+          ) &&
+          DateTime.parse(insuredPerson.dateOfBirth.toString()).isAtSameMomentAs(
+            DateTime.parse(_selectedProfile?.dateOfBirth.toString() ?? ''),
+          )) {
+        print(insuredPerson);
+        return insuredPerson;
+      }
+    }
+    return null;
   }
 }
 
@@ -373,6 +436,9 @@ class _ProfileCard extends StatelessWidget {
                   ],
                 ),
               ),
+              isProfileComplete(profile)
+                  ? _InsuranceTag(label: 'Verified', color: Colors.green)
+                  : _InsuranceTag(label: 'Pending', color: Colors.orange),
               Icon(
                 selected
                     ? Icons.radio_button_checked_rounded
@@ -384,6 +450,40 @@ class _ProfileCard extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  bool isProfileComplete(Customer profile) {
+    return profile.idDetails?.type == IdDetailsTypeEnum.nimc &&
+        profile.idDetails?.number.length == 11;
+  }
+}
+
+class _InsuranceTag extends StatelessWidget {
+  const _InsuranceTag({required this.label, required this.color});
+
+  final String label;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.18),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        label,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(
+          color: color,
+          fontSize: 8,
+          height: 1.1,
+          fontWeight: FontWeight.w400,
         ),
       ),
     );

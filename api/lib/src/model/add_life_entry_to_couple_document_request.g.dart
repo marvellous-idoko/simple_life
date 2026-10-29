@@ -1,61 +1,62 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'create_save_document_request.dart';
+part of 'add_life_entry_to_couple_document_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-const CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnum_monthly =
-    const CreateSaveDocumentRequestFrequencyEnum._('monthly');
-const CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnum_quarterly =
-    const CreateSaveDocumentRequestFrequencyEnum._('quarterly');
-const CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnum_biannual =
-    const CreateSaveDocumentRequestFrequencyEnum._('biannual');
-const CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnum_annual =
-    const CreateSaveDocumentRequestFrequencyEnum._('annual');
-const CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnum_single =
-    const CreateSaveDocumentRequestFrequencyEnum._('single');
+const AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_monthly =
+    const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._('monthly');
+const AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_quarterly =
+    const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._('quarterly');
+const AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_biannual =
+    const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._('biannual');
+const AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_annual =
+    const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._('annual');
+const AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_single =
+    const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._('single');
 
-CreateSaveDocumentRequestFrequencyEnum
-    _$createSaveDocumentRequestFrequencyEnumValueOf(String name) {
+AddLifeEntryToCoupleDocumentRequestFrequencyEnum
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnumValueOf(String name) {
   switch (name) {
     case 'monthly':
-      return _$createSaveDocumentRequestFrequencyEnum_monthly;
+      return _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_monthly;
     case 'quarterly':
-      return _$createSaveDocumentRequestFrequencyEnum_quarterly;
+      return _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_quarterly;
     case 'biannual':
-      return _$createSaveDocumentRequestFrequencyEnum_biannual;
+      return _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_biannual;
     case 'annual':
-      return _$createSaveDocumentRequestFrequencyEnum_annual;
+      return _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_annual;
     case 'single':
-      return _$createSaveDocumentRequestFrequencyEnum_single;
+      return _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_single;
     default:
       throw ArgumentError(name);
   }
 }
 
-final BuiltSet<CreateSaveDocumentRequestFrequencyEnum>
-    _$createSaveDocumentRequestFrequencyEnumValues = BuiltSet<
-        CreateSaveDocumentRequestFrequencyEnum>(const <CreateSaveDocumentRequestFrequencyEnum>[
-  _$createSaveDocumentRequestFrequencyEnum_monthly,
-  _$createSaveDocumentRequestFrequencyEnum_quarterly,
-  _$createSaveDocumentRequestFrequencyEnum_biannual,
-  _$createSaveDocumentRequestFrequencyEnum_annual,
-  _$createSaveDocumentRequestFrequencyEnum_single,
+final BuiltSet<AddLifeEntryToCoupleDocumentRequestFrequencyEnum>
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnumValues = BuiltSet<
+        AddLifeEntryToCoupleDocumentRequestFrequencyEnum>(const <AddLifeEntryToCoupleDocumentRequestFrequencyEnum>[
+  _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_monthly,
+  _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_quarterly,
+  _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_biannual,
+  _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_annual,
+  _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_single,
 ]);
 
-Serializer<CreateSaveDocumentRequestFrequencyEnum>
-    _$createSaveDocumentRequestFrequencyEnumSerializer =
-    _$CreateSaveDocumentRequestFrequencyEnumSerializer();
+Serializer<AddLifeEntryToCoupleDocumentRequestFrequencyEnum>
+    _$addLifeEntryToCoupleDocumentRequestFrequencyEnumSerializer =
+    _$AddLifeEntryToCoupleDocumentRequestFrequencyEnumSerializer();
 
-class _$CreateSaveDocumentRequestFrequencyEnumSerializer
-    implements PrimitiveSerializer<CreateSaveDocumentRequestFrequencyEnum> {
+class _$AddLifeEntryToCoupleDocumentRequestFrequencyEnumSerializer
+    implements
+        PrimitiveSerializer<AddLifeEntryToCoupleDocumentRequestFrequencyEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'monthly': 'monthly',
     'quarterly': 'quarterly',
@@ -73,26 +74,27 @@ class _$CreateSaveDocumentRequestFrequencyEnumSerializer
 
   @override
   final Iterable<Type> types = const <Type>[
-    CreateSaveDocumentRequestFrequencyEnum
+    AddLifeEntryToCoupleDocumentRequestFrequencyEnum
   ];
   @override
-  final String wireName = 'CreateSaveDocumentRequestFrequencyEnum';
+  final String wireName = 'AddLifeEntryToCoupleDocumentRequestFrequencyEnum';
 
   @override
   Object serialize(Serializers serializers,
-          CreateSaveDocumentRequestFrequencyEnum object,
+          AddLifeEntryToCoupleDocumentRequestFrequencyEnum object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  CreateSaveDocumentRequestFrequencyEnum deserialize(
+  AddLifeEntryToCoupleDocumentRequestFrequencyEnum deserialize(
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      CreateSaveDocumentRequestFrequencyEnum.valueOf(
+      AddLifeEntryToCoupleDocumentRequestFrequencyEnum.valueOf(
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
-class _$CreateSaveDocumentRequest extends CreateSaveDocumentRequest {
+class _$AddLifeEntryToCoupleDocumentRequest
+    extends AddLifeEntryToCoupleDocumentRequest {
   @override
   final num? contribution;
   @override
@@ -108,11 +110,12 @@ class _$CreateSaveDocumentRequest extends CreateSaveDocumentRequest {
   @override
   final DeathCoverFrequencyEnum frequency;
 
-  factory _$CreateSaveDocumentRequest(
-          [void Function(CreateSaveDocumentRequestBuilder)? updates]) =>
-      (CreateSaveDocumentRequestBuilder()..update(updates))._build();
+  factory _$AddLifeEntryToCoupleDocumentRequest(
+          [void Function(AddLifeEntryToCoupleDocumentRequestBuilder)?
+              updates]) =>
+      (AddLifeEntryToCoupleDocumentRequestBuilder()..update(updates))._build();
 
-  _$CreateSaveDocumentRequest._(
+  _$AddLifeEntryToCoupleDocumentRequest._(
       {this.contribution,
       required this.personId,
       this.businessType,
@@ -122,18 +125,18 @@ class _$CreateSaveDocumentRequest extends CreateSaveDocumentRequest {
       required this.frequency})
       : super._();
   @override
-  CreateSaveDocumentRequest rebuild(
-          void Function(CreateSaveDocumentRequestBuilder) updates) =>
+  AddLifeEntryToCoupleDocumentRequest rebuild(
+          void Function(AddLifeEntryToCoupleDocumentRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CreateSaveDocumentRequestBuilder toBuilder() =>
-      CreateSaveDocumentRequestBuilder()..replace(this);
+  AddLifeEntryToCoupleDocumentRequestBuilder toBuilder() =>
+      AddLifeEntryToCoupleDocumentRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateSaveDocumentRequest &&
+    return other is AddLifeEntryToCoupleDocumentRequest &&
         contribution == other.contribution &&
         personId == other.personId &&
         businessType == other.businessType &&
@@ -159,7 +162,7 @@ class _$CreateSaveDocumentRequest extends CreateSaveDocumentRequest {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'CreateSaveDocumentRequest')
+    return (newBuiltValueToStringHelper(r'AddLifeEntryToCoupleDocumentRequest')
           ..add('contribution', contribution)
           ..add('personId', personId)
           ..add('businessType', businessType)
@@ -171,11 +174,12 @@ class _$CreateSaveDocumentRequest extends CreateSaveDocumentRequest {
   }
 }
 
-class CreateSaveDocumentRequestBuilder
+class AddLifeEntryToCoupleDocumentRequestBuilder
     implements
-        Builder<CreateSaveDocumentRequest, CreateSaveDocumentRequestBuilder>,
+        Builder<AddLifeEntryToCoupleDocumentRequest,
+            AddLifeEntryToCoupleDocumentRequestBuilder>,
         DeathCoverBuilder {
-  _$CreateSaveDocumentRequest? _$v;
+  _$AddLifeEntryToCoupleDocumentRequest? _$v;
 
   num? _contribution;
   num? get contribution => _$this._contribution;
@@ -209,11 +213,11 @@ class CreateSaveDocumentRequestBuilder
   set frequency(covariant DeathCoverFrequencyEnum? frequency) =>
       _$this._frequency = frequency;
 
-  CreateSaveDocumentRequestBuilder() {
-    CreateSaveDocumentRequest._defaults(this);
+  AddLifeEntryToCoupleDocumentRequestBuilder() {
+    AddLifeEntryToCoupleDocumentRequest._defaults(this);
   }
 
-  CreateSaveDocumentRequestBuilder get _$this {
+  AddLifeEntryToCoupleDocumentRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _contribution = $v.contribution;
@@ -229,32 +233,33 @@ class CreateSaveDocumentRequestBuilder
   }
 
   @override
-  void replace(covariant CreateSaveDocumentRequest other) {
-    _$v = other as _$CreateSaveDocumentRequest;
+  void replace(covariant AddLifeEntryToCoupleDocumentRequest other) {
+    _$v = other as _$AddLifeEntryToCoupleDocumentRequest;
   }
 
   @override
-  void update(void Function(CreateSaveDocumentRequestBuilder)? updates) {
+  void update(
+      void Function(AddLifeEntryToCoupleDocumentRequestBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  CreateSaveDocumentRequest build() => _build();
+  AddLifeEntryToCoupleDocumentRequest build() => _build();
 
-  _$CreateSaveDocumentRequest _build() {
+  _$AddLifeEntryToCoupleDocumentRequest _build() {
     final _$result = _$v ??
-        _$CreateSaveDocumentRequest._(
+        _$AddLifeEntryToCoupleDocumentRequest._(
           contribution: contribution,
           personId: BuiltValueNullFieldError.checkNotNull(
-              personId, r'CreateSaveDocumentRequest', 'personId'),
+              personId, r'AddLifeEntryToCoupleDocumentRequest', 'personId'),
           businessType: businessType,
           businessChannel: businessChannel,
           sumAssured: BuiltValueNullFieldError.checkNotNull(
-              sumAssured, r'CreateSaveDocumentRequest', 'sumAssured'),
+              sumAssured, r'AddLifeEntryToCoupleDocumentRequest', 'sumAssured'),
           term: BuiltValueNullFieldError.checkNotNull(
-              term, r'CreateSaveDocumentRequest', 'term'),
+              term, r'AddLifeEntryToCoupleDocumentRequest', 'term'),
           frequency: BuiltValueNullFieldError.checkNotNull(
-              frequency, r'CreateSaveDocumentRequest', 'frequency'),
+              frequency, r'AddLifeEntryToCoupleDocumentRequest', 'frequency'),
         );
     replace(_$result);
     return _$result;

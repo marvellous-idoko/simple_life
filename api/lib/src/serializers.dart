@@ -16,6 +16,7 @@ import 'package:openapi/src/model/date.dart';
 
 import 'package:openapi/src/model/accident_person.dart';
 import 'package:openapi/src/model/account_statement_premium.dart';
+import 'package:openapi/src/model/add_life_entry_to_couple_document_request.dart';
 import 'package:openapi/src/model/add_motor_to3rd_party_document_request.dart';
 import 'package:openapi/src/model/address.dart';
 import 'package:openapi/src/model/agent.dart';
@@ -57,7 +58,6 @@ import 'package:openapi/src/model/company_customer.dart';
 import 'package:openapi/src/model/company_partner.dart';
 import 'package:openapi/src/model/create3rd_party_document_request.dart';
 import 'package:openapi/src/model/create_password_request.dart';
-import 'package:openapi/src/model/create_save_document_request.dart';
 import 'package:openapi/src/model/customer.dart';
 import 'package:openapi/src/model/customer_id_verification.dart';
 import 'package:openapi/src/model/customer_id_verification_data.dart';
@@ -77,9 +77,7 @@ import 'package:openapi/src/model/existing_policy.dart';
 import 'package:openapi/src/model/flutterwave_event.dart';
 import 'package:openapi/src/model/get3rd_party_quote_options200_response.dart';
 import 'package:openapi/src/model/get3rd_party_quote_options200_response_premium.dart';
-import 'package:openapi/src/model/get_heirs3_years_premium200_response.dart';
-import 'package:openapi/src/model/get_insured_person_by_id200_response.dart';
-import 'package:openapi/src/model/get_insured_persons_by_logged_in_user200_response_inner.dart';
+import 'package:openapi/src/model/get_endowment_premium200_response.dart';
 import 'package:openapi/src/model/get_lgas200_response_inner.dart';
 import 'package:openapi/src/model/get_logged_in_user200_response.dart';
 import 'package:openapi/src/model/get_motor_from3rd_party_document200_response.dart';
@@ -96,6 +94,7 @@ import 'package:openapi/src/model/individual_partner.dart';
 import 'package:openapi/src/model/individual_protection_document.dart';
 import 'package:openapi/src/model/individual_protection_document_basic.dart';
 import 'package:openapi/src/model/individual_savings_document.dart';
+import 'package:openapi/src/model/insured_person_response.dart';
 import 'package:openapi/src/model/interest_rate.dart';
 import 'package:openapi/src/model/is_password_login200_response.dart';
 import 'package:openapi/src/model/life_premium.dart';
@@ -115,7 +114,7 @@ import 'package:openapi/src/model/partner_policy_submission.dart';
 import 'package:openapi/src/model/partner_policy_submission_beneficiary_inner.dart';
 import 'package:openapi/src/model/partner_type.dart';
 import 'package:openapi/src/model/pay_entry.dart';
-import 'package:openapi/src/model/pay_for_save_document200_response.dart';
+import 'package:openapi/src/model/pay_for_endowment_document200_response.dart';
 import 'package:openapi/src/model/paystack_event.dart';
 import 'package:openapi/src/model/paystack_mandate.dart';
 import 'package:openapi/src/model/policy_info.dart';
@@ -156,6 +155,7 @@ part 'serializers.g.dart';
 @SerializersFor([
   AccidentPerson,
   AccountStatementPremium,
+  AddLifeEntryToCoupleDocumentRequest,
   AddMotorTo3rdPartyDocumentRequest,
   Address,$Address,
   Agent,
@@ -197,7 +197,6 @@ part 'serializers.g.dart';
   CompanyPartner,
   Create3rdPartyDocumentRequest,
   CreatePasswordRequest,
-  CreateSaveDocumentRequest,
   Customer,
   CustomerIDVerification,
   CustomerIDVerificationData,
@@ -217,9 +216,7 @@ part 'serializers.g.dart';
   FlutterwaveEvent,
   Get3rdPartyQuoteOptions200Response,
   Get3rdPartyQuoteOptions200ResponsePremium,
-  GetHeirs3YearsPremium200Response,
-  GetInsuredPersonById200Response,
-  GetInsuredPersonsByLoggedInUser200ResponseInner,
+  GetEndowmentPremium200Response,
   GetLgas200ResponseInner,
   GetLoggedInUser200Response,
   GetMotorFrom3rdPartyDocument200Response,
@@ -228,7 +225,7 @@ part 'serializers.g.dart';
   GetSavePremiumQuote200Response,
   GetSaveSumAssuredQuote200ResponseInner,
   Guarantor,
-  HealthForm,$HealthForm,
+  HealthForm,
   HouseItem,
   IdCardDetails,
   IdDetails,
@@ -236,6 +233,7 @@ part 'serializers.g.dart';
   IndividualProtectionDocument,$IndividualProtectionDocument,
   IndividualProtectionDocumentBasic,
   IndividualSavingsDocument,
+  InsuredPersonResponse,
   InterestRate,
   IsPasswordLogin200Response,
   LifePremium,
@@ -255,7 +253,7 @@ part 'serializers.g.dart';
   PartnerPolicySubmissionBeneficiaryInner,
   PartnerType,
   PayEntry,
-  PayForSaveDocument200Response,
+  PayForEndowmentDocument200Response,
   PaystackEvent,
   PaystackMandate,
   PolicyInfo,
@@ -333,6 +331,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<ClaimantDetailsInner>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(InsuredPersonResponse)]),
+        () => ListBuilder<InsuredPersonResponse>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(GetLgas200ResponseInner)]),
         () => ListBuilder<GetLgas200ResponseInner>(),
       )
@@ -364,14 +366,9 @@ Serializers serializers = (_$serializers.toBuilder()
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
       )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(GetInsuredPersonsByLoggedInUser200ResponseInner)]),
-        () => ListBuilder<GetInsuredPersonsByLoggedInUser200ResponseInner>(),
-      )
       ..add(Address.serializer)
       ..add(CustomerPersonal.serializer)
       ..add(DeathCover.serializer)
-      ..add(HealthForm.serializer)
       ..add(IndividualProtectionDocument.serializer)
       ..add(MotorParticulars.serializer)
       ..add(Upload.serializer)

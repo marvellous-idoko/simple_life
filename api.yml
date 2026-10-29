@@ -497,28 +497,6 @@ paths:
         "404":
           $ref: "#/components/responses/NotFound"
 
-  /company-customer/{customerId}/address:
-    parameters:
-      - $ref: "#/components/parameters/CustomerIdParam"
-    patch:
-      description: Add a company customer address
-      operationId: updateCompanyCustomerAddress
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Address"
-      responses:
-        "201":
-          description: Created
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-        "404":
-          $ref: "#/components/responses/NotFound"
 
   /customer/{customerId}/id-card:
     parameters:
@@ -679,12 +657,7 @@ paths:
           content:
             application/json:
               schema:
-                allOf:
-                  - $ref: "#/components/schemas/CustomerPersonal"
-                  - type: object
-                    properties:
-                      health:
-                        $ref: "#/components/schemas/HealthForm"
+                $ref: "#/components/schemas/InsuredPersonResponse"
         "401":
           $ref: "#/components/responses/NotAuthenticated"
         "403":
@@ -752,9 +725,7 @@ paths:
               schema:
                 type: array
                 items:
-                  allOf:
-                    - $ref: "#/components/schemas/CustomerPersonal"
-                    - $ref: "#/components/schemas/HealthForm"
+                  $ref: "#/components/schemas/InsuredPersonResponse"
 
         "401":
           $ref: "#/components/responses/NotAuthenticated"
@@ -823,6 +794,729 @@ paths:
           $ref: "#/components/responses/NotAuthorized"
         "404":
           $ref: "#/components/responses/NotFound"
+  
+  /documents/{documentId}/endowment:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    post:
+      description: Create Term assurance document
+      operationId: createEndowmentDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeathCover"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    patch:
+      description: Add customer to document
+      operationId: addCustomerToEndowmentDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CustomerId"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get term assurance with premium
+      operationId: getEndowmentDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IndividualProtectionDocument"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/endowment/rider:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/RiderCodeParam"
+    patch:
+      description: Add rider to document
+      operationId: addRiderToEndowmentDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete rider from document
+      operationId: deleteRiderEndowmentDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/endowment/beneficiary-share/{beneficiaryId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/BeneficiaryIdParam"
+    patch:
+      description: Add beneficiary share to document
+      operationId: addBeneficiaryShareToEndowmentDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BeneficiaryShare"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete beneficiary share from document
+      operationId: deleteBeneficiaryShareFromEndowmentDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get beneficiary share of insured person for document
+      operationId: getBeneficiaryShareFromEndowmentDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BeneficiaryShare"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/endowment/pay/{payId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/PayIdParam"
+    post:
+      security:
+        - bearerAuth: []
+      description: Register Term Assurance Payment
+      operationId: registerEndowmentPayment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PayEntry"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Pay for term assurance premium
+      operationId: payForEndowmentDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  payUrl:
+                    type: string
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/endowment/premium:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    get:
+      description: Get owner document premium
+      operationId: getEndowmentPremium
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  premium:
+                    type: number
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/couple:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    post:
+      description: Create Term assurance document
+      operationId: createCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "#/components/schemas/DeathCover"
+                - type: object
+                  properties:
+                    contribution:
+                      type: number
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    put:
+      description: Add another life etry to document
+      operationId: addLifeEntryToCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "#/components/schemas/DeathCover"
+                - type: object
+                  properties:
+                    contribution:
+                      type: number
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    patch:
+      description: Add customer to document
+      operationId: addCustomerToCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CustomerId"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get term assurance with premium
+      operationId: getCoupleDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/IndividualSavingsDocument"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/couple/rider:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/RiderCodeParam"
+    patch:
+      description: Add rider to document
+      operationId: addRiderToCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete rider from document
+      operationId: deleteRiderCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/couple/beneficiary-share/{beneficiaryId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/BeneficiaryIdParam"
+    patch:
+      description: Add beneficiary share to document
+      operationId: addBeneficiaryShareToCoupleDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BeneficiaryShare"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete beneficiary share from document
+      operationId: deleteBeneficiaryShareFromCoupleDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get beneficiary share of insured person for document
+      operationId: getBeneficiaryShareFromCoupleDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BeneficiaryShare"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/couple/pay/{payId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/PayIdParam"
+    post:
+      security:
+        - bearerAuth: []
+      description: Register Term Assurance Payment
+      operationId: registerCouplePayment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PayEntry"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Pay for term assurance premium
+      operationId: payForCoupleDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  payUrl:
+                    type: string
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/couple/premium:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    get:
+      description: Get owner document premium
+      operationId: getCouplePremium
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  premium:
+                    type: number
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/salary:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    post:
+      description: Create Term assurance document
+      operationId: createSalaryDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: "#/components/schemas/DeathCover"
+                - type: object
+                  properties:
+                    contribution:
+                      type: number
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    patch:
+      description: Add customer to document
+      operationId: addCustomerToSalaryDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CustomerId"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get term assurance with premium
+      operationId: getSalaryDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IndividualSavingsDocument"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/salary/rider:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/RiderCodeParam"
+    patch:
+      description: Add rider to document
+      operationId: addRiderToSalaryDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete rider from document
+      operationId: deleteRiderSalaryDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Rider"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/salary/beneficiary-share/{beneficiaryId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/BeneficiaryIdParam"
+    patch:
+      description: Add beneficiary share to document
+      operationId: addBeneficiaryShareToSalaryDocument
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BeneficiaryShare"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    delete:
+      description: Delete beneficiary share from document
+      operationId: deleteBeneficiaryShareFromSalaryDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Get beneficiary share of insured person for document
+      operationId: getBeneficiaryShareFromSalaryDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BeneficiaryShare"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/salary/pay/{payId}:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+      - $ref: "#/components/parameters/PayIdParam"
+    post:
+      security:
+        - bearerAuth: []
+      description: Register Term Assurance Payment
+      operationId: registerSalaryPayment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PayEntry"
+      responses:
+        "200":
+          description: OK
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+    get:
+      description: Pay for term assurance premium
+      operationId: payForSalaryDocument
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  payUrl:
+                    type: string
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
+
+  /document/{documentId}/salary/premium:
+    parameters:
+      - $ref: "#/components/parameters/DocumentIdParam"
+    get:
+      description: Get salary plus premium
+      operationId: getSalaryPremium
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  premium:
+                    type: number
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "401":
+          $ref: "#/components/responses/NotAuthenticated"
+        "403":
+          $ref: "#/components/responses/NotAuthorized"
   
   /document/{documentId}/save:
     parameters:
@@ -4709,266 +5403,6 @@ paths:
         "403":
           $ref: "#/components/responses/NotAuthorized"
 
-  /document/{documentId}/couple:
-    parameters:
-      - $ref: "#/components/parameters/DocumentIdParam"
-    post:
-      description: Create Term assurance document
-      operationId: createCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: "#/components/schemas/DeathCover"
-                - type: object
-                  properties:
-                    contribution:
-                      type: number
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    put:
-      description: Add another life etry to document
-      operationId: addLifeEntryToCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              allOf:
-                - $ref: "#/components/schemas/DeathCover"
-                - type: object
-                  properties:
-                    contribution:
-                      type: number
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    patch:
-      description: Add customer to document
-      operationId: addCustomerToCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/CustomerId"
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    get:
-      description: Get term assurance with premium
-      operationId: getCoupleDocument
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/IndividualSavingsDocument"
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-
-  /document/{documentId}/couple/rider:
-    parameters:
-      - $ref: "#/components/parameters/DocumentIdParam"
-      - $ref: "#/components/parameters/RiderCodeParam"
-    patch:
-      description: Add rider to document
-      operationId: addRiderToCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Rider"
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    delete:
-      description: Delete rider from document
-      operationId: deleteRiderCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Rider"
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-
-  /document/{documentId}/couple/beneficiary-share/{beneficiaryId}:
-    parameters:
-      - $ref: "#/components/parameters/DocumentIdParam"
-      - $ref: "#/components/parameters/BeneficiaryIdParam"
-    patch:
-      description: Add beneficiary share to document
-      operationId: addBeneficiaryShareToCoupleDocument
-      security:
-        - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/BeneficiaryShare"
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    delete:
-      description: Delete beneficiary share from document
-      operationId: deleteBeneficiaryShareFromCoupleDocument
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    get:
-      description: Get beneficiary share of insured person for document
-      operationId: getBeneficiaryShareFromCoupleDocument
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/BeneficiaryShare"
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-
-  /document/{documentId}/couple/pay/{payId}:
-    parameters:
-      - $ref: "#/components/parameters/DocumentIdParam"
-      - $ref: "#/components/parameters/PayIdParam"
-    post:
-      security:
-        - bearerAuth: []
-      description: Register Term Assurance Payment
-      operationId: registerCouplePayment
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PayEntry"
-      responses:
-        "200":
-          description: OK
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-    get:
-      description: Pay for term assurance premium
-      operationId: payForCoupleDocument
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  payUrl:
-                    type: string
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-
-  /document/{documentId}/couple/premium:
-    parameters:
-      - $ref: "#/components/parameters/DocumentIdParam"
-    get:
-      description: Get owner document premium
-      operationId: getCouplePremium
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  premium:
-                    type: number
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "401":
-          $ref: "#/components/responses/NotAuthenticated"
-        "403":
-          $ref: "#/components/responses/NotAuthorized"
-
   /document/{documentId}/personal-accident-gold:
     parameters:
       - $ref: "#/components/parameters/DocumentIdParam"
@@ -6133,6 +6567,25 @@ components:
         occupation:
           type: string
 
+    InsuredPersonResponse:
+      allOf:
+        - $ref: "#/components/schemas/CustomerPersonal"
+        - type: object
+          properties:
+            personId:
+              type: string
+              format: uuid
+            bvn:
+              type: string
+            photoUrl:
+              type: string
+              format: uri
+            signatureUrl:
+              type: string
+              format: uri
+            health:
+              $ref: "#/components/schemas/HealthForm"
+
     Agent:
       type: object
       properties:
@@ -7241,57 +7694,57 @@ components:
         stateOfHealth:
           type: string
           enum:
-            - Excellent
-            - Satisfactory
-            - Poor
+            - "Excellent"
+            - "Satisfactory"
+            - "Poor"
         neuralIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes"
+            - "no"
         respiratoryIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes" 
+            - "no"
         renalIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes" 
+            - "no"
         heartIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes" 
+            - "no"
         preExistingIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes"
+            - "no"
         stiIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes"   
+            - "no"
         engageInSport:
           type: string
           enum:
-            - yes
-            - no
-            - na
+            - "yes"
+            - "no"
+            - "na"  
         generalBodyWeakness:
           type: string
           enum:
-            - yes
-            - no
-            - na
+            - "yes"
+            - "no"
+            - "na"
         pregnant:
           type: string
           enum:
-            - yes
-            - no
-            - na
+            - "yes"
+            - "no"
+            - "na"
         alcoholQty:
           type: number
           minimum: 0
@@ -7301,8 +7754,8 @@ components:
         disabilityIssues:
           type: string
           enum:
-            - yes
-            - no
+            - "yes"     
+            - "no"  
         comment:
           type: string
 

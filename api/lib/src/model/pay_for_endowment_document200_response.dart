@@ -6,38 +6,38 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'pay_for_save_document200_response.g.dart';
+part 'pay_for_endowment_document200_response.g.dart';
 
-/// PayForSaveDocument200Response
+/// PayForEndowmentDocument200Response
 ///
 /// Properties:
 /// * [payUrl] 
 @BuiltValue()
-abstract class PayForSaveDocument200Response implements Built<PayForSaveDocument200Response, PayForSaveDocument200ResponseBuilder> {
+abstract class PayForEndowmentDocument200Response implements Built<PayForEndowmentDocument200Response, PayForEndowmentDocument200ResponseBuilder> {
   @BuiltValueField(wireName: r'payUrl')
   String? get payUrl;
 
-  PayForSaveDocument200Response._();
+  PayForEndowmentDocument200Response._();
 
-  factory PayForSaveDocument200Response([void updates(PayForSaveDocument200ResponseBuilder b)]) = _$PayForSaveDocument200Response;
+  factory PayForEndowmentDocument200Response([void updates(PayForEndowmentDocument200ResponseBuilder b)]) = _$PayForEndowmentDocument200Response;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PayForSaveDocument200ResponseBuilder b) => b;
+  static void _defaults(PayForEndowmentDocument200ResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PayForSaveDocument200Response> get serializer => _$PayForSaveDocument200ResponseSerializer();
+  static Serializer<PayForEndowmentDocument200Response> get serializer => _$PayForEndowmentDocument200ResponseSerializer();
 }
 
-class _$PayForSaveDocument200ResponseSerializer implements PrimitiveSerializer<PayForSaveDocument200Response> {
+class _$PayForEndowmentDocument200ResponseSerializer implements PrimitiveSerializer<PayForEndowmentDocument200Response> {
   @override
-  final Iterable<Type> types = const [PayForSaveDocument200Response, _$PayForSaveDocument200Response];
+  final Iterable<Type> types = const [PayForEndowmentDocument200Response, _$PayForEndowmentDocument200Response];
 
   @override
-  final String wireName = r'PayForSaveDocument200Response';
+  final String wireName = r'PayForEndowmentDocument200Response';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PayForSaveDocument200Response object, {
+    PayForEndowmentDocument200Response object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.payUrl != null) {
@@ -52,7 +52,7 @@ class _$PayForSaveDocument200ResponseSerializer implements PrimitiveSerializer<P
   @override
   Object serialize(
     Serializers serializers,
-    PayForSaveDocument200Response object, {
+    PayForEndowmentDocument200Response object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -63,7 +63,7 @@ class _$PayForSaveDocument200ResponseSerializer implements PrimitiveSerializer<P
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PayForSaveDocument200ResponseBuilder result,
+    required PayForEndowmentDocument200ResponseBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -87,12 +87,12 @@ class _$PayForSaveDocument200ResponseSerializer implements PrimitiveSerializer<P
   }
 
   @override
-  PayForSaveDocument200Response deserialize(
+  PayForEndowmentDocument200Response deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PayForSaveDocument200ResponseBuilder();
+    final result = PayForEndowmentDocument200ResponseBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

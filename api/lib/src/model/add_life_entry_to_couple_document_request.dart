@@ -8,9 +8,9 @@ import 'package:openapi/src/model/death_cover.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'create_save_document_request.g.dart';
+part 'add_life_entry_to_couple_document_request.g.dart';
 
-/// CreateSaveDocumentRequest
+/// AddLifeEntryToCoupleDocumentRequest
 ///
 /// Properties:
 /// * [personId] 
@@ -21,31 +21,31 @@ part 'create_save_document_request.g.dart';
 /// * [frequency] 
 /// * [contribution] 
 @BuiltValue()
-abstract class CreateSaveDocumentRequest implements DeathCover, Built<CreateSaveDocumentRequest, CreateSaveDocumentRequestBuilder> {
+abstract class AddLifeEntryToCoupleDocumentRequest implements DeathCover, Built<AddLifeEntryToCoupleDocumentRequest, AddLifeEntryToCoupleDocumentRequestBuilder> {
   @BuiltValueField(wireName: r'contribution')
   num? get contribution;
 
-  CreateSaveDocumentRequest._();
+  AddLifeEntryToCoupleDocumentRequest._();
 
-  factory CreateSaveDocumentRequest([void updates(CreateSaveDocumentRequestBuilder b)]) = _$CreateSaveDocumentRequest;
+  factory AddLifeEntryToCoupleDocumentRequest([void updates(AddLifeEntryToCoupleDocumentRequestBuilder b)]) = _$AddLifeEntryToCoupleDocumentRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CreateSaveDocumentRequestBuilder b) => b;
+  static void _defaults(AddLifeEntryToCoupleDocumentRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<CreateSaveDocumentRequest> get serializer => _$CreateSaveDocumentRequestSerializer();
+  static Serializer<AddLifeEntryToCoupleDocumentRequest> get serializer => _$AddLifeEntryToCoupleDocumentRequestSerializer();
 }
 
-class _$CreateSaveDocumentRequestSerializer implements PrimitiveSerializer<CreateSaveDocumentRequest> {
+class _$AddLifeEntryToCoupleDocumentRequestSerializer implements PrimitiveSerializer<AddLifeEntryToCoupleDocumentRequest> {
   @override
-  final Iterable<Type> types = const [CreateSaveDocumentRequest, _$CreateSaveDocumentRequest];
+  final Iterable<Type> types = const [AddLifeEntryToCoupleDocumentRequest, _$AddLifeEntryToCoupleDocumentRequest];
 
   @override
-  final String wireName = r'CreateSaveDocumentRequest';
+  final String wireName = r'AddLifeEntryToCoupleDocumentRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    CreateSaveDocumentRequest object, {
+    AddLifeEntryToCoupleDocumentRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'sumAssured';
@@ -94,7 +94,7 @@ class _$CreateSaveDocumentRequestSerializer implements PrimitiveSerializer<Creat
   @override
   Object serialize(
     Serializers serializers,
-    CreateSaveDocumentRequest object, {
+    AddLifeEntryToCoupleDocumentRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -105,7 +105,7 @@ class _$CreateSaveDocumentRequestSerializer implements PrimitiveSerializer<Creat
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required CreateSaveDocumentRequestBuilder result,
+    required AddLifeEntryToCoupleDocumentRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -173,12 +173,12 @@ class _$CreateSaveDocumentRequestSerializer implements PrimitiveSerializer<Creat
   }
 
   @override
-  CreateSaveDocumentRequest deserialize(
+  AddLifeEntryToCoupleDocumentRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = CreateSaveDocumentRequestBuilder();
+    final result = AddLifeEntryToCoupleDocumentRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -194,24 +194,24 @@ class _$CreateSaveDocumentRequestSerializer implements PrimitiveSerializer<Creat
 }
 
 
-class CreateSaveDocumentRequestFrequencyEnum extends EnumClass {
+class AddLifeEntryToCoupleDocumentRequestFrequencyEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'monthly')
-  static const CreateSaveDocumentRequestFrequencyEnum monthly = _$createSaveDocumentRequestFrequencyEnum_monthly;
+  static const AddLifeEntryToCoupleDocumentRequestFrequencyEnum monthly = _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_monthly;
   @BuiltValueEnumConst(wireName: r'quarterly')
-  static const CreateSaveDocumentRequestFrequencyEnum quarterly = _$createSaveDocumentRequestFrequencyEnum_quarterly;
+  static const AddLifeEntryToCoupleDocumentRequestFrequencyEnum quarterly = _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_quarterly;
   @BuiltValueEnumConst(wireName: r'biannual')
-  static const CreateSaveDocumentRequestFrequencyEnum biannual = _$createSaveDocumentRequestFrequencyEnum_biannual;
+  static const AddLifeEntryToCoupleDocumentRequestFrequencyEnum biannual = _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_biannual;
   @BuiltValueEnumConst(wireName: r'annual')
-  static const CreateSaveDocumentRequestFrequencyEnum annual = _$createSaveDocumentRequestFrequencyEnum_annual;
+  static const AddLifeEntryToCoupleDocumentRequestFrequencyEnum annual = _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_annual;
   @BuiltValueEnumConst(wireName: r'single')
-  static const CreateSaveDocumentRequestFrequencyEnum single = _$createSaveDocumentRequestFrequencyEnum_single;
+  static const AddLifeEntryToCoupleDocumentRequestFrequencyEnum single = _$addLifeEntryToCoupleDocumentRequestFrequencyEnum_single;
 
-  static Serializer<CreateSaveDocumentRequestFrequencyEnum> get serializer => _$createSaveDocumentRequestFrequencyEnumSerializer;
+  static Serializer<AddLifeEntryToCoupleDocumentRequestFrequencyEnum> get serializer => _$addLifeEntryToCoupleDocumentRequestFrequencyEnumSerializer;
 
-  const CreateSaveDocumentRequestFrequencyEnum._(String name): super(name);
+  const AddLifeEntryToCoupleDocumentRequestFrequencyEnum._(String name): super(name);
 
-  static BuiltSet<CreateSaveDocumentRequestFrequencyEnum> get values => _$createSaveDocumentRequestFrequencyEnumValues;
-  static CreateSaveDocumentRequestFrequencyEnum valueOf(String name) => _$createSaveDocumentRequestFrequencyEnumValueOf(name);
+  static BuiltSet<AddLifeEntryToCoupleDocumentRequestFrequencyEnum> get values => _$addLifeEntryToCoupleDocumentRequestFrequencyEnumValues;
+  static AddLifeEntryToCoupleDocumentRequestFrequencyEnum valueOf(String name) => _$addLifeEntryToCoupleDocumentRequestFrequencyEnumValueOf(name);
 }
 

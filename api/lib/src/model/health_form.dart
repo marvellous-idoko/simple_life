@@ -28,8 +28,8 @@ part 'health_form.g.dart';
 /// * [smokingQty] 
 /// * [disabilityIssues] 
 /// * [comment] 
-@BuiltValue(instantiable: false)
-abstract class HealthForm  {
+@BuiltValue()
+abstract class HealthForm implements Built<HealthForm, HealthFormBuilder> {
   @BuiltValueField(wireName: r'height')
   num? get height;
 
@@ -42,39 +42,39 @@ abstract class HealthForm  {
 
   @BuiltValueField(wireName: r'neuralIssues')
   HealthFormNeuralIssuesEnum? get neuralIssues;
-  // enum neuralIssuesEnum {  true,  false,  };
+  // enum neuralIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'respiratoryIssues')
   HealthFormRespiratoryIssuesEnum? get respiratoryIssues;
-  // enum respiratoryIssuesEnum {  true,  false,  };
+  // enum respiratoryIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'renalIssues')
   HealthFormRenalIssuesEnum? get renalIssues;
-  // enum renalIssuesEnum {  true,  false,  };
+  // enum renalIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'heartIssues')
   HealthFormHeartIssuesEnum? get heartIssues;
-  // enum heartIssuesEnum {  true,  false,  };
+  // enum heartIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'preExistingIssues')
   HealthFormPreExistingIssuesEnum? get preExistingIssues;
-  // enum preExistingIssuesEnum {  true,  false,  };
+  // enum preExistingIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'stiIssues')
   HealthFormStiIssuesEnum? get stiIssues;
-  // enum stiIssuesEnum {  true,  false,  };
+  // enum stiIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'engageInSport')
   HealthFormEngageInSportEnum? get engageInSport;
-  // enum engageInSportEnum {  true,  false,  na,  };
+  // enum engageInSportEnum {  yes,  no,  na,  };
 
   @BuiltValueField(wireName: r'generalBodyWeakness')
   HealthFormGeneralBodyWeaknessEnum? get generalBodyWeakness;
-  // enum generalBodyWeaknessEnum {  true,  false,  na,  };
+  // enum generalBodyWeaknessEnum {  yes,  no,  na,  };
 
   @BuiltValueField(wireName: r'pregnant')
   HealthFormPregnantEnum? get pregnant;
-  // enum pregnantEnum {  true,  false,  na,  };
+  // enum pregnantEnum {  yes,  no,  na,  };
 
   @BuiltValueField(wireName: r'alcoholQty')
   num? get alcoholQty;
@@ -84,10 +84,17 @@ abstract class HealthForm  {
 
   @BuiltValueField(wireName: r'disabilityIssues')
   HealthFormDisabilityIssuesEnum? get disabilityIssues;
-  // enum disabilityIssuesEnum {  true,  false,  };
+  // enum disabilityIssuesEnum {  yes,  no,  };
 
   @BuiltValueField(wireName: r'comment')
   String? get comment;
+
+  HealthForm._();
+
+  factory HealthForm([void updates(HealthFormBuilder b)]) = _$HealthForm;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(HealthFormBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<HealthForm> get serializer => _$HealthFormSerializer();
@@ -95,7 +102,7 @@ abstract class HealthForm  {
 
 class _$HealthFormSerializer implements PrimitiveSerializer<HealthForm> {
   @override
-  final Iterable<Type> types = const [HealthForm];
+  final Iterable<Type> types = const [HealthForm, _$HealthForm];
 
   @override
   final String wireName = r'HealthForm';
@@ -226,47 +233,6 @@ class _$HealthFormSerializer implements PrimitiveSerializer<HealthForm> {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
-  }
-
-  @override
-  HealthForm deserialize(
-    Serializers serializers,
-    Object serialized, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return serializers.deserialize(serialized, specifiedType: FullType($HealthForm)) as $HealthForm;
-  }
-}
-
-
-/// a concrete implementation of [HealthForm], since [HealthForm] is not instantiable
-@BuiltValue(instantiable: true)
-abstract class $HealthForm implements HealthForm, Built<$HealthForm, $HealthFormBuilder> {
-  $HealthForm._();
-
-  factory $HealthForm([void Function($HealthFormBuilder)? updates]) = _$$HealthForm;
-
-  @BuiltValueHook(initializeBuilder: true)
-  static void _defaults($HealthFormBuilder b) => b;
-
-  @BuiltValueSerializer(custom: true)
-  static Serializer<$HealthForm> get serializer => _$$HealthFormSerializer();
-}
-
-class _$$HealthFormSerializer implements PrimitiveSerializer<$HealthForm> {
-  @override
-  final Iterable<Type> types = const [$HealthForm, _$$HealthForm];
-
-  @override
-  final String wireName = r'$HealthForm';
-
-  @override
-  Object serialize(
-    Serializers serializers,
-    $HealthForm object, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return serializers.serialize(object, specifiedType: FullType(HealthForm))!;
   }
 
   void _deserializeProperties(
@@ -418,12 +384,12 @@ class _$$HealthFormSerializer implements PrimitiveSerializer<$HealthForm> {
   }
 
   @override
-  $HealthForm deserialize(
+  HealthForm deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = $HealthFormBuilder();
+    final result = HealthFormBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -437,6 +403,7 @@ class _$$HealthFormSerializer implements PrimitiveSerializer<$HealthForm> {
     return result.build();
   }
 }
+
 
 class HealthFormStateOfHealthEnum extends EnumClass {
 
@@ -457,10 +424,10 @@ class HealthFormStateOfHealthEnum extends EnumClass {
 
 class HealthFormNeuralIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormNeuralIssuesEnum true_ = _$healthFormNeuralIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormNeuralIssuesEnum false_ = _$healthFormNeuralIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormNeuralIssuesEnum yes = _$healthFormNeuralIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormNeuralIssuesEnum no = _$healthFormNeuralIssuesEnum_no;
 
   static Serializer<HealthFormNeuralIssuesEnum> get serializer => _$healthFormNeuralIssuesEnumSerializer;
 
@@ -472,10 +439,10 @@ class HealthFormNeuralIssuesEnum extends EnumClass {
 
 class HealthFormRespiratoryIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormRespiratoryIssuesEnum true_ = _$healthFormRespiratoryIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormRespiratoryIssuesEnum false_ = _$healthFormRespiratoryIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormRespiratoryIssuesEnum yes = _$healthFormRespiratoryIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormRespiratoryIssuesEnum no = _$healthFormRespiratoryIssuesEnum_no;
 
   static Serializer<HealthFormRespiratoryIssuesEnum> get serializer => _$healthFormRespiratoryIssuesEnumSerializer;
 
@@ -487,10 +454,10 @@ class HealthFormRespiratoryIssuesEnum extends EnumClass {
 
 class HealthFormRenalIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormRenalIssuesEnum true_ = _$healthFormRenalIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormRenalIssuesEnum false_ = _$healthFormRenalIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormRenalIssuesEnum yes = _$healthFormRenalIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormRenalIssuesEnum no = _$healthFormRenalIssuesEnum_no;
 
   static Serializer<HealthFormRenalIssuesEnum> get serializer => _$healthFormRenalIssuesEnumSerializer;
 
@@ -502,10 +469,10 @@ class HealthFormRenalIssuesEnum extends EnumClass {
 
 class HealthFormHeartIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormHeartIssuesEnum true_ = _$healthFormHeartIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormHeartIssuesEnum false_ = _$healthFormHeartIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormHeartIssuesEnum yes = _$healthFormHeartIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormHeartIssuesEnum no = _$healthFormHeartIssuesEnum_no;
 
   static Serializer<HealthFormHeartIssuesEnum> get serializer => _$healthFormHeartIssuesEnumSerializer;
 
@@ -517,10 +484,10 @@ class HealthFormHeartIssuesEnum extends EnumClass {
 
 class HealthFormPreExistingIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormPreExistingIssuesEnum true_ = _$healthFormPreExistingIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormPreExistingIssuesEnum false_ = _$healthFormPreExistingIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormPreExistingIssuesEnum yes = _$healthFormPreExistingIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormPreExistingIssuesEnum no = _$healthFormPreExistingIssuesEnum_no;
 
   static Serializer<HealthFormPreExistingIssuesEnum> get serializer => _$healthFormPreExistingIssuesEnumSerializer;
 
@@ -532,10 +499,10 @@ class HealthFormPreExistingIssuesEnum extends EnumClass {
 
 class HealthFormStiIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormStiIssuesEnum true_ = _$healthFormStiIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormStiIssuesEnum false_ = _$healthFormStiIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormStiIssuesEnum yes = _$healthFormStiIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormStiIssuesEnum no = _$healthFormStiIssuesEnum_no;
 
   static Serializer<HealthFormStiIssuesEnum> get serializer => _$healthFormStiIssuesEnumSerializer;
 
@@ -547,10 +514,10 @@ class HealthFormStiIssuesEnum extends EnumClass {
 
 class HealthFormEngageInSportEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormEngageInSportEnum true_ = _$healthFormEngageInSportEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormEngageInSportEnum false_ = _$healthFormEngageInSportEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormEngageInSportEnum yes = _$healthFormEngageInSportEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormEngageInSportEnum no = _$healthFormEngageInSportEnum_no;
   @BuiltValueEnumConst(wireName: r'na')
   static const HealthFormEngageInSportEnum na = _$healthFormEngageInSportEnum_na;
 
@@ -564,10 +531,10 @@ class HealthFormEngageInSportEnum extends EnumClass {
 
 class HealthFormGeneralBodyWeaknessEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormGeneralBodyWeaknessEnum true_ = _$healthFormGeneralBodyWeaknessEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormGeneralBodyWeaknessEnum false_ = _$healthFormGeneralBodyWeaknessEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormGeneralBodyWeaknessEnum yes = _$healthFormGeneralBodyWeaknessEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormGeneralBodyWeaknessEnum no = _$healthFormGeneralBodyWeaknessEnum_no;
   @BuiltValueEnumConst(wireName: r'na')
   static const HealthFormGeneralBodyWeaknessEnum na = _$healthFormGeneralBodyWeaknessEnum_na;
 
@@ -581,10 +548,10 @@ class HealthFormGeneralBodyWeaknessEnum extends EnumClass {
 
 class HealthFormPregnantEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormPregnantEnum true_ = _$healthFormPregnantEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormPregnantEnum false_ = _$healthFormPregnantEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormPregnantEnum yes = _$healthFormPregnantEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormPregnantEnum no = _$healthFormPregnantEnum_no;
   @BuiltValueEnumConst(wireName: r'na')
   static const HealthFormPregnantEnum na = _$healthFormPregnantEnum_na;
 
@@ -598,10 +565,10 @@ class HealthFormPregnantEnum extends EnumClass {
 
 class HealthFormDisabilityIssuesEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'true')
-  static const HealthFormDisabilityIssuesEnum true_ = _$healthFormDisabilityIssuesEnum_true_;
-  @BuiltValueEnumConst(wireName: r'false')
-  static const HealthFormDisabilityIssuesEnum false_ = _$healthFormDisabilityIssuesEnum_false_;
+  @BuiltValueEnumConst(wireName: r'yes')
+  static const HealthFormDisabilityIssuesEnum yes = _$healthFormDisabilityIssuesEnum_yes;
+  @BuiltValueEnumConst(wireName: r'no')
+  static const HealthFormDisabilityIssuesEnum no = _$healthFormDisabilityIssuesEnum_no;
 
   static Serializer<HealthFormDisabilityIssuesEnum> get serializer => _$healthFormDisabilityIssuesEnumSerializer;
 

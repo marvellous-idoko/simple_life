@@ -3,7 +3,7 @@ import 'package:openapi/openapi.dart';
 
 // tests for HealthForm
 void main() {
-  //final instance = HealthFormBuilder();
+  final instance = HealthFormBuilder();
   // TODO add properties to the builder and call build()
 
   group(HealthForm, () {

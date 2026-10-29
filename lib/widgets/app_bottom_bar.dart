@@ -4,6 +4,8 @@ import 'package:simple_life/Bloc__state/general_bloc.dart';
 import 'package:simple_life/app_constants.dart/app_constants.dart';
 import 'package:simple_life/app_routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:simple_life/colors/app_colors.dart';
+import 'package:simple_life/utils/utils.dart';
 
 class AppBottomBar extends StatelessWidget {
   const AppBottomBar({
@@ -12,8 +14,8 @@ class AppBottomBar extends StatelessWidget {
     super.key,
   });
 
-  static const _brandRed = Color(0xFFF22B22);
-  static const _inactiveColor = Color(0xFFA4A9B3);
+  static const _brandRed = AppColors.primary;
+  static const _inactiveColor = AppColors.mutedColor;
 
   final int currentIndex;
   final ValueChanged<int> onTap;
@@ -236,8 +238,11 @@ Future<void> showBuyMenu(BuildContext context) {
                               ['Motor', 'Travel'],
                               ['Home'],
                             ],
-                            onTap: () =>
-                                _selectInsurance(context, dialogContext, Company['HIL']!),
+                            onTap: () => _selectInsurance(
+                              context,
+                              dialogContext,
+                              Company['HIL']!,
+                            ),
                           ),
                         ),
                         const SizedBox(width: 15),
@@ -253,8 +258,11 @@ Future<void> showBuyMenu(BuildContext context) {
                               ['Heirs Secure Plan'],
                               ['Salary Plus'],
                             ],
-                            onTap: () =>
-                                _selectInsurance(context, dialogContext, Company['HLA']!),
+                            onTap: () => _selectInsurance(
+                              context,
+                              dialogContext,
+                              Company['HLA']!,
+                            ),
                           ),
                         ),
                       ],
@@ -302,21 +310,35 @@ Future<void> showBuyMenu(BuildContext context) {
   );
 }
 
-void _selectInsurance(
+Future<void> _selectInsurance(
   BuildContext navigationContext,
   BuildContext dialogContext,
   String insuranceType,
-) {
+) async {
   final message = navigationContext.read<GeneralBloc>().state.message;
-  print(message);
-  if(message['customer']?['isSelected'] == true) {
-    if(insuranceType == Company['HLA']) {
-      // dialogContext.go(AppRoutes.lifeProducts);
-    } else {
-      // dialogContext.go(AppRoutes.generalProducts);
+  final hasSelectedProfile =
+      message['profile']?['customer']?['isSelected'] == true;
+  final isLifeInsurance = insuranceType == Company['HLA'];
+  message['policy']?['company'] == insuranceType;
+  // Navigator.pop(dialogContext);
+  await saveMessage(navigationContext, message);
+
+  // if (hasSelectedProfile) {
+    if (false == false) {
+
+      if (navigationContext.mounted) {
+      navigationContext.go(AppRoutes.selectProfile);
     }
   } else {
-    dialogContext.go(AppRoutes.selectProfile);
+    if (isLifeInsurance) {
+      if (navigationContext.mounted) {
+        navigationContext.go(AppRoutes.lifeProducts);
+      }
+    } else {
+      if (navigationContext.mounted) {
+        navigationContext.go(AppRoutes.generalProducts);
+      }
+    }
   }
 }
 

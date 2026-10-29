@@ -4,6 +4,7 @@ README.md
 analysis_options.yaml
 doc/AccidentPerson.md
 doc/AccountStatementPremium.md
+doc/AddLifeEntryToCoupleDocumentRequest.md
 doc/AddMotorTo3rdPartyDocumentRequest.md
 doc/Address.md
 doc/Agent.md
@@ -45,7 +46,6 @@ doc/CompanyCustomer.md
 doc/CompanyPartner.md
 doc/Create3rdPartyDocumentRequest.md
 doc/CreatePasswordRequest.md
-doc/CreateSaveDocumentRequest.md
 doc/Customer.md
 doc/CustomerIDVerification.md
 doc/CustomerIDVerificationData.md
@@ -66,9 +66,7 @@ doc/ExistingPolicy.md
 doc/FlutterwaveEvent.md
 doc/Get3rdPartyQuoteOptions200Response.md
 doc/Get3rdPartyQuoteOptions200ResponsePremium.md
-doc/GetHeirs3YearsPremium200Response.md
-doc/GetInsuredPersonById200Response.md
-doc/GetInsuredPersonsByLoggedInUser200ResponseInner.md
+doc/GetEndowmentPremium200Response.md
 doc/GetLgas200ResponseInner.md
 doc/GetLoggedInUser200Response.md
 doc/GetMotorFrom3rdPartyDocument200Response.md
@@ -85,6 +83,7 @@ doc/IndividualPartner.md
 doc/IndividualProtectionDocument.md
 doc/IndividualProtectionDocumentBasic.md
 doc/IndividualSavingsDocument.md
+doc/InsuredPersonResponse.md
 doc/InterestRate.md
 doc/IsPasswordLogin200Response.md
 doc/LifePremium.md
@@ -104,7 +103,7 @@ doc/PartnerPolicySubmission.md
 doc/PartnerPolicySubmissionBeneficiaryInner.md
 doc/PartnerType.md
 doc/PayEntry.md
-doc/PayForSaveDocument200Response.md
+doc/PayForEndowmentDocument200Response.md
 doc/PaystackEvent.md
 doc/PaystackMandate.md
 doc/PolicyInfo.md
@@ -151,6 +150,7 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/accident_person.dart
 lib/src/model/account_statement_premium.dart
+lib/src/model/add_life_entry_to_couple_document_request.dart
 lib/src/model/add_motor_to3rd_party_document_request.dart
 lib/src/model/address.dart
 lib/src/model/agent.dart
@@ -192,7 +192,6 @@ lib/src/model/company_customer.dart
 lib/src/model/company_partner.dart
 lib/src/model/create3rd_party_document_request.dart
 lib/src/model/create_password_request.dart
-lib/src/model/create_save_document_request.dart
 lib/src/model/customer.dart
 lib/src/model/customer_id.dart
 lib/src/model/customer_id_verification.dart
@@ -213,9 +212,7 @@ lib/src/model/existing_policy.dart
 lib/src/model/flutterwave_event.dart
 lib/src/model/get3rd_party_quote_options200_response.dart
 lib/src/model/get3rd_party_quote_options200_response_premium.dart
-lib/src/model/get_heirs3_years_premium200_response.dart
-lib/src/model/get_insured_person_by_id200_response.dart
-lib/src/model/get_insured_persons_by_logged_in_user200_response_inner.dart
+lib/src/model/get_endowment_premium200_response.dart
 lib/src/model/get_lgas200_response_inner.dart
 lib/src/model/get_logged_in_user200_response.dart
 lib/src/model/get_motor_from3rd_party_document200_response.dart
@@ -232,6 +229,7 @@ lib/src/model/individual_partner.dart
 lib/src/model/individual_protection_document.dart
 lib/src/model/individual_protection_document_basic.dart
 lib/src/model/individual_savings_document.dart
+lib/src/model/insured_person_response.dart
 lib/src/model/interest_rate.dart
 lib/src/model/is_password_login200_response.dart
 lib/src/model/life_premium.dart
@@ -251,7 +249,7 @@ lib/src/model/partner_policy_submission.dart
 lib/src/model/partner_policy_submission_beneficiary_inner.dart
 lib/src/model/partner_type.dart
 lib/src/model/pay_entry.dart
-lib/src/model/pay_for_save_document200_response.dart
+lib/src/model/pay_for_endowment_document200_response.dart
 lib/src/model/paystack_event.dart
 lib/src/model/paystack_mandate.dart
 lib/src/model/policy_info.dart
@@ -290,6 +288,7 @@ lib/src/serializers.dart
 pubspec.yaml
 test/accident_person_test.dart
 test/account_statement_premium_test.dart
+test/add_life_entry_to_couple_document_request_test.dart
 test/add_motor_to3rd_party_document_request_test.dart
 test/address_test.dart
 test/agent_invitation_test.dart
@@ -331,7 +330,6 @@ test/company_customer_test.dart
 test/company_partner_test.dart
 test/create3rd_party_document_request_test.dart
 test/create_password_request_test.dart
-test/create_save_document_request_test.dart
 test/customer_id_test.dart
 test/customer_id_verification_data_test.dart
 test/customer_id_verification_error_test.dart
@@ -352,9 +350,7 @@ test/existing_policy_test.dart
 test/flutterwave_event_test.dart
 test/get3rd_party_quote_options200_response_premium_test.dart
 test/get3rd_party_quote_options200_response_test.dart
-test/get_heirs3_years_premium200_response_test.dart
-test/get_insured_person_by_id200_response_test.dart
-test/get_insured_persons_by_logged_in_user200_response_inner_test.dart
+test/get_endowment_premium200_response_test.dart
 test/get_lgas200_response_inner_test.dart
 test/get_logged_in_user200_response_test.dart
 test/get_motor_from3rd_party_document200_response_test.dart
@@ -371,6 +367,7 @@ test/individual_partner_test.dart
 test/individual_protection_document_basic_test.dart
 test/individual_protection_document_test.dart
 test/individual_savings_document_test.dart
+test/insured_person_response_test.dart
 test/interest_rate_test.dart
 test/is_password_login200_response_test.dart
 test/life_premium_test.dart
@@ -390,7 +387,7 @@ test/partner_policy_submission_beneficiary_inner_test.dart
 test/partner_policy_submission_test.dart
 test/partner_type_test.dart
 test/pay_entry_test.dart
-test/pay_for_save_document200_response_test.dart
+test/pay_for_endowment_document200_response_test.dart
 test/paystack_event_test.dart
 test/paystack_mandate_test.dart
 test/policy_info_test.dart
