@@ -61,6 +61,8 @@ class _$BeneficiaryGenderEnumSerializer
 
 class _$Beneficiary extends Beneficiary {
   @override
+  final String beneficiaryId;
+  @override
   final String? name;
   @override
   final Date? dateOfBirth;
@@ -75,7 +77,7 @@ class _$Beneficiary extends Beneficiary {
   @override
   final String? guardianName;
   @override
-  final String? guardianPhoneNumber;
+  final String? guardianPhone;
   @override
   final String? guardianAddress;
 
@@ -83,14 +85,15 @@ class _$Beneficiary extends Beneficiary {
       (BeneficiaryBuilder()..update(updates))._build();
 
   _$Beneficiary._(
-      {this.name,
+      {required this.beneficiaryId,
+      this.name,
       this.dateOfBirth,
       this.relationship,
       this.gender,
       this.phone,
       this.email,
       this.guardianName,
-      this.guardianPhoneNumber,
+      this.guardianPhone,
       this.guardianAddress})
       : super._();
   @override
@@ -104,6 +107,7 @@ class _$Beneficiary extends Beneficiary {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Beneficiary &&
+        beneficiaryId == other.beneficiaryId &&
         name == other.name &&
         dateOfBirth == other.dateOfBirth &&
         relationship == other.relationship &&
@@ -111,13 +115,14 @@ class _$Beneficiary extends Beneficiary {
         phone == other.phone &&
         email == other.email &&
         guardianName == other.guardianName &&
-        guardianPhoneNumber == other.guardianPhoneNumber &&
+        guardianPhone == other.guardianPhone &&
         guardianAddress == other.guardianAddress;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, beneficiaryId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, dateOfBirth.hashCode);
     _$hash = $jc(_$hash, relationship.hashCode);
@@ -125,7 +130,7 @@ class _$Beneficiary extends Beneficiary {
     _$hash = $jc(_$hash, phone.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, guardianName.hashCode);
-    _$hash = $jc(_$hash, guardianPhoneNumber.hashCode);
+    _$hash = $jc(_$hash, guardianPhone.hashCode);
     _$hash = $jc(_$hash, guardianAddress.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -134,6 +139,7 @@ class _$Beneficiary extends Beneficiary {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'Beneficiary')
+          ..add('beneficiaryId', beneficiaryId)
           ..add('name', name)
           ..add('dateOfBirth', dateOfBirth)
           ..add('relationship', relationship)
@@ -141,7 +147,7 @@ class _$Beneficiary extends Beneficiary {
           ..add('phone', phone)
           ..add('email', email)
           ..add('guardianName', guardianName)
-          ..add('guardianPhoneNumber', guardianPhoneNumber)
+          ..add('guardianPhone', guardianPhone)
           ..add('guardianAddress', guardianAddress))
         .toString();
   }
@@ -149,6 +155,11 @@ class _$Beneficiary extends Beneficiary {
 
 class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
   _$Beneficiary? _$v;
+
+  String? _beneficiaryId;
+  String? get beneficiaryId => _$this._beneficiaryId;
+  set beneficiaryId(String? beneficiaryId) =>
+      _$this._beneficiaryId = beneficiaryId;
 
   String? _name;
   String? get name => _$this._name;
@@ -178,10 +189,10 @@ class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
   String? get guardianName => _$this._guardianName;
   set guardianName(String? guardianName) => _$this._guardianName = guardianName;
 
-  String? _guardianPhoneNumber;
-  String? get guardianPhoneNumber => _$this._guardianPhoneNumber;
-  set guardianPhoneNumber(String? guardianPhoneNumber) =>
-      _$this._guardianPhoneNumber = guardianPhoneNumber;
+  String? _guardianPhone;
+  String? get guardianPhone => _$this._guardianPhone;
+  set guardianPhone(String? guardianPhone) =>
+      _$this._guardianPhone = guardianPhone;
 
   String? _guardianAddress;
   String? get guardianAddress => _$this._guardianAddress;
@@ -195,6 +206,7 @@ class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
   BeneficiaryBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _beneficiaryId = $v.beneficiaryId;
       _name = $v.name;
       _dateOfBirth = $v.dateOfBirth;
       _relationship = $v.relationship;
@@ -202,7 +214,7 @@ class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
       _phone = $v.phone;
       _email = $v.email;
       _guardianName = $v.guardianName;
-      _guardianPhoneNumber = $v.guardianPhoneNumber;
+      _guardianPhone = $v.guardianPhone;
       _guardianAddress = $v.guardianAddress;
       _$v = null;
     }
@@ -225,6 +237,8 @@ class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
   _$Beneficiary _build() {
     final _$result = _$v ??
         _$Beneficiary._(
+          beneficiaryId: BuiltValueNullFieldError.checkNotNull(
+              beneficiaryId, r'Beneficiary', 'beneficiaryId'),
           name: name,
           dateOfBirth: dateOfBirth,
           relationship: relationship,
@@ -232,7 +246,7 @@ class BeneficiaryBuilder implements Builder<Beneficiary, BeneficiaryBuilder> {
           phone: phone,
           email: email,
           guardianName: guardianName,
-          guardianPhoneNumber: guardianPhoneNumber,
+          guardianPhone: guardianPhone,
           guardianAddress: guardianAddress,
         );
     replace(_$result);

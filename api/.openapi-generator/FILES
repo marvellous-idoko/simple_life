@@ -103,7 +103,7 @@ doc/PartnerPolicySubmission.md
 doc/PartnerPolicySubmissionBeneficiaryInner.md
 doc/PartnerType.md
 doc/PayEntry.md
-doc/PayForEndowmentDocument200Response.md
+doc/PaymentInitializationResponse.md
 doc/PaystackEvent.md
 doc/PaystackMandate.md
 doc/PolicyInfo.md
@@ -249,7 +249,7 @@ lib/src/model/partner_policy_submission.dart
 lib/src/model/partner_policy_submission_beneficiary_inner.dart
 lib/src/model/partner_type.dart
 lib/src/model/pay_entry.dart
-lib/src/model/pay_for_endowment_document200_response.dart
+lib/src/model/payment_initialization_response.dart
 lib/src/model/paystack_event.dart
 lib/src/model/paystack_mandate.dart
 lib/src/model/policy_info.dart
@@ -387,7 +387,7 @@ test/partner_policy_submission_beneficiary_inner_test.dart
 test/partner_policy_submission_test.dart
 test/partner_type_test.dart
 test/pay_entry_test.dart
-test/pay_for_endowment_document200_response_test.dart
+test/payment_initialization_response_test.dart
 test/paystack_event_test.dart
 test/paystack_mandate_test.dart
 test/policy_info_test.dart

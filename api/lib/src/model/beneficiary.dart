@@ -13,6 +13,7 @@ part 'beneficiary.g.dart';
 /// Beneficiary
 ///
 /// Properties:
+/// * [beneficiaryId] 
 /// * [name] 
 /// * [dateOfBirth] 
 /// * [relationship] 
@@ -20,10 +21,13 @@ part 'beneficiary.g.dart';
 /// * [phone] 
 /// * [email] 
 /// * [guardianName] 
-/// * [guardianPhoneNumber] 
+/// * [guardianPhone] 
 /// * [guardianAddress] 
 @BuiltValue()
 abstract class Beneficiary implements Built<Beneficiary, BeneficiaryBuilder> {
+  @BuiltValueField(wireName: r'beneficiaryId')
+  String get beneficiaryId;
+
   @BuiltValueField(wireName: r'name')
   String? get name;
 
@@ -46,8 +50,8 @@ abstract class Beneficiary implements Built<Beneficiary, BeneficiaryBuilder> {
   @BuiltValueField(wireName: r'guardianName')
   String? get guardianName;
 
-  @BuiltValueField(wireName: r'guardianPhoneNumber')
-  String? get guardianPhoneNumber;
+  @BuiltValueField(wireName: r'guardianPhone')
+  String? get guardianPhone;
 
   @BuiltValueField(wireName: r'guardianAddress')
   String? get guardianAddress;
@@ -75,6 +79,11 @@ class _$BeneficiarySerializer implements PrimitiveSerializer<Beneficiary> {
     Beneficiary object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    yield r'beneficiaryId';
+    yield serializers.serialize(
+      object.beneficiaryId,
+      specifiedType: const FullType(String),
+    );
     if (object.name != null) {
       yield r'name';
       yield serializers.serialize(
@@ -124,10 +133,10 @@ class _$BeneficiarySerializer implements PrimitiveSerializer<Beneficiary> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.guardianPhoneNumber != null) {
-      yield r'guardianPhoneNumber';
+    if (object.guardianPhone != null) {
+      yield r'guardianPhone';
       yield serializers.serialize(
-        object.guardianPhoneNumber,
+        object.guardianPhone,
         specifiedType: const FullType(String),
       );
     }
@@ -161,6 +170,13 @@ class _$BeneficiarySerializer implements PrimitiveSerializer<Beneficiary> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'beneficiaryId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.beneficiaryId = valueDes;
+          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -217,13 +233,13 @@ class _$BeneficiarySerializer implements PrimitiveSerializer<Beneficiary> {
           if (valueDes == null) continue;
           result.guardianName = valueDes;
           break;
-        case r'guardianPhoneNumber':
+        case r'guardianPhone':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.guardianPhoneNumber = valueDes;
+          result.guardianPhone = valueDes;
           break;
         case r'guardianAddress':
           final valueDes = serializers.deserialize(

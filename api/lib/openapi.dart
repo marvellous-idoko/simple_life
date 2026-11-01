@@ -112,7 +112,7 @@ export 'package:openapi/src/model/partner_policy_submission.dart';
 export 'package:openapi/src/model/partner_policy_submission_beneficiary_inner.dart';
 export 'package:openapi/src/model/partner_type.dart';
 export 'package:openapi/src/model/pay_entry.dart';
-export 'package:openapi/src/model/pay_for_endowment_document200_response.dart';
+export 'package:openapi/src/model/payment_initialization_response.dart';
 export 'package:openapi/src/model/paystack_event.dart';
 export 'package:openapi/src/model/paystack_mandate.dart';
 export 'package:openapi/src/model/policy_info.dart';

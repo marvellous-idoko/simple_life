@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Beneficiary, () {
+    // String beneficiaryId
+    test('to test the property `beneficiaryId`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -42,8 +47,8 @@ void main() {
       // TODO
     });
 
-    // String guardianPhoneNumber
-    test('to test the property `guardianPhoneNumber`', () async {
+    // String guardianPhone
+    test('to test the property `guardianPhone`', () async {
       // TODO
     });
 

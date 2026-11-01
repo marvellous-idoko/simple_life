@@ -389,3 +389,14 @@ Map<String, Map<String, String>> BusinessOwnerPolicy = {
     'productIcon': 'business_owner_protect_plus_icon.png',
   },
 };
+
+enum PaymentMethod {
+  paystack('paystack'),
+  van('virtual-account');
+
+  // The associated string value
+  final String value;
+
+  // Constructor
+  const PaymentMethod(this.value);
+}

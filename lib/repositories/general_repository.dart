@@ -1,5 +1,6 @@
-import 'package:dio/dio.dart' show Response;
+import 'package:dio/dio.dart' show Response, DioException;
 import 'package:openapi/openapi.dart';
+import 'package:pay_with_paystack/model/payment_data.dart';
 import 'package:simple_life/app_constants.dart/app_constants.dart';
 import 'package:uuid/uuid.dart';
 
@@ -50,9 +51,12 @@ class GeneralRepository {
     return response.data?.toList() ?? const [];
   }
 
-  Future<void> createBeneficiary(Beneficiary beneficiary) async {
+  Future<void> createBeneficiary(
+    Beneficiary beneficiary,
+    String beneficiaryId,
+  ) async {
     await ApiClient().api.createBeneficiary(
-      beneficiaryId: const Uuid().v4(),
+      beneficiaryId: beneficiaryId,
       beneficiary: beneficiary,
     );
   }
@@ -155,6 +159,89 @@ class GeneralRepository {
         documentId: data['documentId'].toString(),
         customerId: request,
       );
+    }
+  }
+
+  Future<Response<void>> addBeneficiaryToPolicy(
+    Map<String, dynamic> shareDocument,
+  ) async {
+    final request = BeneficiaryShare(
+      (builder) => builder
+        ..beneficiaryId = shareDocument['beneficiaryId'].toString()
+        ..personId = shareDocument['body']['personId'].toString()
+        ..share = shareDocument['body']['share'] as num,
+    );
+    final response = await ApiClient().api.addBeneficiaryShareToSaveDocument(
+      beneficiaryId: shareDocument['beneficiaryId'].toString(),
+      documentId: shareDocument['documentId'].toString(),
+      beneficiaryShare: request,
+    );
+    return response;
+  }
+
+  Future<Response<void>> registerSavePayment(
+    Map<String, dynamic> payload,
+  ) async {
+    print(payload);
+    print('payload179');
+
+    final response = await ApiClient().api.registerSavePayment(
+      documentId: payload['documentId'].toString(),
+      payId: payload['payId'].toString(),
+      payEntry: PayEntry(
+        (builder) => builder
+          ..method = PayEntryMethodEnum.valueOf(
+            payload['body']?['method']?.toString() ?? '',
+          )
+          ..paymentCode = num.parse(payload['body']?['paymentCode'] ?? 0)
+          ..referrer = payload['body']?['referrer']?.toString() ?? '',
+      ),
+    );
+
+    return response;
+  }
+
+  // Future<dynamic> payForSaveDocument(Map<String, dynamic> payload) async {
+  //   final response = await ApiClient().api.payForSaveDocument(
+  //     documentId: payload['documentId'].toString(),
+  //     payId: payload['payId'].toString(),
+  //   );
+  //   return response.data;
+  // }
+  Future<dynamic> payForSaveDocument(Map<String, dynamic> payload) async {
+    try {
+      final response = await ApiClient().api.payForSaveDocument(
+        documentId: payload['documentId'].toString(),
+        payId: payload['payId'].toString(),
+      );
+      return response.data;
+    } on DioException catch (error) {
+      print('Error response: ${error.response?.data}');
+      rethrow;
+    }
+  }
+
+  // Future<Response<void>> registerPayment(Map<String, dynamic> payload) async {
+  // final response = await ApiClient().api.registerPayment(
+  //   documentId: payload['documentId'].toString(),
+  //   paymentRequest: PaymentRequest(
+  //     (builder) => builder
+  //       ..method = payload['body']?['method']?.toString()
+  //       ..paymentCode = payload['body']?['paymentCode']?.toString()
+  //       ..referrer = payload['body']?['referrer']?.toString(),
+  //   ),
+  // );
+  // return response;
+  // }
+  Future<dynamic> paystackCallback(PaymentData PaymentData) async {
+    try {
+    final response = await ApiClient().api.paystackCallback(
+      paystackId: PaymentData.reference!,
+    );
+    return response.data;
+  } on DioException catch (error) {
+      print('Error response: ${error.response?.data}');
+      rethrow;
     }
   }
 }

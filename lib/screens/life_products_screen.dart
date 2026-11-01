@@ -486,7 +486,7 @@ class _LifeProductCard extends StatelessWidget {
     );
   }
 
-  goToNextPage(
+  Future<void> goToNextPage(
     BuildContext context,
     String name,
     String code,

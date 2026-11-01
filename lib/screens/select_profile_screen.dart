@@ -43,7 +43,6 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
       if (mounted) _showSelfServiceNotice();
     });
   }
-
   Future<void> _showSelfServiceNotice() {
     return showDialog<void>(
       context: context,
@@ -158,7 +157,6 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
                           }),
                         );
                       }
-
                       final profiles = snapshot.data ?? const <Customer>[];
                       if (profiles.isEmpty) {
                         return const _ProfilesMessage(

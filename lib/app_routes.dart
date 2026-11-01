@@ -10,6 +10,8 @@ abstract class AppRoutes {
   static const String makeClaim = '/make-a-claim';
   static const String myClaims = '/my-claims';
   static const String payPremium = '/pay-premium';
+  static const String buy = '/buy';
+  static const String wallet = '/wallet';
   static const String profile = '/profile';
   static const String editProfile = '/profile/edit';
   static const String lifeProducts = '/life-products';
@@ -18,6 +20,7 @@ abstract class AppRoutes {
   static const String generalProducts = '/general-products';
   static const String beneficiaries = '/beneficiaries';
   static const String dashboard = '/dashboard';
+  static const String lifePolicySummary = '/life-summary';
 
   static String lifeProductDetailsPath(String code) =>
       '/life-products/${Uri.encodeComponent(code)}';

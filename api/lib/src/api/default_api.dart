@@ -45,7 +45,7 @@ import 'package:openapi/src/model/log_user_in_request.dart';
 import 'package:openapi/src/model/motor_particulars.dart';
 import 'package:openapi/src/model/motor_premium.dart';
 import 'package:openapi/src/model/pay_entry.dart';
-import 'package:openapi/src/model/pay_for_endowment_document200_response.dart';
+import 'package:openapi/src/model/payment_initialization_response.dart';
 import 'package:openapi/src/model/policy_info.dart';
 import 'package:openapi/src/model/problem_detail.dart';
 import 'package:openapi/src/model/register_user_without_password_request.dart';
@@ -17395,9 +17395,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payFor3rdPartyDocument({ 
+  Future<Response<PaymentInitializationResponse>> payFor3rdPartyDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17434,14 +17434,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17453,7 +17453,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17478,9 +17478,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payFor3rdPartyFireAndTheftDocument({ 
+  Future<Response<PaymentInitializationResponse>> payFor3rdPartyFireAndTheftDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17517,14 +17517,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17536,7 +17536,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17561,9 +17561,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payFor3rdPartyPlusDocument({ 
+  Future<Response<PaymentInitializationResponse>> payFor3rdPartyPlusDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17600,14 +17600,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17619,7 +17619,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17644,9 +17644,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForAccidentBronzeDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForAccidentBronzeDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17683,14 +17683,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17702,7 +17702,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17727,9 +17727,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForAccidentGoldDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForAccidentGoldDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17766,14 +17766,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17785,7 +17785,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17810,9 +17810,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForAccidentPlatinumDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForAccidentPlatinumDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17849,14 +17849,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17868,7 +17868,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17893,9 +17893,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForAccidentSilverDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForAccidentSilverDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -17932,14 +17932,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -17951,7 +17951,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -17976,9 +17976,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForComprehensiveDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForComprehensiveDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18015,14 +18015,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18034,7 +18034,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18059,9 +18059,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForCoupleDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForCoupleDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18098,14 +18098,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18117,7 +18117,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18142,9 +18142,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForEndowmentDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForEndowmentDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18181,14 +18181,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18200,7 +18200,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18225,9 +18225,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForHeirs25kDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForHeirs25kDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18264,14 +18264,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18283,7 +18283,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18308,9 +18308,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForHeirs35kDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForHeirs35kDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18347,14 +18347,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18366,7 +18366,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18391,9 +18391,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForHeirs3YearsDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForHeirs3YearsDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18430,14 +18430,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18449,7 +18449,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18474,9 +18474,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForHeirs70kDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForHeirs70kDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18513,14 +18513,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18532,7 +18532,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18557,9 +18557,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForHerMotorDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForHerMotorDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18596,14 +18596,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18615,7 +18615,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18640,9 +18640,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForMyHeirsDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForMyHeirsDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18679,14 +18679,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18698,7 +18698,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18723,9 +18723,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForMyHeirsPlusDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForMyHeirsPlusDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18762,14 +18762,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18781,7 +18781,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18806,9 +18806,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForSalaryDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForSalaryDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18845,14 +18845,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18864,7 +18864,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18889,9 +18889,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForSaveDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForSaveDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -18928,14 +18928,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -18947,7 +18947,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -18972,9 +18972,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForSaveExtraDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForSaveExtraDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -19011,14 +19011,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -19030,7 +19030,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -19055,9 +19055,9 @@ class DefaultApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PayForEndowmentDocument200Response] as data
+  /// Returns a [Future] containing a [Response] with a [PaymentInitializationResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PayForEndowmentDocument200Response>> payForTriplePayDocument({ 
+  Future<Response<PaymentInitializationResponse>> payForTriplePayDocument({ 
     required String documentId,
     required String payId,
     CancelToken? cancelToken,
@@ -19094,14 +19094,14 @@ class DefaultApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PayForEndowmentDocument200Response? _responseData;
+    PaymentInitializationResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PayForEndowmentDocument200Response),
-      ) as PayForEndowmentDocument200Response;
+        specifiedType: const FullType(PaymentInitializationResponse),
+      ) as PaymentInitializationResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -19113,7 +19113,7 @@ class DefaultApi {
       );
     }
 
-    return Response<PayForEndowmentDocument200Response>(
+    return Response<PaymentInitializationResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -114,7 +114,7 @@ import 'package:openapi/src/model/partner_policy_submission.dart';
 import 'package:openapi/src/model/partner_policy_submission_beneficiary_inner.dart';
 import 'package:openapi/src/model/partner_type.dart';
 import 'package:openapi/src/model/pay_entry.dart';
-import 'package:openapi/src/model/pay_for_endowment_document200_response.dart';
+import 'package:openapi/src/model/payment_initialization_response.dart';
 import 'package:openapi/src/model/paystack_event.dart';
 import 'package:openapi/src/model/paystack_mandate.dart';
 import 'package:openapi/src/model/policy_info.dart';
@@ -253,7 +253,7 @@ part 'serializers.g.dart';
   PartnerPolicySubmissionBeneficiaryInner,
   PartnerType,
   PayEntry,
-  PayForEndowmentDocument200Response,
+  PaymentInitializationResponse,
   PaystackEvent,
   PaystackMandate,
   PolicyInfo,

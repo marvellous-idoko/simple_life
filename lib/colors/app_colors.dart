@@ -9,4 +9,5 @@ abstract class AppColors {
   static const Color textColor = Color(0xFF515258);
   static const Color mutedColor = Color(0xFF858B98);
   static const Color backgroundColor = Color(0xFFFCFCFD);
+  static const Color backgroundMuted = Color(0xFFF3F4F6);
 }

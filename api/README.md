@@ -458,7 +458,7 @@ Class | Method | HTTP request | Description
  - [PartnerPolicySubmissionBeneficiaryInner](doc/PartnerPolicySubmissionBeneficiaryInner.md)
  - [PartnerType](doc/PartnerType.md)
  - [PayEntry](doc/PayEntry.md)
- - [PayForEndowmentDocument200Response](doc/PayForEndowmentDocument200Response.md)
+ - [PaymentInitializationResponse](doc/PaymentInitializationResponse.md)
  - [PaystackEvent](doc/PaystackEvent.md)
  - [PaystackMandate](doc/PaystackMandate.md)
  - [PolicyInfo](doc/PolicyInfo.md)

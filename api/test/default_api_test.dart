@@ -1591,147 +1591,147 @@ void main() {
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payFor3rdPartyDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payFor3rdPartyDocument(String documentId, String payId) async
     test('test payFor3rdPartyDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party fire and theft premium
     //
-    //Future<PayForEndowmentDocument200Response> payFor3rdPartyFireAndTheftDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payFor3rdPartyFireAndTheftDocument(String documentId, String payId) async
     test('test payFor3rdPartyFireAndTheftDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payFor3rdPartyPlusDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payFor3rdPartyPlusDocument(String documentId, String payId) async
     test('test payFor3rdPartyPlusDocument', () async {
       // TODO
     });
 
     // Pay for AccidentBronze premium
     //
-    //Future<PayForEndowmentDocument200Response> payForAccidentBronzeDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForAccidentBronzeDocument(String documentId, String payId) async
     test('test payForAccidentBronzeDocument', () async {
       // TODO
     });
 
     // Pay for accident premium
     //
-    //Future<PayForEndowmentDocument200Response> payForAccidentGoldDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForAccidentGoldDocument(String documentId, String payId) async
     test('test payForAccidentGoldDocument', () async {
       // TODO
     });
 
     // Pay for AccidentPlatinum premium
     //
-    //Future<PayForEndowmentDocument200Response> payForAccidentPlatinumDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForAccidentPlatinumDocument(String documentId, String payId) async
     test('test payForAccidentPlatinumDocument', () async {
       // TODO
     });
 
     // Pay for AccidentSilver premium
     //
-    //Future<PayForEndowmentDocument200Response> payForAccidentSilverDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForAccidentSilverDocument(String documentId, String payId) async
     test('test payForAccidentSilverDocument', () async {
       // TODO
     });
 
     // Pay for comprehensive premium
     //
-    //Future<PayForEndowmentDocument200Response> payForComprehensiveDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForComprehensiveDocument(String documentId, String payId) async
     test('test payForComprehensiveDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForCoupleDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForCoupleDocument(String documentId, String payId) async
     test('test payForCoupleDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForEndowmentDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForEndowmentDocument(String documentId, String payId) async
     test('test payForEndowmentDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payForHeirs25kDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForHeirs25kDocument(String documentId, String payId) async
     test('test payForHeirs25kDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payForHeirs35kDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForHeirs35kDocument(String documentId, String payId) async
     test('test payForHeirs35kDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForHeirs3YearsDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForHeirs3YearsDocument(String documentId, String payId) async
     test('test payForHeirs3YearsDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payForHeirs70kDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForHeirs70kDocument(String documentId, String payId) async
     test('test payForHeirs70kDocument', () async {
       // TODO
     });
 
     // Pay for 3rd party premium
     //
-    //Future<PayForEndowmentDocument200Response> payForHerMotorDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForHerMotorDocument(String documentId, String payId) async
     test('test payForHerMotorDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForMyHeirsDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForMyHeirsDocument(String documentId, String payId) async
     test('test payForMyHeirsDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForMyHeirsPlusDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForMyHeirsPlusDocument(String documentId, String payId) async
     test('test payForMyHeirsPlusDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForSalaryDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForSalaryDocument(String documentId, String payId) async
     test('test payForSalaryDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForSaveDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForSaveDocument(String documentId, String payId) async
     test('test payForSaveDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForSaveExtraDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForSaveExtraDocument(String documentId, String payId) async
     test('test payForSaveExtraDocument', () async {
       // TODO
     });
 
     // Pay for term assurance premium
     //
-    //Future<PayForEndowmentDocument200Response> payForTriplePayDocument(String documentId, String payId) async
+    //Future<PaymentInitializationResponse> payForTriplePayDocument(String documentId, String payId) async
     test('test payForTriplePayDocument', () async {
       // TODO
     });

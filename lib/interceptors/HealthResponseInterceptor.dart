@@ -20,6 +20,9 @@ class HealthResponseInterceptor extends Interceptor {
         }
       }
     }
+    if (response.requestOptions.path.contains('/pay/')) {
+    print('Raw payment response: ${response.data}');
+  }
 
     handler.next(response);
   }

@@ -1,3 +1,5 @@
+// import 'dart:js_interop';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -6,6 +8,8 @@ import 'package:simple_life/Bloc__state/general_bloc.dart';
 import 'package:simple_life/colors/app_colors.dart';
 import 'package:simple_life/repositories/general_repository.dart';
 import 'package:simple_life/utils/utils.dart';
+import 'package:uuid/uuid.dart';
+
 
 class BeneficiariesScreen extends StatefulWidget {
   const BeneficiariesScreen({super.key});
@@ -19,9 +23,12 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
   static const _textColor = AppColors.textColor;
   static const _mutedColor = AppColors.mutedColor;
   static const _backgroundColor = AppColors.backgroundColor;
-
   late Future<List<Beneficiary>> _availableBeneficiaries;
   final List<_BeneficiaryAllocation> _allocations = [];
+
+  Map<String, dynamic> message = {};
+
+  Map<String, dynamic> policy = {};
 
   int get _totalAllocation => _allocations.fold(
     0,
@@ -34,6 +41,9 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
     _availableBeneficiaries = GeneralRepository()
         .getBeneficiariesByLoggedInUser();
     _restoreAllocations();
+    final bloc = context.read<GeneralBloc>();
+    message = Map<String, dynamic>.from(bloc.state.message);
+    policy = Map<String, dynamic>.from((message['policy'] as Map?) ?? const {});
   }
 
   void _restoreAllocations() {
@@ -49,9 +59,14 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
             (item['percentage'] ?? item['share'] ?? '').toString(),
           ) ??
           0;
+      final beneficiary = item['beneficiary'] as Beneficiary;
       if (name.isNotEmpty && percentage > 0) {
         _allocations.add(
-          _BeneficiaryAllocation(name: name, percentage: percentage),
+          _BeneficiaryAllocation(
+            name: name,
+            percentage: percentage,
+            beneficiary: beneficiary,
+          ),
         );
       }
     }
@@ -86,8 +101,19 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
                             allocations: _allocations,
                             totalAllocation: _totalAllocation,
                             onRemove: _removeBeneficiary,
+                            onEditAllocation: (beneficiary, index) =>
+                                _editBeneficiaryAllocation(
+                                  beneficiary,
+                                  index,
+                                  _totalAllocation - beneficiary.percentage,
+                                ),
+                            onEditBeneficiary: _editBeneficiary,
                           ),
                   ),
+                ),
+                _ProceedBar(
+                  enabled: _totalAllocation == 100,
+                  onPressed: _proceed,
                 ),
               ],
             ),
@@ -137,11 +163,16 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
       builder: (_) => _AllocationSheet(
         beneficiary: beneficiary,
         maximumPercentage: remaining,
+        currentAllocation: 0,
       ),
     );
+    print('allocation:');
+    print(allocation?.percentage);
     if (!mounted || allocation == null) return;
+    // print('allocation:');
+    // print(allocation);
     setState(() => _allocations.add(allocation));
-    await _saveAllocations();
+    // await _saveAllocations();
   }
 
   Future<void> _removeBeneficiary(_BeneficiaryAllocation beneficiary) async {
@@ -149,22 +180,86 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
     await _saveAllocations();
   }
 
-  Future<void> _saveAllocations() async {
-    final bloc = context.read<GeneralBloc>();
-    final message = Map<String, dynamic>.from(bloc.state.message);
-    final policy = Map<String, dynamic>.from(
-      (message['policy'] as Map?) ?? const {},
+  Future<void> _editBeneficiary(_BeneficiaryAllocation beneficiary) async {
+    // setState(() => _allocations.remove(beneficiary));
+    await _saveAllocations();
+  }
+
+  Future<void> _editBeneficiaryAllocation(
+    _BeneficiaryAllocation beneficiary,
+    int index,
+    int currentTotalAllocation,
+  ) async {
+    final allocation = await showModalBottomSheet<_BeneficiaryAllocation>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => _AllocationSheet(
+        beneficiary: beneficiary.beneficiary,
+        currentTotalAllocation: currentTotalAllocation,
+        currentAllocation: beneficiary.percentage,
+      ),
     );
-    policy['beneficiaries'] = _allocations
-        .map(
-          (beneficiary) => {
-            'name': beneficiary.name,
-            'percentage': beneficiary.percentage,
-          },
-        )
-        .toList();
-    message['policy'] = policy;
+    setState(() => _allocations[index] = allocation!);
+    await _saveAllocations();
+  }
+
+  Future<void> _saveAllocations() async {
+    var beneficiares = [];
+    for (var a in _allocations) {
+      final shareDocument = {
+        'documentId': message['policy']['document']['id'],
+        'beneficiaryId': a.beneficiary.beneficiaryId,
+        'body': {
+          'beneficiaryId': a.beneficiary.beneficiaryId,
+          'personId': message['profile']['person']['personId'],
+          'share': a.percentage,
+        },
+        'policyType': message['policy']['type'],
+      };
+      await addBeneficiaryToPolicy(shareDocument);
+      beneficiares.add({
+        'name':a.name,
+        'share':a.percentage,
+        'DOB':a.beneficiary.dateOfBirth.toString(),
+        'beneficiaryId':a.beneficiary.beneficiaryId,
+        'email':a.beneficiary.email,
+        'phone':a.beneficiary.phone,
+        'gender':a.beneficiary.gender?.name,
+        'relationship':a.beneficiary.relationship,
+        'guardianName':a.beneficiary.guardianName,
+        'guardianPhone':a.beneficiary.guardianPhone,
+        'guardianAddress':a.beneficiary.guardianAddress
+      });
+      print('Beneficiary added ${a.beneficiary.name}');
+    }
+    message['policy']['beneficiaries'] = beneficiares;
+    print(message['policy']['beneficiaries']);
+    print("message['policy']");
+
     await saveMessage(context, message);
+
+  }
+
+  Future<void> _proceed() async {
+    await _saveAllocations();
+    if (!mounted) return;
+    final policyType = context
+        .read<GeneralBloc>()
+        .state
+        .message['policy']?['type']
+        ?.toString();
+    print(message['policy']);
+    if (policyType == null) {
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          const SnackBar(content: Text('Unable to load the policy summary.')),
+        );
+      return;
+    }
+    gotoPolicySummary(context, policyType);
   }
 
   Future<void> _showBeneficiaryInfo() {
@@ -282,6 +377,64 @@ class _ScreenHeader extends StatelessWidget {
   }
 }
 
+class _ProceedBar extends StatelessWidget {
+  const _ProceedBar({required this.enabled, required this.onPressed});
+
+  final bool enabled;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 14),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        border: Border(top: BorderSide(color: Color(0xFFE8E9ED))),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x0A000000),
+            blurRadius: 14,
+            offset: Offset(0, -4),
+          ),
+        ],
+      ),
+      child: SizedBox(
+        width: double.infinity,
+        height: 52,
+        child: FilledButton(
+          onPressed: enabled ? onPressed : null,
+          style: FilledButton.styleFrom(
+            backgroundColor: _BeneficiariesScreenState._brandRed,
+            foregroundColor: Colors.white,
+            disabledBackgroundColor: const Color(0xFFE3E5E9),
+            disabledForegroundColor: const Color(0xFF9A9EA8),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                enabled ? 'Proceed' : 'Allocate 100% to proceed',
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              if (enabled) ...[
+                const SizedBox(width: 8),
+                const Icon(Icons.arrow_forward_rounded, size: 19),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _EmptyBeneficiaries extends StatelessWidget {
   const _EmptyBeneficiaries({
     super.key,
@@ -360,7 +513,7 @@ class _EmptyBeneficiaries extends StatelessWidget {
               size: 18,
             ),
             label: const Text(
-              'Who is a beneficiary?',
+              'Who is a Beneficiary?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
             ),
           ),
@@ -376,11 +529,17 @@ class _SelectedBeneficiaries extends StatelessWidget {
     required this.allocations,
     required this.totalAllocation,
     required this.onRemove,
+    required this.onEditAllocation,
+    required this.onEditBeneficiary,
   });
 
   final List<_BeneficiaryAllocation> allocations;
   final int totalAllocation;
   final ValueChanged<_BeneficiaryAllocation> onRemove;
+  // final ValueChanged<_BeneficiaryAllocation, int, int> onEditAllocation;
+  final void Function(_BeneficiaryAllocation beneficiary, int index)
+  onEditAllocation;
+  final ValueChanged<_BeneficiaryAllocation> onEditBeneficiary;
 
   @override
   Widget build(BuildContext context) {
@@ -402,13 +561,14 @@ class _SelectedBeneficiaries extends StatelessWidget {
               borderRadius: BorderRadius.circular(17),
               child: Dismissible(
                 key: ValueKey(
-                  '${allocations[index].name}-${allocations[index].percentage}',
+                  allocations[index].beneficiary.beneficiaryId,
+                  // '${allocations[index].name}-${allocations[index].percentage}',
                 ),
-                direction: DismissDirection.endToStart,
-                background: Container(
+                direction: DismissDirection.horizontal,
+                secondaryBackground: Container(
                   color: _BeneficiariesScreenState._brandRed,
                   alignment: Alignment.centerRight,
-                  padding: const EdgeInsets.only(right: 24),
+                  padding: const EdgeInsets.only(right: 25),
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -429,10 +589,193 @@ class _SelectedBeneficiaries extends StatelessWidget {
                     ],
                   ),
                 ),
-                onDismissed: (_) => onRemove(allocations[index]),
+                background: Container(
+                  color: Colors.amber.shade700,
+                  alignment: Alignment.centerLeft,
+                  padding: const EdgeInsets.only(left: 25),
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.edit_attributes_rounded,
+                        color: Colors.white,
+                        size: 24,
+                      ),
+                      SizedBox(height: 3),
+                      Text(
+                        'Edit Allocation',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                confirmDismiss: (direction) async {
+                  if (direction == DismissDirection.endToStart) {
+                    // 1. SWIPE LEFT (Remove): Show a quick confirmation dialog
+                    final bool? shouldDelete = await showDialog<bool>(
+                      context: context,
+                      builder: (dialogContext) => AlertDialog(
+                        backgroundColor: Colors.white,
+                        surfaceTintColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        icon: Container(
+                          width: 52,
+                          height: 52,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFFFECEB),
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.delete_outline_rounded,
+                            color: _BeneficiariesScreenState._brandRed,
+                          ),
+                        ),
+                        title: const Text(
+                          'Remove beneficiary?',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: _BeneficiariesScreenState._textColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        content: const Text(
+                          'Are you sure you want to remove this beneficiary?',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: _BeneficiariesScreenState._mutedColor,
+                            fontSize: 14,
+                            height: 1.5,
+                          ),
+                        ),
+                        actionsPadding: const EdgeInsets.fromLTRB(
+                          22,
+                          4,
+                          22,
+                          22,
+                        ),
+                        actions: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () =>
+                                      Navigator.pop(dialogContext, false),
+                                  child: const Text('Cancel'),
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: FilledButton(
+                                  onPressed: () =>
+                                      Navigator.pop(dialogContext, true),
+                                  style: FilledButton.styleFrom(
+                                    backgroundColor:
+                                        _BeneficiariesScreenState._brandRed,
+                                  ),
+                                  child: const Text('Remove'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                    return shouldDelete ?? false;
+                  } else if (direction == DismissDirection.startToEnd) {
+                    // 2. SWIPE RIGHT (Edit): Trigger your edit behavior, then force it to snap back
+                    onEditAllocation(allocations[index], index);
+                    return false; // Crucial! This forces the row to snap back into place instead of vanishing.
+                  }
+                  return false;
+                },
+
+                onDismissed: (direction) {
+                  if (direction == DismissDirection.endToStart) {
+                    onRemove(allocations[index]);
+                  }
+                },
                 child: _BeneficiaryRow(
                   beneficiary: allocations[index],
-                  onRemove: () => onRemove(allocations[index]),
+                  onRemove: () => showDialog<bool>(
+                    context: context,
+                    builder: (dialogContext) => AlertDialog(
+                      backgroundColor: Colors.white,
+                      surfaceTintColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      icon: Container(
+                        width: 52,
+                        height: 52,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFFFECEB),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.delete_outline_rounded,
+                          color: _BeneficiariesScreenState._brandRed,
+                        ),
+                      ),
+                      title: const Text(
+                        'Remove Beneficiary?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: _BeneficiariesScreenState._textColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      content: const Text(
+                        'Are you sure you want to remove this beneficiary?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: _BeneficiariesScreenState._mutedColor,
+                          fontSize: 14,
+                          height: 1.5,
+                        ),
+                      ),
+                      actionsPadding: const EdgeInsets.fromLTRB(22, 4, 22, 22),
+                      actions: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                onPressed: () =>
+                                    Navigator.pop(dialogContext, false),
+                                child: const Text('Cancel'),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: FilledButton(
+                                onPressed: () {
+                                  Navigator.pop(dialogContext, true);
+                                  onRemove(allocations[index]);
+                                },
+                                // Navigator.pop(dialogContext, true),
+                                style: FilledButton.styleFrom(
+                                  backgroundColor:
+                                      _BeneficiariesScreenState._brandRed,
+                                ),
+                                child: const Text('Remove'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  onEditAllocation: () =>
+                      onEditAllocation(allocations[index], index),
+                  // onEditBeneficiary: () =>
+                  //     onEditBeneficiary(allocations[index]),
                 ),
               ),
             ),
@@ -532,13 +875,19 @@ class _AllocationSummary extends StatelessWidget {
 }
 
 class _BeneficiaryRow extends StatelessWidget {
-  const _BeneficiaryRow({required this.beneficiary, required this.onRemove});
+  const _BeneficiaryRow({
+    required this.beneficiary,
+    required this.onRemove,
+    required this.onEditAllocation,
+    // required this.onEditBeneficiary,
+  });
 
   final _BeneficiaryAllocation beneficiary;
   final VoidCallback onRemove;
-
+  final VoidCallback onEditAllocation;
+  // final VoidCallback onEditBeneficiary;
   String get initials {
-    final parts = beneficiary.name
+    final parts = beneficiary.beneficiary.name!
         .split(RegExp(r'\s+'))
         .where((part) => part.isNotEmpty)
         .take(2);
@@ -653,7 +1002,12 @@ class _BeneficiaryRow extends StatelessWidget {
             tooltip: 'Beneficiary options',
             color: Colors.white,
             onSelected: (value) {
-              if (value == 'remove') onRemove();
+              if (value == 'remove')
+                onRemove();
+              else if (value == 'edit_allocation')
+                onEditAllocation();
+              // else if (value == 'edit_beneficiary')
+              //   onEditBeneficiary();
             },
             itemBuilder: (_) => const [
               PopupMenuItem(
@@ -676,16 +1030,16 @@ class _BeneficiaryRow extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem(
-                value: 'edit_beneficiary',
-                child: Row(
-                  children: [
-                    Icon(Icons.edit, color: Colors.red),
-                    SizedBox(width: 10),
-                    Text('Edit Beneficiary'),
-                  ],
-                ),
-              ),
+              // PopupMenuItem(
+              //   value: 'edit_beneficiary',
+              //   child: Row(
+              //     children: [
+              //       Icon(Icons.edit, color: Colors.red),
+              //       SizedBox(width: 10),
+              //       Text('Edit Beneficiary'),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ],
@@ -711,7 +1065,6 @@ class _AddBeneficiarySheet extends StatefulWidget {
 
 class _AddBeneficiarySheetState extends State<_AddBeneficiarySheet> {
   late Future<List<Beneficiary>> _beneficiaries;
-
   @override
   void initState() {
     super.initState();
@@ -953,7 +1306,7 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
   final _guardianNameController = TextEditingController();
   final _guardianPhoneController = TextEditingController();
   final _guardianAddress = TextEditingController();
-
+  final _emailController = TextEditingController();
   BeneficiaryGenderEnum? _gender;
   String? _relationship;
   DateTime? _dateOfBirth;
@@ -1014,7 +1367,7 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
               ),
               const SizedBox(height: 22),
               const Text(
-                'Create beneficiary',
+                'Create Beneficiary',
                 style: TextStyle(
                   color: _BeneficiariesScreenState._textColor,
                   fontSize: 21,
@@ -1034,6 +1387,13 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
                 controller: _nameController,
                 textCapitalization: TextCapitalization.words,
                 decoration: _sheetInputDecoration(label: 'Full name'),
+                validator: _requiredField,
+              ),
+              const SizedBox(height: 22),
+              TextFormField(
+                controller: _emailController,
+                keyboardType: TextInputType.emailAddress,
+                decoration: _sheetInputDecoration(label: 'Email'),
                 validator: _requiredField,
               ),
               const SizedBox(height: 14),
@@ -1184,7 +1544,7 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
                           ),
                         )
                       : const Text(
-                          'Create beneficiary',
+                          'Create Beneficiary',
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
                 ),
@@ -1228,6 +1588,7 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
     FocusManager.instance.primaryFocus?.unfocus();
     if (!(_formKey.currentState?.validate() ?? false)) return;
 
+    final beneficiaryId = const Uuid().v4();
     final beneficiary = Beneficiary(
       (builder) => builder
         ..name = _nameController.text.trim()
@@ -1236,17 +1597,30 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
             : _relationship
         ..dateOfBirth = _dateOfBirth!.toDate()
         ..gender = _gender
-        ..phone = _phoneController.text.trim(),
+        ..phone = _phoneController.text.trim()
+        ..guardianName = age(_dateOfBirth) < 18
+            ? _guardianNameController.text.trim()
+            : ''
+        ..guardianPhone = age(_dateOfBirth) < 18
+            ? _guardianPhoneController.text.trim()
+            : ''
+        ..guardianAddress = age(_dateOfBirth) < 18
+            ? _guardianAddress.text.trim()
+            : ''
+        ..email = _emailController.text.trim()
+        ..beneficiaryId = beneficiaryId,
     );
-
+    print(beneficiary);
     setState(() {
       _isSaving = true;
       _errorMessage = null;
     });
     try {
-      await GeneralRepository().createBeneficiary(beneficiary);
+      await GeneralRepository().createBeneficiary(beneficiary, beneficiaryId);
       if (mounted) Navigator.pop(context, beneficiary);
-    } catch (_) {
+    } on DioException catch (error) {
+      debugPrint('Status: ${error.response?.statusCode}');
+      debugPrint('Response: ${error.response?.data}');
       if (!mounted) return;
       setState(() {
         _isSaving = false;
@@ -1270,11 +1644,16 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
 class _AllocationSheet extends StatefulWidget {
   const _AllocationSheet({
     required this.beneficiary,
-    required this.maximumPercentage,
+    this.maximumPercentage,
+    this.currentTotalAllocation,
+    required this.currentAllocation,
   });
 
   final Beneficiary beneficiary;
-  final int maximumPercentage;
+  final int? maximumPercentage;
+  final int currentAllocation;
+
+  final int? currentTotalAllocation;
 
   @override
   State<_AllocationSheet> createState() => _AllocationSheetState();
@@ -1288,6 +1667,12 @@ class _AllocationSheetState extends State<_AllocationSheet> {
   void dispose() {
     _percentageController.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _percentageController.text = widget.currentAllocation?.toString() ?? '';
   }
 
   @override
@@ -1321,7 +1706,7 @@ class _AllocationSheetState extends State<_AllocationSheet> {
             ),
             const SizedBox(height: 22),
             const Text(
-              'Set allocation',
+              'Set Allocation',
               style: TextStyle(
                 color: _BeneficiariesScreenState._textColor,
                 fontSize: 21,
@@ -1329,14 +1714,27 @@ class _AllocationSheetState extends State<_AllocationSheet> {
               ),
             ),
             const SizedBox(height: 7),
-            Text(
-              'Enter the percentage ${widget.beneficiary.name ?? 'this beneficiary'} should receive.',
-              style: const TextStyle(
-                color: _BeneficiariesScreenState._mutedColor,
-                fontSize: 13,
-                height: 1.4,
+            Text.rich(
+              TextSpan(
+                style: const TextStyle(
+                  color: _BeneficiariesScreenState._mutedColor,
+                  fontSize: 13,
+                  height: 1.4,
+                ),
+                children: [
+                  const TextSpan(text: 'Enter the percentage '),
+                  TextSpan(
+                    text: widget.beneficiary.name ?? 'this beneficiary',
+                    style: const TextStyle(
+                      color: _BeneficiariesScreenState._brandRed,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const TextSpan(text: ' should receive.'),
+                ],
               ),
             ),
+
             const SizedBox(height: 22),
             TextFormField(
               controller: _percentageController,
@@ -1351,8 +1749,13 @@ class _AllocationSheetState extends State<_AllocationSheet> {
                 if (percentage == null || percentage <= 0) {
                   return 'Enter a valid percentage';
                 }
-                if (percentage > widget.maximumPercentage) {
+                if (widget.maximumPercentage != null &&
+                    percentage > widget.maximumPercentage!) {
                   return 'Maximum available is ${widget.maximumPercentage}%';
+                }
+                if (widget.currentTotalAllocation != null &&
+                    percentage + widget.currentTotalAllocation! > 100) {
+                  return 'Total allocation ${percentage + widget.currentTotalAllocation!} % has exceeded 100%';
                 }
                 return null;
               },
@@ -1371,7 +1774,7 @@ class _AllocationSheetState extends State<_AllocationSheet> {
                   ),
                 ),
                 child: const Text(
-                  'Add beneficiary',
+                  'Allocate',
                   style: TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -1384,9 +1787,11 @@ class _AllocationSheetState extends State<_AllocationSheet> {
 
   void _submit() {
     if (!(_formKey.currentState?.validate() ?? false)) return;
+    print(int.parse(_percentageController.text.trim()));
     Navigator.pop(
       context,
       _BeneficiaryAllocation(
+        beneficiary: widget.beneficiary,
         name: widget.beneficiary.name!,
         percentage: int.parse(_percentageController.text.trim()),
       ),
@@ -1452,10 +1857,15 @@ class _AddIcon extends StatelessWidget {
 }
 
 class _BeneficiaryAllocation {
-  const _BeneficiaryAllocation({required this.name, required this.percentage});
+  const _BeneficiaryAllocation({
+    required this.name,
+    required this.percentage,
+    required this.beneficiary,
+  });
 
   final String name;
   final int percentage;
+  final Beneficiary beneficiary;
 }
 
 InputDecoration _sheetInputDecoration({required String label, Widget? suffix}) {

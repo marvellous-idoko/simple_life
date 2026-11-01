@@ -10329,7 +10329,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyDocument**
-> PayForEndowmentDocument200Response payFor3rdPartyDocument(documentId, payId)
+> PaymentInitializationResponse payFor3rdPartyDocument(documentId, payId)
 
 
 
@@ -10360,7 +10360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10374,7 +10374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyFireAndTheftDocument**
-> PayForEndowmentDocument200Response payFor3rdPartyFireAndTheftDocument(documentId, payId)
+> PaymentInitializationResponse payFor3rdPartyFireAndTheftDocument(documentId, payId)
 
 
 
@@ -10405,7 +10405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10419,7 +10419,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payFor3rdPartyPlusDocument**
-> PayForEndowmentDocument200Response payFor3rdPartyPlusDocument(documentId, payId)
+> PaymentInitializationResponse payFor3rdPartyPlusDocument(documentId, payId)
 
 
 
@@ -10450,7 +10450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10464,7 +10464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentBronzeDocument**
-> PayForEndowmentDocument200Response payForAccidentBronzeDocument(documentId, payId)
+> PaymentInitializationResponse payForAccidentBronzeDocument(documentId, payId)
 
 
 
@@ -10495,7 +10495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10509,7 +10509,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentGoldDocument**
-> PayForEndowmentDocument200Response payForAccidentGoldDocument(documentId, payId)
+> PaymentInitializationResponse payForAccidentGoldDocument(documentId, payId)
 
 
 
@@ -10540,7 +10540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10554,7 +10554,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentPlatinumDocument**
-> PayForEndowmentDocument200Response payForAccidentPlatinumDocument(documentId, payId)
+> PaymentInitializationResponse payForAccidentPlatinumDocument(documentId, payId)
 
 
 
@@ -10585,7 +10585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10599,7 +10599,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForAccidentSilverDocument**
-> PayForEndowmentDocument200Response payForAccidentSilverDocument(documentId, payId)
+> PaymentInitializationResponse payForAccidentSilverDocument(documentId, payId)
 
 
 
@@ -10630,7 +10630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10644,7 +10644,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForComprehensiveDocument**
-> PayForEndowmentDocument200Response payForComprehensiveDocument(documentId, payId)
+> PaymentInitializationResponse payForComprehensiveDocument(documentId, payId)
 
 
 
@@ -10675,7 +10675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10689,7 +10689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForCoupleDocument**
-> PayForEndowmentDocument200Response payForCoupleDocument(documentId, payId)
+> PaymentInitializationResponse payForCoupleDocument(documentId, payId)
 
 
 
@@ -10720,7 +10720,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10734,7 +10734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForEndowmentDocument**
-> PayForEndowmentDocument200Response payForEndowmentDocument(documentId, payId)
+> PaymentInitializationResponse payForEndowmentDocument(documentId, payId)
 
 
 
@@ -10765,7 +10765,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10779,7 +10779,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs25kDocument**
-> PayForEndowmentDocument200Response payForHeirs25kDocument(documentId, payId)
+> PaymentInitializationResponse payForHeirs25kDocument(documentId, payId)
 
 
 
@@ -10810,7 +10810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10824,7 +10824,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs35kDocument**
-> PayForEndowmentDocument200Response payForHeirs35kDocument(documentId, payId)
+> PaymentInitializationResponse payForHeirs35kDocument(documentId, payId)
 
 
 
@@ -10855,7 +10855,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10869,7 +10869,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs3YearsDocument**
-> PayForEndowmentDocument200Response payForHeirs3YearsDocument(documentId, payId)
+> PaymentInitializationResponse payForHeirs3YearsDocument(documentId, payId)
 
 
 
@@ -10900,7 +10900,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10914,7 +10914,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHeirs70kDocument**
-> PayForEndowmentDocument200Response payForHeirs70kDocument(documentId, payId)
+> PaymentInitializationResponse payForHeirs70kDocument(documentId, payId)
 
 
 
@@ -10945,7 +10945,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -10959,7 +10959,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForHerMotorDocument**
-> PayForEndowmentDocument200Response payForHerMotorDocument(documentId, payId)
+> PaymentInitializationResponse payForHerMotorDocument(documentId, payId)
 
 
 
@@ -10990,7 +10990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11004,7 +11004,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForMyHeirsDocument**
-> PayForEndowmentDocument200Response payForMyHeirsDocument(documentId, payId)
+> PaymentInitializationResponse payForMyHeirsDocument(documentId, payId)
 
 
 
@@ -11035,7 +11035,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11049,7 +11049,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForMyHeirsPlusDocument**
-> PayForEndowmentDocument200Response payForMyHeirsPlusDocument(documentId, payId)
+> PaymentInitializationResponse payForMyHeirsPlusDocument(documentId, payId)
 
 
 
@@ -11080,7 +11080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11094,7 +11094,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForSalaryDocument**
-> PayForEndowmentDocument200Response payForSalaryDocument(documentId, payId)
+> PaymentInitializationResponse payForSalaryDocument(documentId, payId)
 
 
 
@@ -11125,7 +11125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11139,7 +11139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForSaveDocument**
-> PayForEndowmentDocument200Response payForSaveDocument(documentId, payId)
+> PaymentInitializationResponse payForSaveDocument(documentId, payId)
 
 
 
@@ -11170,7 +11170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11184,7 +11184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForSaveExtraDocument**
-> PayForEndowmentDocument200Response payForSaveExtraDocument(documentId, payId)
+> PaymentInitializationResponse payForSaveExtraDocument(documentId, payId)
 
 
 
@@ -11215,7 +11215,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
@@ -11229,7 +11229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payForTriplePayDocument**
-> PayForEndowmentDocument200Response payForTriplePayDocument(documentId, payId)
+> PaymentInitializationResponse payForTriplePayDocument(documentId, payId)
 
 
 
@@ -11260,7 +11260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayForEndowmentDocument200Response**](PayForEndowmentDocument200Response.md)
+[**PaymentInitializationResponse**](PaymentInitializationResponse.md)
 
 ### Authorization
 
