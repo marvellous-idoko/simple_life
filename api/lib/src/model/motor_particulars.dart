@@ -22,6 +22,7 @@ part 'motor_particulars.g.dart';
 /// * [engineNumber] - The Engine number
 /// * [paymentOption] - The motor payment selected
 /// * [motorValue] 
+/// * [value] 
 /// * [use] 
 /// * [type] 
 @BuiltValue(instantiable: false)
@@ -64,6 +65,9 @@ abstract class MotorParticulars  {
 
   @BuiltValueField(wireName: r'motorValue')
   num? get motorValue;
+
+  @BuiltValueField(wireName: r'value')
+  num? get value;
 
   @BuiltValueField(wireName: r'use')
   MotorParticularsUseEnum? get use;
@@ -156,6 +160,13 @@ class _$MotorParticularsSerializer implements PrimitiveSerializer<MotorParticula
       yield r'motorValue';
       yield serializers.serialize(
         object.motorValue,
+        specifiedType: const FullType(num),
+      );
+    }
+    if (object.value != null) {
+      yield r'value';
+      yield serializers.serialize(
+        object.value,
         specifiedType: const FullType(num),
       );
     }
@@ -316,6 +327,14 @@ class _$$MotorParticularsSerializer implements PrimitiveSerializer<$MotorParticu
           ) as num?;
           if (valueDes == null) continue;
           result.motorValue = valueDes;
+          break;
+        case r'value':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(num),
+          ) as num?;
+          if (valueDes == null) continue;
+          result.value = valueDes;
           break;
         case r'use':
           final valueDes = serializers.deserialize(

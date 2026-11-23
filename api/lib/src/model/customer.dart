@@ -187,7 +187,7 @@ class _$CustomerSerializer implements PrimitiveSerializer<Customer> {
             specifiedType: const FullType.nullable(Address),
           ) as Address?;
           if (valueDes == null) continue;
-          result.address = valueDes;
+          result.address.replace(valueDes);
           break;
         case r'occupation':
           final valueDes = serializers.deserialize(

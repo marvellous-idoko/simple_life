@@ -37,7 +37,7 @@ void main() {
       // TODO
     });
 
-    // String productId
+    // int productId
     test('to test the property `productId`', () async {
       // TODO
     });
@@ -59,6 +59,26 @@ void main() {
 
     // num premium
     test('to test the property `premium`', () async {
+      // TODO
+    });
+
+    // String eskaID
+    test('to test the property `eskaID`', () async {
+      // TODO
+    });
+
+    // String policyNumber
+    test('to test the property `policyNumber`', () async {
+      // TODO
+    });
+
+    // String effectiveDate
+    test('to test the property `effectiveDate`', () async {
+      // TODO
+    });
+
+    // String expiryDate
+    test('to test the property `expiryDate`', () async {
       // TODO
     });
 

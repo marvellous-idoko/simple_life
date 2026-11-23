@@ -22,6 +22,10 @@ part 'get_payment_status200_response.g.dart';
 /// * [customerType] 
 /// * [company] 
 /// * [premium] 
+/// * [eskaID] 
+/// * [policyNumber] 
+/// * [effectiveDate] 
+/// * [expiryDate] 
 @BuiltValue()
 abstract class GetPaymentStatus200Response implements Built<GetPaymentStatus200Response, GetPaymentStatus200ResponseBuilder> {
   @BuiltValueField(wireName: r'status')
@@ -43,7 +47,7 @@ abstract class GetPaymentStatus200Response implements Built<GetPaymentStatus200R
   String? get policyholderId;
 
   @BuiltValueField(wireName: r'productId')
-  String? get productId;
+  int? get productId;
 
   @BuiltValueField(wireName: r'date')
   String? get date;
@@ -56,6 +60,18 @@ abstract class GetPaymentStatus200Response implements Built<GetPaymentStatus200R
 
   @BuiltValueField(wireName: r'premium')
   num get premium;
+
+  @BuiltValueField(wireName: r'eskaID')
+  String? get eskaID;
+
+  @BuiltValueField(wireName: r'policyNumber')
+  String? get policyNumber;
+
+  @BuiltValueField(wireName: r'effectiveDate')
+  String? get effectiveDate;
+
+  @BuiltValueField(wireName: r'expiryDate')
+  String? get expiryDate;
 
   GetPaymentStatus200Response._();
 
@@ -118,7 +134,7 @@ class _$GetPaymentStatus200ResponseSerializer implements PrimitiveSerializer<Get
       yield r'productId';
       yield serializers.serialize(
         object.productId,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(int),
       );
     }
     if (object.date != null) {
@@ -147,6 +163,34 @@ class _$GetPaymentStatus200ResponseSerializer implements PrimitiveSerializer<Get
       object.premium,
       specifiedType: const FullType(num),
     );
+    if (object.eskaID != null) {
+      yield r'eskaID';
+      yield serializers.serialize(
+        object.eskaID,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.policyNumber != null) {
+      yield r'policyNumber';
+      yield serializers.serialize(
+        object.policyNumber,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.effectiveDate != null) {
+      yield r'effectiveDate';
+      yield serializers.serialize(
+        object.effectiveDate,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.expiryDate != null) {
+      yield r'expiryDate';
+      yield serializers.serialize(
+        object.expiryDate,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -217,8 +261,8 @@ class _$GetPaymentStatus200ResponseSerializer implements PrimitiveSerializer<Get
         case r'productId':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
           if (valueDes == null) continue;
           result.productId = valueDes;
           break;
@@ -252,6 +296,38 @@ class _$GetPaymentStatus200ResponseSerializer implements PrimitiveSerializer<Get
             specifiedType: const FullType(num),
           ) as num;
           result.premium = valueDes;
+          break;
+        case r'eskaID':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.eskaID = valueDes;
+          break;
+        case r'policyNumber':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.policyNumber = valueDes;
+          break;
+        case r'effectiveDate':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.effectiveDate = valueDes;
+          break;
+        case r'expiryDate':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.expiryDate = valueDes;
           break;
         default:
           unhandled.add(key);

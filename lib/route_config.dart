@@ -1,77 +1,128 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:simple_life/app_routes.dart';
+import 'package:simple_life/navigation/app_page_transitions.dart';
 import 'package:simple_life/screens/beneficiaries_screen.dart';
+import 'package:simple_life/screens/general-policy-summary.dart';
+import 'package:simple_life/screens/get_quote_product_details_screen.dart';
+import 'package:simple_life/screens/get_quote_screen.dart';
+import 'package:simple_life/screens/home_owner_policy_quote_form.dart';
 import 'package:simple_life/screens/home_screen.dart';
 import 'package:simple_life/screens/life-policy-summary.dart';
 import 'package:simple_life/screens/life_product_details_screen.dart';
 import 'package:simple_life/screens/life_product_form.dart';
 import 'package:simple_life/screens/life_products_screen.dart';
 import 'package:simple_life/screens/login_screen.dart';
+import 'package:simple_life/screens/motor-policy-summary.dart';
+import 'package:simple_life/screens/personal_accident_policy_summary.dart';
+import 'package:simple_life/screens/motor_policy_quote_form.dart';
+import 'package:simple_life/screens/register_general_protection_screen.dart';
+import 'package:simple_life/screens/register_motor_screen.dart';
 import 'package:simple_life/screens/my_policies_screen.dart';
 import 'package:simple_life/screens/profile_screen.dart';
 import 'package:simple_life/screens/select_profile_screen.dart';
+import 'package:simple_life/screens/sign_in_with_otp_screen.dart';
 import 'package:simple_life/screens/sign_in_with_password_screen.dart';
 import 'package:simple_life/screens/signup_screen.dart';
 import 'package:simple_life/screens/start_screen.dart';
 import 'package:simple_life/widgets/app_bottom_bar.dart';
 
-final GoRouter appRoutes = GoRouter(
-  initialLocation: AppRoutes.profile,
-  routes: [
-    GoRoute(path: '/', builder: (context, state) => const StartScreen()),
-    // GoRoute(path: '/', builder: (context, state) => const  LifeProductsScreen()),
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>();
 
-    GoRoute(
+final GoRouter appRoutes = GoRouter(
+  navigatorKey: rootNavigatorKey,
+  routes: [
+    slideGoRoute(
+      path: '/',
+      child: (context, state) => const StartScreen(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.getQuote,
+      child: (context, state) => const GetQuoteScreen(),
+    ),
+    slideGoRoute(
       path: AppRoutes.login,
-      builder: (context, state) => const LoginScreen(),
+      child: (context, state) => const LoginScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.signup,
-      builder: (context, state) => const SignupScreen(),
+      child: (context, state) => const SignupScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.signInWithPassword,
-      builder: (context, state) => SignInWithPasswordScreen(),
+      child: (context, state) => SignInWithPasswordScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
+      path: AppRoutes.signInWithOtp,
+      child: (context, state) =>
+          SignInWithOtpScreen(identity: state.extra as String? ?? ''),
+    ),
+    slideGoRoute(
       path: AppRoutes.selectProfile,
-      builder: (context, state) => const SelectProfileScreen(),
+      child: (context, state) => const SelectProfileScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.lifeProducts,
-      builder: (context, state) => const LifeProductsScreen(),
+      child: (context, state) => const LifeProductsScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.lifeProductForm,
-      builder: (context, state) =>
+      child: (context, state) =>
           LifeProductForm(productCode: state.pathParameters['code'] ?? ''),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.beneficiaries,
-      builder: (context, state) => const BeneficiariesScreen(),
+      child: (context, state) => const BeneficiariesScreen(),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.lifeProductDetails,
-      builder: (context, state) => LifeProductDetailsScreen(
+      child: (context, state) => LifeProductDetailsScreen(
         productCode: state.pathParameters['code'] ?? '',
       ),
     ),
-    GoRoute(
+    slideGoRoute(
       path: AppRoutes.lifePolicySummary,
-      builder: (context, state) => const LifePolicySummary(),
+      child: (context, state) => const LifePolicySummary(),
     ),
-    // GoRoute(
-    //   path: AppRoutes.profile,
-    //   builder: (context, state) => const ProfileScreen(),
-    //   routes: [
-    //     // Child Route (Omit the leading slash)
-    //     GoRoute(
-    //       path: 'edit', // Resolves to /profile/edit
-    //       builder: (context, state) => const EditProfileScreen(),
-    //     ),
-    //   ],
-    // ),
+    slideGoRoute(
+      path: AppRoutes.motorPolicySummary,
+      child: (context, state) => const MotorPolicySummary(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.generalPolicySummary,
+      child: (context, state) => const GeneralPolicySummary(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.personalAccidentSummary,
+      child: (context, state) => const PersonalAccidentPolicySummary(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.motorPolicyForm,
+      child: (context, state) => const MotorPolicyQuote(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.registerMotor,
+      child: (context, state) => const RegisterMotorScreen(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.registerProtectee,
+      child: (context, state) => const RegisterProtecteeScreen(),
+    ),
+    slideGoRoute(
+      path: AppRoutes.HomeOwnerPolicyForm,
+      child: (context, state) => const HomeOwnerPolicyQuote(),
+    ),
+    GoRoute(
+      path: AppRoutes.getQuoteProductDetails,
+      pageBuilder: (context, state) => slideHorizontalPage(
+        key: state.pageKey,
+        child: GetQuoteProductDetailsScreen(
+          id: state.pathParameters['id'] ?? '',
+          productIcon:
+              state.extra as String? ?? 'assets/images/car_insurance.png',
+        ),
+      ),
+    ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) => Scaffold(
         body: navigationShell,

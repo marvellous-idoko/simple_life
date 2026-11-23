@@ -27,7 +27,7 @@ abstract class HouseItem implements Built<HouseItem, HouseItemBuilder> {
   String? get value;
 
   @BuiltValueField(wireName: r'qty')
-  String? get qty;
+  int? get qty;
 
   HouseItem._();
 
@@ -77,7 +77,7 @@ class _$HouseItemSerializer implements PrimitiveSerializer<HouseItem> {
       yield r'qty';
       yield serializers.serialize(
         object.qty,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(int),
       );
     }
   }
@@ -130,8 +130,8 @@ class _$HouseItemSerializer implements PrimitiveSerializer<HouseItem> {
         case r'qty':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
           if (valueDes == null) continue;
           result.qty = valueDes;
           break;

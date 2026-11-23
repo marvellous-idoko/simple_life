@@ -357,7 +357,7 @@ class _$BancassuranceIndividualReferralSerializer implements PrimitiveSerializer
             specifiedType: const FullType.nullable(Address),
           ) as Address?;
           if (valueDes == null) continue;
-          result.address = valueDes;
+          result.address.replace(valueDes);
           break;
         case r'idDetails':
           final valueDes = serializers.deserialize(

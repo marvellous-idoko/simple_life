@@ -18,8 +18,8 @@ part 'address.g.dart';
 /// * [street] 
 /// * [streetNumber] 
 /// * [postCode] 
-@BuiltValue(instantiable: false)
-abstract class Address  {
+@BuiltValue()
+abstract class Address implements Built<Address, AddressBuilder> {
   @BuiltValueField(wireName: r'city')
   String? get city;
 
@@ -42,13 +42,20 @@ abstract class Address  {
   @BuiltValueField(wireName: r'postCode')
   String? get postCode;
 
+  Address._();
+
+  factory Address([void updates(AddressBuilder b)]) = _$Address;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(AddressBuilder b) => b;
+
   @BuiltValueSerializer(custom: true)
   static Serializer<Address> get serializer => _$AddressSerializer();
 }
 
 class _$AddressSerializer implements PrimitiveSerializer<Address> {
   @override
-  final Iterable<Type> types = const [Address];
+  final Iterable<Type> types = const [Address, _$Address];
 
   @override
   final String wireName = r'Address';
@@ -116,47 +123,6 @@ class _$AddressSerializer implements PrimitiveSerializer<Address> {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
-  }
-
-  @override
-  Address deserialize(
-    Serializers serializers,
-    Object serialized, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return serializers.deserialize(serialized, specifiedType: FullType($Address)) as $Address;
-  }
-}
-
-
-/// a concrete implementation of [Address], since [Address] is not instantiable
-@BuiltValue(instantiable: true)
-abstract class $Address implements Address, Built<$Address, $AddressBuilder> {
-  $Address._();
-
-  factory $Address([void Function($AddressBuilder)? updates]) = _$$Address;
-
-  @BuiltValueHook(initializeBuilder: true)
-  static void _defaults($AddressBuilder b) => b;
-
-  @BuiltValueSerializer(custom: true)
-  static Serializer<$Address> get serializer => _$$AddressSerializer();
-}
-
-class _$$AddressSerializer implements PrimitiveSerializer<$Address> {
-  @override
-  final Iterable<Type> types = const [$Address, _$$Address];
-
-  @override
-  final String wireName = r'$Address';
-
-  @override
-  Object serialize(
-    Serializers serializers,
-    $Address object, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return serializers.serialize(object, specifiedType: FullType(Address))!;
   }
 
   void _deserializeProperties(
@@ -236,12 +202,12 @@ class _$$AddressSerializer implements PrimitiveSerializer<$Address> {
   }
 
   @override
-  $Address deserialize(
+  Address deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = $AddressBuilder();
+    final result = AddressBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -255,4 +221,5 @@ class _$$AddressSerializer implements PrimitiveSerializer<$Address> {
     return result.build();
   }
 }
+
 

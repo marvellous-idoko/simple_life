@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for GetSaveSumAssuredQuote200ResponseInner
+// tests for SaveSumAssuredQuote
 void main() {
-  final instance = GetSaveSumAssuredQuote200ResponseInnerBuilder();
+  final instance = SaveSumAssuredQuoteBuilder();
   // TODO add properties to the builder and call build()
 
-  group(GetSaveSumAssuredQuote200ResponseInner, () {
+  group(SaveSumAssuredQuote, () {
     // num premium
     test('to test the property `premium`', () async {
       // TODO

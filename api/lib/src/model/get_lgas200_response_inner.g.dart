@@ -11,12 +11,14 @@ class _$GetLgas200ResponseInner extends GetLgas200ResponseInner {
   final String? lga;
   @override
   final String? lgaId;
+  @override
+  final String? state;
 
   factory _$GetLgas200ResponseInner(
           [void Function(GetLgas200ResponseInnerBuilder)? updates]) =>
       (GetLgas200ResponseInnerBuilder()..update(updates))._build();
 
-  _$GetLgas200ResponseInner._({this.lga, this.lgaId}) : super._();
+  _$GetLgas200ResponseInner._({this.lga, this.lgaId, this.state}) : super._();
   @override
   GetLgas200ResponseInner rebuild(
           void Function(GetLgas200ResponseInnerBuilder) updates) =>
@@ -31,7 +33,8 @@ class _$GetLgas200ResponseInner extends GetLgas200ResponseInner {
     if (identical(other, this)) return true;
     return other is GetLgas200ResponseInner &&
         lga == other.lga &&
-        lgaId == other.lgaId;
+        lgaId == other.lgaId &&
+        state == other.state;
   }
 
   @override
@@ -39,6 +42,7 @@ class _$GetLgas200ResponseInner extends GetLgas200ResponseInner {
     var _$hash = 0;
     _$hash = $jc(_$hash, lga.hashCode);
     _$hash = $jc(_$hash, lgaId.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -47,7 +51,8 @@ class _$GetLgas200ResponseInner extends GetLgas200ResponseInner {
   String toString() {
     return (newBuiltValueToStringHelper(r'GetLgas200ResponseInner')
           ..add('lga', lga)
-          ..add('lgaId', lgaId))
+          ..add('lgaId', lgaId)
+          ..add('state', state))
         .toString();
   }
 }
@@ -65,6 +70,10 @@ class GetLgas200ResponseInnerBuilder
   String? get lgaId => _$this._lgaId;
   set lgaId(String? lgaId) => _$this._lgaId = lgaId;
 
+  String? _state;
+  String? get state => _$this._state;
+  set state(String? state) => _$this._state = state;
+
   GetLgas200ResponseInnerBuilder() {
     GetLgas200ResponseInner._defaults(this);
   }
@@ -74,6 +83,7 @@ class GetLgas200ResponseInnerBuilder
     if ($v != null) {
       _lga = $v.lga;
       _lgaId = $v.lgaId;
+      _state = $v.state;
       _$v = null;
     }
     return this;
@@ -97,6 +107,7 @@ class GetLgas200ResponseInnerBuilder
         _$GetLgas200ResponseInner._(
           lga: lga,
           lgaId: lgaId,
+          state: state,
         );
     replace(_$result);
     return _$result;

@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:openapi/openapi.dart';
 
-// tests for GetEndowmentPremium200Response
+// tests for GetBusinessProtectQuote200Response
 void main() {
-  final instance = GetEndowmentPremium200ResponseBuilder();
+  final instance = GetBusinessProtectQuote200ResponseBuilder();
   // TODO add properties to the builder and call build()
 
-  group(GetEndowmentPremium200Response, () {
+  group(GetBusinessProtectQuote200Response, () {
     // num premium
     test('to test the property `premium`', () async {
       // TODO

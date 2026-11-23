@@ -44,6 +44,8 @@ dependencies:
   dio: ^5.11.1
   uuid: ^4.6.0
   pay_with_paystack: ^2.0.0
+  flutter_svg: ^2.2.3
+  intl: ^0.20.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -67,14 +67,26 @@ All URIs are relative to *https://live-retail-api.heirsinsurance.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToCoupleDocument**](doc/DefaultApi.md#addbeneficiarysharetocoupledocument) | **PATCH** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToCreditLifeDocument**](doc/DefaultApi.md#addbeneficiarysharetocreditlifedocument) | **PATCH** /document/{documentId}/credit-life/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToEndowmentDocument**](doc/DefaultApi.md#addbeneficiarysharetoendowmentdocument) | **PATCH** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToEntrepreneurDocument**](doc/DefaultApi.md#addbeneficiarysharetoentrepreneurdocument) | **PATCH** /document/{documentId}/entrepreneur/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToHeirs3YearsDocument**](doc/DefaultApi.md#addbeneficiarysharetoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToHospitalCashAdvanceDocument**](doc/DefaultApi.md#addbeneficiarysharetohospitalcashadvancedocument) | **PATCH** /document/{documentId}/hospital-cash-advance/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToHospitalCashBasicDocument**](doc/DefaultApi.md#addbeneficiarysharetohospitalcashbasicdocument) | **PATCH** /document/{documentId}/hospital-cash-basic/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToHospitalCashIntermediateDocument**](doc/DefaultApi.md#addbeneficiarysharetohospitalcashintermediatedocument) | **PATCH** /document/{documentId}/hospital-cash-intermediate/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToKeymanDocument**](doc/DefaultApi.md#addbeneficiarysharetokeymandocument) | **PATCH** /document/{documentId}/keyman/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToMortgageDocument**](doc/DefaultApi.md#addbeneficiarysharetomortgagedocument) | **PATCH** /document/{documentId}/mortgage/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToMyHeirsDocument**](doc/DefaultApi.md#addbeneficiarysharetomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToMyHeirsPlusDocument**](doc/DefaultApi.md#addbeneficiarysharetomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSalaryDocument**](doc/DefaultApi.md#addbeneficiarysharetosalarydocument) | **PATCH** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSaveDocument**](doc/DefaultApi.md#addbeneficiarysharetosavedocument) | **PATCH** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSaveExtraDocument**](doc/DefaultApi.md#addbeneficiarysharetosaveextradocument) | **PATCH** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToSmartSchoolDocument**](doc/DefaultApi.md#addbeneficiarysharetosmartschooldocument) | **PATCH** /document/{documentId}/smart-school/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToTermAssuranceDocument**](doc/DefaultApi.md#addbeneficiarysharetotermassurancedocument) | **PATCH** /document/{documentId}/term-assurance/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToTriplePayDocument**](doc/DefaultApi.md#addbeneficiarysharetotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToWholeLifeDocument**](doc/DefaultApi.md#addbeneficiarysharetowholelifedocument) | **PATCH** /document/{documentId}/whole-life/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addBeneficiaryShareToWholeLifeLimitedDocument**](doc/DefaultApi.md#addbeneficiarysharetowholelifelimiteddocument) | **PATCH** /document/{documentId}/whole-life-limited/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCargoToMarineCargoDocument**](doc/DefaultApi.md#addcargotomarinecargodocument) | **PATCH** /document/{documentId}/marine-cargo/{cargoId}/{clause} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerTo3rdPartyDocument**](doc/DefaultApi.md#addcustomerto3rdpartydocument) | **PATCH** /document/{documentId}/3rd-party | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerTo3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#addcustomerto3rdpartyfireandtheftdocument) | **PATCH** /document/{documentId}/3rd-party-fire-and-theft | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerTo3rdPartyPlusDocument**](doc/DefaultApi.md#addcustomerto3rdpartyplusdocument) | **PATCH** /document/{documentId}/3rd-party-plus | 
@@ -82,23 +94,54 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToAccidentGoldDocument**](doc/DefaultApi.md#addcustomertoaccidentgolddocument) | **PATCH** /document/{documentId}/personal-accident-gold | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToAccidentPlatinumDocument**](doc/DefaultApi.md#addcustomertoaccidentplatinumdocument) | **PATCH** /document/{documentId}/personal-accident-platinum | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToAccidentSilverDocument**](doc/DefaultApi.md#addcustomertoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToBusinessProtectDocument**](doc/DefaultApi.md#addcustomertobusinessprotectdocument) | **PATCH** /document/{documentId}/business-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToBusinessProtectPlusDocument**](doc/DefaultApi.md#addcustomertobusinessprotectplusdocument) | **PATCH** /document/{documentId}/business-protect-plus | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToComprehensiveDocument**](doc/DefaultApi.md#addcustomertocomprehensivedocument) | **PATCH** /document/{documentId}/comprehensive | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToCoupleDocument**](doc/DefaultApi.md#addcustomertocoupledocument) | **PATCH** /document/{documentId}/couple | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToCreditLifeDocument**](doc/DefaultApi.md#addcustomertocreditlifedocument) | **PATCH** /document/{documentId}/credit-life | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToEndowmentDocument**](doc/DefaultApi.md#addcustomertoendowmentdocument) | **PATCH** /documents/{documentId}/endowment | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToEntrepreneurDocument**](doc/DefaultApi.md#addcustomertoentrepreneurdocument) | **PATCH** /document/{documentId}/entrepreneur | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs25kDocument**](doc/DefaultApi.md#addcustomertoheirs25kdocument) | **PATCH** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs35kDocument**](doc/DefaultApi.md#addcustomertoheirs35kdocument) | **PATCH** /document/{documentId}/heirs-35k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs3YearsDocument**](doc/DefaultApi.md#addcustomertoheirs3yearsdocument) | **PATCH** /document/{documentId}/heirs3years | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHeirs70kDocument**](doc/DefaultApi.md#addcustomertoheirs70kdocument) | **PATCH** /document/{documentId}/heirs-70k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHerMotorDocument**](doc/DefaultApi.md#addcustomertohermotordocument) | **PATCH** /document/{documentId}/her-motor | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHomeProtectDocument**](doc/DefaultApi.md#addcustomertohomeprotectdocument) | **PATCH** /document/{documentId}/home-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHomeProtectPlusDocument**](doc/DefaultApi.md#addcustomertohomeprotectplusdocument) | **PATCH** /document/{documentId}/home-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHospitalCashAdvanceDocument**](doc/DefaultApi.md#addcustomertohospitalcashadvancedocument) | **PATCH** /document/{documentId}/hospital-cash-advance | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHospitalCashBasicDocument**](doc/DefaultApi.md#addcustomertohospitalcashbasicdocument) | **PATCH** /document/{documentId}/hospital-cash-basic | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToHospitalCashIntermediateDocument**](doc/DefaultApi.md#addcustomertohospitalcashintermediatedocument) | **PATCH** /document/{documentId}/hospital-cash-intermediate | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToKeymanDocument**](doc/DefaultApi.md#addcustomertokeymandocument) | **PATCH** /document/{documentId}/keyman | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMarineCargoDocument**](doc/DefaultApi.md#addcustomertomarinecargodocument) | **PATCH** /document/{documentId}/marine-cargo/{clause} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMortgageDocument**](doc/DefaultApi.md#addcustomertomortgagedocument) | **PATCH** /document/{documentId}/mortgage | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMyHeirsDocument**](doc/DefaultApi.md#addcustomertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToMyHeirsPlusDocument**](doc/DefaultApi.md#addcustomertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSalaryDocument**](doc/DefaultApi.md#addcustomertosalarydocument) | **PATCH** /document/{documentId}/salary | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSaveDocument**](doc/DefaultApi.md#addcustomertosavedocument) | **PATCH** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSaveExtraDocument**](doc/DefaultApi.md#addcustomertosaveextradocument) | **PATCH** /document/{documentId}/save-extra | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToSmartSchoolDocument**](doc/DefaultApi.md#addcustomertosmartschooldocument) | **PATCH** /document/{documentId}/smart-school | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTenantProtectBronzeDocument**](doc/DefaultApi.md#addcustomertotenantprotectbronzedocument) | **PATCH** /document/{documentId}/tenant-protect-bronze | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTenantProtectGoldDocument**](doc/DefaultApi.md#addcustomertotenantprotectgolddocument) | **PATCH** /document/{documentId}/tenant-protect-gold | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTenantProtectPlusDocument**](doc/DefaultApi.md#addcustomertotenantprotectplusdocument) | **PATCH** /document/{documentId}/tenant-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTenantProtectSilverDocument**](doc/DefaultApi.md#addcustomertotenantprotectsilverdocument) | **PATCH** /document/{documentId}/tenant-protect-silver | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTermAssuranceDocument**](doc/DefaultApi.md#addcustomertotermassurancedocument) | **PATCH** /document/{documentId}/term-assurance | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToTriplePayDocument**](doc/DefaultApi.md#addcustomertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToWholeLifeDocument**](doc/DefaultApi.md#addcustomertowholelifedocument) | **PATCH** /document/{documentId}/whole-life | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addCustomerToWholeLifeLimitedDocument**](doc/DefaultApi.md#addcustomertowholelifelimiteddocument) | **PATCH** /document/{documentId}/whole-life-limited | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addHealthFormToInsuredPerson**](doc/DefaultApi.md#addhealthformtoinsuredperson) | **PATCH** /insured-person/{personId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToHomeProtectDocument**](doc/DefaultApi.md#addhousetohomeprotectdocument) | **PATCH** /document/{documentId}/home-protect/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToHomeProtectPlusDocument**](doc/DefaultApi.md#addhousetohomeprotectplusdocument) | **PATCH** /document/{documentId}/home-protect-plus/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToTenantProtectBronzeDocument**](doc/DefaultApi.md#addhousetotenantprotectbronzedocument) | **PATCH** /document/{documentId}/tenant-protect-bronze/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToTenantProtectGoldDocument**](doc/DefaultApi.md#addhousetotenantprotectgolddocument) | **PATCH** /document/{documentId}/tenant-protect-gold/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToTenantProtectPlusDocument**](doc/DefaultApi.md#addhousetotenantprotectplusdocument) | **PATCH** /document/{documentId}/tenant-protect-plus/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addHouseToTenantProtectSilverDocument**](doc/DefaultApi.md#addhousetotenantprotectsilverdocument) | **PATCH** /document/{documentId}/tenant-protect-silver/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addItemToCart**](doc/DefaultApi.md#additemtocart) | **POST** /cart/{cartId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addItemToOwner**](doc/DefaultApi.md#additemtoowner) | **POST** /owner/{ownerId}/stationary-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addItemToRenter**](doc/DefaultApi.md#additemtorenter) | **POST** /renter/{renterId}/stationary-item/{itemId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addLifeEntryToCoupleDocument**](doc/DefaultApi.md#addlifeentrytocoupledocument) | **PUT** /document/{documentId}/couple | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addMarineCargo**](doc/DefaultApi.md#addmarinecargo) | **POST** /cargo/{cargoId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addMobileItemToOwner**](doc/DefaultApi.md#addmobileitemtoowner) | **POST** /owner/{ownerId}/mobile-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addMobileItemToRenter**](doc/DefaultApi.md#addmobileitemtorenter) | **POST** /renter/{renterId}/mobile-item/{itemId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorTo3rdPartyDocument**](doc/DefaultApi.md#addmotorto3rdpartydocument) | **PATCH** /document/{documentId}/3rd-party/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorTo3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#addmotorto3rdpartyfireandtheftdocument) | **PATCH** /document/{documentId}/3rd-party-fire-and-theft/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorTo3rdPartyPlusDocument**](doc/DefaultApi.md#addmotorto3rdpartyplusdocument) | **PATCH** /document/{documentId}/3rd-party-plus/{motorId} | 
@@ -107,17 +150,28 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorToHeirs35kDocument**](doc/DefaultApi.md#addmotortoheirs35kdocument) | **PATCH** /document/{documentId}/heirs-35k/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorToHeirs70kDocument**](doc/DefaultApi.md#addmotortoheirs70kdocument) | **PATCH** /document/{documentId}/heirs-70k/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addMotorToHerMotorDocument**](doc/DefaultApi.md#addmotortohermotordocument) | **PATCH** /document/{documentId}/her-motor/{motorId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addOwner**](doc/DefaultApi.md#addowner) | **POST** /owner/{ownerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentBronzeDocument**](doc/DefaultApi.md#addpersontoaccidentbronzedocument) | **PATCH** /document/{documentId}/personal-accident-bronze/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentGoldDocument**](doc/DefaultApi.md#addpersontoaccidentgolddocument) | **PATCH** /document/{documentId}/personal-accident-gold/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentPlatinumDocument**](doc/DefaultApi.md#addpersontoaccidentplatinumdocument) | **PATCH** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addPersonToAccidentSilverDocument**](doc/DefaultApi.md#addpersontoaccidentsilverdocument) | **PATCH** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToCoupleDocument**](doc/DefaultApi.md#addridertocoupledocument) | **PATCH** /document/{documentId}/couple/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToCreditLifeDocument**](doc/DefaultApi.md#addridertocreditlifedocument) | **PATCH** /document/{documentId}/credit-life/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToEndowmentDocument**](doc/DefaultApi.md#addridertoendowmentdocument) | **PATCH** /document/{documentId}/endowment/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToEntrepreneurDocument**](doc/DefaultApi.md#addridertoentrepreneurdocument) | **PATCH** /document/{documentId}/entrepreneur/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToKeymanDocument**](doc/DefaultApi.md#addridertokeymandocument) | **PATCH** /document/{documentId}/keyman/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToMortgageDocument**](doc/DefaultApi.md#addridertomortgagedocument) | **PATCH** /document/{documentId}/mortgage/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToMyHeirsDocument**](doc/DefaultApi.md#addridertomyheirsdocument) | **PATCH** /document/{documentId}/my-heirs/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToMyHeirsPlusDocument**](doc/DefaultApi.md#addridertomyheirsplusdocument) | **PATCH** /document/{documentId}/my-heirs-plus/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToSalaryDocument**](doc/DefaultApi.md#addridertosalarydocument) | **PATCH** /document/{documentId}/salary/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToSaveExtraDocument**](doc/DefaultApi.md#addridertosaveextradocument) | **PATCH** /document/{documentId}/save-extra/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToSmartSchoolDocument**](doc/DefaultApi.md#addridertosmartschooldocument) | **PATCH** /document/{documentId}/smart-school/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToTermAssuranceDocument**](doc/DefaultApi.md#addridertotermassurancedocument) | **PATCH** /document/{documentId}/term-assurance/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**addRiderToTriplePayDocument**](doc/DefaultApi.md#addridertotriplepaydocument) | **PATCH** /document/{documentId}/triple-pay/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToWholeLifeDocument**](doc/DefaultApi.md#addridertowholelifedocument) | **PATCH** /document/{documentId}/whole-life/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addRiderToWholeLifeLimitedDocument**](doc/DefaultApi.md#addridertowholelifelimiteddocument) | **PATCH** /document/{documentId}/whole-life-limited/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addShopToBusinessProtectDocument**](doc/DefaultApi.md#addshoptobusinessprotectdocument) | **PATCH** /document/{documentId}/business-protect/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**addShopToBusinessProtectPlusDocument**](doc/DefaultApi.md#addshoptobusinessprotectplusdocument) | **PATCH** /document/{documentId}/business-protect-plus/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**create3rdPartyDocument**](doc/DefaultApi.md#create3rdpartydocument) | **POST** /document/{documentId}/3rd-party | 
 [*DefaultApi*](doc/DefaultApi.md) | [**create3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#create3rdpartyfireandtheftdocument) | **POST** /document/{documentId}/3rd-party-fire-and-theft | 
 [*DefaultApi*](doc/DefaultApi.md) | [**create3rdPartyPlusDocument**](doc/DefaultApi.md#create3rdpartyplusdocument) | **POST** /document/{documentId}/3rd-party-plus | 
@@ -127,35 +181,82 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**createAccidentPlatinumDocument**](doc/DefaultApi.md#createaccidentplatinumdocument) | **POST** /document/{documentId}/personal-accident-platinum | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createAccidentSilverDocument**](doc/DefaultApi.md#createaccidentsilverdocument) | **POST** /document/{documentId}/personal-accident-silver | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createBeneficiary**](doc/DefaultApi.md#createbeneficiary) | **POST** /beneficiary/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createBusinessProtectDocument**](doc/DefaultApi.md#createbusinessprotectdocument) | **POST** /document/{documentId}/business-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createBusinessProtectPlusDocument**](doc/DefaultApi.md#createbusinessprotectplusdocument) | **POST** /document/{documentId}/business-protect-plus | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createComprehensiveDocument**](doc/DefaultApi.md#createcomprehensivedocument) | **POST** /document/{documentId}/comprehensive | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createCoupleDocument**](doc/DefaultApi.md#createcoupledocument) | **POST** /document/{documentId}/couple | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createCreditLifeDocument**](doc/DefaultApi.md#createcreditlifedocument) | **POST** /document/{documentId}/credit-life | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createCustomer**](doc/DefaultApi.md#createcustomer) | **POST** /customer/{customerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createEndowmentDocument**](doc/DefaultApi.md#createendowmentdocument) | **POST** /documents/{documentId}/endowment | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createEntrepreneurDocument**](doc/DefaultApi.md#createentrepreneurdocument) | **POST** /document/{documentId}/entrepreneur | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs25kDocument**](doc/DefaultApi.md#createheirs25kdocument) | **POST** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs35kDocument**](doc/DefaultApi.md#createheirs35kdocument) | **POST** /document/{documentId}/heirs-35k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs3YearsDocument**](doc/DefaultApi.md#createheirs3yearsdocument) | **POST** /document/{documentId}/heirs3years | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHeirs70kDocument**](doc/DefaultApi.md#createheirs70kdocument) | **POST** /document/{documentId}/heirs-70k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createHerMotorDocument**](doc/DefaultApi.md#createhermotordocument) | **POST** /document/{documentId}/her-motor | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createHomeProtectDocument**](doc/DefaultApi.md#createhomeprotectdocument) | **POST** /document/{documentId}/home-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createHomeProtectPlusDocument**](doc/DefaultApi.md#createhomeprotectplusdocument) | **POST** /document/{documentId}/home-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createHospitalCashAdvanceDocument**](doc/DefaultApi.md#createhospitalcashadvancedocument) | **POST** /document/{documentId}/hospital-cash-advance | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createHospitalCashBasicDocument**](doc/DefaultApi.md#createhospitalcashbasicdocument) | **POST** /document/{documentId}/hospital-cash-basic | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createHospitalCashIntermediateDocument**](doc/DefaultApi.md#createhospitalcashintermediatedocument) | **POST** /document/{documentId}/hospital-cash-intermediate | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createInsuredPerson**](doc/DefaultApi.md#createinsuredperson) | **POST** /insured-person/{personId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createKeymanDocument**](doc/DefaultApi.md#createkeymandocument) | **POST** /document/{documentId}/keyman | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createMarineCargoDocument**](doc/DefaultApi.md#createmarinecargodocument) | **POST** /document/{documentId}/marine-cargo/{clause} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createMortgageDocument**](doc/DefaultApi.md#createmortgagedocument) | **POST** /document/{documentId}/mortgage | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createMotorParticulars**](doc/DefaultApi.md#createmotorparticulars) | **POST** /motor/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createMyHeirsDocument**](doc/DefaultApi.md#createmyheirsdocument) | **POST** /document/{documentId}/my-heirs | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createMyHeirsPlusDocument**](doc/DefaultApi.md#createmyheirsplusdocument) | **POST** /document/{documentId}/my-heirs-plus | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createOTP**](doc/DefaultApi.md#createotp) | **POST** /user/otp | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createPassword**](doc/DefaultApi.md#createpassword) | **POST** /user/password | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createRenter**](doc/DefaultApi.md#createrenter) | **POST** /renter/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createSalaryDocument**](doc/DefaultApi.md#createsalarydocument) | **POST** /document/{documentId}/salary | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createSaveDocument**](doc/DefaultApi.md#createsavedocument) | **POST** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createSaveExtraDocument**](doc/DefaultApi.md#createsaveextradocument) | **POST** /document/{documentId}/save-extra | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createSmartSchoolDocument**](doc/DefaultApi.md#createsmartschooldocument) | **POST** /document/{documentId}/smart-school | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createTenantProtectBronzeDocument**](doc/DefaultApi.md#createtenantprotectbronzedocument) | **POST** /document/{documentId}/tenant-protect-bronze | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createTenantProtectGoldDocument**](doc/DefaultApi.md#createtenantprotectgolddocument) | **POST** /document/{documentId}/tenant-protect-gold | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createTenantProtectPlusDocument**](doc/DefaultApi.md#createtenantprotectplusdocument) | **POST** /document/{documentId}/tenant-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createTenantProtectSilverDocument**](doc/DefaultApi.md#createtenantprotectsilverdocument) | **POST** /document/{documentId}/tenant-protect-silver | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createTermAssuranceDocument**](doc/DefaultApi.md#createtermassurancedocument) | **POST** /document/{documentId}/term-assurance | 
 [*DefaultApi*](doc/DefaultApi.md) | [**createTriplePayDocument**](doc/DefaultApi.md#createtriplepaydocument) | **POST** /document/{documentId}/triple-pay | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createWholeLifeDocument**](doc/DefaultApi.md#createwholelifedocument) | **POST** /document/{documentId}/whole-life | 
+[*DefaultApi*](doc/DefaultApi.md) | [**createWholeLifeLimitedDocument**](doc/DefaultApi.md#createwholelifelimiteddocument) | **POST** /document/{documentId}/whole-life-limited | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromCoupleDocument**](doc/DefaultApi.md#deletebeneficiarysharefromcoupledocument) | **DELETE** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromCreditLifeDocument**](doc/DefaultApi.md#deletebeneficiarysharefromcreditlifedocument) | **DELETE** /document/{documentId}/credit-life/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromEndowmentDocument**](doc/DefaultApi.md#deletebeneficiarysharefromendowmentdocument) | **DELETE** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromEntrepreneurDocument**](doc/DefaultApi.md#deletebeneficiarysharefromentrepreneurdocument) | **DELETE** /document/{documentId}/entrepreneur/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromHeirs3YearsDocument**](doc/DefaultApi.md#deletebeneficiarysharefromheirs3yearsdocument) | **DELETE** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromHospitalCashAdvanceDocument**](doc/DefaultApi.md#deletebeneficiarysharefromhospitalcashadvancedocument) | **DELETE** /document/{documentId}/hospital-cash-advance/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromHospitalCashBasicDocument**](doc/DefaultApi.md#deletebeneficiarysharefromhospitalcashbasicdocument) | **DELETE** /document/{documentId}/hospital-cash-basic/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromHospitalCashIntermediateDocument**](doc/DefaultApi.md#deletebeneficiarysharefromhospitalcashintermediatedocument) | **DELETE** /document/{documentId}/hospital-cash-intermediate/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromKeymanDocument**](doc/DefaultApi.md#deletebeneficiarysharefromkeymandocument) | **DELETE** /document/{documentId}/keyman/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromMortgageDocument**](doc/DefaultApi.md#deletebeneficiarysharefrommortgagedocument) | **DELETE** /document/{documentId}/mortgage/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromMyHeirsDocument**](doc/DefaultApi.md#deletebeneficiarysharefrommyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromMyHeirsPlusDocument**](doc/DefaultApi.md#deletebeneficiarysharefrommyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSalaryDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsalarydocument) | **DELETE** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSaveDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsavedocument) | **DELETE** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSaveExtraDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsaveextradocument) | **DELETE** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromSmartSchoolDocument**](doc/DefaultApi.md#deletebeneficiarysharefromsmartschooldocument) | **DELETE** /document/{documentId}/smart-school/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromTermAssuranceDocument**](doc/DefaultApi.md#deletebeneficiarysharefromtermassurancedocument) | **DELETE** /document/{documentId}/term-assurance/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromTriplePayDocument**](doc/DefaultApi.md#deletebeneficiarysharefromtriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromWholeLifeDocument**](doc/DefaultApi.md#deletebeneficiarysharefromwholelifedocument) | **DELETE** /document/{documentId}/whole-life/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteBeneficiaryShareFromWholeLifeLimitedDocument**](doc/DefaultApi.md#deletebeneficiarysharefromwholelifelimiteddocument) | **DELETE** /document/{documentId}/whole-life-limited/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteCargoFromMarineCargoDocument**](doc/DefaultApi.md#deletecargofrommarinecargodocument) | **DELETE** /document/{documentId}/marine-cargo/{cargoId}/{clause} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteCartItem**](doc/DefaultApi.md#deletecartitem) | **DELETE** /cart/{cartId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromHomeProtectDocument**](doc/DefaultApi.md#deletehousefromhomeprotectdocument) | **DELETE** /document/{documentId}/home-protect/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromHomeProtectPlusDocument**](doc/DefaultApi.md#deletehousefromhomeprotectplusdocument) | **DELETE** /document/{documentId}/home-protect-plus/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromTenantProtectBronzeDocument**](doc/DefaultApi.md#deletehousefromtenantprotectbronzedocument) | **DELETE** /document/{documentId}/tenant-protect-bronze/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromTenantProtectGoldDocument**](doc/DefaultApi.md#deletehousefromtenantprotectgolddocument) | **DELETE** /document/{documentId}/tenant-protect-gold/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromTenantProtectPlusDocument**](doc/DefaultApi.md#deletehousefromtenantprotectplusdocument) | **DELETE** /document/{documentId}/tenant-protect-plus/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteHouseFromTenantProtectSilverDocument**](doc/DefaultApi.md#deletehousefromtenantprotectsilverdocument) | **DELETE** /document/{documentId}/tenant-protect-silver/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteItemFromOwner**](doc/DefaultApi.md#deleteitemfromowner) | **DELETE** /owner/{ownerId}/stationary-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteItemFromRenter**](doc/DefaultApi.md#deleteitemfromrenter) | **DELETE** /renter/{renterId}/stationary-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteItemsFromOwner**](doc/DefaultApi.md#deleteitemsfromowner) | **DELETE** /owner/{ownerId}/stationary-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteItemsFromRenter**](doc/DefaultApi.md#deleteitemsfromrenter) | **DELETE** /renter/{renterId}/stationary-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteMobileItemFromOwner**](doc/DefaultApi.md#deletemobileitemfromowner) | **DELETE** /owner/{ownerId}/mobile-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteMobileItemFromRenter**](doc/DefaultApi.md#deletemobileitemfromrenter) | **DELETE** /renter/{renterId}/mobile-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteMobileItemsFromOwner**](doc/DefaultApi.md#deletemobileitemsfromowner) | **DELETE** /owner/{ownerId}/mobile-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteMobileItemsFromRenter**](doc/DefaultApi.md#deletemobileitemsfromrenter) | **DELETE** /renter/{renterId}/mobile-items | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteMotorFrom3rdPartyDocument**](doc/DefaultApi.md#deletemotorfrom3rdpartydocument) | **DELETE** /document/{documentId}/3rd-party/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteMotorFrom3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#deletemotorfrom3rdpartyfireandtheftdocument) | **DELETE** /document/{documentId}/3rd-party-fire-and-theft/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteMotorFrom3rdPartyPlusDocument**](doc/DefaultApi.md#deletemotorfrom3rdpartyplusdocument) | **DELETE** /document/{documentId}/3rd-party-plus/{motorId} | 
@@ -169,12 +270,22 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**deletePersonFromAccidentPlatinumDocument**](doc/DefaultApi.md#deletepersonfromaccidentplatinumdocument) | **DELETE** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deletePersonFromAccidentSilverDocument**](doc/DefaultApi.md#deletepersonfromaccidentsilverdocument) | **DELETE** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderCoupleDocument**](doc/DefaultApi.md#deleteridercoupledocument) | **DELETE** /document/{documentId}/couple/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderCreditLifeDocument**](doc/DefaultApi.md#deleteridercreditlifedocument) | **DELETE** /document/{documentId}/credit-life/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderEndowmentDocument**](doc/DefaultApi.md#deleteriderendowmentdocument) | **DELETE** /document/{documentId}/endowment/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderEntrepreneurDocument**](doc/DefaultApi.md#deleteriderentrepreneurdocument) | **DELETE** /document/{documentId}/entrepreneur/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderKeymanDocument**](doc/DefaultApi.md#deleteriderkeymandocument) | **DELETE** /document/{documentId}/keyman/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderMortgageDocument**](doc/DefaultApi.md#deleteridermortgagedocument) | **DELETE** /document/{documentId}/mortgage/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderMyHeirsDocument**](doc/DefaultApi.md#deleteridermyheirsdocument) | **DELETE** /document/{documentId}/my-heirs/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderMyHeirsPlusDocument**](doc/DefaultApi.md#deleteridermyheirsplusdocument) | **DELETE** /document/{documentId}/my-heirs-plus/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderSalaryDocument**](doc/DefaultApi.md#deleteridersalarydocument) | **DELETE** /document/{documentId}/salary/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderSaveExtraDocument**](doc/DefaultApi.md#deleteridersaveextradocument) | **DELETE** /document/{documentId}/save-extra/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderSmartSchoolDocument**](doc/DefaultApi.md#deleteridersmartschooldocument) | **DELETE** /document/{documentId}/smart-school/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderTermAssuranceDocument**](doc/DefaultApi.md#deleteridertermassurancedocument) | **DELETE** /document/{documentId}/term-assurance/rider | 
 [*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderTriplePayDocument**](doc/DefaultApi.md#deleteridertriplepaydocument) | **DELETE** /document/{documentId}/triple-pay/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderWholeLifeDocument**](doc/DefaultApi.md#deleteriderwholelifedocument) | **DELETE** /document/{documentId}/whole-life/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteRiderWholeLifeLimitedDocument**](doc/DefaultApi.md#deleteriderwholelifelimiteddocument) | **DELETE** /document/{documentId}/whole-life-limited/rider | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteShopFromBusinessProtectDocument**](doc/DefaultApi.md#deleteshopfrombusinessprotectdocument) | **DELETE** /document/{documentId}/business-protect/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**deleteShopFromBusinessProtectPlusDocument**](doc/DefaultApi.md#deleteshopfrombusinessprotectplusdocument) | **DELETE** /document/{documentId}/business-protect-plus/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**get3rdPartyDocument**](doc/DefaultApi.md#get3rdpartydocument) | **GET** /document/{documentId}/3rd-party | 
 [*DefaultApi*](doc/DefaultApi.md) | [**get3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#get3rdpartyfireandtheftdocument) | **GET** /document/{documentId}/3rd-party-fire-and-theft | 
 [*DefaultApi*](doc/DefaultApi.md) | [**get3rdPartyFireAndTheftQuote**](doc/DefaultApi.md#get3rdpartyfireandtheftquote) | **GET** /motor/quote/3rd-party-fire-and-theft/{motorClass}/{motorValue} | 
@@ -185,27 +296,53 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentBronzeDocument**](doc/DefaultApi.md#getaccidentbronzedocument) | **GET** /document/{documentId}/personal-accident-bronze | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentBronzeDocumentPremium**](doc/DefaultApi.md#getaccidentbronzedocumentpremium) | **GET** /document/{documentId}/personal-accident-bronze/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentBronzeInterestPremium**](doc/DefaultApi.md#getaccidentbronzeinterestpremium) | **GET** /document/{documentId}/personal-accident-bronze/{accidentId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getAccidentBronzeQuote**](doc/DefaultApi.md#getaccidentbronzequote) | **GET** /personal-accident/quote/bronze | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentGoldDocument**](doc/DefaultApi.md#getaccidentgolddocument) | **GET** /document/{documentId}/personal-accident-gold | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentGoldDocumentPremium**](doc/DefaultApi.md#getaccidentgolddocumentpremium) | **GET** /document/{documentId}/personal-accident-gold/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentGoldInterestPremium**](doc/DefaultApi.md#getaccidentgoldinterestpremium) | **GET** /document/{documentId}/personal-accident-gold/{accidentId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getAccidentGoldQuote**](doc/DefaultApi.md#getaccidentgoldquote) | **GET** /personal-accident/quote/gold | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentPerson**](doc/DefaultApi.md#getaccidentperson) | **GET** /accident-person/{personId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentPlatinumDocument**](doc/DefaultApi.md#getaccidentplatinumdocument) | **GET** /document/{documentId}/personal-accident-platinum | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentPlatinumDocumentPremium**](doc/DefaultApi.md#getaccidentplatinumdocumentpremium) | **GET** /document/{documentId}/personal-accident-platinum/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentPlatinumInterestPremium**](doc/DefaultApi.md#getaccidentplatinuminterestpremium) | **GET** /document/{documentId}/personal-accident-platinum/{accidentId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getAccidentPlatinumQuote**](doc/DefaultApi.md#getaccidentplatinumquote) | **GET** /personal-accident/quote/platinum | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentSilverDocument**](doc/DefaultApi.md#getaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentSilverDocumentPremium**](doc/DefaultApi.md#getaccidentsilverdocumentpremium) | **GET** /document/{documentId}/personal-accident-silver/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getAccidentSilverInterestPremium**](doc/DefaultApi.md#getaccidentsilverinterestpremium) | **GET** /document/{documentId}/personal-accident-silver/{accidentId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getAccidentSilverQuote**](doc/DefaultApi.md#getaccidentsilverquote) | **GET** /personal-accident/quote/silver | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiariesByLoggedInUser**](doc/DefaultApi.md#getbeneficiariesbyloggedinuser) | **GET** /beneficiaries | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryById**](doc/DefaultApi.md#getbeneficiarybyid) | **GET** /beneficiary/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromCoupleDocument**](doc/DefaultApi.md#getbeneficiarysharefromcoupledocument) | **GET** /document/{documentId}/couple/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromCreditLifeDocument**](doc/DefaultApi.md#getbeneficiarysharefromcreditlifedocument) | **GET** /document/{documentId}/credit-life/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromEndowmentDocument**](doc/DefaultApi.md#getbeneficiarysharefromendowmentdocument) | **GET** /document/{documentId}/endowment/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromEntrepreneurDocument**](doc/DefaultApi.md#getbeneficiarysharefromentrepreneurdocument) | **GET** /document/{documentId}/entrepreneur/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromHeirs3YearsDocument**](doc/DefaultApi.md#getbeneficiarysharefromheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromHospitalCashAdvanceDocument**](doc/DefaultApi.md#getbeneficiarysharefromhospitalcashadvancedocument) | **GET** /document/{documentId}/hospital-cash-advance/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromHospitalCashBasicDocument**](doc/DefaultApi.md#getbeneficiarysharefromhospitalcashbasicdocument) | **GET** /document/{documentId}/hospital-cash-basic/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromHospitalCashIntermediateDocument**](doc/DefaultApi.md#getbeneficiarysharefromhospitalcashintermediatedocument) | **GET** /document/{documentId}/hospital-cash-intermediate/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromKeymanDocument**](doc/DefaultApi.md#getbeneficiarysharefromkeymandocument) | **GET** /document/{documentId}/keyman/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromMortgageDocument**](doc/DefaultApi.md#getbeneficiarysharefrommortgagedocument) | **GET** /document/{documentId}/mortgage/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromMyHeirsDocument**](doc/DefaultApi.md#getbeneficiarysharefrommyheirsdocument) | **GET** /document/{documentId}/my-heirs/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromMyHeirsPlusDocument**](doc/DefaultApi.md#getbeneficiarysharefrommyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSalaryDocument**](doc/DefaultApi.md#getbeneficiarysharefromsalarydocument) | **GET** /document/{documentId}/salary/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSaveDocument**](doc/DefaultApi.md#getbeneficiarysharefromsavedocument) | **GET** /document/{documentId}/save/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSaveExtraDocument**](doc/DefaultApi.md#getbeneficiarysharefromsaveextradocument) | **GET** /document/{documentId}/save-extra/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromSmartSchoolDocument**](doc/DefaultApi.md#getbeneficiarysharefromsmartschooldocument) | **GET** /document/{documentId}/smart-school/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromTermAssuranceDocument**](doc/DefaultApi.md#getbeneficiarysharefromtermassurancedocument) | **GET** /document/{documentId}/term-assurance/beneficiary-share/{beneficiaryId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromTriplePayDocument**](doc/DefaultApi.md#getbeneficiarysharefromtriplepaydocument) | **GET** /document/{documentId}/triple-pay/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromWholeLifeDocument**](doc/DefaultApi.md#getbeneficiarysharefromwholelifedocument) | **GET** /document/{documentId}/whole-life/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBeneficiaryShareFromWholeLifeLimitedDocument**](doc/DefaultApi.md#getbeneficiarysharefromwholelifelimiteddocument) | **GET** /document/{documentId}/whole-life-limited/beneficiary-share/{beneficiaryId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectDocument**](doc/DefaultApi.md#getbusinessprotectdocument) | **GET** /document/{documentId}/business-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectDocumentPremium**](doc/DefaultApi.md#getbusinessprotectdocumentpremium) | **GET** /document/{documentId}/business-protect/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectInterestPremium**](doc/DefaultApi.md#getbusinessprotectinterestpremium) | **GET** /document/{documentId}/business-protect/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectPlusDocument**](doc/DefaultApi.md#getbusinessprotectplusdocument) | **GET** /document/{documentId}/business-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectPlusDocumentPremium**](doc/DefaultApi.md#getbusinessprotectplusdocumentpremium) | **GET** /document/{documentId}/business-protect-plus/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectPlusInterestPremium**](doc/DefaultApi.md#getbusinessprotectplusinterestpremium) | **GET** /document/{documentId}/business-protect-plus/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectPlusQuote**](doc/DefaultApi.md#getbusinessprotectplusquote) | **GET** /business-protect-plus/quote/{itemsValue} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getBusinessProtectQuote**](doc/DefaultApi.md#getbusinessprotectquote) | **GET** /business-protect/quote/{itemsValue} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCargoDocumentPremium**](doc/DefaultApi.md#getcargodocumentpremium) | **GET** /document/{documentId}/marine-cargo/{clause}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCargoFromMarineCargoDocument**](doc/DefaultApi.md#getcargofrommarinecargodocument) | **GET** /document/{documentId}/marine-cargo/{cargoId}/{clause} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCargoInterestPremium**](doc/DefaultApi.md#getcargointerestpremium) | **GET** /document/{documentId}/marine-cargo/{cargoId}/premium/{clause} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCartItem**](doc/DefaultApi.md#getcartitem) | **GET** /cart/{cartId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getComprehensiveDocument**](doc/DefaultApi.md#getcomprehensivedocument) | **GET** /document/{documentId}/comprehensive | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getComprehensiveDocumentPremium**](doc/DefaultApi.md#getcomprehensivedocumentpremium) | **GET** /document/{documentId}/comprehensive/premium | 
@@ -217,10 +354,15 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getCouplePremium**](doc/DefaultApi.md#getcouplepremium) | **GET** /document/{documentId}/couple/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCouplePremiumQuote**](doc/DefaultApi.md#getcouplepremiumquote) | **GET** /couple/quote-premium/{premium}/{contribution}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCoupleSumAssuredQuote**](doc/DefaultApi.md#getcouplesumassuredquote) | **GET** /couple/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCreditLifeDocument**](doc/DefaultApi.md#getcreditlifedocument) | **GET** /document/{documentId}/credit-life | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCreditLifePremium**](doc/DefaultApi.md#getcreditlifepremium) | **GET** /document/{documentId}/credit-life/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getCreditLifeSumAssuredQuote**](doc/DefaultApi.md#getcreditlifesumassuredquote) | **GET** /credit-life/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCustomerById**](doc/DefaultApi.md#getcustomerbyid) | **GET** /customer/{customerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getCustomersByLoggedInUser**](doc/DefaultApi.md#getcustomersbyloggedinuser) | **GET** /customers | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getEndowmentDocument**](doc/DefaultApi.md#getendowmentdocument) | **GET** /documents/{documentId}/endowment | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getEndowmentPremium**](doc/DefaultApi.md#getendowmentpremium) | **GET** /document/{documentId}/endowment/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getEntrepreneurDocument**](doc/DefaultApi.md#getentrepreneurdocument) | **GET** /document/{documentId}/entrepreneur | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getEntrepreneurPremium**](doc/DefaultApi.md#getentrepreneurpremium) | **GET** /document/{documentId}/entrepreneur/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kDocument**](doc/DefaultApi.md#getheirs25kdocument) | **GET** /document/{documentId}/heirs-25k | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kDocumentPremium**](doc/DefaultApi.md#getheirs25kdocumentpremium) | **GET** /document/{documentId}/heirs-25k/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHeirs25kInterestPremium**](doc/DefaultApi.md#getheirs25kinterestpremium) | **GET** /document/{documentId}/heirs-25k/{motorId}/premium | 
@@ -242,10 +384,54 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getHerMotorInterestPremium**](doc/DefaultApi.md#gethermotorinterestpremium) | **GET** /document/{documentId}/her-motor/{motorId}/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHerMotorQuote**](doc/DefaultApi.md#gethermotorquote) | **GET** /motor/quote/her-motor/{motorClass}/{motorValue} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getHerMotorQuoteOptions**](doc/DefaultApi.md#gethermotorquoteoptions) | **GET** /motor/quote/her-motor/options/{motorClass}/{motorValue} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectDocument**](doc/DefaultApi.md#gethomeprotectdocument) | **GET** /document/{documentId}/home-protect | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectDocumentPremium**](doc/DefaultApi.md#gethomeprotectdocumentpremium) | **GET** /document/{documentId}/home-protect/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectInterestPremium**](doc/DefaultApi.md#gethomeprotectinterestpremium) | **GET** /document/{documentId}/home-protect/{ownerId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectPlusDocument**](doc/DefaultApi.md#gethomeprotectplusdocument) | **GET** /document/{documentId}/home-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectPlusDocumentPremium**](doc/DefaultApi.md#gethomeprotectplusdocumentpremium) | **GET** /document/{documentId}/home-protect-plus/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectPlusInterestPremium**](doc/DefaultApi.md#gethomeprotectplusinterestpremium) | **GET** /document/{documentId}/home-protect-plus/{ownerId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectPlusQuote**](doc/DefaultApi.md#gethomeprotectplusquote) | **GET** /home-protect-plus/quote/{value}/{stationaryValue}/{mobileValue}/{alternativeValue} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHomeProtectQuote**](doc/DefaultApi.md#gethomeprotectquote) | **GET** /home-protect/quote | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashAdvanceDocument**](doc/DefaultApi.md#gethospitalcashadvancedocument) | **GET** /document/{documentId}/hospital-cash-advance | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashAdvancePremium**](doc/DefaultApi.md#gethospitalcashadvancepremium) | **GET** /document/{documentId}/hospital-cash-advance/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashAdvancePremiumQuote**](doc/DefaultApi.md#gethospitalcashadvancepremiumquote) | **GET** /hospital-cash-advance/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashAdvanceSumAssuredQuote**](doc/DefaultApi.md#gethospitalcashadvancesumassuredquote) | **GET** /hospital-cash-advance/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashBasicDocument**](doc/DefaultApi.md#gethospitalcashbasicdocument) | **GET** /document/{documentId}/hospital-cash-basic | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashBasicPremium**](doc/DefaultApi.md#gethospitalcashbasicpremium) | **GET** /document/{documentId}/hospital-cash-basic/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashBasicPremiumQuote**](doc/DefaultApi.md#gethospitalcashbasicpremiumquote) | **GET** /hospital-cash-basic/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashBasicSumAssuredQuote**](doc/DefaultApi.md#gethospitalcashbasicsumassuredquote) | **GET** /hospital-cash-basic/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashIntermediateDocument**](doc/DefaultApi.md#gethospitalcashintermediatedocument) | **GET** /document/{documentId}/hospital-cash-intermediate | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashIntermediatePremium**](doc/DefaultApi.md#gethospitalcashintermediatepremium) | **GET** /document/{documentId}/hospital-cash-intermediate/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashIntermediatePremiumQuote**](doc/DefaultApi.md#gethospitalcashintermediatepremiumquote) | **GET** /hospital-cash-intermediate/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHospitalCashIntermediateSumAssuredQuote**](doc/DefaultApi.md#gethospitalcashintermediatesumassuredquote) | **GET** /hospital-cash-intermediate/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromHomeProtectDocument**](doc/DefaultApi.md#gethousefromhomeprotectdocument) | **GET** /document/{documentId}/home-protect/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromHomeProtectPlusDocument**](doc/DefaultApi.md#gethousefromhomeprotectplusdocument) | **GET** /document/{documentId}/home-protect-plus/{ownerId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromTenantProtectBronzeDocument**](doc/DefaultApi.md#gethousefromtenantprotectbronzedocument) | **GET** /document/{documentId}/tenant-protect-bronze/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromTenantProtectGoldDocument**](doc/DefaultApi.md#gethousefromtenantprotectgolddocument) | **GET** /document/{documentId}/tenant-protect-gold/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromTenantProtectPlusDocument**](doc/DefaultApi.md#gethousefromtenantprotectplusdocument) | **GET** /document/{documentId}/tenant-protect-plus/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getHouseFromTenantProtectSilverDocument**](doc/DefaultApi.md#gethousefromtenantprotectsilverdocument) | **GET** /document/{documentId}/tenant-protect-silver/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getInsuredPersonById**](doc/DefaultApi.md#getinsuredpersonbyid) | **GET** /insured-person/{personId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getInsuredPersonsByLoggedInUser**](doc/DefaultApi.md#getinsuredpersonsbyloggedinuser) | **GET** /insured-persons | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getItemFromOwner**](doc/DefaultApi.md#getitemfromowner) | **GET** /owner/{ownerId}/stationary-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getItemFromRenter**](doc/DefaultApi.md#getitemfromrenter) | **GET** /renter/{renterId}/stationary-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getItemsFromOwner**](doc/DefaultApi.md#getitemsfromowner) | **GET** /owner/{ownerId}/stationary-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getItemsFromRenter**](doc/DefaultApi.md#getitemsfromrenter) | **GET** /renter/{renterId}/stationary-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getKeymanDocument**](doc/DefaultApi.md#getkeymandocument) | **GET** /document/{documentId}/keyman | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getKeymanPremium**](doc/DefaultApi.md#getkeymanpremium) | **GET** /document/{documentId}/keyman/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getKeymanPremiumQuote**](doc/DefaultApi.md#getkeymanpremiumquote) | **GET** /keyman/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getKeymanSumAssuredQuote**](doc/DefaultApi.md#getkeymansumassuredquote) | **GET** /keyman/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getLgas**](doc/DefaultApi.md#getlgas) | **GET** /lga | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getLoggedInUser**](doc/DefaultApi.md#getloggedinuser) | **GET** /user | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMarineCargo**](doc/DefaultApi.md#getmarinecargo) | **GET** /cargo/{cargoId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMarineCargoDocument**](doc/DefaultApi.md#getmarinecargodocument) | **GET** /document/{documentId}/marine-cargo/{clause} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMarineCargoQuote**](doc/DefaultApi.md#getmarinecargoquote) | **GET** /marine-cargo/quote/{amount}/{exchangeRate}/{clause}/{loading} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMobileItemFromOwner**](doc/DefaultApi.md#getmobileitemfromowner) | **GET** /owner/{ownerId}/mobile-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMobileItemFromRenter**](doc/DefaultApi.md#getmobileitemfromrenter) | **GET** /renter/{renterId}/mobile-item/{itemId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMobileItemsFromOwner**](doc/DefaultApi.md#getmobileitemsfromowner) | **GET** /owner/{ownerId}/mobile-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMobileItemsFromRenter**](doc/DefaultApi.md#getmobileitemsfromrenter) | **GET** /renter/{renterId}/mobile-items | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMortgageDocument**](doc/DefaultApi.md#getmortgagedocument) | **GET** /document/{documentId}/mortgage | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMortgagePremium**](doc/DefaultApi.md#getmortgagepremium) | **GET** /document/{documentId}/mortgage/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getMortgageSumAssuredQuote**](doc/DefaultApi.md#getmortgagesumassuredquote) | **GET** /mortgage/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getMotor3rdPartyFireAndTheftDocument**](doc/DefaultApi.md#getmotor3rdpartyfireandtheftdocument) | **GET** /document/{documentId}/3rd-party-fire-and-theft/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getMotorFrom3rdPartyDocument**](doc/DefaultApi.md#getmotorfrom3rdpartydocument) | **GET** /document/{documentId}/3rd-party/{motorId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getMotorFrom3rdPartyPlusDocument**](doc/DefaultApi.md#getmotorfrom3rdpartyplusdocument) | **GET** /document/{documentId}/3rd-party-plus/{motorId} | 
@@ -264,14 +450,18 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getMyHeirsPremium**](doc/DefaultApi.md#getmyheirspremium) | **GET** /document/{documentId}/my-heirs/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getMyHeirsPremiumQuote**](doc/DefaultApi.md#getmyheirspremiumquote) | **GET** /my-heirs/quote-premium/{premium}/{contribution}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getMyHeirsSumAssuredQuote**](doc/DefaultApi.md#getmyheirssumassuredquote) | **GET** /my-heirs/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getOwnerById**](doc/DefaultApi.md#getownerbyid) | **GET** /owner/{ownerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPaymentStatus**](doc/DefaultApi.md#getpaymentstatus) | **GET** /pay/{payId}/status | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentBronzeDocument**](doc/DefaultApi.md#getpersonfromaccidentbronzedocument) | **GET** /document/{documentId}/personal-accident-bronze/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentGoldDocument**](doc/DefaultApi.md#getpersonfromaccidentgolddocument) | **GET** /document/{documentId}/personal-accident-gold/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentPlatinumDocument**](doc/DefaultApi.md#getpersonfromaccidentplatinumdocument) | **GET** /document/{documentId}/personal-accident-platinum/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPersonFromAccidentSilverDocument**](doc/DefaultApi.md#getpersonfromaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/{accidentId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getPolicies**](doc/DefaultApi.md#getpolicies) | **GET** /policy | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getRenterById**](doc/DefaultApi.md#getrenterbyid) | **GET** /renter/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSalaryDocument**](doc/DefaultApi.md#getsalarydocument) | **GET** /document/{documentId}/salary | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSalaryPremium**](doc/DefaultApi.md#getsalarypremium) | **GET** /document/{documentId}/salary/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSalaryPremiumQuote**](doc/DefaultApi.md#getsalarypremiumquote) | **GET** /salary/quote-premium/{premium}/{contribution}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSalarySumAssuredQuote**](doc/DefaultApi.md#getsalarysumassuredquote) | **GET** /salary/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveDocument**](doc/DefaultApi.md#getsavedocument) | **GET** /document/{documentId}/save | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveExtraDocument**](doc/DefaultApi.md#getsaveextradocument) | **GET** /document/{documentId}/save-extra | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveExtraPremium**](doc/DefaultApi.md#getsaveextrapremium) | **GET** /document/{documentId}/save-extra/premium | 
@@ -280,7 +470,37 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getSavePremium**](doc/DefaultApi.md#getsavepremium) | **GET** /document/{documentId}/save/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSavePremiumQuote**](doc/DefaultApi.md#getsavepremiumquote) | **GET** /save/quote-premium/{premium}/{contribution}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSaveSumAssuredQuote**](doc/DefaultApi.md#getsavesumassuredquote) | **GET** /save/quote-assured/{sumAssured}/{savings}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getShopFromBusinessProtectDocument**](doc/DefaultApi.md#getshopfrombusinessprotectdocument) | **GET** /document/{documentId}/business-protect/{renterId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getShopFromBusinessProtectPlusDocument**](doc/DefaultApi.md#getshopfrombusinessprotectplusdocument) | **GET** /document/{documentId}/business-protect-plus/{renterId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getSinglePolicy**](doc/DefaultApi.md#getsinglepolicy) | **GET** /policy/{eskaPolicyId}/company/{company} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSmartSchoolDocument**](doc/DefaultApi.md#getsmartschooldocument) | **GET** /document/{documentId}/smart-school | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSmartSchoolDocumentPremium**](doc/DefaultApi.md#getsmartschooldocumentpremium) | **GET** /document/{documentId}/smart-school/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSmartSchoolPremiumQuote**](doc/DefaultApi.md#getsmartschoolpremiumquote) | **GET** /smart-school/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSmartSchoolSumAssuredQuote**](doc/DefaultApi.md#getsmartschoolsumassuredquote) | **GET** /smart-school/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSurgeryCarePremiumQuote**](doc/DefaultApi.md#getsurgerycarepremiumquote) | **GET** /surgery-care/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getSurgeryCareSumAssuredQuote**](doc/DefaultApi.md#getsurgerycaresumassuredquote) | **GET** /surgery-care/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectBronzeDocument**](doc/DefaultApi.md#gettenantprotectbronzedocument) | **GET** /document/{documentId}/tenant-protect-bronze | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectBronzeDocumentPremium**](doc/DefaultApi.md#gettenantprotectbronzedocumentpremium) | **GET** /document/{documentId}/tenant-protect-bronze/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectBronzeInterestPremium**](doc/DefaultApi.md#gettenantprotectbronzeinterestpremium) | **GET** /document/{documentId}/tenant-protect-bronze/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectBronzeQuote**](doc/DefaultApi.md#gettenantprotectbronzequote) | **GET** /tenant-protect-bronze/quote | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectGoldDocument**](doc/DefaultApi.md#gettenantprotectgolddocument) | **GET** /document/{documentId}/tenant-protect-gold | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectGoldDocumentPremium**](doc/DefaultApi.md#gettenantprotectgolddocumentpremium) | **GET** /document/{documentId}/tenant-protect-gold/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectGoldInterestPremium**](doc/DefaultApi.md#gettenantprotectgoldinterestpremium) | **GET** /document/{documentId}/tenant-protect-gold/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectGoldQuote**](doc/DefaultApi.md#gettenantprotectgoldquote) | **GET** /tenant-protect-gold/quote | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectPlusDocument**](doc/DefaultApi.md#gettenantprotectplusdocument) | **GET** /document/{documentId}/tenant-protect-plus | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectPlusDocumentPremium**](doc/DefaultApi.md#gettenantprotectplusdocumentpremium) | **GET** /document/{documentId}/tenant-protect-plus/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectPlusInterestPremium**](doc/DefaultApi.md#gettenantprotectplusinterestpremium) | **GET** /document/{documentId}/tenant-protect-plus/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectPlusQuote**](doc/DefaultApi.md#gettenantprotectplusquote) | **GET** /tenant-protect-plus/quote/{stationaryValue}/{mobileValue}/{alternativeValue} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectSilverDocument**](doc/DefaultApi.md#gettenantprotectsilverdocument) | **GET** /document/{documentId}/tenant-protect-silver | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectSilverDocumentPremium**](doc/DefaultApi.md#gettenantprotectsilverdocumentpremium) | **GET** /document/{documentId}/tenant-protect-silver/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectSilverInterestPremium**](doc/DefaultApi.md#gettenantprotectsilverinterestpremium) | **GET** /document/{documentId}/tenant-protect-silver/{renterId}/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTenantProtectSilverQuote**](doc/DefaultApi.md#gettenantprotectsilverquote) | **GET** /tenant-protect-silver/quote | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermAssuranceDocument**](doc/DefaultApi.md#gettermassurancedocument) | **GET** /document/{documentId}/term-assurance | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermAssurancePremiumQuote**](doc/DefaultApi.md#gettermassurancepremiumquote) | **GET** /term-assurance/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermAssuranceSumAssuredQuote**](doc/DefaultApi.md#gettermassurancesumassuredquote) | **GET** /term-assurance/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermDocumentPremium**](doc/DefaultApi.md#gettermdocumentpremium) | **GET** /document/{documentId}/term-assurance/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermReturnPremiumPremiumQuote**](doc/DefaultApi.md#gettermreturnpremiumpremiumquote) | **GET** /term-return-premium/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getTermReturnPremiumSumAssuredQuote**](doc/DefaultApi.md#gettermreturnpremiumsumassuredquote) | **GET** /term-return-premium/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getThirdPartyDocumentPremium**](doc/DefaultApi.md#getthirdpartydocumentpremium) | **GET** /document/{documentId}/3rd-party/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getThirdPartyFireAndTheftDocumentPremium**](doc/DefaultApi.md#getthirdpartyfireandtheftdocumentpremium) | **GET** /document/{documentId}/3rd-party-fire-and-theft/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getThirdPartyFireAndTheftInterestPremium**](doc/DefaultApi.md#getthirdpartyfireandtheftinterestpremium) | **GET** /document/{documentId}/3rd-party-fire-and-theft/{motorId}/premium | 
@@ -289,6 +509,14 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getThirdPartyPlusInterestPremium**](doc/DefaultApi.md#getthirdpartyplusinterestpremium) | **GET** /document/{documentId}/3rd-party-plus/{motorId}/premium | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getTriplePayDocument**](doc/DefaultApi.md#gettriplepaydocument) | **GET** /document/{documentId}/triple-pay | 
 [*DefaultApi*](doc/DefaultApi.md) | [**getTriplePayPremium**](doc/DefaultApi.md#gettriplepaypremium) | **GET** /document/{documentId}/triple-pay/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeAssuredQuote**](doc/DefaultApi.md#getwholelifeassuredquote) | **GET** /whole-life/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeDocument**](doc/DefaultApi.md#getwholelifedocument) | **GET** /document/{documentId}/whole-life | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeDocumentPremium**](doc/DefaultApi.md#getwholelifedocumentpremium) | **GET** /document/{documentId}/whole-life/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeLimitedAssuredQuote**](doc/DefaultApi.md#getwholelifelimitedassuredquote) | **GET** /whole-life-limited/quote-assured/{sumAssured}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeLimitedDocument**](doc/DefaultApi.md#getwholelifelimiteddocument) | **GET** /document/{documentId}/whole-life-limited | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeLimitedPremium**](doc/DefaultApi.md#getwholelifelimitedpremium) | **GET** /document/{documentId}/whole-life-limited/premium | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifeLimitedPremiumQuote**](doc/DefaultApi.md#getwholelifelimitedpremiumquote) | **GET** /whole-life-limited/quote-premium/{premium}/{dob}/{term}/{frequency} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**getWholeLifePremiumQuote**](doc/DefaultApi.md#getwholelifepremiumquote) | **GET** /whole-life/quote-premium/{premium}/{dob}/{term}/{frequency} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**isPasswordLogin**](doc/DefaultApi.md#ispasswordlogin) | **POST** /user/is-login-by-password | 
 [*DefaultApi*](doc/DefaultApi.md) | [**logUserIn**](doc/DefaultApi.md#loguserin) | **POST** /user/login | 
 [*DefaultApi*](doc/DefaultApi.md) | [**logUserInPayment**](doc/DefaultApi.md#loguserinpayment) | **POST** /user/login/payment | 
@@ -299,20 +527,46 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**payForAccidentGoldDocument**](doc/DefaultApi.md#payforaccidentgolddocument) | **GET** /document/{documentId}/personal-accident-gold/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForAccidentPlatinumDocument**](doc/DefaultApi.md#payforaccidentplatinumdocument) | **GET** /document/{documentId}/personal-accident-platinum/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForAccidentSilverDocument**](doc/DefaultApi.md#payforaccidentsilverdocument) | **GET** /document/{documentId}/personal-accident-silver/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForBusinessProtectDocument**](doc/DefaultApi.md#payforbusinessprotectdocument) | **GET** /document/{documentId}/business-protect/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForBusinessProtectPlusDocument**](doc/DefaultApi.md#payforbusinessprotectplusdocument) | **GET** /document/{documentId}/business-protect-plus/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForComprehensiveDocument**](doc/DefaultApi.md#payforcomprehensivedocument) | **GET** /document/{documentId}/comprehensive/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForCoupleDocument**](doc/DefaultApi.md#payforcoupledocument) | **GET** /document/{documentId}/couple/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForCreditLifeDocument**](doc/DefaultApi.md#payforcreditlifedocument) | **GET** /document/{documentId}/credit-life/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForEconomyDocument**](doc/DefaultApi.md#payforeconomydocument) | **GET** /document/{documentId}/economy/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForEndowmentDocument**](doc/DefaultApi.md#payforendowmentdocument) | **GET** /document/{documentId}/endowment/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForEntrepreneurDocument**](doc/DefaultApi.md#payforentrepreneurdocument) | **GET** /document/{documentId}/entrepreneur/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForEuropeDocument**](doc/DefaultApi.md#payforeuropedocument) | **GET** /document/{documentId}/europe/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForFamilyDocument**](doc/DefaultApi.md#payforfamilydocument) | **GET** /document/{documentId}/family/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs25kDocument**](doc/DefaultApi.md#payforheirs25kdocument) | **GET** /document/{documentId}/heirs-25k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs35kDocument**](doc/DefaultApi.md#payforheirs35kdocument) | **GET** /document/{documentId}/heirs-35k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs3YearsDocument**](doc/DefaultApi.md#payforheirs3yearsdocument) | **GET** /document/{documentId}/heirs3years/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHeirs70kDocument**](doc/DefaultApi.md#payforheirs70kdocument) | **GET** /document/{documentId}/heirs-70k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForHerMotorDocument**](doc/DefaultApi.md#payforhermotordocument) | **GET** /document/{documentId}/her-motor/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForHomeProtectDocument**](doc/DefaultApi.md#payforhomeprotectdocument) | **GET** /document/{documentId}/home-protect/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForHomeProtectPlusDocument**](doc/DefaultApi.md#payforhomeprotectplusdocument) | **GET** /document/{documentId}/home-protect-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForHospitalCashAdvanceDocument**](doc/DefaultApi.md#payforhospitalcashadvancedocument) | **GET** /document/{documentId}/hospital-cash-advance/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForHospitalCashBasicDocument**](doc/DefaultApi.md#payforhospitalcashbasicdocument) | **GET** /document/{documentId}/hospital-cash-basic/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForHospitalCashIntermediateDocument**](doc/DefaultApi.md#payforhospitalcashintermediatedocument) | **GET** /document/{documentId}/hospital-cash-intermediate/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForKeymanDocument**](doc/DefaultApi.md#payforkeymandocument) | **GET** /document/{documentId}/keyman/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForMarineCargoDocument**](doc/DefaultApi.md#payformarinecargodocument) | **GET** /document/{documentId}/marine-cargo/{clause}/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForMortgageDocument**](doc/DefaultApi.md#payformortgagedocument) | **GET** /document/{documentId}/mortgage/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForMyHeirsDocument**](doc/DefaultApi.md#payformyheirsdocument) | **GET** /document/{documentId}/my-heirs/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForMyHeirsPlusDocument**](doc/DefaultApi.md#payformyheirsplusdocument) | **GET** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForPearlDocument**](doc/DefaultApi.md#payforpearldocument) | **GET** /document/{documentId}/pearl/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForSalaryDocument**](doc/DefaultApi.md#payforsalarydocument) | **GET** /document/{documentId}/salary/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForSaveDocument**](doc/DefaultApi.md#payforsavedocument) | **GET** /document/{documentId}/save/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForSaveExtraDocument**](doc/DefaultApi.md#payforsaveextradocument) | **GET** /document/{documentId}/save-extra/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForSchengenDocument**](doc/DefaultApi.md#payforschengendocument) | **GET** /document/{documentId}/schengen/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForSmartSchoolDocument**](doc/DefaultApi.md#payforsmartschooldocument) | **GET** /document/{documentId}/smart-school/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTenantProtectBronzeDocument**](doc/DefaultApi.md#payfortenantprotectbronzedocument) | **GET** /document/{documentId}/tenant-protect-bronze/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTenantProtectGoldDocument**](doc/DefaultApi.md#payfortenantprotectgolddocument) | **GET** /document/{documentId}/tenant-protect-gold/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTenantProtectPlusDocument**](doc/DefaultApi.md#payfortenantprotectplusdocument) | **GET** /document/{documentId}/tenant-protect-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTenantProtectSilverDocument**](doc/DefaultApi.md#payfortenantprotectsilverdocument) | **GET** /document/{documentId}/tenant-protect-silver/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTermAssuranceDocument**](doc/DefaultApi.md#payfortermassurancedocument) | **GET** /document/{documentId}/term-assurance/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForTravellerDocument**](doc/DefaultApi.md#payfortravellerdocument) | **GET** /document/{documentId}/traveller/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**payForTriplePayDocument**](doc/DefaultApi.md#payfortriplepaydocument) | **GET** /document/{documentId}/triple-pay/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForWholeLifeDocument**](doc/DefaultApi.md#payforwholelifedocument) | **GET** /document/{documentId}/whole-life/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**payForWholeLifeLimitedDocument**](doc/DefaultApi.md#payforwholelifelimiteddocument) | **GET** /document/{documentId}/whole-life-limited/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**paystackCallback**](doc/DefaultApi.md#paystackcallback) | **GET** /paystack/{paystackId}/callback | 
 [*DefaultApi*](doc/DefaultApi.md) | [**register3rdPartyFireAndTheftPayment**](doc/DefaultApi.md#register3rdpartyfireandtheftpayment) | **POST** /document/{documentId}/3rd-party-fire-and-theft/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**register3rdPartyPayment**](doc/DefaultApi.md#register3rdpartypayment) | **POST** /document/{documentId}/3rd-party/pay/{payId} | 
@@ -321,22 +575,49 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**registerAccidentGoldPayment**](doc/DefaultApi.md#registeraccidentgoldpayment) | **POST** /document/{documentId}/personal-accident-gold/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerAccidentPlatinumPayment**](doc/DefaultApi.md#registeraccidentplatinumpayment) | **POST** /document/{documentId}/personal-accident-platinum/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerAccidentSilverPayment**](doc/DefaultApi.md#registeraccidentsilverpayment) | **POST** /document/{documentId}/personal-accident-silver/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerBusinessProtectPayment**](doc/DefaultApi.md#registerbusinessprotectpayment) | **POST** /document/{documentId}/business-protect/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerBusinessProtectPlusPayment**](doc/DefaultApi.md#registerbusinessprotectpluspayment) | **POST** /document/{documentId}/business-protect-plus/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerComprehensivePayment**](doc/DefaultApi.md#registercomprehensivepayment) | **POST** /document/{documentId}/comprehensive/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerCouplePayment**](doc/DefaultApi.md#registercouplepayment) | **POST** /document/{documentId}/couple/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerCreditLifePayment**](doc/DefaultApi.md#registercreditlifepayment) | **POST** /document/{documentId}/credit-life/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerEconomyPayment**](doc/DefaultApi.md#registereconomypayment) | **POST** /document/{documentId}/economy/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerEndowmentPayment**](doc/DefaultApi.md#registerendowmentpayment) | **POST** /document/{documentId}/endowment/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerEntrepreneurPayment**](doc/DefaultApi.md#registerentrepreneurpayment) | **POST** /document/{documentId}/entrepreneur/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerEuropePayment**](doc/DefaultApi.md#registereuropepayment) | **POST** /document/{documentId}/europe/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerFamilyPayment**](doc/DefaultApi.md#registerfamilypayment) | **POST** /document/{documentId}/family/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs25kPayment**](doc/DefaultApi.md#registerheirs25kpayment) | **POST** /document/{documentId}/heirs-25k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs35kPayment**](doc/DefaultApi.md#registerheirs35kpayment) | **POST** /document/{documentId}/heirs-35k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs3YearsPayment**](doc/DefaultApi.md#registerheirs3yearspayment) | **POST** /document/{documentId}/heirs3years/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHeirs70kPayment**](doc/DefaultApi.md#registerheirs70kpayment) | **POST** /document/{documentId}/heirs-70k/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerHerMotorPayment**](doc/DefaultApi.md#registerhermotorpayment) | **POST** /document/{documentId}/her-motor/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerHomeProtectPayment**](doc/DefaultApi.md#registerhomeprotectpayment) | **POST** /document/{documentId}/home-protect/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerHomeProtectPlusPayment**](doc/DefaultApi.md#registerhomeprotectpluspayment) | **POST** /document/{documentId}/home-protect-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerHospitalCashAdvancePayment**](doc/DefaultApi.md#registerhospitalcashadvancepayment) | **POST** /document/{documentId}/hospital-cash-advance/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerHospitalCashBasicPayment**](doc/DefaultApi.md#registerhospitalcashbasicpayment) | **POST** /document/{documentId}/hospital-cash-basic/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerHospitalCashIntermediatePayment**](doc/DefaultApi.md#registerhospitalcashintermediatepayment) | **POST** /document/{documentId}/hospital-cash-intermediate/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerKeymanPayment**](doc/DefaultApi.md#registerkeymanpayment) | **POST** /document/{documentId}/keyman/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerMarineCargoPayment**](doc/DefaultApi.md#registermarinecargopayment) | **POST** /document/{documentId}/marine-cargo/{clause}/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerMortgagePayment**](doc/DefaultApi.md#registermortgagepayment) | **POST** /document/{documentId}/mortgage/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerMyHeirsPayment**](doc/DefaultApi.md#registermyheirspayment) | **POST** /document/{documentId}/my-heirs/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerMyHeirsPlusPayment**](doc/DefaultApi.md#registermyheirspluspayment) | **POST** /document/{documentId}/my-heirs-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerPearlPayment**](doc/DefaultApi.md#registerpearlpayment) | **POST** /document/{documentId}/pearl/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerSalaryPayment**](doc/DefaultApi.md#registersalarypayment) | **POST** /document/{documentId}/salary/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerSaveExtraPayment**](doc/DefaultApi.md#registersaveextrapayment) | **POST** /document/{documentId}/save-extra/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerSavePayment**](doc/DefaultApi.md#registersavepayment) | **POST** /document/{documentId}/save/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerSchengenPayment**](doc/DefaultApi.md#registerschengenpayment) | **POST** /document/{documentId}/schengen/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerSmartSchoolPayment**](doc/DefaultApi.md#registersmartschoolpayment) | **POST** /document/{documentId}/smart-school/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTenantProtectBronzePayment**](doc/DefaultApi.md#registertenantprotectbronzepayment) | **POST** /document/{documentId}/tenant-protect-bronze/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTenantProtectGoldPayment**](doc/DefaultApi.md#registertenantprotectgoldpayment) | **POST** /document/{documentId}/tenant-protect-gold/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTenantProtectPlusPayment**](doc/DefaultApi.md#registertenantprotectpluspayment) | **POST** /document/{documentId}/tenant-protect-plus/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTenantProtectSilverPayment**](doc/DefaultApi.md#registertenantprotectsilverpayment) | **POST** /document/{documentId}/tenant-protect-silver/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTermAssurancePayment**](doc/DefaultApi.md#registertermassurancepayment) | **POST** /document/{documentId}/term-assurance/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerTravellerPayment**](doc/DefaultApi.md#registertravellerpayment) | **POST** /document/{documentId}/traveller/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerTriplePayPayment**](doc/DefaultApi.md#registertriplepaypayment) | **POST** /document/{documentId}/triple-pay/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**registerUserWithoutPassword**](doc/DefaultApi.md#registeruserwithoutpassword) | **POST** /user/register | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerWholeLifeLimitedPayment**](doc/DefaultApi.md#registerwholelifelimitedpayment) | **POST** /document/{documentId}/whole-life-limited/pay/{payId} | 
+[*DefaultApi*](doc/DefaultApi.md) | [**registerWholeLifePayment**](doc/DefaultApi.md#registerwholelifepayment) | **POST** /document/{documentId}/whole-life/pay/{payId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**resetOtp**](doc/DefaultApi.md#resetotp) | **POST** /user/reset | 
+[*DefaultApi*](doc/DefaultApi.md) | [**sendBuyActionToCustomerExperience**](doc/DefaultApi.md#sendbuyactiontocustomerexperience) | **POST** /customer-experience/{company}/contact/{phoneNumber} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**signUpUser**](doc/DefaultApi.md#signupuser) | **POST** /user/signup | 
 [*DefaultApi*](doc/DefaultApi.md) | [**updateCustomer**](doc/DefaultApi.md#updatecustomer) | **PATCH** /customer/{customerId} | 
 [*DefaultApi*](doc/DefaultApi.md) | [**updateCustomerAddress**](doc/DefaultApi.md#updatecustomeraddress) | **PATCH** /customer/{customerId}/address | 
@@ -421,14 +702,17 @@ Class | Method | HTTP request | Description
  - [FlutterwaveEvent](doc/FlutterwaveEvent.md)
  - [Get3rdPartyQuoteOptions200Response](doc/Get3rdPartyQuoteOptions200Response.md)
  - [Get3rdPartyQuoteOptions200ResponsePremium](doc/Get3rdPartyQuoteOptions200ResponsePremium.md)
- - [GetEndowmentPremium200Response](doc/GetEndowmentPremium200Response.md)
+ - [GetBusinessProtectQuote200Response](doc/GetBusinessProtectQuote200Response.md)
+ - [GetCargoFromMarineCargoDocument200Response](doc/GetCargoFromMarineCargoDocument200Response.md)
+ - [GetHouseFromHomeProtectPlusDocument200Response](doc/GetHouseFromHomeProtectPlusDocument200Response.md)
  - [GetLgas200ResponseInner](doc/GetLgas200ResponseInner.md)
  - [GetLoggedInUser200Response](doc/GetLoggedInUser200Response.md)
  - [GetMotorFrom3rdPartyDocument200Response](doc/GetMotorFrom3rdPartyDocument200Response.md)
  - [GetMotorInstallments200Response](doc/GetMotorInstallments200Response.md)
+ - [GetOwnerById200Response](doc/GetOwnerById200Response.md)
  - [GetPaymentStatus200Response](doc/GetPaymentStatus200Response.md)
+ - [GetRenterById200Response](doc/GetRenterById200Response.md)
  - [GetSavePremiumQuote200Response](doc/GetSavePremiumQuote200Response.md)
- - [GetSaveSumAssuredQuote200ResponseInner](doc/GetSaveSumAssuredQuote200ResponseInner.md)
  - [Guarantor](doc/Guarantor.md)
  - [HealthForm](doc/HealthForm.md)
  - [HouseItem](doc/HouseItem.md)
@@ -458,6 +742,7 @@ Class | Method | HTTP request | Description
  - [PartnerPolicySubmissionBeneficiaryInner](doc/PartnerPolicySubmissionBeneficiaryInner.md)
  - [PartnerType](doc/PartnerType.md)
  - [PayEntry](doc/PayEntry.md)
+ - [PayForTenantProtectPlusDocument200Response](doc/PayForTenantProtectPlusDocument200Response.md)
  - [PaymentInitializationResponse](doc/PaymentInitializationResponse.md)
  - [PaystackEvent](doc/PaystackEvent.md)
  - [PaystackMandate](doc/PaystackMandate.md)
@@ -477,11 +762,12 @@ Class | Method | HTTP request | Description
  - [RemitaMandate](doc/RemitaMandate.md)
  - [Rent](doc/Rent.md)
  - [RenterParticulars](doc/RenterParticulars.md)
- - [RenterParticularsAnyOf](doc/RenterParticularsAnyOf.md)
  - [ResetOtpRequest](doc/ResetOtpRequest.md)
  - [Rider](doc/Rider.md)
  - [RiderResponse](doc/RiderResponse.md)
  - [Role](doc/Role.md)
+ - [SaveSumAssuredQuote](doc/SaveSumAssuredQuote.md)
+ - [SendBuyActionToCustomerExperienceRequest](doc/SendBuyActionToCustomerExperienceRequest.md)
  - [SignUpUserRequest](doc/SignUpUserRequest.md)
  - [StatementPremium](doc/StatementPremium.md)
  - [SurrenderRate](doc/SurrenderRate.md)

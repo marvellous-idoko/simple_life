@@ -1,6 +1,9 @@
-abstract class AppRoutes {
+abstract class 
+AppRoutes {
   static const String start = '/';
   static const String login = '/login';
+  static const String getQuote = '/get-quote';
+  static const String getQuoteProductDetails = '/get-quote-product-details/:id';
   static const String home = '/home';
   static const String signup = '/signup';
   static const String signInWithPassword = '/sign-in-with-password';
@@ -21,6 +24,15 @@ abstract class AppRoutes {
   static const String beneficiaries = '/beneficiaries';
   static const String dashboard = '/dashboard';
   static const String lifePolicySummary = '/life-summary';
+  static const String motorPolicyForm = '/motor-policy-form';
+  static const String registerMotor = '/register-motor';
+  static const String registerProtectee = '/register-protectee';
+  static const String HomeOwnerPolicyForm = '/home-owner-policy-form';
+  static const String motorPolicySummary = '/motor-summary';
+  static const String generalPolicySummary = '/general-summary';
+  static const String personalAccidentSummary = '/personal-accident-summary';
+
+
 
   static String lifeProductDetailsPath(String code) =>
       '/life-products/${Uri.encodeComponent(code)}';
@@ -29,5 +41,7 @@ abstract class AppRoutes {
       '/life-products/${Uri.encodeComponent(code)}/apply';
 
   /// Helper method to format path parameters dynamically
+  static String getQuoteProductDetailsPath(String id) =>
+      '/get-quote-product-details/$id';
   static String detailsPath(String id) => '/details/$id';
 }

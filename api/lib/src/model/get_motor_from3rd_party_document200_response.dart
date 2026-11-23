@@ -23,6 +23,7 @@ part 'get_motor_from3rd_party_document200_response.g.dart';
 /// * [engineNumber] - The Engine number
 /// * [paymentOption] - The motor payment selected
 /// * [motorValue] 
+/// * [value] 
 /// * [use] 
 /// * [type] 
 /// * [premium] - Premium to pay
@@ -144,6 +145,13 @@ class _$GetMotorFrom3rdPartyDocument200ResponseSerializer implements PrimitiveSe
       yield serializers.serialize(
         object.make,
         specifiedType: const FullType(String),
+      );
+    }
+    if (object.value != null) {
+      yield r'value';
+      yield serializers.serialize(
+        object.value,
+        specifiedType: const FullType(num),
       );
     }
   }
@@ -272,6 +280,14 @@ class _$GetMotorFrom3rdPartyDocument200ResponseSerializer implements PrimitiveSe
           ) as String?;
           if (valueDes == null) continue;
           result.make = valueDes;
+          break;
+        case r'value':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(num),
+          ) as num?;
+          if (valueDes == null) continue;
+          result.value = valueDes;
           break;
         default:
           unhandled.add(key);

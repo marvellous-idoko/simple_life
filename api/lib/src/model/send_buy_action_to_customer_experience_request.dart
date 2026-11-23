@@ -6,68 +6,55 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'renter_particulars_any_of.g.dart';
+part 'send_buy_action_to_customer_experience_request.g.dart';
 
-/// RenterParticularsAnyOf
+/// SendBuyActionToCustomerExperienceRequest
 ///
 /// Properties:
-/// * [renterId] 
-/// * [owner] - Name of Renter
-/// * [category] - Business Category
+/// * [policyInfo] 
+/// * [inquiryType] 
 @BuiltValue()
-abstract class RenterParticularsAnyOf implements Built<RenterParticularsAnyOf, RenterParticularsAnyOfBuilder> {
-  @BuiltValueField(wireName: r'renterId')
-  String? get renterId;
+abstract class SendBuyActionToCustomerExperienceRequest implements Built<SendBuyActionToCustomerExperienceRequest, SendBuyActionToCustomerExperienceRequestBuilder> {
+  @BuiltValueField(wireName: r'policyInfo')
+  String? get policyInfo;
 
-  /// Name of Renter
-  @BuiltValueField(wireName: r'owner')
-  String? get owner;
+  @BuiltValueField(wireName: r'inquiryType')
+  String? get inquiryType;
 
-  /// Business Category
-  @BuiltValueField(wireName: r'category')
-  String? get category;
+  SendBuyActionToCustomerExperienceRequest._();
 
-  RenterParticularsAnyOf._();
-
-  factory RenterParticularsAnyOf([void updates(RenterParticularsAnyOfBuilder b)]) = _$RenterParticularsAnyOf;
+  factory SendBuyActionToCustomerExperienceRequest([void updates(SendBuyActionToCustomerExperienceRequestBuilder b)]) = _$SendBuyActionToCustomerExperienceRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(RenterParticularsAnyOfBuilder b) => b;
+  static void _defaults(SendBuyActionToCustomerExperienceRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RenterParticularsAnyOf> get serializer => _$RenterParticularsAnyOfSerializer();
+  static Serializer<SendBuyActionToCustomerExperienceRequest> get serializer => _$SendBuyActionToCustomerExperienceRequestSerializer();
 }
 
-class _$RenterParticularsAnyOfSerializer implements PrimitiveSerializer<RenterParticularsAnyOf> {
+class _$SendBuyActionToCustomerExperienceRequestSerializer implements PrimitiveSerializer<SendBuyActionToCustomerExperienceRequest> {
   @override
-  final Iterable<Type> types = const [RenterParticularsAnyOf, _$RenterParticularsAnyOf];
+  final Iterable<Type> types = const [SendBuyActionToCustomerExperienceRequest, _$SendBuyActionToCustomerExperienceRequest];
 
   @override
-  final String wireName = r'RenterParticularsAnyOf';
+  final String wireName = r'SendBuyActionToCustomerExperienceRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    RenterParticularsAnyOf object, {
+    SendBuyActionToCustomerExperienceRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.renterId != null) {
-      yield r'renterId';
+    if (object.policyInfo != null) {
+      yield r'policyInfo';
       yield serializers.serialize(
-        object.renterId,
+        object.policyInfo,
         specifiedType: const FullType(String),
       );
     }
-    if (object.owner != null) {
-      yield r'owner';
+    if (object.inquiryType != null) {
+      yield r'inquiryType';
       yield serializers.serialize(
-        object.owner,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.category != null) {
-      yield r'category';
-      yield serializers.serialize(
-        object.category,
+        object.inquiryType,
         specifiedType: const FullType(String),
       );
     }
@@ -76,7 +63,7 @@ class _$RenterParticularsAnyOfSerializer implements PrimitiveSerializer<RenterPa
   @override
   Object serialize(
     Serializers serializers,
-    RenterParticularsAnyOf object, {
+    SendBuyActionToCustomerExperienceRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -87,36 +74,28 @@ class _$RenterParticularsAnyOfSerializer implements PrimitiveSerializer<RenterPa
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required RenterParticularsAnyOfBuilder result,
+    required SendBuyActionToCustomerExperienceRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'renterId':
+        case r'policyInfo':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.renterId = valueDes;
+          result.policyInfo = valueDes;
           break;
-        case r'owner':
+        case r'inquiryType':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.owner = valueDes;
-          break;
-        case r'category':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.category = valueDes;
+          result.inquiryType = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -127,12 +106,12 @@ class _$RenterParticularsAnyOfSerializer implements PrimitiveSerializer<RenterPa
   }
 
   @override
-  RenterParticularsAnyOf deserialize(
+  SendBuyActionToCustomerExperienceRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = RenterParticularsAnyOfBuilder();
+    final result = SendBuyActionToCustomerExperienceRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

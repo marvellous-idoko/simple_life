@@ -163,9 +163,9 @@ class CustomerBuilder
     implements Builder<Customer, CustomerBuilder>, CustomerPersonalBuilder {
   _$Customer? _$v;
 
-  Address? _address;
-  Address? get address => _$this._address;
-  set address(covariant Address? address) => _$this._address = address;
+  AddressBuilder? _address;
+  AddressBuilder get address => _$this._address ??= AddressBuilder();
+  set address(covariant AddressBuilder? address) => _$this._address = address;
 
   String? _idCardImgUrl;
   String? get idCardImgUrl => _$this._idCardImgUrl;
@@ -221,7 +221,7 @@ class CustomerBuilder
   CustomerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _address = $v.address;
+      _address = $v.address?.toBuilder();
       _idCardImgUrl = $v.idCardImgUrl;
       _customerId = $v.customerId;
       _utilityImgUrl = $v.utilityImgUrl;
@@ -255,7 +255,7 @@ class CustomerBuilder
     try {
       _$result = _$v ??
           _$Customer._(
-            address: address,
+            address: _address?.build(),
             idCardImgUrl: idCardImgUrl,
             customerId: BuiltValueNullFieldError.checkNotNull(
                 customerId, r'Customer', 'customerId'),
@@ -271,6 +271,9 @@ class CustomerBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'address';
+        _address?.build();
+
         _$failedField = 'idDetails';
         _idDetails?.build();
       } catch (e) {

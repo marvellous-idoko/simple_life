@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_life/colors/app_colors.dart';
+import 'package:simple_life/utils/utils.dart';
 
 class PolicyDetailItem {
   const PolicyDetailItem({required this.label, required this.value});
@@ -121,6 +122,7 @@ class PolicyDetailsCard extends StatelessWidget {
   }
 
   Future<void> _showAllDetails(BuildContext context) {
+// details.map((toElement){print(toElement.value); print(toElement.label);});
     return showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,

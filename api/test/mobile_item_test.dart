@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // String qty
+    // int qty
     test('to test the property `qty`', () async {
       // TODO
     });

@@ -13,6 +13,7 @@ part 'get_lgas200_response_inner.g.dart';
 /// Properties:
 /// * [lga] 
 /// * [lgaId] 
+/// * [state] 
 @BuiltValue()
 abstract class GetLgas200ResponseInner implements Built<GetLgas200ResponseInner, GetLgas200ResponseInnerBuilder> {
   @BuiltValueField(wireName: r'lga')
@@ -20,6 +21,9 @@ abstract class GetLgas200ResponseInner implements Built<GetLgas200ResponseInner,
 
   @BuiltValueField(wireName: r'lgaId')
   String? get lgaId;
+
+  @BuiltValueField(wireName: r'state')
+  String? get state;
 
   GetLgas200ResponseInner._();
 
@@ -55,6 +59,13 @@ class _$GetLgas200ResponseInnerSerializer implements PrimitiveSerializer<GetLgas
       yield r'lgaId';
       yield serializers.serialize(
         object.lgaId,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.state != null) {
+      yield r'state';
+      yield serializers.serialize(
+        object.state,
         specifiedType: const FullType(String),
       );
     }
@@ -96,6 +107,14 @@ class _$GetLgas200ResponseInnerSerializer implements PrimitiveSerializer<GetLgas
           ) as String?;
           if (valueDes == null) continue;
           result.lgaId = valueDes;
+          break;
+        case r'state':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.state = valueDes;
           break;
         default:
           unhandled.add(key);

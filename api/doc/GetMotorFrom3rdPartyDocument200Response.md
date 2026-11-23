@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **engineNumber** | **String** | The Engine number | [optional] 
 **paymentOption** | **String** | The motor payment selected | [optional] 
 **motorValue** | **num** |  | [optional] 
+**value** | **num** |  | [optional] 
 **use** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **premium** | **num** | Premium to pay | [optional] 

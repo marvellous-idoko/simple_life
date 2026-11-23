@@ -486,27 +486,6 @@ class _LifeProductCard extends StatelessWidget {
     );
   }
 
-  Future<void> goToNextPage(
-    BuildContext context,
-    String name,
-    String code,
-    dynamic productClass,
-  ) async {
-    print(productClass.toString());
-    var message = context.read<GeneralBloc>().state.message;
-    message['policy'] = {'type': name,
-      'class': productClass,
-      'terms':product.product['terms'],
-      'availableFrequencies':product.product['availableFrequencies'],
-      'minAmount':product.product['minAmount']
-    };
-    print("message['policy']['terms']");
-    print(message['policy']['terms']);
-    await saveMessage(context, context.read<GeneralBloc>().state.message);
-    context.go(AppRoutes.lifeProductForm);
-    // context.go('/life-products/${productClass}');
-
-  }
 }
 
 class _EmptyProducts extends StatelessWidget {

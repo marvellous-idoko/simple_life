@@ -412,14 +412,16 @@ class AgentSubmissionBuilder
   set maidenName(covariant String? maidenName) =>
       _$this._maidenName = maidenName;
 
-  Address? _residentAddress;
-  Address? get residentAddress => _$this._residentAddress;
-  set residentAddress(covariant Address? residentAddress) =>
+  AddressBuilder? _residentAddress;
+  AddressBuilder get residentAddress =>
+      _$this._residentAddress ??= AddressBuilder();
+  set residentAddress(covariant AddressBuilder? residentAddress) =>
       _$this._residentAddress = residentAddress;
 
-  Address? _officeAddress;
-  Address? get officeAddress => _$this._officeAddress;
-  set officeAddress(covariant Address? officeAddress) =>
+  AddressBuilder? _officeAddress;
+  AddressBuilder get officeAddress =>
+      _$this._officeAddress ??= AddressBuilder();
+  set officeAddress(covariant AddressBuilder? officeAddress) =>
       _$this._officeAddress = officeAddress;
 
   AgentSubmissionMaritalStatusEnum? _maritalStatus;
@@ -466,8 +468,8 @@ class AgentSubmissionBuilder
       _agency = $v.agency;
       _stateOfOrigin = $v.stateOfOrigin;
       _maidenName = $v.maidenName;
-      _residentAddress = $v.residentAddress;
-      _officeAddress = $v.officeAddress;
+      _residentAddress = $v.residentAddress?.toBuilder();
+      _officeAddress = $v.officeAddress?.toBuilder();
       _maritalStatus = $v.maritalStatus;
       _firstName = $v.firstName;
       _lastName = $v.lastName;
@@ -494,22 +496,37 @@ class AgentSubmissionBuilder
   AgentSubmission build() => _build();
 
   _$AgentSubmission _build() {
-    final _$result = _$v ??
-        _$AgentSubmission._(
-          qualification: qualification,
-          agency: agency,
-          stateOfOrigin: stateOfOrigin,
-          maidenName: maidenName,
-          residentAddress: residentAddress,
-          officeAddress: officeAddress,
-          maritalStatus: maritalStatus,
-          firstName: firstName,
-          lastName: lastName,
-          dateOfBirth: dateOfBirth,
-          gender: gender,
-          phone: phone,
-          occupation: occupation,
-        );
+    _$AgentSubmission _$result;
+    try {
+      _$result = _$v ??
+          _$AgentSubmission._(
+            qualification: qualification,
+            agency: agency,
+            stateOfOrigin: stateOfOrigin,
+            maidenName: maidenName,
+            residentAddress: _residentAddress?.build(),
+            officeAddress: _officeAddress?.build(),
+            maritalStatus: maritalStatus,
+            firstName: firstName,
+            lastName: lastName,
+            dateOfBirth: dateOfBirth,
+            gender: gender,
+            phone: phone,
+            occupation: occupation,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'residentAddress';
+        _residentAddress?.build();
+        _$failedField = 'officeAddress';
+        _officeAddress?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'AgentSubmission', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

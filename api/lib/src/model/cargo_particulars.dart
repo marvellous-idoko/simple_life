@@ -26,8 +26,8 @@ part 'cargo_particulars.g.dart';
 /// * [lcNumber] 
 /// * [cargo] 
 /// * [loading] 
-@BuiltValue()
-abstract class CargoParticulars implements Built<CargoParticulars, CargoParticularsBuilder> {
+@BuiltValue(instantiable: false)
+abstract class CargoParticulars  {
   @BuiltValueField(wireName: r'cargoId')
   String? get cargoId;
 
@@ -72,20 +72,13 @@ abstract class CargoParticulars implements Built<CargoParticulars, CargoParticul
   @BuiltValueField(wireName: r'loading')
   num? get loading;
 
-  CargoParticulars._();
-
-  factory CargoParticulars([void updates(CargoParticularsBuilder b)]) = _$CargoParticulars;
-
-  @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CargoParticularsBuilder b) => b;
-
   @BuiltValueSerializer(custom: true)
   static Serializer<CargoParticulars> get serializer => _$CargoParticularsSerializer();
 }
 
 class _$CargoParticularsSerializer implements PrimitiveSerializer<CargoParticulars> {
   @override
-  final Iterable<Type> types = const [CargoParticulars, _$CargoParticulars];
+  final Iterable<Type> types = const [CargoParticulars];
 
   @override
   final String wireName = r'CargoParticulars';
@@ -202,6 +195,47 @@ class _$CargoParticularsSerializer implements PrimitiveSerializer<CargoParticula
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  @override
+  CargoParticulars deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return serializers.deserialize(serialized, specifiedType: FullType($CargoParticulars)) as $CargoParticulars;
+  }
+}
+
+
+/// a concrete implementation of [CargoParticulars], since [CargoParticulars] is not instantiable
+@BuiltValue(instantiable: true)
+abstract class $CargoParticulars implements CargoParticulars, Built<$CargoParticulars, $CargoParticularsBuilder> {
+  $CargoParticulars._();
+
+  factory $CargoParticulars([void Function($CargoParticularsBuilder)? updates]) = _$$CargoParticulars;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults($CargoParticularsBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<$CargoParticulars> get serializer => _$$CargoParticularsSerializer();
+}
+
+class _$$CargoParticularsSerializer implements PrimitiveSerializer<$CargoParticulars> {
+  @override
+  final Iterable<Type> types = const [$CargoParticulars, _$$CargoParticulars];
+
+  @override
+  final String wireName = r'$CargoParticulars';
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    $CargoParticulars object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return serializers.serialize(object, specifiedType: FullType(CargoParticulars))!;
   }
 
   void _deserializeProperties(
@@ -337,12 +371,12 @@ class _$CargoParticularsSerializer implements PrimitiveSerializer<CargoParticula
   }
 
   @override
-  CargoParticulars deserialize(
+  $CargoParticulars deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = CargoParticularsBuilder();
+    final result = $CargoParticularsBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -356,7 +390,6 @@ class _$CargoParticularsSerializer implements PrimitiveSerializer<CargoParticula
     return result.build();
   }
 }
-
 
 class CargoParticularsCurrencyEnum extends EnumClass {
 

@@ -253,7 +253,7 @@ class _$AgentSubmissionSerializer implements PrimitiveSerializer<AgentSubmission
             specifiedType: const FullType.nullable(Address),
           ) as Address?;
           if (valueDes == null) continue;
-          result.officeAddress = valueDes;
+          result.officeAddress.replace(valueDes);
           break;
         case r'qualification':
           final valueDes = serializers.deserialize(
@@ -285,7 +285,7 @@ class _$AgentSubmissionSerializer implements PrimitiveSerializer<AgentSubmission
             specifiedType: const FullType.nullable(Address),
           ) as Address?;
           if (valueDes == null) continue;
-          result.residentAddress = valueDes;
+          result.residentAddress.replace(valueDes);
           break;
         case r'maritalStatus':
           final valueDes = serializers.deserialize(

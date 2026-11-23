@@ -77,14 +77,17 @@ import 'package:openapi/src/model/existing_policy.dart';
 import 'package:openapi/src/model/flutterwave_event.dart';
 import 'package:openapi/src/model/get3rd_party_quote_options200_response.dart';
 import 'package:openapi/src/model/get3rd_party_quote_options200_response_premium.dart';
-import 'package:openapi/src/model/get_endowment_premium200_response.dart';
+import 'package:openapi/src/model/get_business_protect_quote200_response.dart';
+import 'package:openapi/src/model/get_cargo_from_marine_cargo_document200_response.dart';
+import 'package:openapi/src/model/get_house_from_home_protect_plus_document200_response.dart';
 import 'package:openapi/src/model/get_lgas200_response_inner.dart';
 import 'package:openapi/src/model/get_logged_in_user200_response.dart';
 import 'package:openapi/src/model/get_motor_from3rd_party_document200_response.dart';
 import 'package:openapi/src/model/get_motor_installments200_response.dart';
+import 'package:openapi/src/model/get_owner_by_id200_response.dart';
 import 'package:openapi/src/model/get_payment_status200_response.dart';
+import 'package:openapi/src/model/get_renter_by_id200_response.dart';
 import 'package:openapi/src/model/get_save_premium_quote200_response.dart';
-import 'package:openapi/src/model/get_save_sum_assured_quote200_response_inner.dart';
 import 'package:openapi/src/model/guarantor.dart';
 import 'package:openapi/src/model/health_form.dart';
 import 'package:openapi/src/model/house_item.dart';
@@ -114,6 +117,7 @@ import 'package:openapi/src/model/partner_policy_submission.dart';
 import 'package:openapi/src/model/partner_policy_submission_beneficiary_inner.dart';
 import 'package:openapi/src/model/partner_type.dart';
 import 'package:openapi/src/model/pay_entry.dart';
+import 'package:openapi/src/model/pay_for_tenant_protect_plus_document200_response.dart';
 import 'package:openapi/src/model/payment_initialization_response.dart';
 import 'package:openapi/src/model/paystack_event.dart';
 import 'package:openapi/src/model/paystack_mandate.dart';
@@ -133,11 +137,12 @@ import 'package:openapi/src/model/register_user_without_password_request.dart';
 import 'package:openapi/src/model/remita_mandate.dart';
 import 'package:openapi/src/model/rent.dart';
 import 'package:openapi/src/model/renter_particulars.dart';
-import 'package:openapi/src/model/renter_particulars_any_of.dart';
 import 'package:openapi/src/model/reset_otp_request.dart';
 import 'package:openapi/src/model/rider.dart';
 import 'package:openapi/src/model/rider_response.dart';
 import 'package:openapi/src/model/role.dart';
+import 'package:openapi/src/model/save_sum_assured_quote.dart';
+import 'package:openapi/src/model/send_buy_action_to_customer_experience_request.dart';
 import 'package:openapi/src/model/sign_up_user_request.dart';
 import 'package:openapi/src/model/statement_premium.dart';
 import 'package:openapi/src/model/surrender_rate.dart';
@@ -157,7 +162,7 @@ part 'serializers.g.dart';
   AccountStatementPremium,
   AddLifeEntryToCoupleDocumentRequest,
   AddMotorTo3rdPartyDocumentRequest,
-  Address,$Address,
+  Address,
   Agent,
   AgentInvitation,
   AgentLicense,
@@ -185,7 +190,7 @@ part 'serializers.g.dart';
   BuyMotorPolicy,
   CargoDocument,
   CargoDocumentCargoesInner,
-  CargoParticulars,
+  CargoParticulars,$CargoParticulars,
   CartItem,
   ClaimInfo,
   ClaimNotice,
@@ -216,14 +221,17 @@ part 'serializers.g.dart';
   FlutterwaveEvent,
   Get3rdPartyQuoteOptions200Response,
   Get3rdPartyQuoteOptions200ResponsePremium,
-  GetEndowmentPremium200Response,
+  GetBusinessProtectQuote200Response,
+  GetCargoFromMarineCargoDocument200Response,
+  GetHouseFromHomeProtectPlusDocument200Response,
   GetLgas200ResponseInner,
   GetLoggedInUser200Response,
   GetMotorFrom3rdPartyDocument200Response,
   GetMotorInstallments200Response,
+  GetOwnerById200Response,
   GetPaymentStatus200Response,
+  GetRenterById200Response,
   GetSavePremiumQuote200Response,
-  GetSaveSumAssuredQuote200ResponseInner,
   Guarantor,
   HealthForm,
   HouseItem,
@@ -248,11 +256,12 @@ part 'serializers.g.dart';
   MotorParticulars,$MotorParticulars,
   MotorPremium,
   OwnDamage,
-  OwnerParticulars,
+  OwnerParticulars,$OwnerParticulars,
   PartnerPolicySubmission,
   PartnerPolicySubmissionBeneficiaryInner,
   PartnerType,
   PayEntry,
+  PayForTenantProtectPlusDocument200Response,
   PaymentInitializationResponse,
   PaystackEvent,
   PaystackMandate,
@@ -271,12 +280,13 @@ part 'serializers.g.dart';
   RegisterUserWithoutPasswordRequest,
   RemitaMandate,
   Rent,
-  RenterParticulars,
-  RenterParticularsAnyOf,
+  RenterParticulars,$RenterParticulars,
   ResetOtpRequest,
   Rider,
   RiderResponse,
   Role,
+  SaveSumAssuredQuote,
+  SendBuyActionToCustomerExperienceRequest,
   SignUpUserRequest,
   StatementPremium,
   SurrenderRate,
@@ -299,12 +309,20 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Rider>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetBusinessProtectQuote200Response)]),
+        () => ListBuilder<GetBusinessProtectQuote200Response>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Beneficiary)]),
         () => ListBuilder<Beneficiary>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(AllocationsAllocationInner)]),
         () => ListBuilder<AllocationsAllocationInner>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(HouseItem)]),
+        () => ListBuilder<HouseItem>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DocumentInterestsInner)]),
@@ -319,16 +337,16 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<MotorDocumentMotorsInner>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(LifePremium)]),
-        () => ListBuilder<LifePremium>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Customer)]),
         () => ListBuilder<Customer>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ClaimantDetailsInner)]),
         () => ListBuilder<ClaimantDetailsInner>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(MobileItem)]),
+        () => ListBuilder<MobileItem>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(InsuredPersonResponse)]),
@@ -351,10 +369,6 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<BeneficiaryShare>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(GetSaveSumAssuredQuote200ResponseInner)]),
-        () => ListBuilder<GetSaveSumAssuredQuote200ResponseInner>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(PolicyInfo)]),
         () => ListBuilder<PolicyInfo>(),
       )
@@ -366,11 +380,13 @@ Serializers serializers = (_$serializers.toBuilder()
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
       )
-      ..add(Address.serializer)
+      ..add(CargoParticulars.serializer)
       ..add(CustomerPersonal.serializer)
       ..add(DeathCover.serializer)
       ..add(IndividualProtectionDocument.serializer)
       ..add(MotorParticulars.serializer)
+      ..add(OwnerParticulars.serializer)
+      ..add(RenterParticulars.serializer)
       ..add(Upload.serializer)
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())

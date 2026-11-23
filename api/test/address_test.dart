@@ -3,7 +3,7 @@ import 'package:openapi/openapi.dart';
 
 // tests for Address
 void main() {
-  //final instance = AddressBuilder();
+  final instance = AddressBuilder();
   // TODO add properties to the builder and call build()
 
   group(Address, () {

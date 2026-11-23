@@ -160,143 +160,127 @@ class _$OwnerParticularsMaterialEnumSerializer
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
-class _$OwnerParticulars extends OwnerParticulars {
+abstract class OwnerParticularsBuilder {
+  void replace(OwnerParticulars other);
+  void update(void Function(OwnerParticularsBuilder) updates);
+  String? get ownerId;
+  set ownerId(String? ownerId);
+
+  String? get owner;
+  set owner(String? owner);
+
+  String? get description;
+  set description(String? description);
+
+  num? get value;
+  set value(num? value);
+
+  OwnerParticularsBuildingTypeEnum? get buildingType;
+  set buildingType(OwnerParticularsBuildingTypeEnum? buildingType);
+
+  OwnerParticularsMaterialEnum? get material;
+  set material(OwnerParticularsMaterialEnum? material);
+
+  AddressBuilder get address;
+  set address(AddressBuilder? address);
+}
+
+class _$$OwnerParticulars extends $OwnerParticulars {
+  @override
+  final String? ownerId;
   @override
   final String? owner;
   @override
-  final OwnerParticularsMaterialEnum? material;
-  @override
   final String? description;
-  @override
-  final String? ownerId;
   @override
   final num? value;
   @override
   final OwnerParticularsBuildingTypeEnum? buildingType;
   @override
-  final String? city;
+  final OwnerParticularsMaterialEnum? material;
   @override
-  final String? state;
-  @override
-  final String? address;
-  @override
-  final String? country;
-  @override
-  final String? street;
-  @override
-  final String? streetNumber;
-  @override
-  final String? postCode;
+  final Address? address;
 
-  factory _$OwnerParticulars(
-          [void Function(OwnerParticularsBuilder)? updates]) =>
-      (OwnerParticularsBuilder()..update(updates))._build();
+  factory _$$OwnerParticulars(
+          [void Function($OwnerParticularsBuilder)? updates]) =>
+      ($OwnerParticularsBuilder()..update(updates))._build();
 
-  _$OwnerParticulars._(
-      {this.owner,
-      this.material,
+  _$$OwnerParticulars._(
+      {this.ownerId,
+      this.owner,
       this.description,
-      this.ownerId,
       this.value,
       this.buildingType,
-      this.city,
-      this.state,
-      this.address,
-      this.country,
-      this.street,
-      this.streetNumber,
-      this.postCode})
+      this.material,
+      this.address})
       : super._();
   @override
-  OwnerParticulars rebuild(void Function(OwnerParticularsBuilder) updates) =>
+  $OwnerParticulars rebuild(void Function($OwnerParticularsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  OwnerParticularsBuilder toBuilder() =>
-      OwnerParticularsBuilder()..replace(this);
+  $OwnerParticularsBuilder toBuilder() =>
+      $OwnerParticularsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is OwnerParticulars &&
-        owner == other.owner &&
-        material == other.material &&
-        description == other.description &&
+    return other is $OwnerParticulars &&
         ownerId == other.ownerId &&
+        owner == other.owner &&
+        description == other.description &&
         value == other.value &&
         buildingType == other.buildingType &&
-        city == other.city &&
-        state == other.state &&
-        address == other.address &&
-        country == other.country &&
-        street == other.street &&
-        streetNumber == other.streetNumber &&
-        postCode == other.postCode;
+        material == other.material &&
+        address == other.address;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, owner.hashCode);
-    _$hash = $jc(_$hash, material.hashCode);
-    _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, ownerId.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, value.hashCode);
     _$hash = $jc(_$hash, buildingType.hashCode);
-    _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jc(_$hash, material.hashCode);
     _$hash = $jc(_$hash, address.hashCode);
-    _$hash = $jc(_$hash, country.hashCode);
-    _$hash = $jc(_$hash, street.hashCode);
-    _$hash = $jc(_$hash, streetNumber.hashCode);
-    _$hash = $jc(_$hash, postCode.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'OwnerParticulars')
-          ..add('owner', owner)
-          ..add('material', material)
-          ..add('description', description)
+    return (newBuiltValueToStringHelper(r'$OwnerParticulars')
           ..add('ownerId', ownerId)
+          ..add('owner', owner)
+          ..add('description', description)
           ..add('value', value)
           ..add('buildingType', buildingType)
-          ..add('city', city)
-          ..add('state', state)
-          ..add('address', address)
-          ..add('country', country)
-          ..add('street', street)
-          ..add('streetNumber', streetNumber)
-          ..add('postCode', postCode))
+          ..add('material', material)
+          ..add('address', address))
         .toString();
   }
 }
 
-class OwnerParticularsBuilder
+class $OwnerParticularsBuilder
     implements
-        Builder<OwnerParticulars, OwnerParticularsBuilder>,
-        AddressBuilder {
-  _$OwnerParticulars? _$v;
+        Builder<$OwnerParticulars, $OwnerParticularsBuilder>,
+        OwnerParticularsBuilder {
+  _$$OwnerParticulars? _$v;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(covariant String? ownerId) => _$this._ownerId = ownerId;
 
   String? _owner;
   String? get owner => _$this._owner;
   set owner(covariant String? owner) => _$this._owner = owner;
 
-  OwnerParticularsMaterialEnum? _material;
-  OwnerParticularsMaterialEnum? get material => _$this._material;
-  set material(covariant OwnerParticularsMaterialEnum? material) =>
-      _$this._material = material;
-
   String? _description;
   String? get description => _$this._description;
   set description(covariant String? description) =>
       _$this._description = description;
-
-  String? _ownerId;
-  String? get ownerId => _$this._ownerId;
-  set ownerId(covariant String? ownerId) => _$this._ownerId = ownerId;
 
   num? _value;
   num? get value => _$this._value;
@@ -307,90 +291,71 @@ class OwnerParticularsBuilder
   set buildingType(covariant OwnerParticularsBuildingTypeEnum? buildingType) =>
       _$this._buildingType = buildingType;
 
-  String? _city;
-  String? get city => _$this._city;
-  set city(covariant String? city) => _$this._city = city;
+  OwnerParticularsMaterialEnum? _material;
+  OwnerParticularsMaterialEnum? get material => _$this._material;
+  set material(covariant OwnerParticularsMaterialEnum? material) =>
+      _$this._material = material;
 
-  String? _state;
-  String? get state => _$this._state;
-  set state(covariant String? state) => _$this._state = state;
+  AddressBuilder? _address;
+  AddressBuilder get address => _$this._address ??= AddressBuilder();
+  set address(covariant AddressBuilder? address) => _$this._address = address;
 
-  String? _address;
-  String? get address => _$this._address;
-  set address(covariant String? address) => _$this._address = address;
-
-  String? _country;
-  String? get country => _$this._country;
-  set country(covariant String? country) => _$this._country = country;
-
-  String? _street;
-  String? get street => _$this._street;
-  set street(covariant String? street) => _$this._street = street;
-
-  String? _streetNumber;
-  String? get streetNumber => _$this._streetNumber;
-  set streetNumber(covariant String? streetNumber) =>
-      _$this._streetNumber = streetNumber;
-
-  String? _postCode;
-  String? get postCode => _$this._postCode;
-  set postCode(covariant String? postCode) => _$this._postCode = postCode;
-
-  OwnerParticularsBuilder() {
-    OwnerParticulars._defaults(this);
+  $OwnerParticularsBuilder() {
+    $OwnerParticulars._defaults(this);
   }
 
-  OwnerParticularsBuilder get _$this {
+  $OwnerParticularsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _owner = $v.owner;
-      _material = $v.material;
-      _description = $v.description;
       _ownerId = $v.ownerId;
+      _owner = $v.owner;
+      _description = $v.description;
       _value = $v.value;
       _buildingType = $v.buildingType;
-      _city = $v.city;
-      _state = $v.state;
-      _address = $v.address;
-      _country = $v.country;
-      _street = $v.street;
-      _streetNumber = $v.streetNumber;
-      _postCode = $v.postCode;
+      _material = $v.material;
+      _address = $v.address?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(covariant OwnerParticulars other) {
-    _$v = other as _$OwnerParticulars;
+  void replace(covariant $OwnerParticulars other) {
+    _$v = other as _$$OwnerParticulars;
   }
 
   @override
-  void update(void Function(OwnerParticularsBuilder)? updates) {
+  void update(void Function($OwnerParticularsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  OwnerParticulars build() => _build();
+  $OwnerParticulars build() => _build();
 
-  _$OwnerParticulars _build() {
-    final _$result = _$v ??
-        _$OwnerParticulars._(
-          owner: owner,
-          material: material,
-          description: description,
-          ownerId: ownerId,
-          value: value,
-          buildingType: buildingType,
-          city: city,
-          state: state,
-          address: address,
-          country: country,
-          street: street,
-          streetNumber: streetNumber,
-          postCode: postCode,
-        );
+  _$$OwnerParticulars _build() {
+    _$$OwnerParticulars _$result;
+    try {
+      _$result = _$v ??
+          _$$OwnerParticulars._(
+            ownerId: ownerId,
+            owner: owner,
+            description: description,
+            value: value,
+            buildingType: buildingType,
+            material: material,
+            address: _address?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'address';
+        _address?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'$OwnerParticulars', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

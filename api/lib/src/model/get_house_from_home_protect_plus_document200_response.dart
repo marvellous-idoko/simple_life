@@ -6,40 +6,52 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'get_endowment_premium200_response.g.dart';
+part 'get_house_from_home_protect_plus_document200_response.g.dart';
 
-/// GetEndowmentPremium200Response
+/// GetHouseFromHomeProtectPlusDocument200Response
 ///
 /// Properties:
-/// * [premium] 
+/// * [ownerId] 
+/// * [premium] - Premium to pay
 @BuiltValue()
-abstract class GetEndowmentPremium200Response implements Built<GetEndowmentPremium200Response, GetEndowmentPremium200ResponseBuilder> {
+abstract class GetHouseFromHomeProtectPlusDocument200Response implements Built<GetHouseFromHomeProtectPlusDocument200Response, GetHouseFromHomeProtectPlusDocument200ResponseBuilder> {
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
+
+  /// Premium to pay
   @BuiltValueField(wireName: r'premium')
   num? get premium;
 
-  GetEndowmentPremium200Response._();
+  GetHouseFromHomeProtectPlusDocument200Response._();
 
-  factory GetEndowmentPremium200Response([void updates(GetEndowmentPremium200ResponseBuilder b)]) = _$GetEndowmentPremium200Response;
+  factory GetHouseFromHomeProtectPlusDocument200Response([void updates(GetHouseFromHomeProtectPlusDocument200ResponseBuilder b)]) = _$GetHouseFromHomeProtectPlusDocument200Response;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(GetEndowmentPremium200ResponseBuilder b) => b;
+  static void _defaults(GetHouseFromHomeProtectPlusDocument200ResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<GetEndowmentPremium200Response> get serializer => _$GetEndowmentPremium200ResponseSerializer();
+  static Serializer<GetHouseFromHomeProtectPlusDocument200Response> get serializer => _$GetHouseFromHomeProtectPlusDocument200ResponseSerializer();
 }
 
-class _$GetEndowmentPremium200ResponseSerializer implements PrimitiveSerializer<GetEndowmentPremium200Response> {
+class _$GetHouseFromHomeProtectPlusDocument200ResponseSerializer implements PrimitiveSerializer<GetHouseFromHomeProtectPlusDocument200Response> {
   @override
-  final Iterable<Type> types = const [GetEndowmentPremium200Response, _$GetEndowmentPremium200Response];
+  final Iterable<Type> types = const [GetHouseFromHomeProtectPlusDocument200Response, _$GetHouseFromHomeProtectPlusDocument200Response];
 
   @override
-  final String wireName = r'GetEndowmentPremium200Response';
+  final String wireName = r'GetHouseFromHomeProtectPlusDocument200Response';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    GetEndowmentPremium200Response object, {
+    GetHouseFromHomeProtectPlusDocument200Response object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.premium != null) {
       yield r'premium';
       yield serializers.serialize(
@@ -52,7 +64,7 @@ class _$GetEndowmentPremium200ResponseSerializer implements PrimitiveSerializer<
   @override
   Object serialize(
     Serializers serializers,
-    GetEndowmentPremium200Response object, {
+    GetHouseFromHomeProtectPlusDocument200Response object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -63,13 +75,21 @@ class _$GetEndowmentPremium200ResponseSerializer implements PrimitiveSerializer<
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required GetEndowmentPremium200ResponseBuilder result,
+    required GetHouseFromHomeProtectPlusDocument200ResponseBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
+          break;
         case r'premium':
           final valueDes = serializers.deserialize(
             value,
@@ -87,12 +107,12 @@ class _$GetEndowmentPremium200ResponseSerializer implements PrimitiveSerializer<
   }
 
   @override
-  GetEndowmentPremium200Response deserialize(
+  GetHouseFromHomeProtectPlusDocument200Response deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = GetEndowmentPremium200ResponseBuilder();
+    final result = GetHouseFromHomeProtectPlusDocument200ResponseBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

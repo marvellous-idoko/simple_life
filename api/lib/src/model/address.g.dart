@@ -6,32 +6,7 @@ part of 'address.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-abstract class AddressBuilder {
-  void replace(Address other);
-  void update(void Function(AddressBuilder) updates);
-  String? get city;
-  set city(String? city);
-
-  String? get state;
-  set state(String? state);
-
-  String? get address;
-  set address(String? address);
-
-  String? get country;
-  set country(String? country);
-
-  String? get street;
-  set street(String? street);
-
-  String? get streetNumber;
-  set streetNumber(String? streetNumber);
-
-  String? get postCode;
-  set postCode(String? postCode);
-}
-
-class _$$Address extends $Address {
+class _$Address extends Address {
   @override
   final String? city;
   @override
@@ -47,10 +22,10 @@ class _$$Address extends $Address {
   @override
   final String? postCode;
 
-  factory _$$Address([void Function($AddressBuilder)? updates]) =>
-      ($AddressBuilder()..update(updates))._build();
+  factory _$Address([void Function(AddressBuilder)? updates]) =>
+      (AddressBuilder()..update(updates))._build();
 
-  _$$Address._(
+  _$Address._(
       {this.city,
       this.state,
       this.address,
@@ -60,16 +35,16 @@ class _$$Address extends $Address {
       this.postCode})
       : super._();
   @override
-  $Address rebuild(void Function($AddressBuilder) updates) =>
+  Address rebuild(void Function(AddressBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  $AddressBuilder toBuilder() => $AddressBuilder()..replace(this);
+  AddressBuilder toBuilder() => AddressBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is $Address &&
+    return other is Address &&
         city == other.city &&
         state == other.state &&
         address == other.address &&
@@ -95,7 +70,7 @@ class _$$Address extends $Address {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'$Address')
+    return (newBuiltValueToStringHelper(r'Address')
           ..add('city', city)
           ..add('state', state)
           ..add('address', address)
@@ -107,44 +82,42 @@ class _$$Address extends $Address {
   }
 }
 
-class $AddressBuilder
-    implements Builder<$Address, $AddressBuilder>, AddressBuilder {
-  _$$Address? _$v;
+class AddressBuilder implements Builder<Address, AddressBuilder> {
+  _$Address? _$v;
 
   String? _city;
   String? get city => _$this._city;
-  set city(covariant String? city) => _$this._city = city;
+  set city(String? city) => _$this._city = city;
 
   String? _state;
   String? get state => _$this._state;
-  set state(covariant String? state) => _$this._state = state;
+  set state(String? state) => _$this._state = state;
 
   String? _address;
   String? get address => _$this._address;
-  set address(covariant String? address) => _$this._address = address;
+  set address(String? address) => _$this._address = address;
 
   String? _country;
   String? get country => _$this._country;
-  set country(covariant String? country) => _$this._country = country;
+  set country(String? country) => _$this._country = country;
 
   String? _street;
   String? get street => _$this._street;
-  set street(covariant String? street) => _$this._street = street;
+  set street(String? street) => _$this._street = street;
 
   String? _streetNumber;
   String? get streetNumber => _$this._streetNumber;
-  set streetNumber(covariant String? streetNumber) =>
-      _$this._streetNumber = streetNumber;
+  set streetNumber(String? streetNumber) => _$this._streetNumber = streetNumber;
 
   String? _postCode;
   String? get postCode => _$this._postCode;
-  set postCode(covariant String? postCode) => _$this._postCode = postCode;
+  set postCode(String? postCode) => _$this._postCode = postCode;
 
-  $AddressBuilder() {
-    $Address._defaults(this);
+  AddressBuilder() {
+    Address._defaults(this);
   }
 
-  $AddressBuilder get _$this {
+  AddressBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _city = $v.city;
@@ -160,21 +133,21 @@ class $AddressBuilder
   }
 
   @override
-  void replace(covariant $Address other) {
-    _$v = other as _$$Address;
+  void replace(Address other) {
+    _$v = other as _$Address;
   }
 
   @override
-  void update(void Function($AddressBuilder)? updates) {
+  void update(void Function(AddressBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  $Address build() => _build();
+  Address build() => _build();
 
-  _$$Address _build() {
+  _$Address _build() {
     final _$result = _$v ??
-        _$$Address._(
+        _$Address._(
           city: city,
           state: state,
           address: address,

@@ -119,9 +119,9 @@ class GuarantorBuilder implements Builder<Guarantor, GuarantorBuilder> {
   String? get email => _$this._email;
   set email(String? email) => _$this._email = email;
 
-  Address? _address;
-  Address? get address => _$this._address;
-  set address(Address? address) => _$this._address = address;
+  AddressBuilder? _address;
+  AddressBuilder get address => _$this._address ??= AddressBuilder();
+  set address(AddressBuilder? address) => _$this._address = address;
 
   GuarantorBuilder() {
     Guarantor._defaults(this);
@@ -137,7 +137,7 @@ class GuarantorBuilder implements Builder<Guarantor, GuarantorBuilder> {
       _relationship = $v.relationship;
       _phone = $v.phone;
       _email = $v.email;
-      _address = $v.address;
+      _address = $v.address?.toBuilder();
       _$v = null;
     }
     return this;
@@ -157,17 +157,30 @@ class GuarantorBuilder implements Builder<Guarantor, GuarantorBuilder> {
   Guarantor build() => _build();
 
   _$Guarantor _build() {
-    final _$result = _$v ??
-        _$Guarantor._(
-          firstName: firstName,
-          surname: surname,
-          middleName: middleName,
-          maidenName: maidenName,
-          relationship: relationship,
-          phone: phone,
-          email: email,
-          address: address,
-        );
+    _$Guarantor _$result;
+    try {
+      _$result = _$v ??
+          _$Guarantor._(
+            firstName: firstName,
+            surname: surname,
+            middleName: middleName,
+            maidenName: maidenName,
+            relationship: relationship,
+            phone: phone,
+            email: email,
+            address: _address?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'address';
+        _address?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'Guarantor', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

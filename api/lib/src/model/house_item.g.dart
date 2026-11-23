@@ -14,7 +14,7 @@ class _$HouseItem extends HouseItem {
   @override
   final String? value;
   @override
-  final String? qty;
+  final int? qty;
 
   factory _$HouseItem([void Function(HouseItemBuilder)? updates]) =>
       (HouseItemBuilder()..update(updates))._build();
@@ -74,9 +74,9 @@ class HouseItemBuilder implements Builder<HouseItem, HouseItemBuilder> {
   String? get value => _$this._value;
   set value(String? value) => _$this._value = value;
 
-  String? _qty;
-  String? get qty => _$this._qty;
-  set qty(String? qty) => _$this._qty = qty;
+  int? _qty;
+  int? get qty => _$this._qty;
+  set qty(int? qty) => _$this._qty = qty;
 
   HouseItemBuilder() {
     HouseItem._defaults(this);

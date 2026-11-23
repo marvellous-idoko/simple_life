@@ -84,19 +84,14 @@ class _LifePolicySummaryState extends State<LifePolicySummary> {
   void initState() {
     super.initState();
     message = context.read<GeneralBloc>().state.message;
-    total = LifePolicySummary._money(message['policy']['quote']['savings']);
-    print(message['policy']);
+    final quote = LifePolicySummary._asMap(message['policy']?['quote']);
+    total = LifePolicySummary._money(
+      quote['premium'] ?? quote['savings'] ?? quote['contribution'],
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    // final message = context.select<GeneralBloc, Map<String, dynamic>>(
-    //   (bloc) => bloc.state.message,
-    // );
-    // final policy = LifePolicySummary._asMap(message['policy']);
-    // final quote = LifePolicySummary._asMap(policy['quote']);
-    // final policyType = LifePolicySummary._text(policy['type'], fallback: 'Policy');
-    // final sumAssured = LifePolicySummary._money(quote['sumAssured']);
 
     return Scaffold(
       backgroundColor: LifePolicySummary._pageColor,
@@ -372,6 +367,7 @@ class _LifePolicySummaryState extends State<LifePolicySummary> {
     await saveMessage(context, message);
     print(message['policy']);
     if (method == PaymentMethod.paystack.value) {
+      print(message);
       await payWithPaystack(
         context,
         message['policy']['document']['id'],

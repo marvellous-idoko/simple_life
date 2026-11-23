@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:simple_life/Bloc__state/general_bloc.dart';
 import 'package:simple_life/app_routes.dart';
+import 'package:simple_life/colors/app_colors.dart';
 import 'package:simple_life/repositories/general_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,13 +14,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  static const _brandRed = Color(0xFFFF0A0A);
-  static const _headingColor = Color(0xFF55565A);
-  static const _secondaryColor = Color(0xFF8B909A);
-  static const _fieldBorder = Color(0xFFE4E6EA);
-  static const _hintColor = Color(0xFFB7BCC4);
-  static const _disabledFill = Color(0xFFF3F4F6);
-  static const _disabledLabel = Color(0xFFC5C8CE);
+  static const _brandRed = AppColors.primary;
+  static const _headingColor = AppColors.textColor;
+  static const _secondaryColor = AppColors.mutedColor;
+  static const _fieldBorder = Color(0xFFE5E7EB);
+  static const _hintColor = Color(0xFFB8BBC2);
+  static const _disabledFill = Color(0xFFF5F5F6);
+  static const _disabledLabel = Color(0xFFC8CAD0);
 
   final _identityController = TextEditingController();
 
@@ -47,9 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _isPasswordLogin() async {
     context.read<GeneralBloc>().add(
-      UpdateGeneralMessage({
-        'identity': _identityController.text.trim()
-      }),
+      UpdateGeneralMessage({'identity': _identityController.text.trim()}),
     );
     final response = await GeneralRepository().isPasswordLogin(
       _identityController.text,
@@ -64,8 +63,16 @@ class _LoginScreenState extends State<LoginScreen> {
       return;
     }
 
+    if (response?.exists == true) {
+      context.go(
+        AppRoutes.signInWithOtp,
+        extra: _identityController.text.trim(),
+      );
+      return;
+    }
+
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Password login is not available')),
+      const SnackBar(content: Text('No account was found for that identity')),
     );
   }
 
@@ -81,10 +88,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 constraints: BoxConstraints(minHeight: constraints.maxHeight),
                 child: Center(
                   child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 520),
+                    constraints: const BoxConstraints(maxWidth: 414),
                     child: IntrinsicHeight(
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(22, 4, 22, 16),
+                        padding: const EdgeInsets.fromLTRB(36, 4, 36, 14),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -95,91 +102,120 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: EdgeInsets.zero,
                                 visualDensity: VisualDensity.compact,
                                 constraints: const BoxConstraints(
-                                  minWidth: 36,
-                                  minHeight: 36,
+                                  minWidth: 32,
+                                  minHeight: 32,
                                 ),
                                 icon: const Icon(
-                                  Icons.chevron_left,
+                                  Icons.arrow_back_ios_new_rounded,
                                   color: _headingColor,
-                                  size: 30,
+                                  size: 14,
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 28),
+                            const SizedBox(height: 20),
+                            Center(
+                              child: Image.asset(
+                                'assets/images/login_illustration.png',
+                                width: 176,
+                                height: 266,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            const SizedBox(height: 14),
                             const Text(
                               'Sign In',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: _headingColor,
-                                fontSize: 32,
-                                height: 1.1,
-                                fontWeight: FontWeight.w700,
+                                fontSize: 28,
+                                height: 1.2,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: -0.45,
                               ),
                             ),
-                            const SizedBox(height: 8),
+                            const SizedBox(height: 3),
                             const Text(
-                              'Sign In to get quote',
+                              'Sign in to get quote',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: _secondaryColor,
                                 fontSize: 16,
-                                height: 1.2,
+                                height: 1.25,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
-                            const SizedBox(height: 36),
+                            const SizedBox(height: 45),
                             const Text(
                               'Email/Phone Number',
                               style: TextStyle(
                                 color: _headingColor,
-                                fontSize: 16,
-                                height: 1.2,
-                                fontWeight: FontWeight.w600,
+                                fontSize: 14,
+                                height: 1.25,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
-                            const SizedBox(height: 10),
-                            TextField(
-                              controller: _identityController,
-                              keyboardType: TextInputType.emailAddress,
-                              textInputAction: TextInputAction.done,
-                              style: const TextStyle(
-                                color: _headingColor,
-                                fontSize: 16,
-                              ),
-                              decoration: InputDecoration(
-                                hintText: 'Enter email/phone number',
-                                hintStyle: const TextStyle(
-                                  color: _hintColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                  vertical: 16,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: const BorderSide(
-                                    color: _fieldBorder,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(28),
-                                  borderSide: const BorderSide(
-                                    color: _brandRed,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 16),
+                            const SizedBox(height: 8),
                             SizedBox(
-                              height: 52,
+                              height: 50,
+                              child: TextField(
+                                controller: _identityController,
+                                keyboardType: TextInputType.emailAddress,
+                                textInputAction: TextInputAction.done,
+                                onSubmitted: (_) {
+                                  if (_canSend) _isPasswordLogin();
+                                },
+                                style: const TextStyle(
+                                  color: _headingColor,
+                                  fontSize: 14,
+                                ),
+                                decoration: InputDecoration(
+                                  hintText: 'Enter email/phone number',
+                                  hintStyle: const TextStyle(
+                                    color: _hintColor,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  prefixIcon: const Icon(
+                                    Icons.phone_outlined,
+                                    color: _hintColor,
+                                    size: 20,
+                                  ),
+                                  prefixIconConstraints: const BoxConstraints(
+                                    minWidth: 46,
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  contentPadding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                    vertical: 14,
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: const BorderSide(
+                                      color: _fieldBorder,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: const BorderSide(
+                                      color: _brandRed,
+                                      width: 1.2,
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: const BorderSide(
+                                      color: _brandRed,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 14),
+                            SizedBox(
+                              height: 50,
                               child: FilledButton(
-                                onPressed: _canSend
-                                    ? () {
-                                        _isPasswordLogin();
-                                      }
-                                    : null,
+                                onPressed: _canSend ? _isPasswordLogin : null,
                                 style: FilledButton.styleFrom(
                                   backgroundColor: _brandRed,
                                   disabledBackgroundColor: _disabledFill,
@@ -187,38 +223,45 @@ class _LoginScreenState extends State<LoginScreen> {
                                   disabledForegroundColor: _disabledLabel,
                                   elevation: 0,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(28),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                 ),
                                 child: const Text(
                                   'Proceed',
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 28),
+                            const SizedBox(height: 18),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 const Text(
                                   "Don't have an account? ",
                                   style: TextStyle(
-                                    color: _headingColor,
-                                    fontSize: 15,
+                                    color: _secondaryColor,
+                                    fontSize: 11,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                GestureDetector(
+                                InkWell(
                                   onTap: () => context.go('/signup'),
-                                  child: const Text(
-                                    'Register',
-                                    style: TextStyle(
-                                      color: _brandRed,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w700,
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: const Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 2,
+                                      vertical: 3,
+                                    ),
+                                    child: Text(
+                                      'Register',
+                                      style: TextStyle(
+                                        color: _brandRed,
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w700,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -233,16 +276,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   'Terms',
                                   style: TextStyle(
                                     color: _brandRed,
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                SizedBox(width: 18),
+                                SizedBox(width: 20),
                                 Text(
                                   'Privacy Policy',
                                   style: TextStyle(
                                     color: _brandRed,
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
@@ -250,11 +293,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(height: 10),
                             const Text(
-                              '2026 Copyright All Rights reserved',
+                              '2025 Copyright All Rights reserved',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: _secondaryColor,
-                                fontSize: 14,
+                                fontSize: 9,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
@@ -271,5 +314,4 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
 }

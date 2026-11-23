@@ -13,34 +13,24 @@ part 'owner_particulars.g.dart';
 /// OwnerParticulars
 ///
 /// Properties:
-/// * [city] 
-/// * [state] 
-/// * [address] - Address of entity
-/// * [country] 
-/// * [street] 
-/// * [streetNumber] 
-/// * [postCode] 
 /// * [ownerId] 
 /// * [owner] - Name of Owner
 /// * [description] 
 /// * [value] 
 /// * [buildingType] 
 /// * [material] 
-@BuiltValue()
-abstract class OwnerParticulars implements Address, Built<OwnerParticulars, OwnerParticularsBuilder> {
+/// * [address] 
+@BuiltValue(instantiable: false)
+abstract class OwnerParticulars  {
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
+
   /// Name of Owner
   @BuiltValueField(wireName: r'owner')
   String? get owner;
 
-  @BuiltValueField(wireName: r'material')
-  OwnerParticularsMaterialEnum? get material;
-  // enum materialEnum {  concrete,  clay,  wood,  };
-
   @BuiltValueField(wireName: r'description')
   String? get description;
-
-  @BuiltValueField(wireName: r'ownerId')
-  String? get ownerId;
 
   @BuiltValueField(wireName: r'value')
   num? get value;
@@ -49,12 +39,12 @@ abstract class OwnerParticulars implements Address, Built<OwnerParticulars, Owne
   OwnerParticularsBuildingTypeEnum? get buildingType;
   // enum buildingTypeEnum {  bungalow,  flat,  condo,  duplex,  multi-storey,  warehouse,  };
 
-  OwnerParticulars._();
+  @BuiltValueField(wireName: r'material')
+  OwnerParticularsMaterialEnum? get material;
+  // enum materialEnum {  concrete,  clay,  wood,  };
 
-  factory OwnerParticulars([void updates(OwnerParticularsBuilder b)]) = _$OwnerParticulars;
-
-  @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(OwnerParticularsBuilder b) => b;
+  @BuiltValueField(wireName: r'address')
+  Address? get address;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<OwnerParticulars> get serializer => _$OwnerParticularsSerializer();
@@ -62,7 +52,7 @@ abstract class OwnerParticulars implements Address, Built<OwnerParticulars, Owne
 
 class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticulars> {
   @override
-  final Iterable<Type> types = const [OwnerParticulars, _$OwnerParticulars];
+  final Iterable<Type> types = const [OwnerParticulars];
 
   @override
   final String wireName = r'OwnerParticulars';
@@ -72,48 +62,6 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
     OwnerParticulars object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.owner != null) {
-      yield r'owner';
-      yield serializers.serialize(
-        object.owner,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.country != null) {
-      yield r'country';
-      yield serializers.serialize(
-        object.country,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.address != null) {
-      yield r'address';
-      yield serializers.serialize(
-        object.address,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.city != null) {
-      yield r'city';
-      yield serializers.serialize(
-        object.city,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.streetNumber != null) {
-      yield r'streetNumber';
-      yield serializers.serialize(
-        object.streetNumber,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.description != null) {
-      yield r'description';
-      yield serializers.serialize(
-        object.description,
-        specifiedType: const FullType(String),
-      );
-    }
     if (object.ownerId != null) {
       yield r'ownerId';
       yield serializers.serialize(
@@ -121,31 +69,17 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
         specifiedType: const FullType(String),
       );
     }
-    if (object.material != null) {
-      yield r'material';
+    if (object.owner != null) {
+      yield r'owner';
       yield serializers.serialize(
-        object.material,
-        specifiedType: const FullType(OwnerParticularsMaterialEnum),
-      );
-    }
-    if (object.street != null) {
-      yield r'street';
-      yield serializers.serialize(
-        object.street,
+        object.owner,
         specifiedType: const FullType(String),
       );
     }
-    if (object.postCode != null) {
-      yield r'postCode';
+    if (object.description != null) {
+      yield r'description';
       yield serializers.serialize(
-        object.postCode,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.state != null) {
-      yield r'state';
-      yield serializers.serialize(
-        object.state,
+        object.description,
         specifiedType: const FullType(String),
       );
     }
@@ -163,6 +97,20 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
         specifiedType: const FullType(OwnerParticularsBuildingTypeEnum),
       );
     }
+    if (object.material != null) {
+      yield r'material';
+      yield serializers.serialize(
+        object.material,
+        specifiedType: const FullType(OwnerParticularsMaterialEnum),
+      );
+    }
+    if (object.address != null) {
+      yield r'address';
+      yield serializers.serialize(
+        object.address,
+        specifiedType: const FullType(Address),
+      );
+    }
   }
 
   @override
@@ -172,6 +120,47 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  @override
+  OwnerParticulars deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return serializers.deserialize(serialized, specifiedType: FullType($OwnerParticulars)) as $OwnerParticulars;
+  }
+}
+
+
+/// a concrete implementation of [OwnerParticulars], since [OwnerParticulars] is not instantiable
+@BuiltValue(instantiable: true)
+abstract class $OwnerParticulars implements OwnerParticulars, Built<$OwnerParticulars, $OwnerParticularsBuilder> {
+  $OwnerParticulars._();
+
+  factory $OwnerParticulars([void Function($OwnerParticularsBuilder)? updates]) = _$$OwnerParticulars;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults($OwnerParticularsBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<$OwnerParticulars> get serializer => _$$OwnerParticularsSerializer();
+}
+
+class _$$OwnerParticularsSerializer implements PrimitiveSerializer<$OwnerParticulars> {
+  @override
+  final Iterable<Type> types = const [$OwnerParticulars, _$$OwnerParticulars];
+
+  @override
+  final String wireName = r'$OwnerParticulars';
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    $OwnerParticulars object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return serializers.serialize(object, specifiedType: FullType(OwnerParticulars))!;
   }
 
   void _deserializeProperties(
@@ -186,54 +175,6 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'owner':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.owner = valueDes;
-          break;
-        case r'country':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.country = valueDes;
-          break;
-        case r'address':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.address = valueDes;
-          break;
-        case r'city':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.city = valueDes;
-          break;
-        case r'streetNumber':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.streetNumber = valueDes;
-          break;
-        case r'description':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.description = valueDes;
-          break;
         case r'ownerId':
           final valueDes = serializers.deserialize(
             value,
@@ -242,37 +183,21 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
           if (valueDes == null) continue;
           result.ownerId = valueDes;
           break;
-        case r'material':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(OwnerParticularsMaterialEnum),
-          ) as OwnerParticularsMaterialEnum?;
-          if (valueDes == null) continue;
-          result.material = valueDes;
-          break;
-        case r'street':
+        case r'owner':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.street = valueDes;
+          result.owner = valueDes;
           break;
-        case r'postCode':
+        case r'description':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.postCode = valueDes;
-          break;
-        case r'state':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.state = valueDes;
+          result.description = valueDes;
           break;
         case r'value':
           final valueDes = serializers.deserialize(
@@ -290,6 +215,22 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
           if (valueDes == null) continue;
           result.buildingType = valueDes;
           break;
+        case r'material':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(OwnerParticularsMaterialEnum),
+          ) as OwnerParticularsMaterialEnum?;
+          if (valueDes == null) continue;
+          result.material = valueDes;
+          break;
+        case r'address':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(Address),
+          ) as Address?;
+          if (valueDes == null) continue;
+          result.address.replace(valueDes);
+          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -299,12 +240,12 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
   }
 
   @override
-  OwnerParticulars deserialize(
+  $OwnerParticulars deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = OwnerParticularsBuilder();
+    final result = $OwnerParticularsBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -318,7 +259,6 @@ class _$OwnerParticularsSerializer implements PrimitiveSerializer<OwnerParticula
     return result.build();
   }
 }
-
 
 class OwnerParticularsBuildingTypeEnum extends EnumClass {
 

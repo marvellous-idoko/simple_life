@@ -66,6 +66,11 @@ void main() {
       // TODO
     });
 
+    // num value
+    test('to test the property `value`', () async {
+      // TODO
+    });
+
     // String use
     test('to test the property `use`', () async {
       // TODO

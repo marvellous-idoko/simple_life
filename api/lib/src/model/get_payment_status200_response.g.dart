@@ -20,7 +20,7 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
   @override
   final String? policyholderId;
   @override
-  final String? productId;
+  final int? productId;
   @override
   final String? date;
   @override
@@ -29,6 +29,14 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
   final String? company;
   @override
   final num premium;
+  @override
+  final String? eskaID;
+  @override
+  final String? policyNumber;
+  @override
+  final String? effectiveDate;
+  @override
+  final String? expiryDate;
 
   factory _$GetPaymentStatus200Response(
           [void Function(GetPaymentStatus200ResponseBuilder)? updates]) =>
@@ -45,7 +53,11 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
       this.date,
       this.customerType,
       this.company,
-      required this.premium})
+      required this.premium,
+      this.eskaID,
+      this.policyNumber,
+      this.effectiveDate,
+      this.expiryDate})
       : super._();
   @override
   GetPaymentStatus200Response rebuild(
@@ -70,7 +82,11 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
         date == other.date &&
         customerType == other.customerType &&
         company == other.company &&
-        premium == other.premium;
+        premium == other.premium &&
+        eskaID == other.eskaID &&
+        policyNumber == other.policyNumber &&
+        effectiveDate == other.effectiveDate &&
+        expiryDate == other.expiryDate;
   }
 
   @override
@@ -87,6 +103,10 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
     _$hash = $jc(_$hash, customerType.hashCode);
     _$hash = $jc(_$hash, company.hashCode);
     _$hash = $jc(_$hash, premium.hashCode);
+    _$hash = $jc(_$hash, eskaID.hashCode);
+    _$hash = $jc(_$hash, policyNumber.hashCode);
+    _$hash = $jc(_$hash, effectiveDate.hashCode);
+    _$hash = $jc(_$hash, expiryDate.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -104,7 +124,11 @@ class _$GetPaymentStatus200Response extends GetPaymentStatus200Response {
           ..add('date', date)
           ..add('customerType', customerType)
           ..add('company', company)
-          ..add('premium', premium))
+          ..add('premium', premium)
+          ..add('eskaID', eskaID)
+          ..add('policyNumber', policyNumber)
+          ..add('effectiveDate', effectiveDate)
+          ..add('expiryDate', expiryDate))
         .toString();
   }
 }
@@ -140,9 +164,9 @@ class GetPaymentStatus200ResponseBuilder
   set policyholderId(String? policyholderId) =>
       _$this._policyholderId = policyholderId;
 
-  String? _productId;
-  String? get productId => _$this._productId;
-  set productId(String? productId) => _$this._productId = productId;
+  int? _productId;
+  int? get productId => _$this._productId;
+  set productId(int? productId) => _$this._productId = productId;
 
   String? _date;
   String? get date => _$this._date;
@@ -159,6 +183,23 @@ class GetPaymentStatus200ResponseBuilder
   num? _premium;
   num? get premium => _$this._premium;
   set premium(num? premium) => _$this._premium = premium;
+
+  String? _eskaID;
+  String? get eskaID => _$this._eskaID;
+  set eskaID(String? eskaID) => _$this._eskaID = eskaID;
+
+  String? _policyNumber;
+  String? get policyNumber => _$this._policyNumber;
+  set policyNumber(String? policyNumber) => _$this._policyNumber = policyNumber;
+
+  String? _effectiveDate;
+  String? get effectiveDate => _$this._effectiveDate;
+  set effectiveDate(String? effectiveDate) =>
+      _$this._effectiveDate = effectiveDate;
+
+  String? _expiryDate;
+  String? get expiryDate => _$this._expiryDate;
+  set expiryDate(String? expiryDate) => _$this._expiryDate = expiryDate;
 
   GetPaymentStatus200ResponseBuilder() {
     GetPaymentStatus200Response._defaults(this);
@@ -178,6 +219,10 @@ class GetPaymentStatus200ResponseBuilder
       _customerType = $v.customerType;
       _company = $v.company;
       _premium = $v.premium;
+      _eskaID = $v.eskaID;
+      _policyNumber = $v.policyNumber;
+      _effectiveDate = $v.effectiveDate;
+      _expiryDate = $v.expiryDate;
       _$v = null;
     }
     return this;
@@ -215,6 +260,10 @@ class GetPaymentStatus200ResponseBuilder
           company: company,
           premium: BuiltValueNullFieldError.checkNotNull(
               premium, r'GetPaymentStatus200Response', 'premium'),
+          eskaID: eskaID,
+          policyNumber: policyNumber,
+          effectiveDate: effectiveDate,
+          expiryDate: expiryDate,
         );
     replace(_$result);
     return _$result;

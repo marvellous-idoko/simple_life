@@ -70,7 +70,53 @@ class _$CargoParticularsCurrencyEnumSerializer
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
-class _$CargoParticulars extends CargoParticulars {
+abstract class CargoParticularsBuilder {
+  void replace(CargoParticulars other);
+  void update(void Function(CargoParticularsBuilder) updates);
+  String? get cargoId;
+  set cargoId(String? cargoId);
+
+  num? get amount;
+  set amount(num? amount);
+
+  num? get exchangeRate;
+  set exchangeRate(num? exchangeRate);
+
+  num? get sumInsured;
+  set sumInsured(num? sumInsured);
+
+  CargoParticularsCurrencyEnum? get currency;
+  set currency(CargoParticularsCurrencyEnum? currency);
+
+  String? get bankName;
+  set bankName(String? bankName);
+
+  String? get loadingPort;
+  set loadingPort(String? loadingPort);
+
+  String? get destinationPort;
+  set destinationPort(String? destinationPort);
+
+  String? get cacNumber;
+  set cacNumber(String? cacNumber);
+
+  String? get invoiceNumber;
+  set invoiceNumber(String? invoiceNumber);
+
+  String? get tinNumber;
+  set tinNumber(String? tinNumber);
+
+  String? get lcNumber;
+  set lcNumber(String? lcNumber);
+
+  String? get cargo;
+  set cargo(String? cargo);
+
+  num? get loading;
+  set loading(num? loading);
+}
+
+class _$$CargoParticulars extends $CargoParticulars {
   @override
   final String? cargoId;
   @override
@@ -100,11 +146,11 @@ class _$CargoParticulars extends CargoParticulars {
   @override
   final num? loading;
 
-  factory _$CargoParticulars(
-          [void Function(CargoParticularsBuilder)? updates]) =>
-      (CargoParticularsBuilder()..update(updates))._build();
+  factory _$$CargoParticulars(
+          [void Function($CargoParticularsBuilder)? updates]) =>
+      ($CargoParticularsBuilder()..update(updates))._build();
 
-  _$CargoParticulars._(
+  _$$CargoParticulars._(
       {this.cargoId,
       this.amount,
       this.exchangeRate,
@@ -121,17 +167,17 @@ class _$CargoParticulars extends CargoParticulars {
       this.loading})
       : super._();
   @override
-  CargoParticulars rebuild(void Function(CargoParticularsBuilder) updates) =>
+  $CargoParticulars rebuild(void Function($CargoParticularsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CargoParticularsBuilder toBuilder() =>
-      CargoParticularsBuilder()..replace(this);
+  $CargoParticularsBuilder toBuilder() =>
+      $CargoParticularsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CargoParticulars &&
+    return other is $CargoParticulars &&
         cargoId == other.cargoId &&
         amount == other.amount &&
         exchangeRate == other.exchangeRate &&
@@ -171,7 +217,7 @@ class _$CargoParticulars extends CargoParticulars {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'CargoParticulars')
+    return (newBuiltValueToStringHelper(r'$CargoParticulars')
           ..add('cargoId', cargoId)
           ..add('amount', amount)
           ..add('exchangeRate', exchangeRate)
@@ -190,74 +236,78 @@ class _$CargoParticulars extends CargoParticulars {
   }
 }
 
-class CargoParticularsBuilder
-    implements Builder<CargoParticulars, CargoParticularsBuilder> {
-  _$CargoParticulars? _$v;
+class $CargoParticularsBuilder
+    implements
+        Builder<$CargoParticulars, $CargoParticularsBuilder>,
+        CargoParticularsBuilder {
+  _$$CargoParticulars? _$v;
 
   String? _cargoId;
   String? get cargoId => _$this._cargoId;
-  set cargoId(String? cargoId) => _$this._cargoId = cargoId;
+  set cargoId(covariant String? cargoId) => _$this._cargoId = cargoId;
 
   num? _amount;
   num? get amount => _$this._amount;
-  set amount(num? amount) => _$this._amount = amount;
+  set amount(covariant num? amount) => _$this._amount = amount;
 
   num? _exchangeRate;
   num? get exchangeRate => _$this._exchangeRate;
-  set exchangeRate(num? exchangeRate) => _$this._exchangeRate = exchangeRate;
+  set exchangeRate(covariant num? exchangeRate) =>
+      _$this._exchangeRate = exchangeRate;
 
   num? _sumInsured;
   num? get sumInsured => _$this._sumInsured;
-  set sumInsured(num? sumInsured) => _$this._sumInsured = sumInsured;
+  set sumInsured(covariant num? sumInsured) => _$this._sumInsured = sumInsured;
 
   CargoParticularsCurrencyEnum? _currency;
   CargoParticularsCurrencyEnum? get currency => _$this._currency;
-  set currency(CargoParticularsCurrencyEnum? currency) =>
+  set currency(covariant CargoParticularsCurrencyEnum? currency) =>
       _$this._currency = currency;
 
   String? _bankName;
   String? get bankName => _$this._bankName;
-  set bankName(String? bankName) => _$this._bankName = bankName;
+  set bankName(covariant String? bankName) => _$this._bankName = bankName;
 
   String? _loadingPort;
   String? get loadingPort => _$this._loadingPort;
-  set loadingPort(String? loadingPort) => _$this._loadingPort = loadingPort;
+  set loadingPort(covariant String? loadingPort) =>
+      _$this._loadingPort = loadingPort;
 
   String? _destinationPort;
   String? get destinationPort => _$this._destinationPort;
-  set destinationPort(String? destinationPort) =>
+  set destinationPort(covariant String? destinationPort) =>
       _$this._destinationPort = destinationPort;
 
   String? _cacNumber;
   String? get cacNumber => _$this._cacNumber;
-  set cacNumber(String? cacNumber) => _$this._cacNumber = cacNumber;
+  set cacNumber(covariant String? cacNumber) => _$this._cacNumber = cacNumber;
 
   String? _invoiceNumber;
   String? get invoiceNumber => _$this._invoiceNumber;
-  set invoiceNumber(String? invoiceNumber) =>
+  set invoiceNumber(covariant String? invoiceNumber) =>
       _$this._invoiceNumber = invoiceNumber;
 
   String? _tinNumber;
   String? get tinNumber => _$this._tinNumber;
-  set tinNumber(String? tinNumber) => _$this._tinNumber = tinNumber;
+  set tinNumber(covariant String? tinNumber) => _$this._tinNumber = tinNumber;
 
   String? _lcNumber;
   String? get lcNumber => _$this._lcNumber;
-  set lcNumber(String? lcNumber) => _$this._lcNumber = lcNumber;
+  set lcNumber(covariant String? lcNumber) => _$this._lcNumber = lcNumber;
 
   String? _cargo;
   String? get cargo => _$this._cargo;
-  set cargo(String? cargo) => _$this._cargo = cargo;
+  set cargo(covariant String? cargo) => _$this._cargo = cargo;
 
   num? _loading;
   num? get loading => _$this._loading;
-  set loading(num? loading) => _$this._loading = loading;
+  set loading(covariant num? loading) => _$this._loading = loading;
 
-  CargoParticularsBuilder() {
-    CargoParticulars._defaults(this);
+  $CargoParticularsBuilder() {
+    $CargoParticulars._defaults(this);
   }
 
-  CargoParticularsBuilder get _$this {
+  $CargoParticularsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _cargoId = $v.cargoId;
@@ -280,21 +330,21 @@ class CargoParticularsBuilder
   }
 
   @override
-  void replace(CargoParticulars other) {
-    _$v = other as _$CargoParticulars;
+  void replace(covariant $CargoParticulars other) {
+    _$v = other as _$$CargoParticulars;
   }
 
   @override
-  void update(void Function(CargoParticularsBuilder)? updates) {
+  void update(void Function($CargoParticularsBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  CargoParticulars build() => _build();
+  $CargoParticulars build() => _build();
 
-  _$CargoParticulars _build() {
+  _$$CargoParticulars _build() {
     final _$result = _$v ??
-        _$CargoParticulars._(
+        _$$CargoParticulars._(
           cargoId: cargoId,
           amount: amount,
           exchangeRate: exchangeRate,

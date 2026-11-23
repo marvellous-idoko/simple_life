@@ -3,19 +3,20 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'get_save_sum_assured_quote200_response_inner.g.dart';
+part 'save_sum_assured_quote.g.dart';
 
-/// GetSaveSumAssuredQuote200ResponseInner
+/// SaveSumAssuredQuote
 ///
 /// Properties:
 /// * [premium] 
 /// * [contribution] 
 /// * [frequency] 
 @BuiltValue()
-abstract class GetSaveSumAssuredQuote200ResponseInner implements Built<GetSaveSumAssuredQuote200ResponseInner, GetSaveSumAssuredQuote200ResponseInnerBuilder> {
+abstract class SaveSumAssuredQuote implements Built<SaveSumAssuredQuote, SaveSumAssuredQuoteBuilder> {
   @BuiltValueField(wireName: r'premium')
   num? get premium;
 
@@ -23,29 +24,30 @@ abstract class GetSaveSumAssuredQuote200ResponseInner implements Built<GetSaveSu
   num? get contribution;
 
   @BuiltValueField(wireName: r'frequency')
-  String? get frequency;
+  SaveSumAssuredQuoteFrequencyEnum? get frequency;
+  // enum frequencyEnum {  monthly,  quarterly,  biannual,  annual,  single,  };
 
-  GetSaveSumAssuredQuote200ResponseInner._();
+  SaveSumAssuredQuote._();
 
-  factory GetSaveSumAssuredQuote200ResponseInner([void updates(GetSaveSumAssuredQuote200ResponseInnerBuilder b)]) = _$GetSaveSumAssuredQuote200ResponseInner;
+  factory SaveSumAssuredQuote([void updates(SaveSumAssuredQuoteBuilder b)]) = _$SaveSumAssuredQuote;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(GetSaveSumAssuredQuote200ResponseInnerBuilder b) => b;
+  static void _defaults(SaveSumAssuredQuoteBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<GetSaveSumAssuredQuote200ResponseInner> get serializer => _$GetSaveSumAssuredQuote200ResponseInnerSerializer();
+  static Serializer<SaveSumAssuredQuote> get serializer => _$SaveSumAssuredQuoteSerializer();
 }
 
-class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSerializer<GetSaveSumAssuredQuote200ResponseInner> {
+class _$SaveSumAssuredQuoteSerializer implements PrimitiveSerializer<SaveSumAssuredQuote> {
   @override
-  final Iterable<Type> types = const [GetSaveSumAssuredQuote200ResponseInner, _$GetSaveSumAssuredQuote200ResponseInner];
+  final Iterable<Type> types = const [SaveSumAssuredQuote, _$SaveSumAssuredQuote];
 
   @override
-  final String wireName = r'GetSaveSumAssuredQuote200ResponseInner';
+  final String wireName = r'SaveSumAssuredQuote';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    GetSaveSumAssuredQuote200ResponseInner object, {
+    SaveSumAssuredQuote object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.premium != null) {
@@ -66,7 +68,7 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
       yield r'frequency';
       yield serializers.serialize(
         object.frequency,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(SaveSumAssuredQuoteFrequencyEnum),
       );
     }
   }
@@ -74,7 +76,7 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
   @override
   Object serialize(
     Serializers serializers,
-    GetSaveSumAssuredQuote200ResponseInner object, {
+    SaveSumAssuredQuote object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -85,7 +87,7 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required GetSaveSumAssuredQuote200ResponseInnerBuilder result,
+    required SaveSumAssuredQuoteBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -111,8 +113,8 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
         case r'frequency':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
+            specifiedType: const FullType.nullable(SaveSumAssuredQuoteFrequencyEnum),
+          ) as SaveSumAssuredQuoteFrequencyEnum?;
           if (valueDes == null) continue;
           result.frequency = valueDes;
           break;
@@ -125,12 +127,12 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
   }
 
   @override
-  GetSaveSumAssuredQuote200ResponseInner deserialize(
+  SaveSumAssuredQuote deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = GetSaveSumAssuredQuote200ResponseInnerBuilder();
+    final result = SaveSumAssuredQuoteBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -145,4 +147,25 @@ class _$GetSaveSumAssuredQuote200ResponseInnerSerializer implements PrimitiveSer
   }
 }
 
+
+class SaveSumAssuredQuoteFrequencyEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'monthly')
+  static const SaveSumAssuredQuoteFrequencyEnum monthly = _$saveSumAssuredQuoteFrequencyEnum_monthly;
+  @BuiltValueEnumConst(wireName: r'quarterly')
+  static const SaveSumAssuredQuoteFrequencyEnum quarterly = _$saveSumAssuredQuoteFrequencyEnum_quarterly;
+  @BuiltValueEnumConst(wireName: r'biannual')
+  static const SaveSumAssuredQuoteFrequencyEnum biannual = _$saveSumAssuredQuoteFrequencyEnum_biannual;
+  @BuiltValueEnumConst(wireName: r'annual')
+  static const SaveSumAssuredQuoteFrequencyEnum annual = _$saveSumAssuredQuoteFrequencyEnum_annual;
+  @BuiltValueEnumConst(wireName: r'single')
+  static const SaveSumAssuredQuoteFrequencyEnum single = _$saveSumAssuredQuoteFrequencyEnum_single;
+
+  static Serializer<SaveSumAssuredQuoteFrequencyEnum> get serializer => _$saveSumAssuredQuoteFrequencyEnumSerializer;
+
+  const SaveSumAssuredQuoteFrequencyEnum._(String name): super(name);
+
+  static BuiltSet<SaveSumAssuredQuoteFrequencyEnum> get values => _$saveSumAssuredQuoteFrequencyEnumValues;
+  static SaveSumAssuredQuoteFrequencyEnum valueOf(String name) => _$saveSumAssuredQuoteFrequencyEnumValueOf(name);
+}
 

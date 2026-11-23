@@ -13,14 +13,16 @@ class AuthInterceptor extends Interceptor {
     // 1. Fetch token dynamically
     final token = await _getSavedToken();
 
+    print(options.uri);
+    print(options.path);
     // 2. Inject authorization headers if token exists
-    if (token != null) {
+    if (token != null && token.isNotEmpty) {
       options.headers['Authorization'] = 'Bearer $token';
     }
-
+    print("options.uri");
+    print(options.headers['Authorization']);
     // 3. Forward the request to the next block or server
     // return handler.next(options);
-    print(options.headers);
     super.onRequest(options, handler);
     
   }

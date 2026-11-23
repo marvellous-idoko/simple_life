@@ -1,4 +1,4 @@
-# openapi.model.GetSaveSumAssuredQuote200ResponseInner
+# openapi.model.SaveSumAssuredQuote
 
 ## Load the model package
 ```dart

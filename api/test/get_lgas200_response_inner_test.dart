@@ -17,5 +17,10 @@ void main() {
       // TODO
     });
 
+    // String state
+    test('to test the property `state`', () async {
+      // TODO
+    });
+
   });
 }

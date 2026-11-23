@@ -40,7 +40,7 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
     super.initState();
     _availableBeneficiaries = GeneralRepository()
         .getBeneficiariesByLoggedInUser();
-    _restoreAllocations();
+    // _restoreAllocations();
     final bloc = context.read<GeneralBloc>();
     message = Map<String, dynamic>.from(bloc.state.message);
     policy = Map<String, dynamic>.from((message['policy'] as Map?) ?? const {});
@@ -232,14 +232,9 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
         'guardianPhone':a.beneficiary.guardianPhone,
         'guardianAddress':a.beneficiary.guardianAddress
       });
-      print('Beneficiary added ${a.beneficiary.name}');
     }
     message['policy']['beneficiaries'] = beneficiares;
-    print(message['policy']['beneficiaries']);
-    print("message['policy']");
-
     await saveMessage(context, message);
-
   }
 
   Future<void> _proceed() async {
@@ -250,7 +245,6 @@ class _BeneficiariesScreenState extends State<BeneficiariesScreen> {
         .state
         .message['policy']?['type']
         ?.toString();
-    print(message['policy']);
     if (policyType == null) {
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
@@ -1610,7 +1604,6 @@ class _CreateBeneficiarySheetState extends State<_CreateBeneficiarySheet> {
         ..email = _emailController.text.trim()
         ..beneficiaryId = beneficiaryId,
     );
-    print(beneficiary);
     setState(() {
       _isSaving = true;
       _errorMessage = null;

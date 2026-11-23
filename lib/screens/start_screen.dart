@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:simple_life/app_routes.dart';
+import 'package:simple_life/utils/utils.dart';
 
-class StartScreen extends StatelessWidget {
+import '../Bloc__state/general_bloc.dart';
+
+class StartScreen extends StatefulWidget {
   const StartScreen({super.key});
 
   static const _brandRed = Color(0xFFFF0A0A);
   static const _headingColor = Color(0xFF55565A);
   static const _secondaryColor = Color(0xFF7D8493);
 
+  @override
+  State<StartScreen> createState() => _StartScreenState();
+}
+
+class _StartScreenState extends State<StartScreen> {
+  Map<String, dynamic> message = {};
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    message = context.read<GeneralBloc>().state.message;
+    message['policy'] = null;
+    saveMessage(context, message);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +48,7 @@ class StartScreen extends StatelessWidget {
                     'Welcome',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: _headingColor,
+                      color: StartScreen._headingColor,
                       fontSize: 46,
                       height: 1,
                       fontWeight: FontWeight.w700,
@@ -39,7 +60,7 @@ class StartScreen extends StatelessWidget {
                     'What would you like to do?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: _secondaryColor,
+                      color: StartScreen._secondaryColor,
                       fontSize: 21,
                       height: 1.2,
                       fontWeight: FontWeight.w400,
@@ -50,9 +71,9 @@ class StartScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 60,
                     child: FilledButton(
-                      onPressed: () => context.go('/signup'),
+                      onPressed: () => context.go(AppRoutes.getQuote),
                       style: FilledButton.styleFrom(
-                        backgroundColor: _brandRed,
+                        backgroundColor: StartScreen._brandRed,
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(19),
@@ -74,8 +95,8 @@ class StartScreen extends StatelessWidget {
                     child: OutlinedButton(
                       onPressed: () => context.go('/login'),
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: _brandRed,
-                        side: const BorderSide(color: _brandRed, width: 1.25),
+                        foregroundColor: StartScreen._brandRed,
+                        side: const BorderSide(color: StartScreen._brandRed, width: 1.25),
                         padding: const EdgeInsets.fromLTRB(12, 7, 12, 5),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(19),
@@ -96,7 +117,7 @@ class StartScreen extends StatelessWidget {
                           Text(
                             'Make a claim, Renew policy and more',
                             style: TextStyle(
-                              color: _secondaryColor,
+                              color: StartScreen._secondaryColor,
                               fontSize: 16,
                               height: 1,
                               fontStyle: FontStyle.italic,

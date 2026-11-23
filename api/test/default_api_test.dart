@@ -16,6 +16,13 @@ void main() {
 
     // Add beneficiary share to document
     //
+    //Future addBeneficiaryShareToCreditLifeDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
     //Future addBeneficiaryShareToEndowmentDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
     test('test addBeneficiaryShareToEndowmentDocument', () async {
       // TODO
@@ -23,8 +30,50 @@ void main() {
 
     // Add beneficiary share to document
     //
+    //Future addBeneficiaryShareToEntrepreneurDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
     //Future addBeneficiaryShareToHeirs3YearsDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
     test('test addBeneficiaryShareToHeirs3YearsDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToHospitalCashAdvanceDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToHospitalCashBasicDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToHospitalCashIntermediateDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToKeymanDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToKeymanDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToMortgageDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToMortgageDocument', () async {
       // TODO
     });
 
@@ -65,8 +114,43 @@ void main() {
 
     // Add beneficiary share to document
     //
+    //Future addBeneficiaryShareToSmartSchoolDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToTermAssuranceDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
     //Future addBeneficiaryShareToTriplePayDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
     test('test addBeneficiaryShareToTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToWholeLifeDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Add beneficiary share to document
+    //
+    //Future addBeneficiaryShareToWholeLifeLimitedDocument(String documentId, String beneficiaryId, { BeneficiaryShare beneficiaryShare }) async
+    test('test addBeneficiaryShareToWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Add interest to marine cargo document
+    //
+    //Future addCargoToMarineCargoDocument(String documentId, String cargoId, String clause, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addCargoToMarineCargoDocument', () async {
       // TODO
     });
 
@@ -121,6 +205,20 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToBusinessProtectDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToBusinessProtectPlusDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToBusinessProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToComprehensiveDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToComprehensiveDocument', () async {
       // TODO
@@ -135,8 +233,22 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToCreditLifeDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToEndowmentDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToEntrepreneurDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToEntrepreneurDocument', () async {
       // TODO
     });
 
@@ -177,6 +289,62 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToHomeProtectDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToHomeProtectPlusDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToHospitalCashAdvanceDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToHospitalCashBasicDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToHospitalCashIntermediateDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToKeymanDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToKeymanDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToMarineCargoDocument(String documentId, String clause, { CustomerId customerId }) async
+    test('test addCustomerToMarineCargoDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToMortgageDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToMortgageDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToMyHeirsDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToMyHeirsDocument', () async {
       // TODO
@@ -212,8 +380,64 @@ void main() {
 
     // Add customer to document
     //
+    //Future addCustomerToSmartSchoolDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToTenantProtectBronzeDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToTenantProtectGoldDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToTenantProtectPlusDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToTenantProtectSilverDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToTermAssuranceDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
     //Future addCustomerToTriplePayDocument(String documentId, { CustomerId customerId }) async
     test('test addCustomerToTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToWholeLifeDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Add customer to document
+    //
+    //Future addCustomerToWholeLifeLimitedDocument(String documentId, { CustomerId customerId }) async
+    test('test addCustomerToWholeLifeLimitedDocument', () async {
       // TODO
     });
 
@@ -224,6 +448,48 @@ void main() {
       // TODO
     });
 
+    // Add interest to owner document
+    //
+    //Future addHouseToHomeProtectDocument(String documentId, String ownerId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Add interest to owner document
+    //
+    //Future addHouseToHomeProtectPlusDocument(String documentId, String ownerId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Add interest to TenantProtectBronze document
+    //
+    //Future addHouseToTenantProtectBronzeDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Add interest to TenantProtectPlus document
+    //
+    //Future addHouseToTenantProtectGoldDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Add interest to TenantProtectPlus document
+    //
+    //Future addHouseToTenantProtectPlusDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Add interest to TenantProtectSilver document
+    //
+    //Future addHouseToTenantProtectSilverDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addHouseToTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
     // Add Item to Cart
     //
     //Future addItemToCart(String cartId, { CartItem cartItem }) async
@@ -231,10 +497,45 @@ void main() {
       // TODO
     });
 
+    // Add house item for house owner
+    //
+    //Future addItemToOwner(String ownerId, String itemId, { HouseItem houseItem }) async
+    test('test addItemToOwner', () async {
+      // TODO
+    });
+
+    // Add house item for renter
+    //
+    //Future addItemToRenter(String renterId, String itemId, { HouseItem houseItem }) async
+    test('test addItemToRenter', () async {
+      // TODO
+    });
+
     // Add another life etry to document
     //
     //Future addLifeEntryToCoupleDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
     test('test addLifeEntryToCoupleDocument', () async {
+      // TODO
+    });
+
+    // Add particulars for marine cargo
+    //
+    //Future addMarineCargo(String cargoId, { CargoParticulars cargoParticulars }) async
+    test('test addMarineCargo', () async {
+      // TODO
+    });
+
+    // Add house mobile item for house owner
+    //
+    //Future addMobileItemToOwner(String ownerId, String itemId, { MobileItem mobileItem }) async
+    test('test addMobileItemToOwner', () async {
+      // TODO
+    });
+
+    // Add house mobile item for renter
+    //
+    //Future addMobileItemToRenter(String renterId, String itemId, { MobileItem mobileItem }) async
+    test('test addMobileItemToRenter', () async {
       // TODO
     });
 
@@ -294,6 +595,13 @@ void main() {
       // TODO
     });
 
+    // Add particulars for house owner
+    //
+    //Future addOwner(String ownerId, { OwnerParticulars ownerParticulars }) async
+    test('test addOwner', () async {
+      // TODO
+    });
+
     // Add interest to AccidentBronze document
     //
     //Future addPersonToAccidentBronzeDocument(String documentId, String accidentId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
@@ -331,8 +639,36 @@ void main() {
 
     // Add rider to document
     //
+    //Future addRiderToCreditLifeDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
     //Future addRiderToEndowmentDocument(String documentId, String riderCode, { Rider rider }) async
     test('test addRiderToEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToEntrepreneurDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToKeymanDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToKeymanDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToMortgageDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToMortgageDocument', () async {
       // TODO
     });
 
@@ -366,8 +702,50 @@ void main() {
 
     // Add rider to document
     //
+    //Future addRiderToSmartSchoolDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToTermAssuranceDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
     //Future addRiderToTriplePayDocument(String documentId, String riderCode, { Rider rider }) async
     test('test addRiderToTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToWholeLifeDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Add rider to document
+    //
+    //Future addRiderToWholeLifeLimitedDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test addRiderToWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Add interest to BusinessProtect document
+    //
+    //Future addShopToBusinessProtectDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addShopToBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Add interest to BusinessProtectPlus document
+    //
+    //Future addShopToBusinessProtectPlusDocument(String documentId, String renterId, { AddMotorTo3rdPartyDocumentRequest addMotorTo3rdPartyDocumentRequest }) async
+    test('test addShopToBusinessProtectPlusDocument', () async {
       // TODO
     });
 
@@ -434,6 +812,20 @@ void main() {
       // TODO
     });
 
+    // Create business owner document
+    //
+    //Future createBusinessProtectDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Create business owner document
+    //
+    //Future createBusinessProtectPlusDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createBusinessProtectPlusDocument', () async {
+      // TODO
+    });
+
     // Create comprehensive document
     //
     //Future createComprehensiveDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
@@ -448,6 +840,13 @@ void main() {
       // TODO
     });
 
+    // Create Term assurance document
+    //
+    //Future createCreditLifeDocument(String documentId, { DeathCover deathCover }) async
+    test('test createCreditLifeDocument', () async {
+      // TODO
+    });
+
     // Create a customer with  personal details
     //
     //Future createCustomer(String customerId, { CustomerPersonal customerPersonal }) async
@@ -459,6 +858,13 @@ void main() {
     //
     //Future createEndowmentDocument(String documentId, { DeathCover deathCover }) async
     test('test createEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createEntrepreneurDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
+    test('test createEntrepreneurDocument', () async {
       // TODO
     });
 
@@ -497,10 +903,66 @@ void main() {
       // TODO
     });
 
+    // Create owner document
+    //
+    //Future createHomeProtectDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Create owner document
+    //
+    //Future createHomeProtectPlusDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Create Hospital Cash Advance document
+    //
+    //Future createHospitalCashAdvanceDocument(String documentId, { DeathCover deathCover }) async
+    test('test createHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Create Hospital Cash Basic document
+    //
+    //Future createHospitalCashBasicDocument(String documentId, { DeathCover deathCover }) async
+    test('test createHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Create Hospital Cash Intermediate document
+    //
+    //Future createHospitalCashIntermediateDocument(String documentId, { DeathCover deathCover }) async
+    test('test createHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
     // Create an insured person
     //
     //Future createInsuredPerson(String personId, { CustomerPersonal customerPersonal }) async
     test('test createInsuredPerson', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createKeymanDocument(String documentId, { DeathCover deathCover }) async
+    test('test createKeymanDocument', () async {
+      // TODO
+    });
+
+    // Create marine cargo document
+    //
+    //Future createMarineCargoDocument(String documentId, String clause, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createMarineCargoDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createMortgageDocument(String documentId, { DeathCover deathCover }) async
+    test('test createMortgageDocument', () async {
       // TODO
     });
 
@@ -539,6 +1001,13 @@ void main() {
       // TODO
     });
 
+    // Add particulars for renter
+    //
+    //Future createRenter(String renterId, { RenterParticulars renterParticulars }) async
+    test('test createRenter', () async {
+      // TODO
+    });
+
     // Create Term assurance document
     //
     //Future createSalaryDocument(String documentId, { AddLifeEntryToCoupleDocumentRequest addLifeEntryToCoupleDocumentRequest }) async
@@ -560,10 +1029,66 @@ void main() {
       // TODO
     });
 
+    // Create Smart School document
+    //
+    //Future createSmartSchoolDocument(String documentId, { DeathCover deathCover }) async
+    test('test createSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Create renter document
+    //
+    //Future createTenantProtectBronzeDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Create renter document
+    //
+    //Future createTenantProtectGoldDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Create renter document
+    //
+    //Future createTenantProtectPlusDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Create renter document
+    //
+    //Future createTenantProtectSilverDocument(String documentId, { Create3rdPartyDocumentRequest create3rdPartyDocumentRequest }) async
+    test('test createTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createTermAssuranceDocument(String documentId, { DeathCover deathCover }) async
+    test('test createTermAssuranceDocument', () async {
+      // TODO
+    });
+
     // Create Term assurance document
     //
     //Future createTriplePayDocument(String documentId, { DeathCover deathCover }) async
     test('test createTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createWholeLifeDocument(String documentId, { DeathCover deathCover }) async
+    test('test createWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Create Term assurance document
+    //
+    //Future createWholeLifeLimitedDocument(String documentId, { DeathCover deathCover }) async
+    test('test createWholeLifeLimitedDocument', () async {
       // TODO
     });
 
@@ -576,6 +1101,13 @@ void main() {
 
     // Delete beneficiary share from document
     //
+    //Future deleteBeneficiaryShareFromCreditLifeDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
     //Future deleteBeneficiaryShareFromEndowmentDocument(String documentId, String beneficiaryId) async
     test('test deleteBeneficiaryShareFromEndowmentDocument', () async {
       // TODO
@@ -583,8 +1115,50 @@ void main() {
 
     // Delete beneficiary share from document
     //
+    //Future deleteBeneficiaryShareFromEntrepreneurDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
     //Future deleteBeneficiaryShareFromHeirs3YearsDocument(String documentId, String beneficiaryId) async
     test('test deleteBeneficiaryShareFromHeirs3YearsDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromHospitalCashAdvanceDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromHospitalCashBasicDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromHospitalCashIntermediateDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromKeymanDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromKeymanDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromMortgageDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromMortgageDocument', () async {
       // TODO
     });
 
@@ -625,8 +1199,43 @@ void main() {
 
     // Delete beneficiary share from document
     //
+    //Future deleteBeneficiaryShareFromSmartSchoolDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromTermAssuranceDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
     //Future deleteBeneficiaryShareFromTriplePayDocument(String documentId, String beneficiaryId) async
     test('test deleteBeneficiaryShareFromTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromWholeLifeDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Delete beneficiary share from document
+    //
+    //Future deleteBeneficiaryShareFromWholeLifeLimitedDocument(String documentId, String beneficiaryId) async
+    test('test deleteBeneficiaryShareFromWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from marine cargo document
+    //
+    //Future deleteCargoFromMarineCargoDocument(String documentId, String cargoId, String clause) async
+    test('test deleteCargoFromMarineCargoDocument', () async {
       // TODO
     });
 
@@ -634,6 +1243,104 @@ void main() {
     //
     //Future deleteCartItem(String cartId) async
     test('test deleteCartItem', () async {
+      // TODO
+    });
+
+    // Delete  interest from owner document
+    //
+    //Future deleteHouseFromHomeProtectDocument(String documentId, String ownerId) async
+    test('test deleteHouseFromHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from owner document
+    //
+    //Future deleteHouseFromHomeProtectPlusDocument(String documentId, String ownerId) async
+    test('test deleteHouseFromHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteHouseFromTenantProtectBronzeDocument(String documentId, String renterId) async
+    test('test deleteHouseFromTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteHouseFromTenantProtectGoldDocument(String documentId, String renterId) async
+    test('test deleteHouseFromTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteHouseFromTenantProtectPlusDocument(String documentId, String renterId) async
+    test('test deleteHouseFromTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteHouseFromTenantProtectSilverDocument(String documentId, String renterId) async
+    test('test deleteHouseFromTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
+    // remove house item for house owner
+    //
+    //Future deleteItemFromOwner(String ownerId, String itemId) async
+    test('test deleteItemFromOwner', () async {
+      // TODO
+    });
+
+    // remove house item for renter
+    //
+    //Future deleteItemFromRenter(String renterId, String itemId) async
+    test('test deleteItemFromRenter', () async {
+      // TODO
+    });
+
+    // remove all house item for house owner
+    //
+    //Future deleteItemsFromOwner(String ownerId) async
+    test('test deleteItemsFromOwner', () async {
+      // TODO
+    });
+
+    // remove all house item for renter
+    //
+    //Future deleteItemsFromRenter(String renterId) async
+    test('test deleteItemsFromRenter', () async {
+      // TODO
+    });
+
+    // remove house mobile item for house owner
+    //
+    //Future deleteMobileItemFromOwner(String ownerId, String itemId) async
+    test('test deleteMobileItemFromOwner', () async {
+      // TODO
+    });
+
+    // remove house mobile item for renter
+    //
+    //Future deleteMobileItemFromRenter(String renterId, String itemId) async
+    test('test deleteMobileItemFromRenter', () async {
+      // TODO
+    });
+
+    // remove all house mobile item for house owner
+    //
+    //Future deleteMobileItemsFromOwner(String ownerId) async
+    test('test deleteMobileItemsFromOwner', () async {
+      // TODO
+    });
+
+    // remove all house mobile item for renter
+    //
+    //Future deleteMobileItemsFromRenter(String renterId) async
+    test('test deleteMobileItemsFromRenter', () async {
       // TODO
     });
 
@@ -730,8 +1437,36 @@ void main() {
 
     // Delete rider from document
     //
+    //Future deleteRiderCreditLifeDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
     //Future deleteRiderEndowmentDocument(String documentId, String riderCode, { Rider rider }) async
     test('test deleteRiderEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderEntrepreneurDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderKeymanDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderKeymanDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderMortgageDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderMortgageDocument', () async {
       // TODO
     });
 
@@ -765,8 +1500,50 @@ void main() {
 
     // Delete rider from document
     //
+    //Future deleteRiderSmartSchoolDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderTermAssuranceDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
     //Future deleteRiderTriplePayDocument(String documentId, String riderCode, { Rider rider }) async
     test('test deleteRiderTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderWholeLifeDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Delete rider from document
+    //
+    //Future deleteRiderWholeLifeLimitedDocument(String documentId, String riderCode, { Rider rider }) async
+    test('test deleteRiderWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteShopFromBusinessProtectDocument(String documentId, String renterId) async
+    test('test deleteShopFromBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Delete  interest from renter document
+    //
+    //Future deleteShopFromBusinessProtectPlusDocument(String documentId, String renterId) async
+    test('test deleteShopFromBusinessProtectPlusDocument', () async {
       // TODO
     });
 
@@ -786,7 +1563,7 @@ void main() {
 
     // Get Quotes for 3rd party fire and theft by class and value
     //
-    //Future<GetEndowmentPremium200Response> get3rdPartyFireAndTheftQuote(String motorClass, num motorValue) async
+    //Future<GetBusinessProtectQuote200Response> get3rdPartyFireAndTheftQuote(String motorClass, num motorValue) async
     test('test get3rdPartyFireAndTheftQuote', () async {
       // TODO
     });
@@ -800,7 +1577,7 @@ void main() {
 
     // Get Quotes for 3rd party plus
     //
-    //Future<GetEndowmentPremium200Response> get3rdPartyPlusQuote(String motorClass, String motorType) async
+    //Future<GetBusinessProtectQuote200Response> get3rdPartyPlusQuote(String motorClass, String motorType) async
     test('test get3rdPartyPlusQuote', () async {
       // TODO
     });
@@ -828,15 +1605,22 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentBronzeDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentBronzeDocumentPremium(String documentId) async
     test('test getAccidentBronzeDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentBronzeInterestPremium(String documentId, String accidentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentBronzeInterestPremium(String documentId, String accidentId) async
     test('test getAccidentBronzeInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quotes for Personal Accident
+    //
+    //Future<GetBusinessProtectQuote200Response> getAccidentBronzeQuote() async
+    test('test getAccidentBronzeQuote', () async {
       // TODO
     });
 
@@ -849,15 +1633,22 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentGoldDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentGoldDocumentPremium(String documentId) async
     test('test getAccidentGoldDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentGoldInterestPremium(String documentId, String accidentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentGoldInterestPremium(String documentId, String accidentId) async
     test('test getAccidentGoldInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quotes for Personal Accident
+    //
+    //Future<GetBusinessProtectQuote200Response> getAccidentGoldQuote() async
+    test('test getAccidentGoldQuote', () async {
       // TODO
     });
 
@@ -877,15 +1668,22 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentPlatinumDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentPlatinumDocumentPremium(String documentId) async
     test('test getAccidentPlatinumDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentPlatinumInterestPremium(String documentId, String accidentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentPlatinumInterestPremium(String documentId, String accidentId) async
     test('test getAccidentPlatinumInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quotes for Personal Accident
+    //
+    //Future<GetBusinessProtectQuote200Response> getAccidentPlatinumQuote() async
+    test('test getAccidentPlatinumQuote', () async {
       // TODO
     });
 
@@ -898,15 +1696,22 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentSilverDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentSilverDocumentPremium(String documentId) async
     test('test getAccidentSilverDocumentPremium', () async {
       // TODO
     });
 
     // Get holder interest premium
     //
-    //Future<GetEndowmentPremium200Response> getAccidentSilverInterestPremium(String documentId, String accidentId) async
+    //Future<GetBusinessProtectQuote200Response> getAccidentSilverInterestPremium(String documentId, String accidentId) async
     test('test getAccidentSilverInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quotes for Personal Accident
+    //
+    //Future<GetBusinessProtectQuote200Response> getAccidentSilverQuote() async
+    test('test getAccidentSilverQuote', () async {
       // TODO
     });
 
@@ -933,6 +1738,13 @@ void main() {
 
     // Get beneficiary share of insured person for document
     //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromCreditLifeDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
     //Future<BeneficiaryShare> getBeneficiaryShareFromEndowmentDocument(String documentId, String beneficiaryId) async
     test('test getBeneficiaryShareFromEndowmentDocument', () async {
       // TODO
@@ -940,8 +1752,50 @@ void main() {
 
     // Get beneficiary share of insured person for document
     //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromEntrepreneurDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
     //Future<BeneficiaryShare> getBeneficiaryShareFromHeirs3YearsDocument(String documentId, String beneficiaryId) async
     test('test getBeneficiaryShareFromHeirs3YearsDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromHospitalCashAdvanceDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromHospitalCashBasicDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromHospitalCashIntermediateDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromKeymanDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromKeymanDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromMortgageDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromMortgageDocument', () async {
       // TODO
     });
 
@@ -982,8 +1836,113 @@ void main() {
 
     // Get beneficiary share of insured person for document
     //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromSmartSchoolDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromTermAssuranceDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
     //Future<BeneficiaryShare> getBeneficiaryShareFromTriplePayDocument(String documentId, String beneficiaryId) async
     test('test getBeneficiaryShareFromTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromWholeLifeDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Get beneficiary share of insured person for document
+    //
+    //Future<BeneficiaryShare> getBeneficiaryShareFromWholeLifeLimitedDocument(String documentId, String beneficiaryId) async
+    test('test getBeneficiaryShareFromWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Get business owner document with premium and interests
+    //
+    //Future<Document> getBusinessProtectDocument(String documentId) async
+    test('test getBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectDocumentPremium(String documentId) async
+    test('test getBusinessProtectDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectInterestPremium(String documentId, String renterId) async
+    test('test getBusinessProtectInterestPremium', () async {
+      // TODO
+    });
+
+    // Get business owner document with premium and interests
+    //
+    //Future<Document> getBusinessProtectPlusDocument(String documentId) async
+    test('test getBusinessProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectPlusDocumentPremium(String documentId) async
+    test('test getBusinessProtectPlusDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectPlusInterestPremium(String documentId, String renterId) async
+    test('test getBusinessProtectPlusInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for business protect plus policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectPlusQuote(num itemsValue) async
+    test('test getBusinessProtectPlusQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for business protect policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getBusinessProtectQuote(num itemsValue) async
+    test('test getBusinessProtectQuote', () async {
+      // TODO
+    });
+
+    // Get document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getCargoDocumentPremium(String documentId, String clause) async
+    test('test getCargoDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get marine cargo interest for document with premium
+    //
+    //Future<GetCargoFromMarineCargoDocument200Response> getCargoFromMarineCargoDocument(String documentId, String cargoId, String clause) async
+    test('test getCargoFromMarineCargoDocument', () async {
+      // TODO
+    });
+
+    // Get interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getCargoInterestPremium(String documentId, String cargoId, String clause) async
+    test('test getCargoInterestPremium', () async {
       // TODO
     });
 
@@ -1003,28 +1962,28 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getComprehensiveDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getComprehensiveDocumentPremium(String documentId) async
     test('test getComprehensiveDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getComprehensiveInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getComprehensiveInterestPremium(String documentId, String motorId) async
     test('test getComprehensiveInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive Plus by class and value
     //
-    //Future<GetEndowmentPremium200Response> getComprehensivePlusQuote(String motorClass, num motorValue) async
+    //Future<GetBusinessProtectQuote200Response> getComprehensivePlusQuote(String motorClass, num motorValue) async
     test('test getComprehensivePlusQuote', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive by class and value
     //
-    //Future<GetEndowmentPremium200Response> getComprehensiveQuote(String motorClass, num motorValue) async
+    //Future<GetBusinessProtectQuote200Response> getComprehensiveQuote(String motorClass, num motorValue) async
     test('test getComprehensiveQuote', () async {
       // TODO
     });
@@ -1045,7 +2004,7 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetEndowmentPremium200Response> getCouplePremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getCouplePremium(String documentId) async
     test('test getCouplePremium', () async {
       // TODO
     });
@@ -1059,8 +2018,29 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<GetSaveSumAssuredQuote200ResponseInner>> getCoupleSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getCoupleSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
     test('test getCoupleSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getCreditLifeDocument(String documentId) async
+    test('test getCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getCreditLifePremium(String documentId) async
+    test('test getCreditLifePremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getCreditLifeSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getCreditLifeSumAssuredQuote', () async {
       // TODO
     });
 
@@ -1087,8 +2067,22 @@ void main() {
 
     // Get owner document premium
     //
-    //Future<GetEndowmentPremium200Response> getEndowmentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getEndowmentPremium(String documentId) async
     test('test getEndowmentPremium', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualSavingsDocument> getEntrepreneurDocument(String documentId) async
+    test('test getEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getEntrepreneurPremium(String documentId) async
+    test('test getEntrepreneurPremium', () async {
       // TODO
     });
 
@@ -1101,21 +2095,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs25kDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs25kDocumentPremium(String documentId) async
     test('test getHeirs25kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs25kInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs25kInterestPremium(String documentId, String motorId) async
     test('test getHeirs25kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 15k
     //
-    //Future<GetEndowmentPremium200Response> getHeirs25kQuote() async
+    //Future<GetBusinessProtectQuote200Response> getHeirs25kQuote() async
     test('test getHeirs25kQuote', () async {
       // TODO
     });
@@ -1129,21 +2123,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs35kDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs35kDocumentPremium(String documentId) async
     test('test getHeirs35kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs35kInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs35kInterestPremium(String documentId, String motorId) async
     test('test getHeirs35kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 35k
     //
-    //Future<GetEndowmentPremium200Response> getHeirs35kQuote() async
+    //Future<GetBusinessProtectQuote200Response> getHeirs35kQuote() async
     test('test getHeirs35kQuote', () async {
       // TODO
     });
@@ -1157,7 +2151,7 @@ void main() {
 
     // Get heirs3years document premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs3YearsPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs3YearsPremium(String documentId) async
     test('test getHeirs3YearsPremium', () async {
       // TODO
     });
@@ -1171,7 +2165,7 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<LifePremium>> getHeirs3YearsSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getHeirs3YearsSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
     test('test getHeirs3YearsSumAssuredQuote', () async {
       // TODO
     });
@@ -1185,21 +2179,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs70kDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs70kDocumentPremium(String documentId) async
     test('test getHeirs70kDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getHeirs70kInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getHeirs70kInterestPremium(String documentId, String motorId) async
     test('test getHeirs70kInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for Heirs 70k
     //
-    //Future<GetEndowmentPremium200Response> getHeirs70kQuote() async
+    //Future<GetBusinessProtectQuote200Response> getHeirs70kQuote() async
     test('test getHeirs70kQuote', () async {
       // TODO
     });
@@ -1213,21 +2207,21 @@ void main() {
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getHerMotorDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getHerMotorDocumentPremium(String documentId) async
     test('test getHerMotorDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getHerMotorInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getHerMotorInterestPremium(String documentId, String motorId) async
     test('test getHerMotorInterestPremium', () async {
       // TODO
     });
 
     // Get Quotes for comprehensive by class and value
     //
-    //Future<GetEndowmentPremium200Response> getHerMotorQuote(String motorClass, num motorValue) async
+    //Future<GetBusinessProtectQuote200Response> getHerMotorQuote(String motorClass, num motorValue) async
     test('test getHerMotorQuote', () async {
       // TODO
     });
@@ -1236,6 +2230,188 @@ void main() {
     //
     //Future<Get3rdPartyQuoteOptions200Response> getHerMotorQuoteOptions(String motorClass, num motorValue) async
     test('test getHerMotorQuoteOptions', () async {
+      // TODO
+    });
+
+    // Get owner document with premium and interests
+    //
+    //Future<Document> getHomeProtectDocument(String documentId) async
+    test('test getHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectDocumentPremium(String documentId) async
+    test('test getHomeProtectDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get owner interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectInterestPremium(String documentId, String ownerId) async
+    test('test getHomeProtectInterestPremium', () async {
+      // TODO
+    });
+
+    // Get owner document with premium and interests
+    //
+    //Future<Document> getHomeProtectPlusDocument(String documentId) async
+    test('test getHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectPlusDocumentPremium(String documentId) async
+    test('test getHomeProtectPlusDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get owner interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectPlusInterestPremium(String documentId, String ownerId) async
+    test('test getHomeProtectPlusInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for house owner policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectPlusQuote(num value, num stationaryValue, num mobileValue, num alternativeValue) async
+    test('test getHomeProtectPlusQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for house owner policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getHomeProtectQuote() async
+    test('test getHomeProtectQuote', () async {
+      // TODO
+    });
+
+    // Get Hospital Cash Advance with premium
+    //
+    //Future<IndividualProtectionDocument> getHospitalCashAdvanceDocument(String documentId) async
+    test('test getHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHospitalCashAdvancePremium(String documentId) async
+    test('test getHospitalCashAdvancePremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Advance Sum Assured
+    //
+    //Future<LifeQuote> getHospitalCashAdvancePremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getHospitalCashAdvancePremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Advance
+    //
+    //Future<SaveSumAssuredQuote> getHospitalCashAdvanceSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getHospitalCashAdvanceSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get Hospital Cash Basic with premium
+    //
+    //Future<IndividualProtectionDocument> getHospitalCashBasicDocument(String documentId) async
+    test('test getHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHospitalCashBasicPremium(String documentId) async
+    test('test getHospitalCashBasicPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Basic Sum Assured
+    //
+    //Future<LifeQuote> getHospitalCashBasicPremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getHospitalCashBasicPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Basic
+    //
+    //Future<SaveSumAssuredQuote> getHospitalCashBasicSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getHospitalCashBasicSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get Hospital Cash Intermediate with premium
+    //
+    //Future<IndividualProtectionDocument> getHospitalCashIntermediateDocument(String documentId) async
+    test('test getHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getHospitalCashIntermediatePremium(String documentId) async
+    test('test getHospitalCashIntermediatePremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Intermediate Sum Assured
+    //
+    //Future<LifeQuote> getHospitalCashIntermediatePremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getHospitalCashIntermediatePremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Hospital Cash Intermediate
+    //
+    //Future<SaveSumAssuredQuote> getHospitalCashIntermediateSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getHospitalCashIntermediateSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get owner interest for document with premium
+    //
+    //Future<GetHouseFromHomeProtectPlusDocument200Response> getHouseFromHomeProtectDocument(String documentId, String ownerId) async
+    test('test getHouseFromHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Get owner interest for document with premium
+    //
+    //Future<GetHouseFromHomeProtectPlusDocument200Response> getHouseFromHomeProtectPlusDocument(String documentId, String ownerId) async
+    test('test getHouseFromHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getHouseFromTenantProtectBronzeDocument(String documentId, String renterId) async
+    test('test getHouseFromTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getHouseFromTenantProtectGoldDocument(String documentId, String renterId) async
+    test('test getHouseFromTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getHouseFromTenantProtectPlusDocument(String documentId, String renterId) async
+    test('test getHouseFromTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getHouseFromTenantProtectSilverDocument(String documentId, String renterId) async
+    test('test getHouseFromTenantProtectSilverDocument', () async {
       // TODO
     });
 
@@ -1253,6 +2429,62 @@ void main() {
       // TODO
     });
 
+    // get house item for house owner
+    //
+    //Future<HouseItem> getItemFromOwner(String ownerId, String itemId) async
+    test('test getItemFromOwner', () async {
+      // TODO
+    });
+
+    // get house item for renter
+    //
+    //Future<HouseItem> getItemFromRenter(String renterId, String itemId) async
+    test('test getItemFromRenter', () async {
+      // TODO
+    });
+
+    // get all stationary items for house owner
+    //
+    //Future<BuiltList<HouseItem>> getItemsFromOwner(String ownerId) async
+    test('test getItemsFromOwner', () async {
+      // TODO
+    });
+
+    // get all stationary items for house owner
+    //
+    //Future<BuiltList<HouseItem>> getItemsFromRenter(String renterId) async
+    test('test getItemsFromRenter', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getKeymanDocument(String documentId) async
+    test('test getKeymanDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getKeymanPremium(String documentId) async
+    test('test getKeymanPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getKeymanPremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getKeymanPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getKeymanSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getKeymanSumAssuredQuote', () async {
+      // TODO
+    });
+
     // Get LGA
     //
     //Future<BuiltList<GetLgas200ResponseInner>> getLgas() async
@@ -1264,6 +2496,76 @@ void main() {
     //
     //Future<GetLoggedInUser200Response> getLoggedInUser() async
     test('test getLoggedInUser', () async {
+      // TODO
+    });
+
+    // get particulars for marine cargo
+    //
+    //Future<CargoParticulars> getMarineCargo(String cargoId) async
+    test('test getMarineCargo', () async {
+      // TODO
+    });
+
+    // Get marine cargo document with premium and interest
+    //
+    //Future<Document> getMarineCargoDocument(String documentId, String clause) async
+    test('test getMarineCargoDocument', () async {
+      // TODO
+    });
+
+    // Get Quote for marine policy
+    //
+    //Future<BuiltList<GetBusinessProtectQuote200Response>> getMarineCargoQuote(num amount, num exchangeRate, String clause, num loading) async
+    test('test getMarineCargoQuote', () async {
+      // TODO
+    });
+
+    // get house mobile item for house owner
+    //
+    //Future<MobileItem> getMobileItemFromOwner(String ownerId, String itemId) async
+    test('test getMobileItemFromOwner', () async {
+      // TODO
+    });
+
+    // get house mobile item for renter
+    //
+    //Future<MobileItem> getMobileItemFromRenter(String renterId, String itemId) async
+    test('test getMobileItemFromRenter', () async {
+      // TODO
+    });
+
+    // get all mobile items for house owner
+    //
+    //Future<BuiltList<MobileItem>> getMobileItemsFromOwner(String ownerId) async
+    test('test getMobileItemsFromOwner', () async {
+      // TODO
+    });
+
+    // get all mobile items for renter
+    //
+    //Future<BuiltList<MobileItem>> getMobileItemsFromRenter(String renterId) async
+    test('test getMobileItemsFromRenter', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getMortgageDocument(String documentId) async
+    test('test getMortgageDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getMortgagePremium(String documentId) async
+    test('test getMortgagePremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getMortgageSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getMortgageSumAssuredQuote', () async {
       // TODO
     });
 
@@ -1353,7 +2655,7 @@ void main() {
 
     // Get my heirs plus document premium
     //
-    //Future<GetEndowmentPremium200Response> getMyHeirsPlusPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getMyHeirsPlusPremium(String documentId) async
     test('test getMyHeirsPlusPremium', () async {
       // TODO
     });
@@ -1367,14 +2669,14 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<LifePremium>> getMyHeirsPlusSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getMyHeirsPlusSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
     test('test getMyHeirsPlusSumAssuredQuote', () async {
       // TODO
     });
 
     // Get my heirs document premium
     //
-    //Future<GetEndowmentPremium200Response> getMyHeirsPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getMyHeirsPremium(String documentId) async
     test('test getMyHeirsPremium', () async {
       // TODO
     });
@@ -1388,8 +2690,15 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<GetSaveSumAssuredQuote200ResponseInner>> getMyHeirsSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getMyHeirsSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
     test('test getMyHeirsSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // get particulars for house owner
+    //
+    //Future<GetOwnerById200Response> getOwnerById(String ownerId) async
+    test('test getOwnerById', () async {
       // TODO
     });
 
@@ -1435,6 +2744,13 @@ void main() {
       // TODO
     });
 
+    // get particulars for renter
+    //
+    //Future<GetRenterById200Response> getRenterById(String renterId) async
+    test('test getRenterById', () async {
+      // TODO
+    });
+
     // Get term assurance with premium
     //
     //Future<IndividualSavingsDocument> getSalaryDocument(String documentId) async
@@ -1444,8 +2760,22 @@ void main() {
 
     // Get salary plus premium
     //
-    //Future<GetEndowmentPremium200Response> getSalaryPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getSalaryPremium(String documentId) async
     test('test getSalaryPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<GetSavePremiumQuote200Response> getSalaryPremiumQuote(num contribution, num premium, String dob, num term, String frequency) async
+    test('test getSalaryPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getSalarySumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
+    test('test getSalarySumAssuredQuote', () async {
       // TODO
     });
 
@@ -1465,7 +2795,7 @@ void main() {
 
     // Get save extra document premium
     //
-    //Future<GetEndowmentPremium200Response> getSaveExtraPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getSaveExtraPremium(String documentId) async
     test('test getSaveExtraPremium', () async {
       // TODO
     });
@@ -1479,14 +2809,14 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<GetSaveSumAssuredQuote200ResponseInner>> getSaveExtraSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getSaveExtraSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
     test('test getSaveExtraSumAssuredQuote', () async {
       // TODO
     });
 
     // Get save document premium
     //
-    //Future<GetEndowmentPremium200Response> getSavePremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getSavePremium(String documentId) async
     test('test getSavePremium', () async {
       // TODO
     });
@@ -1500,8 +2830,22 @@ void main() {
 
     // Get Quote for Premium Payment
     //
-    //Future<BuiltList<GetSaveSumAssuredQuote200ResponseInner>> getSaveSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
+    //Future<SaveSumAssuredQuote> getSaveSumAssuredQuote(num sumAssured, num savings, String dob, num term, String frequency) async
     test('test getSaveSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getShopFromBusinessProtectDocument(String documentId, String renterId) async
+    test('test getShopFromBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Get renter interest for document with premium
+    //
+    //Future<GetMotorFrom3rdPartyDocument200Response> getShopFromBusinessProtectPlusDocument(String documentId, String renterId) async
+    test('test getShopFromBusinessProtectPlusDocument', () async {
       // TODO
     });
 
@@ -1512,44 +2856,240 @@ void main() {
       // TODO
     });
 
+    // Get smart school with premium
+    //
+    //Future<IndividualProtectionDocument> getSmartSchoolDocument(String documentId) async
+    test('test getSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getSmartSchoolDocumentPremium(String documentId) async
+    test('test getSmartSchoolDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getSmartSchoolPremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getSmartSchoolPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getSmartSchoolSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getSmartSchoolSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getSurgeryCarePremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getSurgeryCarePremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Surgery Care
+    //
+    //Future<SaveSumAssuredQuote> getSurgeryCareSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getSurgeryCareSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get renter document with premium and interests
+    //
+    //Future<Document> getTenantProtectBronzeDocument(String documentId) async
+    test('test getTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectBronzeDocumentPremium(String documentId) async
+    test('test getTenantProtectBronzeDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get holder interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectBronzeInterestPremium(String documentId, String renterId) async
+    test('test getTenantProtectBronzeInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for renter policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectBronzeQuote() async
+    test('test getTenantProtectBronzeQuote', () async {
+      // TODO
+    });
+
+    // Get renter document with premium and interests
+    //
+    //Future<Document> getTenantProtectGoldDocument(String documentId) async
+    test('test getTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectGoldDocumentPremium(String documentId) async
+    test('test getTenantProtectGoldDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get holder interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectGoldInterestPremium(String documentId, String renterId) async
+    test('test getTenantProtectGoldInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for renter policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectGoldQuote() async
+    test('test getTenantProtectGoldQuote', () async {
+      // TODO
+    });
+
+    // Get renter document with premium and interests
+    //
+    //Future<Document> getTenantProtectPlusDocument(String documentId) async
+    test('test getTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectPlusDocumentPremium(String documentId) async
+    test('test getTenantProtectPlusDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectPlusInterestPremium(String documentId, String renterId) async
+    test('test getTenantProtectPlusInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for renter policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectPlusQuote(num stationaryValue, num mobileValue, num alternativeValue) async
+    test('test getTenantProtectPlusQuote', () async {
+      // TODO
+    });
+
+    // Get renter document with premium and interests
+    //
+    //Future<Document> getTenantProtectSilverDocument(String documentId) async
+    test('test getTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectSilverDocumentPremium(String documentId) async
+    test('test getTenantProtectSilverDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get holder interest premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectSilverInterestPremium(String documentId, String renterId) async
+    test('test getTenantProtectSilverInterestPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for renter policy
+    //
+    //Future<GetBusinessProtectQuote200Response> getTenantProtectSilverQuote() async
+    test('test getTenantProtectSilverQuote', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getTermAssuranceDocument(String documentId) async
+    test('test getTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getTermAssurancePremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getTermAssurancePremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<LifePremium> getTermAssuranceSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getTermAssuranceSumAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getTermDocumentPremium(String documentId) async
+    test('test getTermDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getTermReturnPremiumPremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getTermReturnPremiumPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getTermReturnPremiumSumAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getTermReturnPremiumSumAssuredQuote', () async {
+      // TODO
+    });
+
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyDocumentPremium(String documentId) async
     test('test getThirdPartyDocumentPremium', () async {
       // TODO
     });
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyFireAndTheftDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyFireAndTheftDocumentPremium(String documentId) async
     test('test getThirdPartyFireAndTheftDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyFireAndTheftInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyFireAndTheftInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyFireAndTheftInterestPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyInterestPremium', () async {
       // TODO
     });
 
     // Get document premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyPlusDocumentPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyPlusDocumentPremium(String documentId) async
     test('test getThirdPartyPlusDocumentPremium', () async {
       // TODO
     });
 
     // Get interest premium
     //
-    //Future<GetEndowmentPremium200Response> getThirdPartyPlusInterestPremium(String documentId, String motorId) async
+    //Future<GetBusinessProtectQuote200Response> getThirdPartyPlusInterestPremium(String documentId, String motorId) async
     test('test getThirdPartyPlusInterestPremium', () async {
       // TODO
     });
@@ -1563,8 +3103,64 @@ void main() {
 
     // Get triple pay document premium
     //
-    //Future<GetEndowmentPremium200Response> getTriplePayPremium(String documentId) async
+    //Future<GetBusinessProtectQuote200Response> getTriplePayPremium(String documentId) async
     test('test getTriplePayPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getWholeLifeAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getWholeLifeAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getWholeLifeDocument(String documentId) async
+    test('test getWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getWholeLifeDocumentPremium(String documentId) async
+    test('test getWholeLifeDocumentPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Premium Payment
+    //
+    //Future<SaveSumAssuredQuote> getWholeLifeLimitedAssuredQuote(num sumAssured, String dob, num term, String frequency) async
+    test('test getWholeLifeLimitedAssuredQuote', () async {
+      // TODO
+    });
+
+    // Get term assurance with premium
+    //
+    //Future<IndividualProtectionDocument> getWholeLifeLimitedDocument(String documentId) async
+    test('test getWholeLifeLimitedDocument', () async {
+      // TODO
+    });
+
+    // Get owner document premium
+    //
+    //Future<GetBusinessProtectQuote200Response> getWholeLifeLimitedPremium(String documentId) async
+    test('test getWholeLifeLimitedPremium', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getWholeLifeLimitedPremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getWholeLifeLimitedPremiumQuote', () async {
+      // TODO
+    });
+
+    // Get Quote for Sum Assured
+    //
+    //Future<LifeQuote> getWholeLifePremiumQuote(num premium, String dob, num term, String frequency) async
+    test('test getWholeLifePremiumQuote', () async {
       // TODO
     });
 
@@ -1638,6 +3234,20 @@ void main() {
       // TODO
     });
 
+    // Pay for renter premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForBusinessProtectDocument(String documentId, String payId) async
+    test('test payForBusinessProtectDocument', () async {
+      // TODO
+    });
+
+    // Pay for renter premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForBusinessProtectPlusDocument(String documentId, String payId) async
+    test('test payForBusinessProtectPlusDocument', () async {
+      // TODO
+    });
+
     // Pay for comprehensive premium
     //
     //Future<PaymentInitializationResponse> payForComprehensiveDocument(String documentId, String payId) async
@@ -1654,8 +3264,43 @@ void main() {
 
     // Pay for term assurance premium
     //
+    //Future<PayForTenantProtectPlusDocument200Response> payForCreditLifeDocument(String documentId, String payId) async
+    test('test payForCreditLifeDocument', () async {
+      // TODO
+    });
+
+    // Pay for Economy premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForEconomyDocument(String documentId, String payId) async
+    test('test payForEconomyDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
     //Future<PaymentInitializationResponse> payForEndowmentDocument(String documentId, String payId) async
     test('test payForEndowmentDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForEntrepreneurDocument(String documentId, String payId) async
+    test('test payForEntrepreneurDocument', () async {
+      // TODO
+    });
+
+    // Pay for Europe premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForEuropeDocument(String documentId, String payId) async
+    test('test payForEuropeDocument', () async {
+      // TODO
+    });
+
+    // Pay for Family premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForFamilyDocument(String documentId, String payId) async
+    test('test payForFamilyDocument', () async {
       // TODO
     });
 
@@ -1694,6 +3339,62 @@ void main() {
       // TODO
     });
 
+    // Pay for owner premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForHomeProtectDocument(String documentId, String payId) async
+    test('test payForHomeProtectDocument', () async {
+      // TODO
+    });
+
+    // Pay for owner premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForHomeProtectPlusDocument(String documentId, String payId) async
+    test('test payForHomeProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Pay for Hospital Cash Advance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForHospitalCashAdvanceDocument(String documentId, String payId) async
+    test('test payForHospitalCashAdvanceDocument', () async {
+      // TODO
+    });
+
+    // Pay for Hospital Cash Basic premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForHospitalCashBasicDocument(String documentId, String payId) async
+    test('test payForHospitalCashBasicDocument', () async {
+      // TODO
+    });
+
+    // Pay for Hospital Cash Intermediate premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForHospitalCashIntermediateDocument(String documentId, String payId) async
+    test('test payForHospitalCashIntermediateDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForKeymanDocument(String documentId, String payId) async
+    test('test payForKeymanDocument', () async {
+      // TODO
+    });
+
+    // Pay for marine cargo premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForMarineCargoDocument(String documentId, String payId, String clause) async
+    test('test payForMarineCargoDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForMortgageDocument(String documentId, String payId) async
+    test('test payForMortgageDocument', () async {
+      // TODO
+    });
+
     // Pay for term assurance premium
     //
     //Future<PaymentInitializationResponse> payForMyHeirsDocument(String documentId, String payId) async
@@ -1705,6 +3406,13 @@ void main() {
     //
     //Future<PaymentInitializationResponse> payForMyHeirsPlusDocument(String documentId, String payId) async
     test('test payForMyHeirsPlusDocument', () async {
+      // TODO
+    });
+
+    // Pay for Pearl premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForPearlDocument(String documentId, String payId) async
+    test('test payForPearlDocument', () async {
       // TODO
     });
 
@@ -1729,10 +3437,80 @@ void main() {
       // TODO
     });
 
+    // Pay for Schengen premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForSchengenDocument(String documentId, String payId) async
+    test('test payForSchengenDocument', () async {
+      // TODO
+    });
+
+    // Pay for smart school premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForSmartSchoolDocument(String documentId, String payId) async
+    test('test payForSmartSchoolDocument', () async {
+      // TODO
+    });
+
+    // Pay for TenantProtectBronze premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTenantProtectBronzeDocument(String documentId, String payId) async
+    test('test payForTenantProtectBronzeDocument', () async {
+      // TODO
+    });
+
+    // Pay for renter premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTenantProtectGoldDocument(String documentId, String payId) async
+    test('test payForTenantProtectGoldDocument', () async {
+      // TODO
+    });
+
+    // Pay for renter premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTenantProtectPlusDocument(String documentId, String payId) async
+    test('test payForTenantProtectPlusDocument', () async {
+      // TODO
+    });
+
+    // Pay for TenantProtectSilver premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTenantProtectSilverDocument(String documentId, String payId) async
+    test('test payForTenantProtectSilverDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTermAssuranceDocument(String documentId, String payId) async
+    test('test payForTermAssuranceDocument', () async {
+      // TODO
+    });
+
+    // Pay for Traveller premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForTravellerDocument(String documentId, String payId) async
+    test('test payForTravellerDocument', () async {
+      // TODO
+    });
+
     // Pay for term assurance premium
     //
     //Future<PaymentInitializationResponse> payForTriplePayDocument(String documentId, String payId) async
     test('test payForTriplePayDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForWholeLifeDocument(String documentId, String payId) async
+    test('test payForWholeLifeDocument', () async {
+      // TODO
+    });
+
+    // Pay for term assurance premium
+    //
+    //Future<PayForTenantProtectPlusDocument200Response> payForWholeLifeLimitedDocument(String documentId, String payId) async
+    test('test payForWholeLifeLimitedDocument', () async {
       // TODO
     });
 
@@ -1792,6 +3570,20 @@ void main() {
       // TODO
     });
 
+    // Register Holder Payment
+    //
+    //Future registerBusinessProtectPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerBusinessProtectPayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerBusinessProtectPlusPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerBusinessProtectPlusPayment', () async {
+      // TODO
+    });
+
     // Register Comprehensive Payment
     //
     //Future registerComprehensivePayment(String documentId, String payId, { PayEntry payEntry }) async
@@ -1808,8 +3600,43 @@ void main() {
 
     // Register Term Assurance Payment
     //
+    //Future registerCreditLifePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerCreditLifePayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerEconomyPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerEconomyPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
     //Future registerEndowmentPayment(String documentId, String payId, { PayEntry payEntry }) async
     test('test registerEndowmentPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
+    //Future registerEntrepreneurPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerEntrepreneurPayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerEuropePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerEuropePayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerFamilyPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerFamilyPayment', () async {
       // TODO
     });
 
@@ -1848,6 +3675,62 @@ void main() {
       // TODO
     });
 
+    // Register HomeProtect Payment
+    //
+    //Future registerHomeProtectPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerHomeProtectPayment', () async {
+      // TODO
+    });
+
+    // Register Owner Payment
+    //
+    //Future registerHomeProtectPlusPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerHomeProtectPlusPayment', () async {
+      // TODO
+    });
+
+    // Register Hospital Cash Intermediate Payment
+    //
+    //Future registerHospitalCashAdvancePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerHospitalCashAdvancePayment', () async {
+      // TODO
+    });
+
+    // Register Hospital Cash Basic Payment
+    //
+    //Future registerHospitalCashBasicPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerHospitalCashBasicPayment', () async {
+      // TODO
+    });
+
+    // Register Hospital Cash Intermediate Payment
+    //
+    //Future registerHospitalCashIntermediatePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerHospitalCashIntermediatePayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
+    //Future registerKeymanPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerKeymanPayment', () async {
+      // TODO
+    });
+
+    // Register Marine cargo Payment
+    //
+    //Future registerMarineCargoPayment(String documentId, String payId, String clause, { PayEntry payEntry }) async
+    test('test registerMarineCargoPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
+    //Future registerMortgagePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerMortgagePayment', () async {
+      // TODO
+    });
+
     // Register Term Assurance Payment
     //
     //Future registerMyHeirsPayment(String documentId, String payId, { PayEntry payEntry }) async
@@ -1859,6 +3742,13 @@ void main() {
     //
     //Future registerMyHeirsPlusPayment(String documentId, String payId, { PayEntry payEntry }) async
     test('test registerMyHeirsPlusPayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerPearlPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerPearlPayment', () async {
       // TODO
     });
 
@@ -1883,6 +3773,62 @@ void main() {
       // TODO
     });
 
+    // Register Holder Payment
+    //
+    //Future registerSchengenPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerSchengenPayment', () async {
+      // TODO
+    });
+
+    // Register Smart School Payment
+    //
+    //Future registerSmartSchoolPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerSmartSchoolPayment', () async {
+      // TODO
+    });
+
+    // Register TenantProtectBronze Payment
+    //
+    //Future registerTenantProtectBronzePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTenantProtectBronzePayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerTenantProtectGoldPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTenantProtectGoldPayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerTenantProtectPlusPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTenantProtectPlusPayment', () async {
+      // TODO
+    });
+
+    // Register TenantProtectSilver Payment
+    //
+    //Future registerTenantProtectSilverPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTenantProtectSilverPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
+    //Future registerTermAssurancePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTermAssurancePayment', () async {
+      // TODO
+    });
+
+    // Register Holder Payment
+    //
+    //Future registerTravellerPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerTravellerPayment', () async {
+      // TODO
+    });
+
     // Register Term Assurance Payment
     //
     //Future registerTriplePayPayment(String documentId, String payId, { PayEntry payEntry }) async
@@ -1897,10 +3843,31 @@ void main() {
       // TODO
     });
 
+    // Register Term Assurance Payment
+    //
+    //Future registerWholeLifeLimitedPayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerWholeLifeLimitedPayment', () async {
+      // TODO
+    });
+
+    // Register Term Assurance Payment
+    //
+    //Future registerWholeLifePayment(String documentId, String payId, { PayEntry payEntry }) async
+    test('test registerWholeLifePayment', () async {
+      // TODO
+    });
+
     // Reset password by creating a one time password for an existing user
     //
     //Future resetOtp({ ResetOtpRequest resetOtpRequest }) async
     test('test resetOtp', () async {
+      // TODO
+    });
+
+    // Connect with Customer Experience
+    //
+    //Future sendBuyActionToCustomerExperience(String company, String phoneNumber, { SendBuyActionToCustomerExperienceRequest sendBuyActionToCustomerExperienceRequest }) async
+    test('test sendBuyActionToCustomerExperience', () async {
       // TODO
     });
 

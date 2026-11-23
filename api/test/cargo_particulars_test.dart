@@ -3,7 +3,7 @@ import 'package:openapi/openapi.dart';
 
 // tests for CargoParticulars
 void main() {
-  final instance = CargoParticularsBuilder();
+  //final instance = CargoParticularsBuilder();
   // TODO add properties to the builder and call build()
 
   group(CargoParticulars, () {

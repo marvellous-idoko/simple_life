@@ -43,6 +43,7 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
       if (mounted) _showSelfServiceNotice();
     });
   }
+
   Future<void> _showSelfServiceNotice() {
     return showDialog<void>(
       context: context,
@@ -255,7 +256,6 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
   }
 
   Future<void> markProfileAsSelected(Customer customer, dynamic person) async {
-
     final customerJson = Map<String, dynamic>.from(
       standardSerializers.serializeWith(Customer.serializer, customer) as Map,
     );
@@ -271,13 +271,28 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
     final updatedMessage = <String, dynamic>{
       ...bloc.state.message,
       'selectedCustomer': customerJson,
-      'profile': {'person': personJson, 'customer': customerJson},
+      'profile': {
+        'person': personJson,
+        'customer': {...customerJson, 'selectedProfile': true},
+      },
     };
     await saveMessage(context, updatedMessage);
     // mark Customer as selected
     // await GeneralRepository().markCustomerAsSelected(customer['customerId']);
-
-    if (mounted) context.go(AppRoutes.lifeProducts);
+    if (mounted)
+      if (bloc.state.message['policy']?['type'].toString().isNotEmpty == true) {
+        if (lifePolicies.contains(bloc.state.message['policy']?['type'])) {
+          createLifePolicyDocument(context);
+        } else if (motorPolicies.contains(
+          bloc.state.message['policy']?['type'],
+        )) {
+          context.push(AppRoutes.registerMotor);
+        } else if([...HomeOwnerPolicies, ...BusinessProtectPolicies, ...TenantProtectPolicies].contains(bloc.state.message['policy']?['type'])) {
+          context.push(AppRoutes.registerProtectee);
+        }
+      } else {
+        context.go(AppRoutes.lifeProducts);
+      }
   }
 
   bool isProfileComplete(Customer profile) {

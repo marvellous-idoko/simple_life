@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_ui/material_ui.dart' as material_ui;
 import 'package:simple_life/Bloc__state/general_bloc.dart';
+import 'package:simple_life/services/global_loader.dart';
 
 import 'route_config.dart';
 
 void main() {
+  GlobalLoader.instance.bindNavigatorKey(rootNavigatorKey);
   runApp(const MainApp());
 }
 

@@ -293,9 +293,9 @@ class BancassuranceCorporateReferralBuilder
   set uniqueReferralNumber(String? uniqueReferralNumber) =>
       _$this._uniqueReferralNumber = uniqueReferralNumber;
 
-  Address? _address;
-  Address? get address => _$this._address;
-  set address(Address? address) => _$this._address = address;
+  AddressBuilder? _address;
+  AddressBuilder get address => _$this._address ??= AddressBuilder();
+  set address(AddressBuilder? address) => _$this._address = address;
 
   IdDetailsBuilder? _idDetails;
   IdDetailsBuilder get idDetails => _$this._idDetails ??= IdDetailsBuilder();
@@ -322,7 +322,7 @@ class BancassuranceCorporateReferralBuilder
       _referrerAccountNumber = $v.referrerAccountNumber;
       _channel = $v.channel;
       _uniqueReferralNumber = $v.uniqueReferralNumber;
-      _address = $v.address;
+      _address = $v.address?.toBuilder();
       _idDetails = $v.idDetails?.toBuilder();
       _$v = null;
     }
@@ -361,12 +361,14 @@ class BancassuranceCorporateReferralBuilder
             referrerAccountNumber: referrerAccountNumber,
             channel: channel,
             uniqueReferralNumber: uniqueReferralNumber,
-            address: address,
+            address: _address?.build(),
             idDetails: _idDetails?.build(),
           );
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'address';
+        _address?.build();
         _$failedField = 'idDetails';
         _idDetails?.build();
       } catch (e) {

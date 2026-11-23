@@ -172,6 +172,8 @@ class _$GetMotorFrom3rdPartyDocument200Response
   @override
   final num? motorValue;
   @override
+  final num? value;
+  @override
   final MotorParticularsUseEnum? use;
   @override
   final MotorParticularsTypeEnum? type;
@@ -194,6 +196,7 @@ class _$GetMotorFrom3rdPartyDocument200Response
       this.engineNumber,
       this.paymentOption,
       this.motorValue,
+      this.value,
       this.use,
       this.type})
       : super._();
@@ -222,6 +225,7 @@ class _$GetMotorFrom3rdPartyDocument200Response
         engineNumber == other.engineNumber &&
         paymentOption == other.paymentOption &&
         motorValue == other.motorValue &&
+        value == other.value &&
         use == other.use &&
         type == other.type;
   }
@@ -240,6 +244,7 @@ class _$GetMotorFrom3rdPartyDocument200Response
     _$hash = $jc(_$hash, engineNumber.hashCode);
     _$hash = $jc(_$hash, paymentOption.hashCode);
     _$hash = $jc(_$hash, motorValue.hashCode);
+    _$hash = $jc(_$hash, value.hashCode);
     _$hash = $jc(_$hash, use.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -261,6 +266,7 @@ class _$GetMotorFrom3rdPartyDocument200Response
           ..add('engineNumber', engineNumber)
           ..add('paymentOption', paymentOption)
           ..add('motorValue', motorValue)
+          ..add('value', value)
           ..add('use', use)
           ..add('type', type))
         .toString();
@@ -321,6 +327,10 @@ class GetMotorFrom3rdPartyDocument200ResponseBuilder
   num? get motorValue => _$this._motorValue;
   set motorValue(covariant num? motorValue) => _$this._motorValue = motorValue;
 
+  num? _value;
+  num? get value => _$this._value;
+  set value(covariant num? value) => _$this._value = value;
+
   MotorParticularsUseEnum? _use;
   MotorParticularsUseEnum? get use => _$this._use;
   set use(covariant MotorParticularsUseEnum? use) => _$this._use = use;
@@ -347,6 +357,7 @@ class GetMotorFrom3rdPartyDocument200ResponseBuilder
       _engineNumber = $v.engineNumber;
       _paymentOption = $v.paymentOption;
       _motorValue = $v.motorValue;
+      _value = $v.value;
       _use = $v.use;
       _type = $v.type;
       _$v = null;
@@ -382,6 +393,7 @@ class GetMotorFrom3rdPartyDocument200ResponseBuilder
           engineNumber: engineNumber,
           paymentOption: paymentOption,
           motorValue: motorValue,
+          value: value,
           use: use,
           type: type,
         );
